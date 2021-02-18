@@ -4,7 +4,7 @@ export(Array) var riel_paths = []
 export(Array) var follow_paths = []
 export(Array) var camera_paths = []
 export(Array) var tiempo_tweens = []
-onready var cam = get_node("Camara")
+#onready var cam = get_node("Camara")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,12 +19,95 @@ func _asigna_camera(follow_path, _parent, _cam):
 	
 
 func _activa_camera(camera_path: NodePath, cameras: Array):
-	get_node(camera_path)._prende_cam()
 	for cam in cameras:
 		if cam != camera_path:
 			get_node(cam)._apaga_cam()
+	
+	get_node(camera_path)._prende_cam()
+			
+			
+			
+			
+#TWEEN COMPLETED TWEEN COMPLETED TWEEN COMPLETED TWEEN COMPLETED TWEEN COMPLETED 
+#TWEEN COMPLETED TWEEN COMPLETED TWEEN COMPLETED TWEEN COMPLETED TWEEN COMPLETED 
+#TWEEN COMPLETED TWEEN COMPLETED TWEEN COMPLETED TWEEN COMPLETED TWEEN COMPLETED 
+#TWEEN COMPLETED TWEEN COMPLETED TWEEN COMPLETED TWEEN COMPLETED TWEEN COMPLETED 
+#TWEEN COMPLETED TWEEN COMPLETED TWEEN COMPLETED TWEEN COMPLETED TWEEN COMPLETED 
+
+
+
+func _on_Tween_00_intro_tween_completed(object, key):
+	_activa_camera(camera_paths[1], camera_paths)	
+	get_node(riel_paths[1])._mueve_camara(tiempo_tweens[1], Tween.TRANS_CUBIC, Tween.EASE_OUT)
+	
+
+func _on_Tween_01_intro_tween_completed(object, key):
+	_activa_camera(camera_paths[2], camera_paths)	
+	get_node(riel_paths[2])._mueve_camara(tiempo_tweens[2], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+
+
+func _on_Tween_02_intro_tween_completed(object, key):
+	yield(get_tree().create_timer(0.5),"timeout")
+	_activa_camera(camera_paths[3], camera_paths)	
+	get_node(riel_paths[3])._mueve_camara(tiempo_tweens[3], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+
+
+func _on_Tween_03_intro_tween_completed(object, key):
+	_activa_camera(camera_paths[4], camera_paths)	
+	get_node(riel_paths[4])._mueve_camara(tiempo_tweens[4], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	
+	
+func _on_Tween_04_intro_tween_completed(object, key):
+	_activa_camera(camera_paths[5], camera_paths)	
+	get_node(riel_paths[5])._mueve_camara(tiempo_tweens[5], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	
+	
+func _on_Tween_05_intro_tween_completed(object, key):
+	_activa_camera(camera_paths[6], camera_paths)	
+	get_node(riel_paths[6])._mueve_camara(tiempo_tweens[6], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+
+
+func _on_Tween_06_intro_tween_completed(object, key):
+	#yield(get_tree().create_timer(0.2),"timeout")
+	_activa_camera(camera_paths[7], camera_paths)	
+	get_node(riel_paths[7])._mueve_camara(tiempo_tweens[7], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	
+
+func _on_Tween_07_intro_tween_completed(object, key):
+	_activa_camera(camera_paths[8], camera_paths)	
+	get_node(riel_paths[8])._mueve_camara(tiempo_tweens[8], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+
+
+func _on_Tween_08_intro_tween_completed(object, key):
+	_activa_camera(camera_paths[9], camera_paths)	
+	get_node(riel_paths[9])._mueve_camara(tiempo_tweens[9], Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+
+
+func _on_Tween_09_intro_tween_completed(object, key):
+	_activa_camera(camera_paths[10], camera_paths)	
+	get_node(riel_paths[10])._mueve_camara(tiempo_tweens[10], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	
+	
 
 func _on_tween_01_01_tween_completed(object, key):
-	_activa_camera(camera_paths[1], camera_paths)
-	#_asigna_camera(follow_paths[1], follow_paths[0], cam)
+	_activa_camera(camera_paths[1], camera_paths)	
 	get_node(riel_paths[1])._mueve_camara(tiempo_tweens[1], Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
