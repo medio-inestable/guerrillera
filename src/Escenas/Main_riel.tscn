@@ -1,0 +1,217 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Escenas/Camara.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Path.gd" type="Script" id=2]
+[ext_resource path="res://Assets/UI/crosshair.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Main_riel.gd" type="Script" id=4]
+[ext_resource path="res://Personajes/Muxxxe_enemy_01.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/area_trigger_path.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Rieles.gd" type="Script" id=7]
+
+[sub_resource type="Curve3D" id=1]
+_data = {
+"points": PoolVector3Array( 0, 0, 4.19925, 0, 0, -4.19925, 0, 0, 0, 1.04137, 0, -0.148767, -1.04137, 0, 0.148767, -4.60007, 0, -5.38982 ),
+"tilts": PoolRealArray( 0, 0 )
+}
+
+[sub_resource type="Curve3D" id=2]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -23, 2, -1, 0.306633, 0, -4.29585, -0.306633, 0, 4.29585, -26, 5, 6, 0, 0, 0, 0, 0, 0, -23, 2, 14, -6, 5, -3, 6, -5, 3, -13.411, 2, 16.0111, -2, 4, 0, 2, -4, 0, -6.69222, 2, 6.75902, 0, 0, 0, 0, 0, 0, 0.577296, 2, 13.6981 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="Curve3D" id=4]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 0, 0.943252, 4.06346, 0, 0.7, 1.6, 0, -0.7, -1.6, -2.108, 5.87442, 8.18024, -1.1712, -0.578377, 0.86465, 1.1712, 0.578377, -0.86465, -3.65727, 5.96054, 13.3355, 0, 0, 0, 0, 0, 0, -1.55663, 4.39876, 15.2733, 1.00553, 1.12761, 0.182861, -1.00553, -1.12761, -0.182861, -0.953634, 1.36629, 17.9565, 0, 0.6, -0.5, 0, -0.6, 0.5, -1.11357, 0.642499, 15.3088, 0, 0.3, -1, 0, -0.3, 1, 0, 4.66767, 12.6583, -2.40439, -1.79526, 2.46452, 2.40439, 1.79526, -2.46452, -1.57529, 2.8853, 10.2543, 0, 0, 0, 0, 0, 0, -3.16186, -0.997812, 16.8113, 0, 0, 0, 0, 0, 0, -2.46213, 0.655306, 17.4996, 0, 0, 0, 0, 0, 0, -1.51522, 2.8924, 18.431, 0, 0, 0, 0, 0, 0, -1.20287, 3.70967, 13.9606, 0, 0, 0, 0, 0, 0, -2.60389, 0.473273, 8.1545, 0, 0, 0, 0, 0, 0, -1.91125, 1.87898, 22.7248, 0, 0, 0, 0, 0, 0, -0.207783, 5.99802, 18.7056, 0, 0, 0, 0, 0, 0, 0.497253, 7.79602, 11.4309, 0, 0, 0, 0, 0, 0, -2.31544, 1.12709, 10.1029, 0, 0, 0, 0, 0, 0, -2.59337, 0.375199, 15.5661, 0, 0, 0, 0, 0, 0, -1.80465, 2.23858, 16.3408, 0, 0, 0, 0, 0, 0, -0.565681, 5.18075, 16.6513, 0, 0, 0, 0, 0, 0, -1.89429, 2.15629, 12.9303, 0, 0, 0, 0, 0, 0, -1.59954, 3.01709, 14.9824, 0, 0, 0, 0, 0, 0, -1.28227, 3.20954, 12.4476, 0, 0, 0, 0, 0, 0, -1.18754, 3.267, 11.6908, 0, 0, 0, 0, 0, 0, -1.16564, 3.56019, 13.3245, 0, 0, 0, 0, 0, 0, -1.11909, 4.18333, 16.7967, 0, 0, 0, 0, 0, 0, -1.95552, 1.55938, 9.80251, 0, 0, 0, 0, 0, 0, -2.137, 0.990051, 8.28494, 0, 0, 0, 0, 0, 0, -2.01694, 1.82425, 12.2453, 0, 0, 0, 0, 0, 0, -1.93659, 2.38248, 14.8956, 0, 0, 0, 0, 0, 0, -1.92518, 2.46174, 15.2719, 0, 0, 0, 0, 0, 0, -0.227293, 4.71092, 9.58571, 0, 0, 0, 0, 0, 0, -0.0171413, 5.82162, 14.26, 0, 0, 0, 0, 0, 0, 0.445408, 3.62812, 15.2345, 0, 0, 0, 0, 0, 0, -2.13824, 1.97545, 14.8549, 0, 0, 0, 0, 0, 0, -3.95222, 4.11093, 13.3882, 0, 0, 0, 0, 0, 0, -4.72495, 2.42112, 13.71, 0, 0, 0, 0, 0, 0, -2.50752, -2.02261, 14.0758, 0, 0, 0, 0, 0, 0, -6.62098, 2.31258, 18.9628, 0, 0, 0, 0, 0, 0, -4.21505, -0.938809, 17.1238, 0, 0, 0, 0, 0, 0, -2.96834, -0.205651, 12.7274 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="BoxShape" id=5]
+
+[node name="Main_riel" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="Rieles" type="Spatial" parent="."]
+script = ExtResource( 7 )
+riel_paths = [ NodePath("riel_01_01"), NodePath("riel_01_02") ]
+follow_paths = [ NodePath("riel_01_01/follow_01_01"), NodePath("riel_01_02/follow_01_02") ]
+camera_paths = [ NodePath("riel_01_01/follow_01_01/Camara"), NodePath("riel_01_02/follow_01_02/Camara") ]
+tiempo_tweens = [ 0.01, 6.116 ]
+
+[node name="riel_01_01" type="Path" parent="Rieles"]
+curve = SubResource( 1 )
+script = ExtResource( 2 )
+pathFnode = NodePath("follow_01_01")
+tweenNode = NodePath("follow_01_01/tween_01_01")
+camNode = NodePath("follow_01_01/Camara")
+camNumero = 1
+
+[node name="follow_01_01" type="PathFollow" parent="Rieles/riel_01_01"]
+transform = Transform( -0.999906, 0, -0.0136782, 0, 1, 0, 0.0136786, 0, -0.999875, 0, 0, 0 )
+rotation_mode = 4
+loop = false
+
+[node name="Camara" parent="Rieles/riel_01_01/follow_01_01" instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
+
+[node name="tween_01_01" type="Tween" parent="Rieles/riel_01_01/follow_01_01"]
+
+[node name="riel_01_02" type="Path" parent="Rieles"]
+curve = SubResource( 2 )
+script = ExtResource( 2 )
+pathFnode = NodePath("follow_01_02")
+tweenNode = NodePath("follow_01_02/tween_01_02")
+camNode = NodePath("follow_01_02/Camara")
+camNumero = 2
+
+[node name="follow_01_02" type="PathFollow" parent="Rieles/riel_01_02"]
+rotation_mode = 0
+loop = false
+
+[node name="Camara" parent="Rieles/riel_01_02/follow_01_02" instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 0, 0, 0 )
+
+[node name="tween_01_02" type="Tween" parent="Rieles/riel_01_02/follow_01_02"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 373.763
+margin_top = 57.4337
+margin_right = 427.763
+margin_bottom = 111.434
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 372.574
+margin_top = 119.273
+margin_right = 426.574
+margin_bottom = 173.273
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 372.574
+margin_top = 178.733
+margin_right = 426.574
+margin_bottom = 232.733
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="meshes" type="Spatial" parent="."]
+
+[node name="MeshInstance2" type="MeshInstance" parent="meshes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19908, 0.629447, 7.51536 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="meshes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.36703, 2.97812, 12.4418 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance7" type="MeshInstance" parent="meshes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63297, 1.97812, -11.5582 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance8" type="MeshInstance" parent="meshes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.36703, 1.97812, -13.5582 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance9" type="MeshInstance" parent="meshes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.367, 0.97812, -8.5582 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance11" type="MeshInstance" parent="meshes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.367, 2.97812, -3.5582 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance10" type="MeshInstance" parent="meshes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.36703, 4.97812, -8.5582 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance5" type="MeshInstance" parent="meshes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.95668, -1.57411, 12.4418 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="meshes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9674, 0.202563, 8.18095 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance12" type="MeshInstance" parent="meshes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9674, 6.20256, 3.18095 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance13" type="MeshInstance" parent="meshes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9674, 1.20256, 14.181 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance6" type="MeshInstance" parent="meshes"]
+transform = Transform( 21.6344, 0, 0, 0, 0.0337608, 0, 0, 0, 21.6344, -1.55115, -1.49547, 1.44249 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="Enemigos" type="Spatial" parent="."]
+
+[node name="Rieles_e" type="Spatial" parent="Enemigos"]
+
+[node name="enemigo_01" type="Path" parent="Enemigos/Rieles_e"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.86542, 0, 0 )
+curve = SubResource( 4 )
+
+[node name="PathFollow" type="PathFollow" parent="Enemigos/Rieles_e/enemigo_01"]
+transform = Transform( 1, 0, 0, 0, 0.738386, 0.674375, 0, -0.674378, 0.738383, 0, 0.943252, 4.06346 )
+rotation_mode = 4
+loop = false
+
+[node name="Muxxxe_enemy_01" parent="Enemigos/Rieles_e/enemigo_01/PathFollow" instance=ExtResource( 5 )]
+transform = Transform( -0.267158, -0.192715, 0.944186, 0.940434, 0.161646, 0.299088, -0.210265, 0.96785, 0.13805, 1.86265e-09, 9.53674e-07, 0 )
+
+[node name="area_e_01" type="Area" parent="Enemigos/Rieles_e/enemigo_01"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6061, 0, 11 )
+collision_layer = 0
+collision_mask = 2147483650
+script = ExtResource( 6 )
+pathfollow = NodePath("../PathFollow")
+time_tween = 15.0
+
+[node name="CollisionShape" type="CollisionShape" parent="Enemigos/Rieles_e/enemigo_01/area_e_01"]
+transform = Transform( 2.7, 0, 0, 0, 2.7, 0, 0, 0, 2.7, -10.7968, 0, 0 )
+shape = SubResource( 5 )
+
+[node name="Tween" type="Tween" parent="Enemigos/Rieles_e/enemigo_01/area_e_01"]
+[connection signal="tween_completed" from="Rieles/riel_01_01/follow_01_01/tween_01_01" to="Rieles" method="_on_tween_01_01_tween_completed"]
+[connection signal="area_entered" from="Enemigos/Rieles_e/enemigo_01/area_e_01" to="Enemigos/Rieles_e/enemigo_01/area_e_01" method="_on_area_e_01_area_entered"]

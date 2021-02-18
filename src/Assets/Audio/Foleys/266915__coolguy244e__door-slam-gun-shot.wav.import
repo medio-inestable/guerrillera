@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/266915__coolguy244e__door-slam-gun-shot.wav-8c1b5f1b7fc6ae35771be89987fcb161.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Foleys/266915__coolguy244e__door-slam-gun-shot.wav"
+dest_files=[ "res://.import/266915__coolguy244e__door-slam-gun-shot.wav-8c1b5f1b7fc6ae35771be89987fcb161.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
