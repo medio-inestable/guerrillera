@@ -56,13 +56,13 @@ func _input(event):
 func _apaga_cam() -> void:
 	$Camera.current = false
 	$Camera.visible = false
-	print('d')
+	#print('d')
 	
 
 func _prende_cam() -> void:
 	$Camera.current = true
 	$Camera.visible = true
-	print('a')
+	#print('a')
 	
 
 func _muzzle(_r_magnitude_x: float, _r_magnitude_y: float):

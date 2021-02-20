@@ -1,9 +1,9 @@
 extends Spatial
 
-export(Array) var riel_paths = []
-export(Array) var follow_paths = []
-export(Array) var camera_paths = []
-export(Array) var tiempo_tweens = []
+export(Array, NodePath) var riel_paths = []
+export(Array, NodePath) var follow_paths = []
+export(Array, NodePath) var camera_paths = []
+export(Array, float) var tiempo_tweens = []
 #onready var cam = get_node("Camara")
 
 # Called when the node enters the scene tree for the first time.
