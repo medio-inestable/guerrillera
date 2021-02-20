@@ -18,7 +18,7 @@ func _process(delta):
 	var cam_rot = Quat(cam.global_transform.basis)
 	var cam_rot_diff = cam_rot - cam_rot_prev
 	var cam_rot_conj = conjugate(cam_rot)
-	var ang_vel = (cam_rot_diff * 2.0) * cam_rot_conj; 
+	var ang_vel = (cam_rot_diff * 0.1) * cam_rot_conj; 
 	ang_vel = Vector3(ang_vel.x, ang_vel.y, ang_vel.z) # Convert Quat to Vector3
 	
 	mat.set_shader_param("linear_velocity", velocity)

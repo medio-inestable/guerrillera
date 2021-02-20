@@ -15,12 +15,23 @@ var shoot = true
 var cross = load("res://Assets/UI/crosshair_cursor.png")
 var muzzlepng = load("res://Assets/UI/crosshair_invisible.png")
 
+export(NodePath) var cosa_mirar_node
+onready var cosa_mirar = get_node(cosa_mirar_node)
+
+var mirando: bool = false
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():	
-	pass
+	if cosa_mirar != null:
+		mirando = true
 	
+	
+func _process(delta):
+	#print('cagandola')
+	if mirando && $Camera.current:
+		look_at(cosa_mirar.transform.origin,Vector3(0,1,0))
+		#print('cagandola')
 	
 
 func _input(event):
@@ -45,13 +56,13 @@ func _input(event):
 func _apaga_cam() -> void:
 	$Camera.current = false
 	$Camera.visible = false
-	print('d')
+	#print('d')
 	
 
 func _prende_cam() -> void:
 	$Camera.current = true
 	$Camera.visible = true
-	print('a')
+	#print('a')
 	
 
 func _muzzle(_r_magnitude_x: float, _r_magnitude_y: float):
@@ -97,11 +108,11 @@ func _shake_camera():
 func _recoil_cam(_r_magnitude_x: float, _r_magnitude_y: float):
 	$Tween.interpolate_property($Camera, "rotation_degrees", Vector3(0,0,0), Vector3(_r_magnitude_y,_r_magnitude_x,0), 0.3, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	$Tween.start()
-	$Tween.interpolate_property($Camera, "fov", 80, 85, 0.3, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
-	$Tween.start()
+	#$Tween.interpolate_property($Camera, "fov", 80, 85, 0.3, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
+	#$Tween.start()
 	get_viewport().warp_mouse(Vector2(get_viewport().get_mouse_position().x+(_r_magnitude_x*1.5),get_viewport().get_mouse_position().y-(_r_magnitude_y*1.3)))
 	yield(get_tree().create_timer(0.2), "timeout")
 	$Tween.interpolate_property($Camera, "rotation_degrees", Vector3(_r_magnitude_y,_r_magnitude_x,0), Vector3(0,0,0), 0.5, Tween.TRANS_ELASTIC, Tween.EASE_IN_OUT)
 	$Tween.start()
-	$Tween.interpolate_property($Camera, "fov", 85, 80, 0.5, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
-	$Tween.start()
+	#$Tween.interpolate_property($Camera, "fov", 85, 80, 0.5, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
+	#$Tween.start()

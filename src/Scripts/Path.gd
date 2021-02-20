@@ -30,7 +30,7 @@ func _ready():
 
 
 func _mueve_camara(_segundos: float, _tween_s, _tween_e) -> void:	
-	tween_node.interpolate_property(pathF, 'unit_offset', 0, 1, _segundos, _tween_s, _tween_e)
+	tween_node.interpolate_property(pathF, 'unit_offset', 0.1, 0.9, _segundos, _tween_s, _tween_e)
 	tween_node.start()
 
 
