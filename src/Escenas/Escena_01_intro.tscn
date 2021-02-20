@@ -26,100 +26,100 @@ _data = {
 "tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
 }
 
-[sub_resource type="Curve3D" id=12]
+[sub_resource type="Curve3D" id=4]
 _data = {
 "points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 0, 1.6984, 0.0737543, 0, 0, 0, 0, 0, 0, -0.00494385, 0.952357, 0.111291, 0, 0, 0, 0, 0, 0, -0.00494385, 1.7594, 0.120676 ),
 "tilts": PoolRealArray( 0, 0, 0 )
 }
 
-[sub_resource type="Curve3D" id=4]
+[sub_resource type="Curve3D" id=5]
 _data = {
 "points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 0, 0.918867, 3.56729, 0, 0, 0, 0, 0, 0, 0, 0.954313, 3.14193 ),
 "tilts": PoolRealArray( 0, 0 )
 }
 
-[sub_resource type="Curve3D" id=5]
+[sub_resource type="Curve3D" id=6]
 _data = {
 "points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 2.14754, 1.08429, 2.3562, 0, 0, 0, 0, 0, 0, 1.86397, 1.13155, 2.02536 ),
 "tilts": PoolRealArray( 0, 0 )
 }
 
-[sub_resource type="Curve3D" id=6]
+[sub_resource type="Curve3D" id=7]
 _data = {
 "points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -0.298279, 1.34423, 2.00764, 0, 0, 0, 0, 0, 0, -0.121033, 1.35604, 1.51138 ),
 "tilts": PoolRealArray( 0, 0 )
 }
 
-[sub_resource type="Curve3D" id=7]
+[sub_resource type="Curve3D" id=8]
 _data = {
 "points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -0.200339, 1.62024, 0.63886, 0, 0, 0, 0, 0, 0, 0.226643, 1.87157, 0.408946 ),
 "tilts": PoolRealArray( 0, 0 )
 }
 
-[sub_resource type="Curve3D" id=8]
+[sub_resource type="Curve3D" id=9]
 _data = {
 "points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -0.163645, 1.72772, -0.700918, 0, 0, 0, 0, 0, 0, -0.0924225, 1.68289, -0.374153 ),
 "tilts": PoolRealArray( 0, 0 )
 }
 
-[sub_resource type="Curve3D" id=9]
+[sub_resource type="Curve3D" id=10]
 _data = {
 "points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -0.00579834, 1.68683, 0.438748, 0, 0, 0, 0, 0, 0, -0.00453186, 1.6862, 0.379116 ),
 "tilts": PoolRealArray( 0, 0 )
 }
 
-[sub_resource type="Curve3D" id=10]
+[sub_resource type="Curve3D" id=11]
 _data = {
 "points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -0.00389099, 1.6862, 0.241456, 0, 0, 0, 0, 0, 0, -0.00389099, 1.6862, 0.219252 ),
 "tilts": PoolRealArray( 0, 0 )
 }
 
-[sub_resource type="Curve3D" id=11]
+[sub_resource type="Curve3D" id=12]
 _data = {
 "points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -0.00653076, 1.63159, 0.302925, 0, 0, 0, 0, 0, 0, -0.00653076, 1.62064, 1.60547 ),
 "tilts": PoolRealArray( 0, 0 )
 }
 
-[sub_resource type="VisualShaderNodeInput" id=27]
+[sub_resource type="VisualShaderNodeInput" id=13]
 output_port_for_preview = 0
 input_name = "screen_uv"
 
-[sub_resource type="VisualShaderNodeVectorOp" id=28]
+[sub_resource type="VisualShaderNodeVectorOp" id=14]
 output_port_for_preview = 0
 default_input_values = [ 0, Vector3( 0, 0, 0 ), 1, Vector3( 0.01, 0, 0 ) ]
 
-[sub_resource type="VisualShaderNodeScalarOp" id=29]
+[sub_resource type="VisualShaderNodeScalarOp" id=15]
 output_port_for_preview = 0
 default_input_values = [ 0, 0.1, 1, 0.0 ]
 operator = 2
 
-[sub_resource type="VisualShaderNodeVectorCompose" id=30]
+[sub_resource type="VisualShaderNodeVectorCompose" id=16]
 
-[sub_resource type="VisualShaderNodeInput" id=13]
+[sub_resource type="VisualShaderNodeInput" id=17]
 output_port_for_preview = 0
 input_name = "uv"
 
-[sub_resource type="VisualShaderNodeScalarOp" id=17]
+[sub_resource type="VisualShaderNodeScalarOp" id=18]
 default_input_values = [ 0, 0.5, 1, 0.0 ]
 operator = 2
 
-[sub_resource type="VisualShaderNodeScalarFunc" id=18]
+[sub_resource type="VisualShaderNodeScalarFunc" id=19]
 function = 0
 
-[sub_resource type="VisualShaderNodeInput" id=19]
+[sub_resource type="VisualShaderNodeInput" id=20]
 input_name = "time"
 
-[sub_resource type="VisualShaderNodeScalarOp" id=20]
+[sub_resource type="VisualShaderNodeScalarOp" id=21]
 default_input_values = [ 0, 0.5, 1, 0.0 ]
 
-[sub_resource type="CameraTexture" id=21]
+[sub_resource type="CameraTexture" id=22]
 
-[sub_resource type="VisualShaderNodeTexture" id=22]
+[sub_resource type="VisualShaderNodeTexture" id=23]
 output_port_for_preview = 0
 source = 1
-texture = SubResource( 21 )
+texture = SubResource( 22 )
 
-[sub_resource type="VisualShader" id=14]
+[sub_resource type="VisualShader" id=24]
 code = "shader_type canvas_item;
 
 
@@ -181,30 +181,30 @@ graph_offset = Vector2( -93.56, -179.887 )
 mode = 1
 flags/light_only = false
 nodes/fragment/0/position = Vector2( 860, 160 )
-nodes/fragment/2/node = SubResource( 13 )
+nodes/fragment/2/node = SubResource( 17 )
 nodes/fragment/2/position = Vector2( -20, 200 )
-nodes/fragment/4/node = SubResource( 17 )
+nodes/fragment/4/node = SubResource( 18 )
 nodes/fragment/4/position = Vector2( 260, 360 )
-nodes/fragment/5/node = SubResource( 18 )
+nodes/fragment/5/node = SubResource( 19 )
 nodes/fragment/5/position = Vector2( 80, 420 )
-nodes/fragment/6/node = SubResource( 19 )
+nodes/fragment/6/node = SubResource( 20 )
 nodes/fragment/6/position = Vector2( -120, 400 )
-nodes/fragment/7/node = SubResource( 20 )
+nodes/fragment/7/node = SubResource( 21 )
 nodes/fragment/7/position = Vector2( 460, 360 )
-nodes/fragment/8/node = SubResource( 22 )
+nodes/fragment/8/node = SubResource( 23 )
 nodes/fragment/8/position = Vector2( 580, -80 )
-nodes/fragment/15/node = SubResource( 27 )
+nodes/fragment/15/node = SubResource( 13 )
 nodes/fragment/15/position = Vector2( 0, -40 )
-nodes/fragment/16/node = SubResource( 28 )
+nodes/fragment/16/node = SubResource( 14 )
 nodes/fragment/16/position = Vector2( 300, -60 )
-nodes/fragment/17/node = SubResource( 29 )
+nodes/fragment/17/node = SubResource( 15 )
 nodes/fragment/17/position = Vector2( 660, 320 )
-nodes/fragment/18/node = SubResource( 30 )
+nodes/fragment/18/node = SubResource( 16 )
 nodes/fragment/18/position = Vector2( 460, 180 )
 nodes/fragment/connections = PoolIntArray( 5, 0, 4, 1, 6, 0, 5, 0, 4, 0, 7, 1, 8, 0, 0, 0, 15, 0, 16, 0, 16, 0, 8, 0, 7, 0, 17, 1, 17, 0, 18, 0, 18, 0, 16, 1, 17, 0, 18, 2 )
 
-[sub_resource type="ShaderMaterial" id=15]
-shader = SubResource( 14 )
+[sub_resource type="ShaderMaterial" id=25]
+shader = SubResource( 24 )
 
 [node name="Escena_01_intro" type="Spatial"]
 
@@ -273,14 +273,14 @@ cosa_mirar_node = NodePath("../../Riel_Mira_02_intro/Follow_Mira_02_intro")
 [node name="Tween_02_intro" type="Tween" parent="Rieles/Riel_02_intro/Follow_02_intro"]
 
 [node name="Riel_Mira_02_intro" type="Path" parent="Rieles/Riel_02_intro"]
-curve = SubResource( 12 )
+curve = SubResource( 4 )
 script = ExtResource( 6 )
 follow_node = NodePath("Follow_Mira_02_intro")
 tween_node = NodePath("Follow_Mira_02_intro/Mira_02_intro/Tween_Mira_02_intro")
 timer_node = NodePath("Follow_Mira_02_intro/Mira_02_intro/Timer_Mira_02_intro")
 
 [node name="Follow_Mira_02_intro" type="PathFollow" parent="Rieles/Riel_02_intro/Riel_Mira_02_intro"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000321984, 1.64982, 0.0761991 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000321983, 1.64981, 0.076199 )
 offset = 0.0634167
 rotation_mode = 0
 loop = false
@@ -295,7 +295,7 @@ one_shot = true
 autostart = true
 
 [node name="Riel_03_intro" type="Path" parent="Rieles"]
-curve = SubResource( 4 )
+curve = SubResource( 5 )
 script = ExtResource( 4 )
 pathFnode = NodePath("Follow_03_intro")
 tweenNode = NodePath("Follow_03_intro/Tween_03_intro")
@@ -316,7 +316,7 @@ cosa_mirar_node = NodePath("../../Mira_03_intro")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.922331, 0 )
 
 [node name="Riel_04_intro" type="Path" parent="Rieles"]
-curve = SubResource( 5 )
+curve = SubResource( 6 )
 script = ExtResource( 4 )
 pathFnode = NodePath("Follow_04_intro")
 tweenNode = NodePath("Follow_04_intro/Tween_04_intro")
@@ -338,7 +338,7 @@ cosa_mirar_node = NodePath("../../Mira_04_intro")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44149, 0 )
 
 [node name="Riel_05_intro" type="Path" parent="Rieles"]
-curve = SubResource( 6 )
+curve = SubResource( 7 )
 script = ExtResource( 4 )
 pathFnode = NodePath("Follow_05_intro")
 tweenNode = NodePath("Follow_05_intro/Tween_05_intro")
@@ -357,7 +357,7 @@ cosa_mirar_node = NodePath("../../Mira_05_intro")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.58328, 0 )
 
 [node name="Riel_06_intro" type="Path" parent="Rieles"]
-curve = SubResource( 7 )
+curve = SubResource( 8 )
 script = ExtResource( 4 )
 pathFnode = NodePath("Follow_06_intro")
 tweenNode = NodePath("Follow_06_intro/Tween_06_intro")
@@ -379,7 +379,7 @@ cosa_mirar_node = NodePath("../../Mira_06_intro")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68214, 0.120682 )
 
 [node name="Riel_07_intro" type="Path" parent="Rieles"]
-curve = SubResource( 8 )
+curve = SubResource( 9 )
 script = ExtResource( 4 )
 pathFnode = NodePath("Follow_07_intro")
 tweenNode = NodePath("Follow_07_intro/Tween_07_intro")
@@ -401,7 +401,7 @@ cosa_mirar_node = NodePath("../../Mira_07_intro")
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.56656, 0.824653 )
 
 [node name="Riel_08_intro" type="Path" parent="Rieles"]
-curve = SubResource( 9 )
+curve = SubResource( 10 )
 script = ExtResource( 4 )
 pathFnode = NodePath("Follow_08_intro")
 tweenNode = NodePath("Follow_08_intro/Tween_08_intro")
@@ -420,7 +420,7 @@ offset = 0.000539539
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0121235, 1.6753, 0.0446749 )
 
 [node name="Riel_09_intro" type="Path" parent="Rieles"]
-curve = SubResource( 10 )
+curve = SubResource( 11 )
 script = ExtResource( 4 )
 pathFnode = NodePath("Follow_09_intro")
 tweenNode = NodePath("Follow_09_intro/Tween_09_intro")
@@ -440,7 +440,7 @@ __meta__ = {
 }
 
 [node name="Riel_10_intro" type="Path" parent="Rieles"]
-curve = SubResource( 11 )
+curve = SubResource( 12 )
 script = ExtResource( 4 )
 pathFnode = NodePath("Follow_10_intro")
 tweenNode = NodePath("Follow_10_intro/Tween_10_intro")
@@ -467,7 +467,8 @@ stream = ExtResource( 5 )
 autoplay = true
 
 [node name="ColorRect" type="TextureRect" parent="."]
-material = SubResource( 15 )
+visible = false
+material = SubResource( 25 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
