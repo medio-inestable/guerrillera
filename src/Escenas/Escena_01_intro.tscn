@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://Assets/Modelos/Escena_tamaños_inicio.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Rieles.gd" type="Script" id=2]
@@ -7,6 +7,15 @@
 [ext_resource path="res://Assets/Audio/Musica/guerrillera_muxxxe.wav" type="AudioStream" id=5]
 [ext_resource path="res://Scripts/Movimiento_mira.gd" type="Script" id=6]
 [ext_resource path="res://Assets/intro/medio_intro.jpg" type="Texture" id=7]
+[ext_resource path="res://Assets/Modelos/1_Pasillo_VidrioBien.gltf" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Modelos/1_Pasillo_VidrioRoto.gltf" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Modelos/2_Pasillo_VidrioBien.gltf" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Modelos/2_Pasillo_VidrioRoto.gltf" type="PackedScene" id=11]
+[ext_resource path="res://Assets/materials/glitch_0_8.jpg" type="Texture" id=12]
+[ext_resource path="res://Assets/materials/glitch_2.jpg" type="Texture" id=13]
+[ext_resource path="res://Assets/materials/glitch_4.jpg" type="Texture" id=14]
+[ext_resource path="res://Assets/materials/world_environment.tres" type="Environment" id=15]
+[ext_resource path="res://Scripts/tiltilar.gd" type="Script" id=16]
 
 [sub_resource type="Curve3D" id=1]
 _data = {
@@ -80,47 +89,171 @@ _data = {
 "tilts": PoolRealArray( 0, 0 )
 }
 
-[sub_resource type="VisualShaderNodeInput" id=13]
-output_port_for_preview = 0
-input_name = "screen_uv"
+[sub_resource type="CubeMesh" id=13]
 
-[sub_resource type="VisualShaderNodeVectorOp" id=14]
-output_port_for_preview = 0
-default_input_values = [ 0, Vector3( 0, 0, 0 ), 1, Vector3( 0.01, 0, 0 ) ]
+[sub_resource type="VisualShaderNodeColorConstant" id=14]
+constant = Color( 0, 0, 0, 1 )
 
-[sub_resource type="VisualShaderNodeScalarOp" id=15]
-output_port_for_preview = 0
-default_input_values = [ 0, 0.1, 1, 0.0 ]
-operator = 2
+[sub_resource type="VisualShader" id=15]
+code = "shader_type spatial;
+render_mode specular_schlick_ggx;
 
-[sub_resource type="VisualShaderNodeVectorCompose" id=16]
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Color:2
+	vec3 n_out2p0 = vec3(0.000000, 0.000000, 0.000000);
+	float n_out2p1 = 1.000000;
+
+// Output:0
+	ALBEDO = n_out2p0;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+nodes/fragment/2/node = SubResource( 14 )
+nodes/fragment/2/position = Vector2( 180, 120 )
+nodes/fragment/connections = PoolIntArray( 2, 0, 0, 0 )
+
+[sub_resource type="ShaderMaterial" id=16]
+shader = SubResource( 15 )
 
 [sub_resource type="VisualShaderNodeInput" id=17]
 output_port_for_preview = 0
+input_name = "screen_uv"
+
+[sub_resource type="VisualShaderNodeVectorOp" id=18]
+output_port_for_preview = 0
+default_input_values = [ 0, Vector3( 0, 0, 0 ), 1, Vector3( 0.01, 0, 0 ) ]
+
+[sub_resource type="VisualShaderNodeVectorCompose" id=19]
+output_port_for_preview = 0
+
+[sub_resource type="VisualShaderNodeTexture" id=20]
+output_port_for_preview = 0
+texture = ExtResource( 14 )
+
+[sub_resource type="VisualShaderNodeVectorOp" id=21]
+output_port_for_preview = 0
+default_input_values = [ 0, Vector3( 0, 0, 0 ), 1, Vector3( 2, 0.1, 0.1 ) ]
+operator = 2
+
+[sub_resource type="VisualShaderNodeTexture" id=22]
+texture = ExtResource( 13 )
+
+[sub_resource type="VisualShaderNodeVectorCompose" id=23]
+output_port_for_preview = 0
+
+[sub_resource type="VisualShaderNodeVectorOp" id=24]
+output_port_for_preview = 0
+
+[sub_resource type="VisualShaderNodeScalarOp" id=25]
+default_input_values = [ 0, 0.0, 1, 0.5 ]
+operator = 2
+
+[sub_resource type="VisualShaderNodeTexture" id=26]
+output_port_for_preview = 0
+texture = ExtResource( 12 )
+
+[sub_resource type="VisualShaderNodeVectorOp" id=27]
+
+[sub_resource type="VisualShaderNodeDotProduct" id=28]
+output_port_for_preview = 0
+default_input_values = [ 0, Vector3( 0, 0, 0 ), 1, Vector3( 12.9898, 78.233, 0 ) ]
+
+[sub_resource type="VisualShaderNodeVectorCompose" id=29]
+default_input_values = [ 0, 5.0, 1, 400.0, 2, 0.0 ]
+
+[sub_resource type="VisualShaderNodeScalarFunc" id=30]
+output_port_for_preview = 0
+function = 0
+
+[sub_resource type="VisualShaderNodeScalarOp" id=31]
+output_port_for_preview = 0
+default_input_values = [ 0, 0.0, 1, 43758.5 ]
+operator = 2
+
+[sub_resource type="VisualShaderNodeScalarFunc" id=32]
+output_port_for_preview = 0
+function = 17
+
+[sub_resource type="VisualShaderNodeInput" id=33]
+output_port_for_preview = 0
 input_name = "uv"
 
-[sub_resource type="VisualShaderNodeScalarOp" id=18]
+[sub_resource type="VisualShaderNodeVectorOp" id=34]
+operator = 2
+
+[sub_resource type="VisualShaderNodeScalarOp" id=35]
+output_port_for_preview = 0
+default_input_values = [ 0, 0.0, 1, 0.3 ]
+operator = 2
+
+[sub_resource type="VisualShaderNodeScalarOp" id=36]
+output_port_for_preview = 0
 default_input_values = [ 0, 0.5, 1, 0.0 ]
 operator = 2
 
-[sub_resource type="VisualShaderNodeScalarFunc" id=19]
+[sub_resource type="VisualShaderNodeVectorCompose" id=37]
+output_port_for_preview = 0
+
+[sub_resource type="VisualShaderNodeVectorOp" id=38]
+output_port_for_preview = 0
+operator = 2
+
+[sub_resource type="VisualShaderNodeVectorDerivativeFunc" id=39]
+output_port_for_preview = 0
+function = 2
+
+[sub_resource type="VisualShaderNodeIf" id=40]
+output_port_for_preview = 0
+default_input_values = [ 0, 1.0, 1, 0.01, 2, 1e-05, 3, Vector3( 0, 0, 0 ), 4, Vector3( 0, 0, 0 ), 5, Vector3( 0, 0, 0 ) ]
+
+[sub_resource type="VisualShaderNodeScalarOp" id=41]
+output_port_for_preview = 0
+
+[sub_resource type="VisualShaderNodeVectorDerivativeFunc" id=49]
+output_port_for_preview = 0
+function = 1
+
+[sub_resource type="VisualShaderNodeScalarOp" id=50]
+default_input_values = [ 0, 0.0, 1, 0.4 ]
+operator = 2
+
+[sub_resource type="VisualShaderNodeScalarFunc" id=42]
+output_port_for_preview = 0
 function = 0
 
-[sub_resource type="VisualShaderNodeInput" id=20]
+[sub_resource type="VisualShaderNodeInput" id=43]
+output_port_for_preview = 0
 input_name = "time"
 
-[sub_resource type="VisualShaderNodeScalarOp" id=21]
+[sub_resource type="VisualShaderNodeScalarOp" id=44]
+output_port_for_preview = 0
 default_input_values = [ 0, 0.5, 1, 0.0 ]
 
-[sub_resource type="CameraTexture" id=22]
+[sub_resource type="CameraTexture" id=45]
 
-[sub_resource type="VisualShaderNodeTexture" id=23]
+[sub_resource type="VisualShaderNodeTexture" id=46]
 output_port_for_preview = 0
 source = 1
-texture = SubResource( 22 )
+texture = SubResource( 45 )
 
-[sub_resource type="VisualShader" id=24]
+[sub_resource type="VisualShader" id=47]
 code = "shader_type canvas_item;
+uniform sampler2D tex_frg_19;
+uniform sampler2D tex_frg_21;
+uniform sampler2D tex_frg_25;
 
 
 
@@ -133,11 +266,41 @@ void fragment() {
 // Input:15
 	vec3 n_out15p0 = vec3(SCREEN_UV, 0.0);
 
+// Texture:19
+	vec4 tex_frg_19_read = texture(tex_frg_19, UV.xy);
+	vec3 n_out19p0 = tex_frg_19_read.rgb;
+	float n_out19p1 = tex_frg_19_read.a;
+
+// VectorCompose:18
+	float n_in18p1 = 0.00000;
+	float n_in18p2 = 0.00000;
+	vec3 n_out18p0 = vec3(dot(n_out19p0, vec3(0.333333, 0.333333, 0.333333)), n_in18p1, n_in18p2);
+
+// Texture:21
+	vec4 tex_frg_21_read = texture(tex_frg_21, UV.xy);
+	vec3 n_out21p0 = tex_frg_21_read.rgb;
+	float n_out21p1 = tex_frg_21_read.a;
+
+// VectorCompose:22
+	float n_in22p2 = 0.00000;
+	vec3 n_out22p0 = vec3(dot(n_out21p0, vec3(0.333333, 0.333333, 0.333333)), dot(n_out21p0, vec3(0.333333, 0.333333, 0.333333)), n_in22p2);
+
+// VectorOp:23
+	vec3 n_out23p0 = n_out18p0 + n_out22p0;
+
+// ScalarOp:47
+	float n_in47p1 = 0.40000;
+	float n_out47p0 = dot(n_out23p0, vec3(0.333333, 0.333333, 0.333333)) * n_in47p1;
+
 // Input:6
 	float n_out6p0 = TIME;
 
+// ScalarOp:24
+	float n_in24p1 = 0.50000;
+	float n_out24p0 = n_out6p0 * n_in24p1;
+
 // ScalarFunc:5
-	float n_out5p0 = sin(n_out6p0);
+	float n_out5p0 = sin(n_out24p0);
 
 // ScalarOp:4
 	float n_in4p0 = 0.50000;
@@ -147,16 +310,75 @@ void fragment() {
 	float n_in7p0 = 0.50000;
 	float n_out7p0 = n_in7p0 + n_out4p0;
 
-// ScalarOp:17
-	float n_in17p0 = 0.10000;
-	float n_out17p0 = n_in17p0 * n_out7p0;
+// Input:33
+	vec3 n_out33p0 = vec3(UV, 0.0);
 
-// VectorCompose:18
-	float n_in18p1 = 0.00000;
-	vec3 n_out18p0 = vec3(n_out17p0, n_in18p1, n_out17p0);
+// VectorOp:34
+	vec3 n_out34p0 = vec3(n_out7p0) * n_out33p0;
+
+// DotProduct:27
+	vec3 n_in27p1 = vec3(12.98980, 78.23300, 0.00000);
+	float n_out27p0 = dot(n_out34p0, n_in27p1);
+
+// ScalarFunc:30
+	float n_out30p0 = sin(n_out27p0);
+
+// ScalarOp:31
+	float n_in31p1 = 43758.50000;
+	float n_out31p0 = n_out30p0 * n_in31p1;
+
+// ScalarFunc:32
+	float n_out32p0 = fract(n_out31p0);
+
+// VectorDerivativeFunc:43
+	vec3 n_out43p0 = dFdy(vec3(n_out32p0));
+
+// VectorDerivativeFunc:46
+	vec3 n_out46p0 = dFdx(n_out43p0);
+
+// VectorCompose:41
+	float n_in41p2 = 0.00000;
+	vec3 n_out41p0 = vec3(n_out5p0, dot(n_out46p0, vec3(0.333333, 0.333333, 0.333333)), n_in41p2);
+
+// ScalarOp:39
+	float n_in39p1 = 0.30000;
+	float n_out39p0 = dot(n_out41p0, vec3(0.333333, 0.333333, 0.333333)) * n_in39p1;
+
+// VectorOp:20
+	vec3 n_out20p0 = vec3(n_out47p0) * vec3(n_out39p0);
+
+// If:44
+	float n_in44p1 = 0.01000;
+	float n_in44p2 = 0.00001;
+	vec3 n_in44p3 = vec3(0.00000, 0.00000, 0.00000);
+	vec3 n_in44p5 = vec3(0.00000, 0.00000, 0.00000);
+	vec3 n_out44p0;
+	if(abs(n_out39p0 - n_in44p1) < n_in44p2)
+	{
+		n_out44p0 = n_in44p3;
+	}
+	else if(n_out39p0 < n_in44p1)
+	{
+		n_out44p0 = n_in44p5;
+	}
+	else
+	{
+		n_out44p0 = n_out46p0;
+	}
+
+// Texture:25
+	vec4 tex_frg_25_read = texture(tex_frg_25, UV.xy);
+	vec3 n_out25p0 = tex_frg_25_read.rgb;
+	float n_out25p1 = tex_frg_25_read.a;
+
+// ScalarOp:45
+	float n_out45p0 = dot(n_out44p0, vec3(0.333333, 0.333333, 0.333333)) + dot(n_out25p0, vec3(0.333333, 0.333333, 0.333333));
+
+// VectorOp:42
+	vec3 n_out42p0 = n_out20p0 * vec3(n_out45p0);
 
 // VectorOp:16
-	vec3 n_out16p0 = n_out15p0 + n_out18p0;
+	vec3 n_out16p0 = n_out15p0 + n_out42p0;
 
 // Texture:8
 	vec3 n_out8p0;
@@ -167,8 +389,12 @@ void fragment() {
 		n_out8p1 = _tex_read.a;
 	}
 
+// VectorOp:26
+	vec3 n_in26p1 = vec3(0.00000, 0.00000, 0.00000);
+	vec3 n_out26p0 = n_out8p0 + n_in26p1;
+
 // Output:0
-	COLOR.rgb = n_out8p0;
+	COLOR.rgb = n_out26p0;
 
 }
 
@@ -177,34 +403,76 @@ void light() {
 
 }
 "
-graph_offset = Vector2( -93.56, -179.887 )
+graph_offset = Vector2( -233.17, 216.196 )
 mode = 1
 flags/light_only = false
-nodes/fragment/0/position = Vector2( 860, 160 )
-nodes/fragment/2/node = SubResource( 17 )
-nodes/fragment/2/position = Vector2( -20, 200 )
-nodes/fragment/4/node = SubResource( 18 )
-nodes/fragment/4/position = Vector2( 260, 360 )
-nodes/fragment/5/node = SubResource( 19 )
-nodes/fragment/5/position = Vector2( 80, 420 )
-nodes/fragment/6/node = SubResource( 20 )
-nodes/fragment/6/position = Vector2( -120, 400 )
-nodes/fragment/7/node = SubResource( 21 )
-nodes/fragment/7/position = Vector2( 460, 360 )
-nodes/fragment/8/node = SubResource( 23 )
-nodes/fragment/8/position = Vector2( 580, -80 )
-nodes/fragment/15/node = SubResource( 13 )
-nodes/fragment/15/position = Vector2( 0, -40 )
-nodes/fragment/16/node = SubResource( 14 )
-nodes/fragment/16/position = Vector2( 300, -60 )
-nodes/fragment/17/node = SubResource( 15 )
-nodes/fragment/17/position = Vector2( 660, 320 )
-nodes/fragment/18/node = SubResource( 16 )
-nodes/fragment/18/position = Vector2( 460, 180 )
-nodes/fragment/connections = PoolIntArray( 5, 0, 4, 1, 6, 0, 5, 0, 4, 0, 7, 1, 8, 0, 0, 0, 15, 0, 16, 0, 16, 0, 8, 0, 7, 0, 17, 1, 17, 0, 18, 0, 18, 0, 16, 1, 17, 0, 18, 2 )
+nodes/fragment/0/position = Vector2( 1058, 20 )
+nodes/fragment/4/node = SubResource( 36 )
+nodes/fragment/4/position = Vector2( -440, 640 )
+nodes/fragment/5/node = SubResource( 42 )
+nodes/fragment/5/position = Vector2( -680, 420 )
+nodes/fragment/6/node = SubResource( 43 )
+nodes/fragment/6/position = Vector2( -960, 680 )
+nodes/fragment/7/node = SubResource( 44 )
+nodes/fragment/7/position = Vector2( -229, 682 )
+nodes/fragment/8/node = SubResource( 46 )
+nodes/fragment/8/position = Vector2( 620, -40 )
+nodes/fragment/15/node = SubResource( 17 )
+nodes/fragment/15/position = Vector2( 136, -50 )
+nodes/fragment/16/node = SubResource( 18 )
+nodes/fragment/16/position = Vector2( 400, -20 )
+nodes/fragment/18/node = SubResource( 19 )
+nodes/fragment/18/position = Vector2( -400, -160 )
+nodes/fragment/19/node = SubResource( 20 )
+nodes/fragment/19/position = Vector2( -740, -180 )
+nodes/fragment/20/node = SubResource( 21 )
+nodes/fragment/20/position = Vector2( 140, 120 )
+nodes/fragment/21/node = SubResource( 22 )
+nodes/fragment/21/position = Vector2( -760, 160 )
+nodes/fragment/22/node = SubResource( 23 )
+nodes/fragment/22/position = Vector2( -460, 140 )
+nodes/fragment/23/node = SubResource( 24 )
+nodes/fragment/23/position = Vector2( -240, 60 )
+nodes/fragment/24/node = SubResource( 25 )
+nodes/fragment/24/position = Vector2( -860, 420 )
+nodes/fragment/25/node = SubResource( 26 )
+nodes/fragment/25/position = Vector2( 573.8, 159.4 )
+nodes/fragment/26/node = SubResource( 27 )
+nodes/fragment/26/position = Vector2( 838, 148 )
+nodes/fragment/27/node = SubResource( 28 )
+nodes/fragment/27/position = Vector2( 311.168, 799.88 )
+nodes/fragment/29/node = SubResource( 29 )
+nodes/fragment/29/position = Vector2( 91.168, 909.88 )
+nodes/fragment/30/node = SubResource( 30 )
+nodes/fragment/30/position = Vector2( 517.168, 806.88 )
+nodes/fragment/31/node = SubResource( 31 )
+nodes/fragment/31/position = Vector2( 781.328, 704.416 )
+nodes/fragment/32/node = SubResource( 32 )
+nodes/fragment/32/position = Vector2( -440, 460 )
+nodes/fragment/33/node = SubResource( 33 )
+nodes/fragment/33/position = Vector2( -105.832, 914.88 )
+nodes/fragment/34/node = SubResource( 34 )
+nodes/fragment/34/position = Vector2( 100.168, 769.88 )
+nodes/fragment/39/node = SubResource( 35 )
+nodes/fragment/39/position = Vector2( -20, 320 )
+nodes/fragment/41/node = SubResource( 37 )
+nodes/fragment/41/position = Vector2( -240, 320 )
+nodes/fragment/42/node = SubResource( 38 )
+nodes/fragment/42/position = Vector2( 320, 180 )
+nodes/fragment/43/node = SubResource( 39 )
+nodes/fragment/43/position = Vector2( -300, 580 )
+nodes/fragment/44/node = SubResource( 40 )
+nodes/fragment/44/position = Vector2( 208.881, 363.871 )
+nodes/fragment/45/node = SubResource( 41 )
+nodes/fragment/45/position = Vector2( 440, 500 )
+nodes/fragment/46/node = SubResource( 49 )
+nodes/fragment/46/position = Vector2( -60, 560 )
+nodes/fragment/47/node = SubResource( 50 )
+nodes/fragment/47/position = Vector2( -30.9865, 110 )
+nodes/fragment/connections = PoolIntArray( 5, 0, 4, 1, 4, 0, 7, 1, 15, 0, 16, 0, 16, 0, 8, 0, 6, 0, 24, 0, 24, 0, 5, 0, 18, 0, 23, 0, 8, 0, 26, 0, 26, 0, 0, 0, 27, 0, 30, 0, 30, 0, 31, 0, 31, 0, 32, 0, 34, 0, 27, 0, 7, 0, 34, 0, 33, 0, 29, 0, 33, 0, 29, 1, 33, 0, 29, 2, 33, 0, 34, 1, 22, 0, 23, 1, 42, 0, 16, 1, 32, 0, 43, 0, 41, 0, 39, 0, 39, 0, 44, 0, 43, 0, 46, 0, 46, 0, 41, 1, 45, 0, 42, 1, 5, 0, 41, 0, 19, 0, 18, 0, 21, 0, 22, 1, 21, 0, 22, 0, 23, 0, 47, 0, 47, 0, 20, 0, 39, 0, 20, 1, 46, 0, 44, 4, 25, 0, 45, 1, 20, 0, 42, 0, 44, 0, 45, 0 )
 
-[sub_resource type="ShaderMaterial" id=25]
-shader = SubResource( 24 )
+[sub_resource type="ShaderMaterial" id=48]
+shader = SubResource( 47 )
 
 [node name="Escena_01_intro" type="Spatial"]
 
@@ -224,6 +492,7 @@ camNode = NodePath("Follow_00_intro/Camara")
 camNumero = 1
 
 [node name="Follow_00_intro" type="PathFollow" parent="Rieles/Riel_00_intro"]
+rotation_mode = 0
 loop = false
 
 [node name="Camara" parent="Rieles/Riel_00_intro/Follow_00_intro" instance=ExtResource( 3 )]
@@ -240,7 +509,7 @@ camNumero = 2
 
 [node name="Riel_01_intro" type="PathFollow" parent="Rieles/Riel_01_intro"]
 transform = Transform( -0.988157, -0.0641728, 0.139313, -3.72525e-09, 0.908272, 0.418375, -0.153383, 0.413428, -0.897516, -0.738559, 1.62839, 1.609 )
-rotation_mode = 4
+rotation_mode = 0
 loop = false
 
 [node name="Camara" parent="Rieles/Riel_01_intro/Riel_01_intro" instance=ExtResource( 3 )]
@@ -347,6 +616,8 @@ camNode = NodePath("../Riel_04_intro/Follow_04_intro/Camara")
 [node name="Follow_05_intro" type="PathFollow" parent="Rieles/Riel_05_intro"]
 transform = Transform( 1, 1.08629e-05, -0.000633086, -1.08702e-05, 1, -1.16004e-05, 0.000633086, 1.16073e-05, 1, -0.297731, 1.34427, 2.0061 )
 offset = 0.00316294
+rotation_mode = 0
+loop = false
 
 [node name="Camara" parent="Rieles/Riel_05_intro/Follow_05_intro" instance=ExtResource( 3 )]
 cosa_mirar_node = NodePath("../../Mira_05_intro")
@@ -367,6 +638,7 @@ camNumero = 7
 [node name="Follow_06_intro" type="PathFollow" parent="Rieles/Riel_06_intro"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.196656, 1.62241, 0.636877 )
 offset = 0.00868346
+rotation_mode = 0
 loop = false
 
 [node name="Camara" parent="Rieles/Riel_06_intro/Follow_06_intro" instance=ExtResource( 3 )]
@@ -389,6 +661,7 @@ camNumero = 8
 [node name="Follow_07_intro" type="PathFollow" parent="Rieles/Riel_07_intro"]
 transform = Transform( 0.999994, 0.00300552, 0.00167595, -0.00296633, 0.999733, -0.0229137, -0.00174437, 0.0229085, 0.999736, -0.163457, 1.7276, -0.700057 )
 offset = 0.00174232
+rotation_mode = 0
 loop = false
 
 [node name="Camara" parent="Rieles/Riel_07_intro/Follow_07_intro" instance=ExtResource( 3 )]
@@ -411,6 +684,8 @@ camNumero = 9
 [node name="Follow_08_intro" type="PathFollow" parent="Rieles/Riel_08_intro"]
 transform = Transform( 0.999996, 0.00246492, -0.00125339, -0.00246856, 0.999993, -0.00290467, 0.00124622, 0.00290775, 0.999995, -0.00579246, 1.68683, 0.438471 )
 offset = 0.000539539
+rotation_mode = 0
+loop = false
 
 [node name="Camara" parent="Rieles/Riel_08_intro/Follow_08_intro" instance=ExtResource( 3 )]
 
@@ -428,6 +703,8 @@ camNode = NodePath("Follow_09_intro/Camara")
 camNumero = 10
 
 [node name="Follow_09_intro" type="PathFollow" parent="Rieles/Riel_09_intro"]
+rotation_mode = 0
+loop = false
 
 [node name="Camara" parent="Rieles/Riel_09_intro/Follow_09_intro" instance=ExtResource( 3 )]
 
@@ -449,6 +726,7 @@ camNode = NodePath("Follow_10_intro/Camara")
 [node name="Follow_10_intro" type="PathFollow" parent="Rieles/Riel_10_intro"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00653076, 1.63151, 0.312763 )
 offset = 0.0169348
+rotation_mode = 0
 loop = false
 
 [node name="Camara" parent="Rieles/Riel_10_intro/Follow_10_intro" instance=ExtResource( 3 )]
@@ -464,11 +742,307 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.031918, 0, 0 )
 
 [node name="Guerrillera" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+volume_db = -80.0
 autoplay = true
 
-[node name="ColorRect" type="TextureRect" parent="."]
+[node name="Pasillos" type="Spatial" parent="."]
+
+[node name="Pasillos_derecha" type="Spatial" parent="Pasillos"]
+
+[node name="1_Pasillo_VidrioBien" parent="Pasillos/Pasillos_derecha" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, 1.08907 )
+
+[node name="1_Pasillo_VidrioRoto" parent="Pasillos/Pasillos_derecha" instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, 1.04736 )
+
+[node name="2_Pasillo_VidrioBien" parent="Pasillos/Pasillos_derecha" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, 9.08488 )
+
+[node name="1_Pasillo_VidrioRoto2" parent="Pasillos/Pasillos_derecha" instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.00099, 0, 7.04312 )
+
+[node name="1_Pasillo_VidrioBien2" parent="Pasillos/Pasillos_derecha" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, 11.0096 )
+
+[node name="1_Pasillo_VidrioRoto3" parent="Pasillos/Pasillos_derecha" instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, 10.9679 )
+
+[node name="2_Pasillo_VidrioBien2" parent="Pasillos/Pasillos_derecha" instance=ExtResource( 10 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, 19.0054 )
+
+[node name="1_Pasillo_VidrioRoto4" parent="Pasillos/Pasillos_derecha" instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.00099, 0, 16.9636 )
+
+[node name="Pasillos_izquierda" type="Spatial" parent="Pasillos"]
+
+[node name="1_Pasillo_VidrioBien2" parent="Pasillos/Pasillos_izquierda" instance=ExtResource( 8 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 3.84716, 0, 9.04317 )
+
+[node name="1_Pasillo_VidrioRoto3" parent="Pasillos/Pasillos_izquierda" instance=ExtResource( 9 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 3.84716, 0, 9.08488 )
+
+[node name="2_Pasillo_VidrioRoto" parent="Pasillos/Pasillos_izquierda" instance=ExtResource( 11 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.84826, 0, 9.18003 )
+
+[node name="1_Pasillo_VidrioRoto4" parent="Pasillos/Pasillos_izquierda" instance=ExtResource( 9 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 3.84815, 0, 3.08913 )
+
+[node name="1_Pasillo_VidrioBien3" parent="Pasillos/Pasillos_izquierda" instance=ExtResource( 8 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 3.84716, 0, 19.0302 )
+
+[node name="1_Pasillo_VidrioRoto5" parent="Pasillos/Pasillos_izquierda" instance=ExtResource( 9 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 3.84716, 0, 19.0719 )
+
+[node name="2_Pasillo_VidrioRoto2" parent="Pasillos/Pasillos_izquierda" instance=ExtResource( 11 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.84826, 0, 19.167 )
+
+[node name="1_Pasillo_VidrioRoto6" parent="Pasillos/Pasillos_izquierda" instance=ExtResource( 9 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 3.84815, 0, 13.0761 )
+
+[node name="Techo" type="MeshInstance" parent="Pasillos"]
+transform = Transform( 4.19363, 0, 0, 0, 0.1, 0, 0, 0, 11.5531, 0, 3.3284, 8.58832 )
+mesh = SubResource( 13 )
+material/0 = SubResource( 16 )
+
+[node name="Techo2" type="MeshInstance" parent="Pasillos"]
+transform = Transform( 4.19363, 0, 0, 0, 0.1, 0, 0, 0, 11.5531, 0, -0.0854475, 8.58832 )
+mesh = SubResource( 13 )
+material/0 = null
+
+[node name="Pared" type="MeshInstance" parent="Pasillos"]
+transform = Transform( -1.83309e-07, 0.1, 0, -1.99141, -2.0757e-09, 0, 0, 0, 11.5531, 3.93485, 1.94909, 8.58832 )
+mesh = SubResource( 13 )
+material/0 = null
+
+[node name="Pared2" type="MeshInstance" parent="Pasillos"]
+transform = Transform( -1.83309e-07, 0.1, 0, -1.99141, -2.0757e-09, 0, 0, 0, 11.5531, -4.04387, 1.94909, 8.58832 )
+mesh = SubResource( 13 )
+material/0 = null
+
+[node name="Pared3" type="MeshInstance" parent="Pasillos"]
+transform = Transform( 2.8795e-15, -1.57084e-09, -4.15181, -1.99141, -2.0757e-09, 0, -1.83309e-07, 0.1, -5.05003e-07, -0.0438724, 1.94909, -2.88142 )
+mesh = SubResource( 13 )
+material/0 = null
+
+[node name="Pared4" type="MeshInstance" parent="Pasillos"]
+transform = Transform( 2.8795e-15, -1.57084e-09, -4.15181, -1.99141, -2.0757e-09, 0, -1.83309e-07, 0.1, -5.05003e-07, -0.0438724, 1.94909, 20.1186 )
+mesh = SubResource( 13 )
+material/0 = null
+
+[node name="Luces" type="Spatial" parent="."]
+
+[node name="Luces_rojas" type="Spatial" parent="Luces"]
+
+[node name="Luz_pasillo" type="OmniLight" parent="Luces/Luces_rojas"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52722, 2.6386, 1.18273 )
 visible = false
-material = SubResource( 25 )
+light_color = Color( 1, 0.164706, 0.243137, 1 )
+light_energy = 4.62
+shadow_enabled = true
+omni_range = 3.9
+omni_attenuation = 0.574349
+
+[node name="Luz_pasillo2" type="OmniLight" parent="Luces/Luces_rojas"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52722, 2.6386, 3.21958 )
+light_color = Color( 1, 0.164706, 0.243137, 1 )
+light_energy = 4.62
+shadow_enabled = true
+omni_range = 3.9
+omni_attenuation = 0.574349
+
+[node name="Luz_pasillo3" type="OmniLight" parent="Luces/Luces_rojas"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52722, 2.6386, 7.04125 )
+light_color = Color( 1, 0.164706, 0.243137, 1 )
+light_energy = 4.62
+shadow_enabled = true
+omni_range = 3.9
+omni_attenuation = 0.574349
+
+[node name="Luz_pasillo4" type="OmniLight" parent="Luces/Luces_rojas"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52722, 2.6386, 9.21487 )
+visible = false
+light_color = Color( 1, 0.164706, 0.243137, 1 )
+light_energy = 4.62
+shadow_enabled = true
+omni_range = 3.9
+omni_attenuation = 0.574349
+
+[node name="Luz_pasillo5" type="OmniLight" parent="Luces/Luces_rojas"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52722, 2.6386, 11.1067 )
+light_color = Color( 1, 0.164706, 0.243137, 1 )
+light_energy = 4.62
+shadow_enabled = true
+omni_range = 3.9
+omni_attenuation = 0.574349
+
+[node name="Luz_pasillo6" type="OmniLight" parent="Luces/Luces_rojas"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52722, 2.6386, 13.1677 )
+visible = false
+light_color = Color( 1, 0.164706, 0.243137, 1 )
+light_energy = 4.62
+shadow_enabled = true
+omni_range = 3.9
+omni_attenuation = 0.574349
+
+[node name="Luz_pasillo7" type="OmniLight" parent="Luces/Luces_rojas"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52722, 2.6386, 15.2268 )
+light_color = Color( 1, 0.164706, 0.243137, 1 )
+light_energy = 4.62
+shadow_enabled = true
+omni_range = 3.9
+omni_attenuation = 0.574349
+
+[node name="Luz_pasillo8" type="OmniLight" parent="Luces/Luces_rojas"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54172, 2.6386, 1.18273 )
+light_color = Color( 1, 0.164706, 0.243137, 1 )
+light_energy = 4.62
+shadow_enabled = true
+omni_range = 3.9
+omni_attenuation = 0.574349
+
+[node name="Luz_pasillo9" type="OmniLight" parent="Luces/Luces_rojas"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54172, 2.6386, 3.21958 )
+visible = false
+light_color = Color( 1, 0.164706, 0.243137, 1 )
+light_energy = 4.62
+shadow_enabled = true
+omni_range = 3.9
+omni_attenuation = 0.574349
+
+[node name="Luz_pasillo10" type="OmniLight" parent="Luces/Luces_rojas"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54172, 2.6386, 7.04125 )
+light_color = Color( 1, 0.164706, 0.243137, 1 )
+light_energy = 4.62
+shadow_enabled = true
+omni_range = 3.9
+omni_attenuation = 0.574349
+
+[node name="Luz_pasillo11" type="OmniLight" parent="Luces/Luces_rojas"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54172, 2.6386, 9.21487 )
+light_color = Color( 1, 0.164706, 0.243137, 1 )
+light_energy = 4.62
+shadow_enabled = true
+omni_range = 3.9
+omni_attenuation = 0.574349
+
+[node name="Luz_pasillo12" type="OmniLight" parent="Luces/Luces_rojas"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54172, 2.6386, 11.1067 )
+visible = false
+light_color = Color( 1, 0.164706, 0.243137, 1 )
+light_energy = 4.62
+shadow_enabled = true
+omni_range = 3.9
+omni_attenuation = 0.574349
+
+[node name="Luz_pasillo13" type="OmniLight" parent="Luces/Luces_rojas"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54172, 2.6386, 13.1677 )
+light_color = Color( 1, 0.164706, 0.243137, 1 )
+light_energy = 4.62
+shadow_enabled = true
+omni_range = 3.9
+omni_attenuation = 0.574349
+
+[node name="Luz_pasillo14" type="OmniLight" parent="Luces/Luces_rojas"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54172, 2.6386, 15.2268 )
+light_color = Color( 1, 0.164706, 0.243137, 1 )
+light_energy = 4.62
+shadow_enabled = true
+omni_range = 3.9
+omni_attenuation = 0.574349
+
+[node name="Luz_pasillo15" type="OmniLight" parent="Luces"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00950652, 2.80025, 2.63443 )
+visible = false
+light_color = Color( 0.952941, 1, 0.996078, 1 )
+light_energy = 1.59
+shadow_enabled = true
+omni_range = 3.6
+omni_attenuation = 1.6245
+
+[node name="Luz_pasillo16" type="OmniLight" parent="Luces"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00950652, 2.80025, 5.71858 )
+visible = false
+light_color = Color( 0.952941, 1, 0.996078, 1 )
+light_energy = 1.59
+shadow_enabled = true
+omni_range = 3.6
+omni_attenuation = 1.6245
+
+[node name="Luz_pasillo17" type="OmniLight" parent="Luces"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00950652, 2.80025, 9.38755 )
+visible = false
+light_color = Color( 0.952941, 1, 0.996078, 1 )
+light_energy = 1.59
+shadow_enabled = true
+omni_range = 3.6
+omni_attenuation = 1.6245
+
+[node name="SpotLight2" type="SpotLight" parent="Luces"]
+transform = Transform( 0.616394, 0.204227, -0.760493, -0.00235042, 0.966255, 0.257578, 0.787434, -0.156982, 0.596074, -1.64258, 2.29561, 1.24691 )
+light_color = Color( 1, 0, 0.141176, 1 )
+light_energy = 0.87
+light_indirect_energy = 1.1
+light_specular = 0.14
+spot_range = 5.4
+spot_angle = 48.8
+spot_angle_attenuation = 0.241484
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="SpotLight5" type="SpotLight" parent="Luces"]
+transform = Transform( 0.536918, 0.308244, -0.785305, -0.428808, 0.90136, 0.0606193, 0.726528, 0.304197, 0.616134, -1.64258, 1.12761, 1.24691 )
+light_energy = 0.0
+light_indirect_energy = 1.1
+light_specular = 0.14
+spot_range = 3.52792
+spot_angle = 48.8
+spot_angle_attenuation = 0.241484
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="SpotLight6" type="SpotLight" parent="Luces"]
+transform = Transform( 0.888571, 0.408714, 0.208313, -0.428808, 0.90136, 0.0606193, -0.162989, -0.143191, 0.976182, 0.891898, 1.12761, 1.24691 )
+light_energy = 1.17
+light_indirect_energy = 1.1
+light_specular = 0.14
+spot_range = 2.73596
+spot_angle = 43.7376
+spot_angle_attenuation = 0.241484
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="SpotLight3" type="SpotLight" parent="Luces"]
+transform = Transform( 0.542654, -0.215122, 0.811942, -0.00235042, 0.966255, 0.257578, -0.839953, -0.141684, 0.523836, 1.68478, 1.69863, 0.817346 )
+light_color = Color( 1, 0, 0.141176, 1 )
+light_energy = 5.54
+light_indirect_energy = 0.48
+light_specular = 0.22
+shadow_enabled = true
+shadow_contact = 0.1
+spot_range = 4.9
+spot_attenuation = 1.10957
+spot_angle = 48.8
+spot_angle_attenuation = 0.659754
+script = ExtResource( 16 )
+tiltilar_time = 1.924
+energia = 5.54
+
+[node name="SpotLight4" type="SpotLight" parent="Luces"]
+transform = Transform( -0.983812, -0.0483899, 0.172548, -0.00235042, 0.966255, 0.257578, -0.179189, 0.253003, -0.950726, 0.124902, 1.57381, -1.69637 )
+light_color = Color( 1, 0, 0.141176, 1 )
+light_energy = 1.17
+light_indirect_energy = 1.1
+light_specular = 0.14
+spot_range = 5.4
+spot_attenuation = 0.840897
+spot_angle = 48.8
+spot_angle_attenuation = 0.287175
+
+[node name="ColorRect" type="TextureRect" parent="."]
+material = SubResource( 48 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -482,6 +1056,9 @@ flip_v = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 15 )
 [connection signal="tween_completed" from="Rieles/Riel_00_intro/Follow_00_intro/Tween_00_intro" to="Rieles" method="_on_Tween_00_intro_tween_completed"]
 [connection signal="tween_completed" from="Rieles/Riel_01_intro/Riel_01_intro/Tween_01_intro" to="Rieles" method="_on_Tween_01_intro_tween_completed"]
 [connection signal="tween_completed" from="Rieles/Riel_02_intro/Follow_02_intro/Tween_02_intro" to="Rieles" method="_on_Tween_02_intro_tween_completed"]

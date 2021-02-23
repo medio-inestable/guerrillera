@@ -7,7 +7,7 @@ extends Spatial
 var time = 0
 var period = 0.05
 var magnitude = 1.5
-var magnitude_recoil = 30
+var magnitude_recoil = 10
 var r_magitude_x
 var r_magitude_y
 var shoot = true
@@ -40,8 +40,8 @@ func _input(event):
 		if event.button_index == BUTTON_LEFT and event.is_pressed() and $Camera.current and shoot:
 			yield(get_tree().create_timer(0.03),"timeout")
 			shoot = false
-			r_magitude_y = rand_range(10,35)
-			r_magitude_x = rand_range(-25, 25)
+			r_magitude_y = rand_range(2,8)
+			r_magitude_x = rand_range(-5, 5)
 			$flash.visible = true
 			_shake_camera()
 			_recoil_cam(r_magitude_x, r_magitude_y)
