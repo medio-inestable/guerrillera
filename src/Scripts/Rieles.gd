@@ -8,6 +8,8 @@ export(Array, float) var tiempo_tweens = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	#OS.set_window_maximized(true)
 	_activa_camera(camera_paths[0], camera_paths)
 	#_asigna_camera(follow_paths[0], ".", cam)
 	get_node(riel_paths[0])._mueve_camara(tiempo_tweens[0], Tween.TRANS_LINEAR, Tween.EASE_OUT_IN)
