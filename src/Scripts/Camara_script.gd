@@ -56,6 +56,7 @@ func _input(event):
 func _apaga_cam() -> void:
 	$Camera.current = false
 	$Camera.visible = false
+	#$Area.queue_free()
 	#print('d')
 	
 
