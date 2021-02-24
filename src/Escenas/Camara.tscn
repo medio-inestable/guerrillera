@@ -77,7 +77,6 @@ environment = ExtResource( 6 )
 fov = 34.0
 
 [node name="motion_blur" parent="Camera" instance=ExtResource( 4 )]
-visible = false
 
 [node name="Area" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.158683, 0, 0, 0, 1, 0, -0.462464, 0 )

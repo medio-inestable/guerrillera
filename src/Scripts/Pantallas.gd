@@ -5,6 +5,8 @@ var rota = -0.001
 
 func _ready():
 	pantallas = get_children()	
+	yield(get_tree().create_timer(5), "timeout")
+	rota = -0.002
 	pass
 
 func _process(delta):
