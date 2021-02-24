@@ -11,7 +11,9 @@ transform = Transform( -1, 0, -4.37114e-07, 0, 1, 0, 4.37114e-07, 0, -1, 0, 0, 0
 script = ExtResource( 2 )
 
 [node name="TV_01" parent="." instance=ExtResource( 1 )]
+
 transform = Transform( -1, 0, -4.37115e-07, 0, 1, 0, 4.37115e-07, 0, -1, 0, -1, 0 )
+
 
 [node name="Area" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.257198, -0.0372286 )
