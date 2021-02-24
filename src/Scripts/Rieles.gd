@@ -4,6 +4,7 @@ export(Array, NodePath) var riel_paths = []
 export(Array, NodePath) var follow_paths = []
 export(Array, NodePath) var camera_paths = []
 export(Array, float) var tiempo_tweens = []
+export(NodePath) onready var main_muxxxe = get_node(main_muxxxe) as Spatial
 #onready var cam = get_node("Camara")
 
 # Called when the node enters the scene tree for the first time.
@@ -44,6 +45,7 @@ func _on_Tween_00_intro_tween_completed(object, key):
 	
 
 func _on_Tween_01_intro_tween_completed(object, key):
+	get_node("Riel_02_intro/Riel_Mira_02_intro")._mueve_mira()
 	_activa_camera(camera_paths[2], camera_paths)	
 	get_node(riel_paths[2])._mueve_camara(tiempo_tweens[2], Tween.TRANS_LINEAR, Tween.EASE_OUT)
 
@@ -86,6 +88,8 @@ func _on_Tween_08_intro_tween_completed(object, key):
 
 
 func _on_Tween_09_intro_tween_completed(object, key):
+	main_muxxxe.visible = false
+	get_node("Riel_10_intro/Riel_Mira_10_intro")._mueve_mira()
 	_activa_camera(camera_paths[10], camera_paths)	
 	get_node(riel_paths[10])._mueve_camara(tiempo_tweens[10], Tween.TRANS_LINEAR, Tween.EASE_OUT)
 	

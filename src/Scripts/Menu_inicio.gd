@@ -18,4 +18,4 @@ func _ready():
 
 
 func _on_boton_inicio_pressed():
-	get_tree().change_scene("res://Escenas/Escena_01_intro.tscn")
+	get_tree().change_scene("res://Escenas/Escena_01_pantallas.tscn")
