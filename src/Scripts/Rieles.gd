@@ -93,11 +93,17 @@ func _on_Tween_09_intro_tween_completed(object, key):
 	_activa_camera(camera_paths[10], camera_paths)	
 	get_node(riel_paths[10])._mueve_camara(tiempo_tweens[10], Tween.TRANS_LINEAR, Tween.EASE_OUT)
 	
-	
+
+func _on_Tween_10_intro_tween_completed(object, key):
+	get_node("Riel_11_intro/Riel_Mira_11_intro")._mueve_mira()
+	_activa_camera(camera_paths[11], camera_paths)	
+	get_node(riel_paths[11])._mueve_camara(tiempo_tweens[11], Tween.TRANS_LINEAR, Tween.EASE_OUT)
 
 func _on_tween_01_01_tween_completed(object, key):
 	_activa_camera(camera_paths[1], camera_paths)	
 	get_node(riel_paths[1])._mueve_camara(tiempo_tweens[1], Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+
+
 
 
 
