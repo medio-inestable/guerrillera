@@ -18,7 +18,7 @@ func _ready():
 
 
 func _on_Timer_timeout():
-	get_tree().change_scene("res://Escenas/Menu_inicio.tscn")
+	get_tree().change_scene("res://Escenas/Escena_00_menu.tscn")
 	pass
 
 
