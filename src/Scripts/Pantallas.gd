@@ -1,12 +1,15 @@
 extends Spatial
 
 var pantallas
-var rota = -0.001
+export(float) var rota_ini
+export(float) var rota_fin
+var rota
 
 func _ready():
+	rota = rota_ini
 	pantallas = get_children()	
 	yield(get_tree().create_timer(5), "timeout")
-	rota = -0.002
+	rota = rota_fin
 	pass
 
 func _process(delta):
