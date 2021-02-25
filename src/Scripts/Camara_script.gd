@@ -17,12 +17,14 @@ var muzzlepng = load("res://Assets/UI/crosshair_invisible.png")
 
 export(NodePath) var cosa_mirar_node
 onready var cosa_mirar = get_node(cosa_mirar_node)
+export(int) var fov_cam
 
 var mirando: bool = false
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():	
+	$Camera.fov = fov_cam
 	if cosa_mirar != null:
 		mirando = true
 	
