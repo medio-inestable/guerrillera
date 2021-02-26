@@ -10,5 +10,5 @@ func _ready():
 
 
 func _mueve_mira() -> void:	
-	tween_node.interpolate_property(follow_node, "unit_offset", 0.1, 0.9, tiempo_tween, Tween.TRANS_LINEAR, Tween.EASE_OUT_IN)
+	tween_node.interpolate_property(follow_node, "unit_offset", 0.01, 0.99, tiempo_tween, Tween.TRANS_LINEAR, Tween.EASE_OUT_IN)
 	tween_node.start()
