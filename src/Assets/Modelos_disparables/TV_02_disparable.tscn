@@ -4,6 +4,8 @@
 [ext_resource path="res://Scripts/Scripts_disparables/TV_02_disparable.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Modelos_escenas/TV_02_Rota.tscn" type="PackedScene" id=3]
 
+
+
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 1.16728, 0.935756, 0.365184 )
 
