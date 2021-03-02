@@ -1,4 +1,4 @@
-extends SpotLight
+extends Spatial
 
 export(float) var tiltilar_time
 export(float) var energia
@@ -9,8 +9,10 @@ func _ready():
 
 
 func _tiltilar():
-	light_energy = energia
-	yield(get_tree().create_timer(tiltilar_time), "timeout")
-	light_energy = 0	
+	var tiltilar_rand = rand_range(tiltilar_time, tiltilar_time+0.3)
+	self.visible = false
+	yield(get_tree().create_timer(tiltilar_rand), "timeout")
+	self.visible = true
+	yield(get_tree().create_timer(tiltilar_rand), "timeout")
 	_tiltilar()
 	

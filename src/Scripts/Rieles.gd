@@ -104,28 +104,21 @@ func _on_Tween_11_intro_tween_completed(object, key):
 	_activa_camera(camera_paths[12], camera_paths)	
 	get_node(riel_paths[12])._mueve_camara(tiempo_tweens[12], Tween.TRANS_LINEAR, Tween.EASE_OUT)
 
+
+func _on_Tween_12_intro_tween_completed(object, key):
+	_activa_camera(camera_paths[13], camera_paths)	
+	get_node(riel_paths[13])._mueve_camara(tiempo_tweens[13], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	
+	
+func _on_Tween_13_intro_tween_completed(object, key):
+	get_node("Riel_14_tunel/Riel_Mira_14_tunel")._mueve_mira()
+	_activa_camera(camera_paths[14], camera_paths)	
+	get_node(riel_paths[14])._mueve_camara(tiempo_tweens[14], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+
+	
 func _on_tween_01_01_tween_completed(object, key):
 	_activa_camera(camera_paths[1], camera_paths)	
 	get_node(riel_paths[1])._mueve_camara(tiempo_tweens[1], Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
