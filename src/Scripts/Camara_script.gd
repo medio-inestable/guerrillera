@@ -12,7 +12,7 @@ var r_magitude_x
 var r_magitude_y
 var shoot = true
 
-var cross = load("res://Assets/UI/crosshair_cursor.png")
+var cross = load("res://Assets/UI/target/chain_lock_cursor.png")
 var muzzlepng = load("res://Assets/UI/crosshair_invisible.png")
 
 export(NodePath) var cosa_mirar_node
@@ -69,14 +69,14 @@ func _prende_cam() -> void:
 
 func _muzzle(_r_magnitude_x: float, _r_magnitude_y: float):
 	$gunshot.play()
-	Input.set_custom_mouse_cursor(muzzlepng, Input.CURSOR_ARROW, Vector2(25,25))
+	Input.set_custom_mouse_cursor(muzzlepng, Input.CURSOR_ARROW, Vector2(50,50))
 	$AnimatedSprite.set_position(Vector2(get_viewport().get_mouse_position().x+(_r_magnitude_x*0.6),get_viewport().get_mouse_position().y-(_r_magnitude_y*0.9)))
 	$AnimatedSprite.play('muzzle')	
 	$gunshell.play('gun_shell')	
 	yield(get_tree().create_timer(0.1),"timeout")
 	$AnimatedSprite.set_frame(0)
 	$gunshell.set_frame(0)
-	Input.set_custom_mouse_cursor(cross, Input.CURSOR_ARROW, Vector2(25,25))
+	Input.set_custom_mouse_cursor(cross, Input.CURSOR_ARROW, Vector2(50,50))
 
 
 func _shake_camera():
