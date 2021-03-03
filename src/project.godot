@@ -29,7 +29,8 @@ window/size/resizable=false
 window/size/borderless=true
 window/size/fullscreen=true
 window/tablet_driver=""
-window/stretch/aspect="keep"
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [rendering]
 
