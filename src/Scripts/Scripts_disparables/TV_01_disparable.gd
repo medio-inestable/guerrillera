@@ -3,6 +3,7 @@ extends Spatial
 var cross = load("res://Assets/UI/target/chain_lock_cursor.png")
 var cross_hover = load("res://Assets/UI/target/chain_lock_cursor_hover.png")
 
+
 func _ready():
 	pass
 
@@ -12,6 +13,7 @@ func _on_Area_input_event(camera, event, click_position, click_normal, shape_idx
 	if event is InputEventMouseButton:
 		#print(self)
 		if event.button_index == BUTTON_LEFT and event.pressed == true:
+			GameEvents.emit_signal("objeto_disparado")
 			$TV_01.visible = false
 			$TV_01_Rota.rotation.x = rand_range(-0.25,0.25)*PI
 			#$TV_01_Rota.rotation.y = 180

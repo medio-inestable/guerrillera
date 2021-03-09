@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=2]
+[gd_scene load_steps=87 format=2]
 
 [ext_resource path="res://Assets/Modelos/Escena_tamaños_inicio.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Rieles.gd" type="Script" id=2]
@@ -30,6 +30,10 @@
 [ext_resource path="res://Assets/Modelos_escenas/Animaciones/Anti_Muxxxe/agonising.tscn" type="PackedScene" id=28]
 [ext_resource path="res://Escenas/GI_Probe_01.tres" type="GIProbeData" id=29]
 [ext_resource path="res://Escenas/UI_main.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Assets/Modelos_escenas/1_Pasillo_VidrioRoto.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Assets/Modelos_escenas/Lampara02.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Assets/Modelos_escenas/Pasillo_Puerta.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Assets/Modelos_disparables/muxxxe_disparable.tscn" type="PackedScene" id=34]
 
 [sub_resource type="Curve3D" id=1]
 _data = {
@@ -145,120 +149,126 @@ _data = {
 "tilts": PoolRealArray( 0, 0 )
 }
 
-[sub_resource type="CubeMesh" id=20]
+[sub_resource type="Curve3D" id=20]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -0.319808, -15.1202, 17.4093, 0, 0, 0, 0, 0, 0, -0.344489, -15.2537, 17.5189, 0, 0, 0, 0, 0, 0, -0.294165, -15.1189, 17.4592, 0, 0, 0, 0, 0, 0, -0.23646, -15.2744, 17.5306, 0, 0, 0, 0, 0, 0, -0.224501, -15.1562, 17.5714, 0, 0, 0, 0, 0, 0, -0.161666, -15.2788, 17.4943 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0 )
+}
 
-[sub_resource type="VisualShaderNodeInput" id=21]
+[sub_resource type="CubeMesh" id=21]
+
+[sub_resource type="VisualShaderNodeInput" id=22]
 output_port_for_preview = 0
 input_name = "screen_uv"
 
-[sub_resource type="VisualShaderNodeVectorOp" id=22]
+[sub_resource type="VisualShaderNodeVectorOp" id=23]
 output_port_for_preview = 0
 default_input_values = [ 0, Vector3( 0, 0, 0 ), 1, Vector3( 0.01, 0, 0 ) ]
 
-[sub_resource type="VisualShaderNodeVectorCompose" id=23]
+[sub_resource type="VisualShaderNodeVectorCompose" id=24]
 output_port_for_preview = 0
 
-[sub_resource type="VisualShaderNodeTexture" id=24]
+[sub_resource type="VisualShaderNodeTexture" id=25]
 output_port_for_preview = 0
 texture = ExtResource( 14 )
 
-[sub_resource type="VisualShaderNodeVectorOp" id=25]
+[sub_resource type="VisualShaderNodeVectorOp" id=26]
 output_port_for_preview = 0
 default_input_values = [ 0, Vector3( 0, 0, 0 ), 1, Vector3( 2, 0.1, 0.1 ) ]
 operator = 2
 
-[sub_resource type="VisualShaderNodeTexture" id=26]
+[sub_resource type="VisualShaderNodeTexture" id=27]
 texture = ExtResource( 13 )
 
-[sub_resource type="VisualShaderNodeVectorCompose" id=27]
+[sub_resource type="VisualShaderNodeVectorCompose" id=28]
 output_port_for_preview = 0
 
-[sub_resource type="VisualShaderNodeVectorOp" id=28]
+[sub_resource type="VisualShaderNodeVectorOp" id=29]
 output_port_for_preview = 0
 
-[sub_resource type="VisualShaderNodeScalarOp" id=29]
+[sub_resource type="VisualShaderNodeScalarOp" id=30]
 default_input_values = [ 0, 0.0, 1, 0.5 ]
 operator = 2
 
-[sub_resource type="VisualShaderNodeTexture" id=30]
+[sub_resource type="VisualShaderNodeTexture" id=31]
 output_port_for_preview = 0
 texture = ExtResource( 12 )
 
-[sub_resource type="VisualShaderNodeDotProduct" id=31]
+[sub_resource type="VisualShaderNodeDotProduct" id=32]
 output_port_for_preview = 0
 default_input_values = [ 0, Vector3( 0, 0, 0 ), 1, Vector3( 12.9898, 78.233, 0 ) ]
 
-[sub_resource type="VisualShaderNodeVectorCompose" id=32]
+[sub_resource type="VisualShaderNodeVectorCompose" id=33]
 default_input_values = [ 0, 5.0, 1, 400.0, 2, 0.0 ]
 
-[sub_resource type="VisualShaderNodeScalarFunc" id=33]
+[sub_resource type="VisualShaderNodeScalarFunc" id=34]
 output_port_for_preview = 0
 function = 0
 
-[sub_resource type="VisualShaderNodeScalarOp" id=34]
+[sub_resource type="VisualShaderNodeScalarOp" id=35]
 output_port_for_preview = 0
 default_input_values = [ 0, 0.0, 1, 43758.5 ]
 operator = 2
 
-[sub_resource type="VisualShaderNodeScalarFunc" id=35]
+[sub_resource type="VisualShaderNodeScalarFunc" id=36]
 output_port_for_preview = 0
 function = 17
 
-[sub_resource type="VisualShaderNodeInput" id=36]
+[sub_resource type="VisualShaderNodeInput" id=37]
 output_port_for_preview = 0
 input_name = "uv"
 
-[sub_resource type="VisualShaderNodeVectorOp" id=37]
+[sub_resource type="VisualShaderNodeVectorOp" id=38]
 
-[sub_resource type="VisualShaderNodeScalarOp" id=38]
+[sub_resource type="VisualShaderNodeScalarOp" id=39]
 output_port_for_preview = 0
 default_input_values = [ 0, 0.0, 1, 0.3 ]
 operator = 2
 
-[sub_resource type="VisualShaderNodeScalarOp" id=39]
+[sub_resource type="VisualShaderNodeScalarOp" id=40]
 output_port_for_preview = 0
 default_input_values = [ 0, 0.5, 1, 0.0 ]
 operator = 2
 
-[sub_resource type="VisualShaderNodeVectorCompose" id=40]
+[sub_resource type="VisualShaderNodeVectorCompose" id=41]
 output_port_for_preview = 0
 
-[sub_resource type="VisualShaderNodeVectorDerivativeFunc" id=41]
+[sub_resource type="VisualShaderNodeVectorDerivativeFunc" id=42]
 output_port_for_preview = 0
 function = 2
 
-[sub_resource type="VisualShaderNodeScalarOp" id=42]
+[sub_resource type="VisualShaderNodeScalarOp" id=43]
 output_port_for_preview = 0
 operator = 2
 
-[sub_resource type="VisualShaderNodeVectorDerivativeFunc" id=43]
+[sub_resource type="VisualShaderNodeVectorDerivativeFunc" id=44]
 output_port_for_preview = 0
 function = 1
 
-[sub_resource type="VisualShaderNodeScalarOp" id=44]
+[sub_resource type="VisualShaderNodeScalarOp" id=45]
 default_input_values = [ 0, 0.0, 1, 0.4 ]
 operator = 2
 
-[sub_resource type="VisualShaderNodeScalarFunc" id=45]
+[sub_resource type="VisualShaderNodeScalarFunc" id=46]
 output_port_for_preview = 0
 function = 0
 
-[sub_resource type="VisualShaderNodeInput" id=46]
+[sub_resource type="VisualShaderNodeInput" id=47]
 output_port_for_preview = 0
 input_name = "time"
 
-[sub_resource type="VisualShaderNodeScalarOp" id=47]
+[sub_resource type="VisualShaderNodeScalarOp" id=48]
 output_port_for_preview = 0
 default_input_values = [ 0, 0.5, 1, 0.0 ]
 
-[sub_resource type="CameraTexture" id=48]
+[sub_resource type="CameraTexture" id=49]
 
-[sub_resource type="VisualShaderNodeTexture" id=49]
+[sub_resource type="VisualShaderNodeTexture" id=50]
 output_port_for_preview = 0
 source = 1
-texture = SubResource( 48 )
+texture = SubResource( 49 )
 
-[sub_resource type="VisualShader" id=50]
+[sub_resource type="VisualShader" id=51]
 code = "shader_type canvas_item;
 uniform sampler2D tex_frg_19;
 uniform sampler2D tex_frg_21;
@@ -380,75 +390,75 @@ graph_offset = Vector2( 54, -123 )
 mode = 1
 flags/light_only = false
 nodes/fragment/0/position = Vector2( 960, -20 )
-nodes/fragment/4/node = SubResource( 39 )
+nodes/fragment/4/node = SubResource( 40 )
 nodes/fragment/4/position = Vector2( -440, 640 )
-nodes/fragment/5/node = SubResource( 45 )
+nodes/fragment/5/node = SubResource( 46 )
 nodes/fragment/5/position = Vector2( -680, 420 )
-nodes/fragment/6/node = SubResource( 46 )
+nodes/fragment/6/node = SubResource( 47 )
 nodes/fragment/6/position = Vector2( -960, 680 )
-nodes/fragment/7/node = SubResource( 47 )
+nodes/fragment/7/node = SubResource( 48 )
 nodes/fragment/7/position = Vector2( -229, 682 )
-nodes/fragment/8/node = SubResource( 49 )
+nodes/fragment/8/node = SubResource( 50 )
 nodes/fragment/8/position = Vector2( 680, -60 )
-nodes/fragment/15/node = SubResource( 21 )
+nodes/fragment/15/node = SubResource( 22 )
 nodes/fragment/15/position = Vector2( 140, -60 )
-nodes/fragment/16/node = SubResource( 22 )
+nodes/fragment/16/node = SubResource( 23 )
 nodes/fragment/16/position = Vector2( 440, -40 )
-nodes/fragment/18/node = SubResource( 23 )
+nodes/fragment/18/node = SubResource( 24 )
 nodes/fragment/18/position = Vector2( -400, -160 )
-nodes/fragment/19/node = SubResource( 24 )
+nodes/fragment/19/node = SubResource( 25 )
 nodes/fragment/19/position = Vector2( -740, -180 )
-nodes/fragment/20/node = SubResource( 25 )
+nodes/fragment/20/node = SubResource( 26 )
 nodes/fragment/20/position = Vector2( 220, 80 )
-nodes/fragment/21/node = SubResource( 26 )
+nodes/fragment/21/node = SubResource( 27 )
 nodes/fragment/21/position = Vector2( -760, 160 )
-nodes/fragment/22/node = SubResource( 27 )
+nodes/fragment/22/node = SubResource( 28 )
 nodes/fragment/22/position = Vector2( -460, 140 )
-nodes/fragment/23/node = SubResource( 28 )
+nodes/fragment/23/node = SubResource( 29 )
 nodes/fragment/23/position = Vector2( -240, 60 )
-nodes/fragment/24/node = SubResource( 29 )
+nodes/fragment/24/node = SubResource( 30 )
 nodes/fragment/24/position = Vector2( -860, 420 )
-nodes/fragment/25/node = SubResource( 30 )
+nodes/fragment/25/node = SubResource( 31 )
 nodes/fragment/25/position = Vector2( 500, 200 )
-nodes/fragment/27/node = SubResource( 31 )
+nodes/fragment/27/node = SubResource( 32 )
 nodes/fragment/27/position = Vector2( 311.168, 799.88 )
-nodes/fragment/29/node = SubResource( 32 )
+nodes/fragment/29/node = SubResource( 33 )
 nodes/fragment/29/position = Vector2( 91.168, 909.88 )
-nodes/fragment/30/node = SubResource( 33 )
+nodes/fragment/30/node = SubResource( 34 )
 nodes/fragment/30/position = Vector2( 517.168, 806.88 )
-nodes/fragment/31/node = SubResource( 34 )
+nodes/fragment/31/node = SubResource( 35 )
 nodes/fragment/31/position = Vector2( 781.328, 704.416 )
-nodes/fragment/32/node = SubResource( 35 )
+nodes/fragment/32/node = SubResource( 36 )
 nodes/fragment/32/position = Vector2( -440, 460 )
-nodes/fragment/33/node = SubResource( 36 )
+nodes/fragment/33/node = SubResource( 37 )
 nodes/fragment/33/position = Vector2( -105.832, 914.88 )
-nodes/fragment/34/node = SubResource( 37 )
+nodes/fragment/34/node = SubResource( 38 )
 nodes/fragment/34/position = Vector2( 100.168, 769.88 )
-nodes/fragment/39/node = SubResource( 38 )
+nodes/fragment/39/node = SubResource( 39 )
 nodes/fragment/39/position = Vector2( 0, 200 )
-nodes/fragment/41/node = SubResource( 40 )
+nodes/fragment/41/node = SubResource( 41 )
 nodes/fragment/41/position = Vector2( -240, 320 )
-nodes/fragment/43/node = SubResource( 41 )
+nodes/fragment/43/node = SubResource( 42 )
 nodes/fragment/43/position = Vector2( -200, 540 )
-nodes/fragment/45/node = SubResource( 42 )
+nodes/fragment/45/node = SubResource( 43 )
 nodes/fragment/45/position = Vector2( 480, 280 )
-nodes/fragment/46/node = SubResource( 43 )
+nodes/fragment/46/node = SubResource( 44 )
 nodes/fragment/46/position = Vector2( 60, 540 )
-nodes/fragment/47/node = SubResource( 44 )
+nodes/fragment/47/node = SubResource( 45 )
 nodes/fragment/47/position = Vector2( -30.9865, 110 )
 nodes/fragment/connections = PoolIntArray( 5, 0, 4, 1, 4, 0, 7, 1, 15, 0, 16, 0, 6, 0, 24, 0, 24, 0, 5, 0, 18, 0, 23, 0, 27, 0, 30, 0, 30, 0, 31, 0, 31, 0, 32, 0, 7, 0, 34, 0, 33, 0, 29, 0, 33, 0, 29, 1, 33, 0, 29, 2, 33, 0, 34, 1, 22, 0, 23, 1, 32, 0, 43, 0, 41, 0, 39, 0, 43, 0, 46, 0, 46, 0, 41, 1, 5, 0, 41, 0, 19, 0, 18, 0, 21, 0, 22, 1, 21, 0, 22, 0, 23, 0, 47, 0, 47, 0, 20, 0, 39, 0, 20, 1, 25, 0, 45, 1, 46, 0, 45, 0, 34, 0, 27, 0, 16, 0, 8, 0, 8, 0, 0, 0, 20, 0, 16, 1, 18, 0, 47, 1 )
 
-[sub_resource type="ShaderMaterial" id=51]
-shader = SubResource( 50 )
+[sub_resource type="ShaderMaterial" id=52]
+shader = SubResource( 51 )
 
 [node name="Escena_01_intro" type="Spatial"]
 
 [node name="Rieles" type="Spatial" parent="."]
 script = ExtResource( 2 )
-riel_paths = [ NodePath("Riel_00_intro"), NodePath("Riel_01_intro"), NodePath("Riel_02_intro"), NodePath("Riel_03_intro"), NodePath("Riel_04_intro"), NodePath("Riel_05_intro"), NodePath("Riel_06_intro"), NodePath("Riel_07_intro"), NodePath("Riel_08_intro"), NodePath("Riel_09_intro"), NodePath("Riel_10_intro"), NodePath("Riel_11_intro"), NodePath("Riel_12_intro"), NodePath("Riel_13_intro"), NodePath("Riel_14_tunel") ]
-follow_paths = [ NodePath("Riel_00_intro/Follow_00_intro"), NodePath("Riel_01_intro/Riel_01_intro"), NodePath("Riel_02_intro/Follow_02_intro"), NodePath("Riel_03_intro/Follow_03_intro"), NodePath("Riel_04_intro/Follow_04_intro"), NodePath("Riel_05_intro/Follow_05_intro"), NodePath("Riel_06_intro/Follow_06_intro"), NodePath("Riel_07_intro/Follow_07_intro"), NodePath("Riel_08_intro/Follow_08_intro"), NodePath("Riel_09_intro/Follow_09_intro"), NodePath("Riel_10_intro/Follow_10_intro"), NodePath("Riel_11_intro/Follow_11_intro"), NodePath("Riel_12_intro/Follow_12_intro"), NodePath("Riel_13_intro/Follow_13_intro"), NodePath("Riel_14_tunel/Follow_14_tunel") ]
-camera_paths = [ NodePath("Riel_00_intro/Follow_00_intro/Camara"), NodePath("Riel_01_intro/Riel_01_intro/Camara"), NodePath("Riel_02_intro/Follow_02_intro/Camara"), NodePath("Riel_03_intro/Follow_03_intro/Camara"), NodePath("Riel_04_intro/Follow_04_intro/Camara"), NodePath("Riel_05_intro/Follow_05_intro/Camara"), NodePath("Riel_06_intro/Follow_06_intro/Camara"), NodePath("Riel_07_intro/Follow_07_intro/Camara"), NodePath("Riel_08_intro/Follow_08_intro/Camara"), NodePath("Riel_09_intro/Follow_09_intro/Camara"), NodePath("Riel_10_intro/Follow_10_intro/Camara"), NodePath("Riel_11_intro/Follow_11_intro/Camara"), NodePath("Riel_12_intro/Follow_12_intro/Camara"), NodePath("Riel_13_intro/Follow_13_intro/Camara"), NodePath("Riel_14_tunel/Follow_14_tunel/Camara") ]
-tiempo_tweens = [ 0.01, 1.982, 2.938, 0.669, 0.618, 0.6, 0.604, 0.696, 0.743, 0.866, 16.0, 0.4, 0.3, 0.6, 4.0 ]
+riel_paths = [ NodePath("Riel_00_intro"), NodePath("Riel_01_intro"), NodePath("Riel_02_intro"), NodePath("Riel_03_intro"), NodePath("Riel_04_intro"), NodePath("Riel_05_intro"), NodePath("Riel_06_intro"), NodePath("Riel_07_intro"), NodePath("Riel_08_intro"), NodePath("Riel_09_intro"), NodePath("Riel_10_intro"), NodePath("Riel_11_intro"), NodePath("Riel_12_intro"), NodePath("Riel_13_intro"), NodePath("Riel_14_tunel"), NodePath("Riel_15_tunel") ]
+follow_paths = [ NodePath("Riel_00_intro/Follow_00_intro"), NodePath("Riel_01_intro/Riel_01_intro"), NodePath("Riel_02_intro/Follow_02_intro"), NodePath("Riel_03_intro/Follow_03_intro"), NodePath("Riel_04_intro/Follow_04_intro"), NodePath("Riel_05_intro/Follow_05_intro"), NodePath("Riel_06_intro/Follow_06_intro"), NodePath("Riel_07_intro/Follow_07_intro"), NodePath("Riel_08_intro/Follow_08_intro"), NodePath("Riel_09_intro/Follow_09_intro"), NodePath("Riel_10_intro/Follow_10_intro"), NodePath("Riel_11_intro/Follow_11_intro"), NodePath("Riel_12_intro/Follow_12_intro"), NodePath("Riel_13_intro/Follow_13_intro"), NodePath("Riel_14_tunel/Follow_14_tunel"), NodePath("Riel_15_tunel/Follow_15_tunel") ]
+camera_paths = [ NodePath("Riel_00_intro/Follow_00_intro/Camara"), NodePath("Riel_01_intro/Riel_01_intro/Camara"), NodePath("Riel_02_intro/Follow_02_intro/Camara"), NodePath("Riel_03_intro/Follow_03_intro/Camara"), NodePath("Riel_04_intro/Follow_04_intro/Camara"), NodePath("Riel_05_intro/Follow_05_intro/Camara"), NodePath("Riel_06_intro/Follow_06_intro/Camara"), NodePath("Riel_07_intro/Follow_07_intro/Camara"), NodePath("Riel_08_intro/Follow_08_intro/Camara"), NodePath("Riel_09_intro/Follow_09_intro/Camara"), NodePath("Riel_10_intro/Follow_10_intro/Camara"), NodePath("Riel_11_intro/Follow_11_intro/Camara"), NodePath("Riel_12_intro/Follow_12_intro/Camara"), NodePath("Riel_13_intro/Follow_13_intro/Camara"), NodePath("Riel_14_tunel/Follow_14_tunel/Camara"), NodePath("Riel_15_tunel/Follow_15_tunel/Camara") ]
+tiempo_tweens = [ 0.01, 1.982, 2.938, 0.669, 0.618, 0.6, 0.604, 0.696, 0.743, 0.866, 16.0, 0.4, 0.3, 0.6, 4.0, 6.0 ]
 main_muxxxe = NodePath("../idle01")
 
 [node name="Riel_00_intro" type="Path" parent="Rieles"]
@@ -850,6 +860,30 @@ loop = false
 
 [node name="Tween_Mira_14_tunel" type="Tween" parent="Rieles/Riel_14_tunel/Riel_Mira_14_tunel/Follow_Mira_14_tunel"]
 
+[node name="Riel_15_tunel" type="Path" parent="Rieles"]
+curve = SubResource( 20 )
+script = ExtResource( 4 )
+pathFnode = NodePath("Follow_15_tunel")
+tweenNode = NodePath("Follow_15_tunel/Tween_15_tunel")
+camNode = NodePath("Follow_15_tunel/Camara")
+camNumero = 16
+
+[node name="Follow_15_tunel" type="PathFollow" parent="Rieles/Riel_15_tunel"]
+transform = Transform( 0.873939, 0.486032, 0, -0.48603, 0.873941, 0, 0, 0, 0.999993, -0.319808, -15.1202, 17.4093 )
+rotation_mode = 0
+cubic_interp = false
+loop = false
+
+[node name="Camara" parent="Rieles/Riel_15_tunel/Follow_15_tunel" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+cosa_mirar_node = NodePath("../../Mira_15_tunel")
+fov_cam = 135
+
+[node name="Tween_15_tunel" type="Tween" parent="Rieles/Riel_15_tunel/Follow_15_tunel"]
+
+[node name="Mira_15_tunel" type="Spatial" parent="Rieles/Riel_15_tunel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9312, -15.2225, 17.3405 )
+
 [node name="idle01" parent="." instance=ExtResource( 22 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0876109, -0.150241 )
 
@@ -866,103 +900,115 @@ autoplay = true
 [node name="Techo" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 13.7165, 0, 0, 0, 0.1, 0, 0, 0, 6.22194, -4.09549, 4.31002, 15.2828 )
 use_in_baked_light = true
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
 material/0 = ExtResource( 21 )
 
 [node name="Techo6" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 9.77366, 0, 0, 0, 0.0813659, 3.61708, 0, -0.0581342, 5.06254, -0.795314, 6.9911, -4.79297 )
 use_in_baked_light = true
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
 material/0 = ExtResource( 21 )
 
 [node name="Techo5" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 9.77366, 0, 0, 0, 0.08845, -2.90279, 0, 0.0466541, 5.5033, -0.795314, 7.12324, 6.15349 )
 use_in_baked_light = true
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
 material/0 = ExtResource( 21 )
 
 [node name="Techo3" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 8.433, 0, 0, 0, 0.0663508, 2.47665, 0, -0.0748169, 2.1964, 0.0123322, 4.70405, -8.57894 )
 use_in_baked_light = true
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
 material/0 = ExtResource( 21 )
 
 [node name="Techo2" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 7.60888, 0, 0, 0, 0.1, 0, 0, 0, 18.004, 0.0123322, -0.117429, 7.01591 )
 use_in_baked_light = true
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
 material/0 = ExtResource( 21 )
 
 [node name="Techo4" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 6.55639, 0, 0, 0, 0.1, 0, 0, 0, 9.62968, -11.8261, -0.117429, 11.2722 )
 use_in_baked_light = true
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
 material/0 = ExtResource( 21 )
 
 [node name="Techo7" type="MeshInstance" parent="Pasillos"]
-transform = Transform( 6.90689, 0, 0, 0, 0.152122, 0, 0, 0, 6.53871, -13.786, -18.3803, 18.1131 )
+transform = Transform( 6.90689, 0, 0, 0, 0.152122, 0, 0, 0, 6.53871, -13.786, -15.3239, 18.1131 )
 use_in_baked_light = true
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
+material/0 = ExtResource( 21 )
+
+[node name="Techo8" type="MeshInstance" parent="Pasillos"]
+transform = Transform( 22.194, 0, 0, 0, 0.152122, 0, 0, 0, 6.53871, 1.11925, -16.83, 18.1131 )
+use_in_baked_light = true
+mesh = SubResource( 21 )
+material/0 = ExtResource( 21 )
+
+[node name="Techo9" type="MeshInstance" parent="Pasillos"]
+transform = Transform( 15.8483, 0, 0, 0, 0.152122, 0, 0, 0, 6.53871, 13.1227, -13.7212, 18.1131 )
+use_in_baked_light = true
+mesh = SubResource( 21 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared" type="MeshInstance" parent="Pasillos"]
 transform = Transform( -1.83309e-07, 0.1, 0, -9.09493, -9.47989e-09, 0, 0, 0, 16.6033, 7.21084, 1.94909, 7.03953 )
 use_in_baked_light = true
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared2" type="MeshInstance" parent="Pasillos"]
 transform = Transform( -1.97815e-07, 0.0987938, 0, -8.98523, -8.57412e-09, 0, 0, 0, 11.1303, -7.70722, 1.94909, 1.22508 )
 use_in_baked_light = true
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared3" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 5.9309e-15, -3.23544e-09, -8.55146, -3.53542, -3.68506e-09, 0, -1.83309e-07, 0.1, -5.05003e-07, -0.0562046, 3.53873, -9.85317 )
 use_in_baked_light = true
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared4" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 1.02889e-14, -5.61281e-09, -14.835, -2.24418, -2.33917e-09, 0, -1.83309e-07, 0.1, -5.05003e-07, -3.54269, 1.94909, 20.567 )
 use_in_baked_light = true
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared7" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 4.75587e-15, -2.59443e-09, -6.85723, -12.3001, -1.28208e-08, 0, -1.83309e-07, 0.1, -5.05003e-07, -13.661, -10.769, 23.0133 )
 use_in_baked_light = true
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared8" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 4.75587e-15, -2.59443e-09, -6.85723, -12.3001, -1.28208e-08, 0, -1.83309e-07, 0.1, -5.05003e-07, -13.661, -10.769, 11.5611 )
 use_in_baked_light = true
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared9" type="MeshInstance" parent="Pasillos"]
 transform = Transform( -1.83309e-07, 0.1, -2.8306e-07, -12.3001, -1.28208e-08, 0, 6.1044e-15, -3.33014e-09, 6.90126, -19.6035, -10.769, 17.3259 )
 use_in_baked_light = true
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared10" type="MeshInstance" parent="Pasillos"]
 transform = Transform( -1.83309e-07, 0.1, -2.8306e-07, -12.3001, -1.28208e-08, 0, 6.1044e-15, -3.33014e-09, 6.90126, -8.0418, -13.9802, 17.3259 )
 use_in_baked_light = true
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared5" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 4.30729e-15, -2.34973e-09, -6.21047, -2.24418, -2.33917e-09, 0, -1.83309e-07, 0.1, -5.05003e-07, -12.8895, 1.94909, 10.9233 )
 use_in_baked_light = true
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared6" type="MeshInstance" parent="Pasillos"]
 transform = Transform( -1.83309e-07, 0.1, -2.67128e-07, -2.24418, -2.33917e-09, 0, 4.23841e-15, -2.31218e-09, 5.44195, -17.9426, 1.94909, 14.8138 )
 use_in_baked_light = true
-mesh = SubResource( 20 )
+mesh = SubResource( 21 )
 material/0 = ExtResource( 21 )
 
 [node name="Luces" type="Spatial" parent="."]
@@ -1055,439 +1101,439 @@ spot_angle_attenuation = 0.34151
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 15 )
 
-[node name="Objetos_escena" type="Spatial" parent="."]
+[node name="Objetos_escena_02" type="Spatial" parent="."]
 
-[node name="Pantallas" type="Spatial" parent="Objetos_escena"]
+[node name="Pantallas" type="Spatial" parent="Objetos_escena_02"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.54587 )
 script = ExtResource( 18 )
 rota_ini = -0.001
 rota_fin = -0.003
 
-[node name="TV_01_disparable" parent="Objetos_escena/Pantallas" instance=ExtResource( 8 )]
+[node name="TV_01_disparable" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 8 )]
 transform = Transform( 0.498, 0, 0.28357, 0, 0.573076, 0, -0.28357, 0, 0.498, 2.15137, 1.51321, 3.87094 )
 
-[node name="TV_01_disparable2" parent="Objetos_escena/Pantallas" instance=ExtResource( 8 )]
+[node name="TV_01_disparable2" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 8 )]
 transform = Transform( -0.204185, 0, 0.535466, 0, 0.573076, 0, -0.535466, 0, -0.204185, 2.97323, 2.4424, 0.582518 )
 
-[node name="TV_01_disparable4" parent="Objetos_escena/Pantallas" instance=ExtResource( 8 )]
+[node name="TV_01_disparable4" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 8 )]
 transform = Transform( -0.0946892, 0, -0.713362, 0, 0.71962, 0, 0.713362, 0, -0.0946892, -4.20127, 1.30966, 0.241041 )
 
-[node name="TV_01_disparable5" parent="Objetos_escena/Pantallas" instance=ExtResource( 8 )]
+[node name="TV_01_disparable5" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 8 )]
 transform = Transform( -0.783201, 0, -0.316401, 0, 0.844698, 0, 0.316401, 0, -0.783201, -1.19098, 1.87226, -3.44082 )
 
-[node name="TV_02_disparable3" parent="Objetos_escena/Pantallas" instance=ExtResource( 9 )]
+[node name="TV_02_disparable3" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 9 )]
 transform = Transform( 0.282167, 0, -0.856151, 0, 0.901451, 0, 0.856151, 0, 0.282167, -3.46728, 1.76034, 2.69233 )
 
-[node name="TV_02_disparable15" parent="Objetos_escena/Pantallas" instance=ExtResource( 9 )]
+[node name="TV_02_disparable15" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 9 )]
 transform = Transform( 0.235019, 0, -0.713094, 0, 0.750824, 0, 0.713094, 0, 0.235019, -2.98042, 4.95177, 1.65638 )
 
-[node name="TV_02_disparable5" parent="Objetos_escena/Pantallas" instance=ExtResource( 9 )]
+[node name="TV_02_disparable5" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 9 )]
 transform = Transform( -0.434043, 0, -1.02473, 0, 1.11286, 0, 1.02473, 0, -0.434043, -3.98125, 1.97628, -1.46169 )
 
-[node name="TV_02_disparable18" parent="Objetos_escena/Pantallas" instance=ExtResource( 9 )]
+[node name="TV_02_disparable18" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 9 )]
 transform = Transform( -0.147125, 0, -1.10309, 0, 1.11286, 0, 1.10309, 0, -0.147125, -3.98125, 4.47288, 0.668128 )
 
-[node name="TV_03_disparable2" parent="Objetos_escena/Pantallas" instance=ExtResource( 10 )]
+[node name="TV_03_disparable2" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 10 )]
 transform = Transform( 0.0646411, 0, 0.533699, 0, 0.537599, 0, -0.533699, 0, 0.0646411, 3.41348, 1.04001, 1.7034 )
 
-[node name="TV_03_disparable22" parent="Objetos_escena/Pantallas" instance=ExtResource( 10 )]
+[node name="TV_03_disparable22" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 10 )]
 transform = Transform( 0.287099, 0, 0.376476, 0, 0.473456, 0, -0.376476, 0, 0.287099, 3.45295, 1.04001, 3.4651 )
 
-[node name="TV_03_disparable4" parent="Objetos_escena/Pantallas" instance=ExtResource( 10 )]
+[node name="TV_03_disparable4" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 10 )]
 transform = Transform( -0.478479, 0, -0.483989, 0, 0.680579, 0, 0.483989, 0, -0.478479, -3.03684, 1.4405, -2.35947 )
 
-[node name="TV_03_disparable14" parent="Objetos_escena/Pantallas" instance=ExtResource( 10 )]
+[node name="TV_03_disparable14" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 10 )]
 transform = Transform( -0.570386, 0, -0.371277, 0, 0.680579, 0, 0.371277, 0, -0.570386, -2.64533, 4.04824, -3.53214 )
 
-[node name="TV_01_disparable7" parent="Objetos_escena/Pantallas" instance=ExtResource( 8 )]
+[node name="TV_01_disparable7" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 8 )]
 transform = Transform( -0.138212, 0, 0.556159, 0, 0.573076, 0, -0.556159, 0, -0.138212, 1.51244, 4.9365, 0.582518 )
 
-[node name="TV_01_disparable9" parent="Objetos_escena/Pantallas" instance=ExtResource( 8 )]
+[node name="TV_01_disparable9" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 8 )]
 transform = Transform( -0.425022, 0, -0.580696, 0, 0.71962, 0, 0.580696, 0, -0.425022, -2.76952, 3.80377, -0.0961499 )
 
-[node name="TV_01_disparable14" parent="Objetos_escena/Pantallas" instance=ExtResource( 8 )]
+[node name="TV_01_disparable14" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 8 )]
 transform = Transform( -0.774307, 0, 0.337581, 0, 0.844698, 0, -0.337581, 0, -0.774307, 1.33833, 2.64443, -4.10108 )
 
-[node name="TV_01_disparable12" parent="Objetos_escena/Pantallas" instance=ExtResource( 8 )]
+[node name="TV_01_disparable12" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 8 )]
 transform = Transform( -0.653519, 0, 0.535187, 0, 0.844698, 0, -0.535187, 0, -0.653519, 1.54924, 5.60256, -0.829757 )
 
-[node name="TV_02_disparable16" parent="Objetos_escena/Pantallas" instance=ExtResource( 9 )]
+[node name="TV_02_disparable16" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 9 )]
 transform = Transform( 0.667037, 0, 0.0984635, 0, 0.674265, 0, -0.0984635, 0, 0.667037, -0.186826, 4.64887, 4.51134 )
 
-[node name="TV_02_disparable12" parent="Objetos_escena/Pantallas" instance=ExtResource( 9 )]
+[node name="TV_02_disparable12" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 9 )]
 transform = Transform( 0.521803, 0, 0.42703, 0, 0.674265, 0, -0.42703, 0, 0.521803, 1.32896, 4.74255, 2.78445 )
 
-[node name="TV_02_disparable9" parent="Objetos_escena/Pantallas" instance=ExtResource( 9 )]
+[node name="TV_02_disparable9" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 9 )]
 transform = Transform( -1.06029, 0, 0.337996, 0, 1.11286, 0, -0.337996, 0, -1.06029, 0.160502, 4.25444, -1.06543 )
 
-[node name="TV_02_disparable10" parent="Objetos_escena/Pantallas" instance=ExtResource( 9 )]
+[node name="TV_02_disparable10" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 9 )]
 transform = Transform( -0.660003, 0, -0.896025, 0, 1.11286, 0, 0.896025, 0, -0.660003, -2.00532, 4.47039, -0.614754 )
 
-[node name="TV_02_disparable14" parent="Objetos_escena/Pantallas" instance=ExtResource( 9 )]
+[node name="TV_02_disparable14" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 9 )]
 transform = Transform( -0.536191, 0, -0.727937, 0, 0.904096, 0, 0.727937, 0, -0.536191, -1.72685, 6.92381, -0.460955 )
 
-[node name="TV_03_disparable7" parent="Objetos_escena/Pantallas" instance=ExtResource( 10 )]
+[node name="TV_03_disparable7" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 10 )]
 transform = Transform( 0.00593909, 0, 0.537567, 0, 0.537599, 0, -0.537567, 0, 0.00593909, 2.37511, 3.53411, 1.36885 )
 
-[node name="TV_03_disparable21" parent="Objetos_escena/Pantallas" instance=ExtResource( 10 )]
+[node name="TV_03_disparable21" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 10 )]
 transform = Transform( 0.00482765, 0, 0.436967, 0, 0.436993, 0, -0.436967, 0, 0.00482765, 2.93892, 3.5002, -0.0378199 )
 
-[node name="TV_03_disparable16" parent="Objetos_escena/Pantallas" instance=ExtResource( 10 )]
+[node name="TV_03_disparable16" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 10 )]
 transform = Transform( -0.133696, 0, 0.52071, 0, 0.537599, 0, -0.52071, 0, -0.133696, 2.97588, 3.43036, -1.83911 )
 
-[node name="TV_03_disparable8" parent="Objetos_escena/Pantallas" instance=ExtResource( 10 )]
+[node name="TV_03_disparable8" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 10 )]
 transform = Transform( 0.0741411, 0, -0.532462, 0, 0.537599, 0, 0.532462, 0, 0.0741411, -3.52782, 3.30756, 1.28283 )
 
-[node name="TV_03_disparable9" parent="Objetos_escena/Pantallas" instance=ExtResource( 10 )]
+[node name="TV_03_disparable9" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 10 )]
 transform = Transform( -0.463841, 0, -0.458993, 0, 0.652551, 0, 0.458993, 0, -0.463841, -2.57509, 3.9346, -1.92065 )
 
-[node name="TV_03_disparable18" parent="Objetos_escena/Pantallas" instance=ExtResource( 10 )]
+[node name="TV_03_disparable18" parent="Objetos_escena_02/Pantallas" instance=ExtResource( 10 )]
 transform = Transform( -0.503479, 0, 0.0357897, 0, 0.504749, 0, -0.0357897, 0, -0.503479, 0.659067, 1.43572, -3.50952 )
 
-[node name="Pantallas_rota_contrario" type="Spatial" parent="Objetos_escena"]
+[node name="Pantallas_rota_contrario" type="Spatial" parent="Objetos_escena_02"]
 script = ExtResource( 18 )
 rota_ini = 0.002
 rota_fin = 0.003
 
-[node name="TV_01_disparable11" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 8 )]
+[node name="TV_01_disparable11" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 8 )]
 transform = Transform( -0.347105, 0, 0.512557, 0, 0.61903, 0, -0.512557, 0, -0.347105, 2.95006, 2.4424, -1.9412 )
 
-[node name="TV_02_disparable" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 9 )]
+[node name="TV_02_disparable" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 9 )]
 transform = Transform( 0.662111, 0, -0.127443, 0, 0.674265, 0, 0.127443, 0, 0.662111, -0.472065, 1.64901, 4.02853 )
 
-[node name="TV_02_disparable2" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 9 )]
+[node name="TV_02_disparable2" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 9 )]
 transform = Transform( 0.430516, 0, 0.613062, 0, 0.749126, 0, -0.613062, 0, 0.430516, 3.07708, 2.05132, 3.31139 )
 
-[node name="TV_02_disparable4" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 9 )]
+[node name="TV_02_disparable4" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 9 )]
 transform = Transform( -0.741218, 0, 0.392058, 0, 0.838516, 0, -0.392058, 0, -0.741218, 1.74747, 1.76034, -3.2536 )
 
-[node name="TV_03_disparable" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 10 )]
+[node name="TV_03_disparable" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 10 )]
 transform = Transform( 0.436762, 0, -0.313452, 0, 0.537599, 0, 0.313452, 0, 0.436762, -2.10237, 1.2002, 3.1561 )
 
-[node name="TV_03_disparable3" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 10 )]
+[node name="TV_03_disparable3" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 10 )]
 transform = Transform( 0.0257276, 0, -0.536983, 0, 0.537599, 0, 0.536983, 0, 0.0257276, -4.20982, 0.804412, 0.7327 )
 
-[node name="TV_01_disparable6" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 8 )]
+[node name="TV_01_disparable6" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 8 )]
 transform = Transform( 0.540212, 0, 0.191277, 0, 0.573076, 0, -0.191277, 0, 0.540212, 0.851612, 3.27563, 2.93783 )
 
-[node name="TV_01_disparable13" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 8 )]
+[node name="TV_01_disparable13" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 8 )]
 transform = Transform( 0.373384, 0, 0.434742, 0, 0.573076, 0, -0.434742, 0, 0.373384, 2.18027, 2.67922, 2.9497 )
 
-[node name="TV_01_disparable10" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 8 )]
+[node name="TV_01_disparable10" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 8 )]
 transform = Transform( -0.819581, 0, -0.204449, 0, 0.844698, 0, 0.204449, 0, -0.819581, -0.872725, 3.30545, -3.36327 )
 
-[node name="TV_02_disparable13" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 9 )]
+[node name="TV_02_disparable13" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 9 )]
 transform = Transform( 0.663898, 0, -0.11778, 0, 0.674265, 0, 0.11778, 0, 0.663898, -0.279445, 2.67862, 3.47658 )
 
-[node name="TV_02_disparable8" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 9 )]
+[node name="TV_02_disparable8" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 9 )]
 transform = Transform( 0.307812, 0, -0.847269, 0, 0.901451, 0, 0.847269, 0, 0.307812, -1.83688, 5.40853, 1.08508 )
 
-[node name="TV_03_disparable6" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 10 )]
+[node name="TV_03_disparable6" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 10 )]
 transform = Transform( 0.473286, 0, -0.254976, 0, 0.537599, 0, 0.254976, 0, 0.473286, -1.64673, 3.86531, 3.16853 )
 
-[node name="TV_03_disparable15" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 10 )]
+[node name="TV_03_disparable15" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 10 )]
 transform = Transform( 0.339255, 0, 0.417037, 0, 0.537599, 0, -0.417037, 0, 0.339255, 2.16346, 3.94695, 2.44917 )
 
-[node name="TV_03_disparable19" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 10 )]
+[node name="TV_03_disparable19" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 10 )]
 transform = Transform( -0.396626, 0, 0.362906, 0, 0.537599, 0, -0.362906, 0, -0.396626, 2.51351, 0.703974, -2.42849 )
 
-[node name="TV_03_disparable13" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 10 )]
+[node name="TV_03_disparable13" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 10 )]
 transform = Transform( -0.55788, 0, 0.338516, 0, 0.652551, 0, -0.338516, 0, -0.55788, 1.36248, 4.92722, -2.59435 )
 
-[node name="TV_03_disparable11" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 10 )]
+[node name="TV_03_disparable11" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 10 )]
 transform = Transform( -0.355251, 0, 0.358565, 0, 0.504749, 0, -0.358565, 0, -0.355251, 1.54448, 3.60687, -3.18504 )
 
-[node name="TV_01_disparable3" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 8 )]
+[node name="TV_01_disparable3" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 8 )]
 transform = Transform( 0.593128, 0, -0.407494, 0, 0.71962, 0, 0.407494, 0, 0.593128, -2.32484, 2.3635, 3.79361 )
 
-[node name="TV_03_disparable5" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 10 )]
+[node name="TV_03_disparable5" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 10 )]
 transform = Transform( -0.244491, 0, 0.441583, 0, 0.504749, 0, -0.441583, 0, -0.244491, 3.09615, 1.4405, -1.27259 )
 
-[node name="TV_01_disparable15" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 8 )]
+[node name="TV_01_disparable15" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 8 )]
 transform = Transform( 0.330655, 0, -0.639155, 0, 0.71962, 0, 0.639155, 0, 0.330655, -2.57993, 3.41153, 2.15113 )
 
-[node name="TV_03_disparable20" parent="Objetos_escena/Pantallas_rota_contrario" instance=ExtResource( 10 )]
+[node name="TV_03_disparable20" parent="Objetos_escena_02/Pantallas_rota_contrario" instance=ExtResource( 10 )]
 transform = Transform( -0.417135, 0, -0.134297, 0, 0.438221, 0, 0.134297, 0, -0.417135, -0.805358, 0.596333, -3.77633 )
 
-[node name="Pantallas_rota_rapido" type="Spatial" parent="Objetos_escena"]
+[node name="Pantallas_rota_rapido" type="Spatial" parent="Objetos_escena_02"]
 script = ExtResource( 18 )
 rota_ini = 0.002
 rota_fin = 0.004
 
-[node name="TV_01_disparable16" parent="Objetos_escena/Pantallas_rota_rapido" instance=ExtResource( 8 )]
+[node name="TV_01_disparable16" parent="Objetos_escena_02/Pantallas_rota_rapido" instance=ExtResource( 8 )]
 transform = Transform( -0.231517, 0, -0.681361, 0, 0.71962, 0, 0.681361, 0, -0.231517, -4.13873, 2.3635, -0.076649 )
 
-[node name="TV_02_disparable17" parent="Objetos_escena/Pantallas_rota_rapido" instance=ExtResource( 9 )]
+[node name="TV_02_disparable17" parent="Objetos_escena_02/Pantallas_rota_rapido" instance=ExtResource( 9 )]
 transform = Transform( 0.560631, 0, 0.374601, 0, 0.674265, 0, -0.374601, 0, 0.560631, 1.35179, 2.07363, 4.02853 )
 
-[node name="TV_03_disparable12" parent="Objetos_escena/Pantallas_rota_rapido" instance=ExtResource( 10 )]
+[node name="TV_03_disparable12" parent="Objetos_escena_02/Pantallas_rota_rapido" instance=ExtResource( 10 )]
 transform = Transform( 0.0646411, 0, 0.533699, 0, 0.537599, 0, -0.533699, 0, 0.0646411, 3.45505, 2.51735, 1.38183 )
 
-[node name="TV_01_disparable17" parent="Objetos_escena/Pantallas_rota_rapido" instance=ExtResource( 8 )]
+[node name="TV_01_disparable17" parent="Objetos_escena_02/Pantallas_rota_rapido" instance=ExtResource( 8 )]
 transform = Transform( 0.540212, 0, 0.191277, 0, 0.573076, 0, -0.191277, 0, 0.540212, 0.851612, 1.16519, 3.47561 )
 
-[node name="TV_01_disparable8" parent="Objetos_escena/Pantallas_rota_rapido" instance=ExtResource( 8 )]
+[node name="TV_01_disparable8" parent="Objetos_escena_02/Pantallas_rota_rapido" instance=ExtResource( 8 )]
 transform = Transform( 0.512802, 0, -0.504863, 0, 0.71962, 0, 0.504863, 0, 0.512802, -1.63126, 4.85761, 2.35667 )
 
-[node name="TV_02_disparable6" parent="Objetos_escena/Pantallas_rota_rapido" instance=ExtResource( 9 )]
+[node name="TV_02_disparable6" parent="Objetos_escena_02/Pantallas_rota_rapido" instance=ExtResource( 9 )]
 transform = Transform( 0.622687, 0, -0.258639, 0, 0.674265, 0, 0.258639, 0, 0.622687, -0.472065, 4.14311, 1.81435 )
 
-[node name="TV_02_disparable7" parent="Objetos_escena/Pantallas_rota_rapido" instance=ExtResource( 9 )]
+[node name="TV_02_disparable7" parent="Objetos_escena_02/Pantallas_rota_rapido" instance=ExtResource( 9 )]
 transform = Transform( 0.364251, 0, 0.824581, 0, 0.901451, 0, -0.824581, 0, 0.364251, 0.51276, 5.27472, 1.08681 )
 
-[node name="TV_02_disparable11" parent="Objetos_escena/Pantallas_rota_rapido" instance=ExtResource( 9 )]
+[node name="TV_02_disparable11" parent="Objetos_escena_02/Pantallas_rota_rapido" instance=ExtResource( 9 )]
 transform = Transform( -0.536191, 0, -0.727937, 0, 0.904096, 0, 0.727937, 0, -0.536191, -0.600224, 6.43636, -0.066267 )
 
-[node name="TV_03_disparable10" parent="Objetos_escena/Pantallas_rota_rapido" instance=ExtResource( 10 )]
+[node name="TV_03_disparable10" parent="Objetos_escena_02/Pantallas_rota_rapido" instance=ExtResource( 10 )]
 transform = Transform( -0.267618, 0, 0.427963, 0, 0.504749, 0, -0.427963, 0, -0.267618, 2.23529, 3.94215, -1.01853 )
 
-[node name="TV_03_disparable17" parent="Objetos_escena/Pantallas_rota_rapido" instance=ExtResource( 10 )]
+[node name="TV_03_disparable17" parent="Objetos_escena_02/Pantallas_rota_rapido" instance=ExtResource( 10 )]
 transform = Transform( -0.488324, 0, -0.127717, 0, 0.504749, 0, 0.127717, 0, -0.488324, -0.927413, 5.82244, -4.48486 )
 
-[node name="Pantallas_estaticas" type="Spatial" parent="Objetos_escena"]
+[node name="Pantallas_estaticas" type="Spatial" parent="Objetos_escena_02"]
 
-[node name="TV_01_disparable" parent="Objetos_escena/Pantallas_estaticas" instance=ExtResource( 8 )]
+[node name="TV_01_disparable" parent="Objetos_escena_02/Pantallas_estaticas" instance=ExtResource( 8 )]
 transform = Transform( 0.814976, 0, 0.579495, 0, 1, 0, -0.579495, 0, 0.814976, 2.98879, 2.11877, 9.55367 )
 
-[node name="TV_02_disparable" parent="Objetos_escena/Pantallas_estaticas" instance=ExtResource( 9 )]
+[node name="TV_02_disparable" parent="Objetos_escena_02/Pantallas_estaticas" instance=ExtResource( 9 )]
 transform = Transform( 0.451764, -0.282417, -0.406817, -0.0203595, 0.539597, -0.397204, 0.494818, 0.280046, 0.355077, -3.34672, 1.00348, 10.2083 )
 
-[node name="TV_03_disparable" parent="Objetos_escena/Pantallas_estaticas" instance=ExtResource( 10 )]
+[node name="TV_03_disparable" parent="Objetos_escena_02/Pantallas_estaticas" instance=ExtResource( 10 )]
 transform = Transform( 0.381667, 0.209814, 0.0877367, 0.063983, 0.0654116, -0.434761, -0.218233, 0.38612, 0.0259764, 4.33245, 3.10698, 11.09 )
 
-[node name="TV_03_disparable2" parent="Objetos_escena/Pantallas_estaticas" instance=ExtResource( 10 )]
+[node name="TV_03_disparable2" parent="Objetos_escena_02/Pantallas_estaticas" instance=ExtResource( 10 )]
 transform = Transform( 0.171966, 0.354859, 0.204676, -0.0443696, 0.236807, -0.373287, -0.407245, 0.124044, 0.127098, 3.56424, 0.30148, 5.45509 )
 
-[node name="TV_03_disparable3" parent="Objetos_escena/Pantallas_estaticas" instance=ExtResource( 10 )]
+[node name="TV_03_disparable3" parent="Objetos_escena_02/Pantallas_estaticas" instance=ExtResource( 10 )]
 transform = Transform( 0.250263, 0, 4.37575e-08, 0, 0.250263, 0, -4.37575e-08, 0, 0.250263, 1.52306, 1.99375, 9.70768 )
 
-[node name="TV_01_disparable2" parent="Objetos_escena/Pantallas_estaticas" instance=ExtResource( 8 )]
+[node name="TV_01_disparable2" parent="Objetos_escena_02/Pantallas_estaticas" instance=ExtResource( 8 )]
 transform = Transform( -0.0541688, -0.406497, -0.377728, -0.0577041, 0.381592, -0.40238, 0.551895, 0, -0.0791456, -3.30911, 0.424667, 11.2693 )
 
-[node name="TV_02_disparable2" parent="Objetos_escena/Pantallas_estaticas" instance=ExtResource( 9 )]
+[node name="TV_02_disparable2" parent="Objetos_escena_02/Pantallas_estaticas" instance=ExtResource( 9 )]
 transform = Transform( 0.771383, 0.0159893, -0.0941447, -0.0954928, 0.12916, -0.760493, -2.27555e-08, 0.766298, 0.130146, -3.33587, 0.322774, 9.54795 )
 
-[node name="Intro_Silla" parent="Objetos_escena" instance=ExtResource( 11 )]
+[node name="Intro_Silla" parent="Objetos_escena_02" instance=ExtResource( 11 )]
 transform = Transform( -0.927138, 0, -0.37472, 0, 1, 0, 0.37472, 0, -0.927138, -0.236281, 0, -1.02417 )
 
-[node name="Piso" type="Spatial" parent="Objetos_escena"]
+[node name="Piso" type="Spatial" parent="Objetos_escena_02"]
 
-[node name="Piso_seccion" type="Spatial" parent="Objetos_escena/Piso"]
+[node name="Piso_seccion" type="Spatial" parent="Objetos_escena_02/Piso"]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, -2.34344 )
 
-[node name="Floor" parent="Objetos_escena/Piso/Piso_seccion" instance=ExtResource( 17 )]
+[node name="Floor" parent="Objetos_escena_02/Piso/Piso_seccion" instance=ExtResource( 17 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.01415, -9.53674e-07, 0.00765038 )
 
-[node name="Floor2" parent="Objetos_escena/Piso/Piso_seccion" instance=ExtResource( 17 )]
+[node name="Floor2" parent="Objetos_escena_02/Piso/Piso_seccion" instance=ExtResource( 17 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.99344, 0.00496149, -0.00490761 )
 
-[node name="Piso_seccion6" type="Spatial" parent="Objetos_escena/Piso"]
+[node name="Piso_seccion6" type="Spatial" parent="Objetos_escena_02/Piso"]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, -5.34344 )
 
-[node name="Floor" parent="Objetos_escena/Piso/Piso_seccion6" instance=ExtResource( 17 )]
+[node name="Floor" parent="Objetos_escena_02/Piso/Piso_seccion6" instance=ExtResource( 17 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.01415, -9.53674e-07, 0.00765038 )
 
-[node name="Floor2" parent="Objetos_escena/Piso/Piso_seccion6" instance=ExtResource( 17 )]
+[node name="Floor2" parent="Objetos_escena_02/Piso/Piso_seccion6" instance=ExtResource( 17 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.99344, 0.00496149, -0.00490761 )
 
-[node name="Piso_seccion2" type="Spatial" parent="Objetos_escena/Piso"]
+[node name="Piso_seccion2" type="Spatial" parent="Objetos_escena_02/Piso"]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 1.65656 )
 
-[node name="Floor" parent="Objetos_escena/Piso/Piso_seccion2" instance=ExtResource( 17 )]
+[node name="Floor" parent="Objetos_escena_02/Piso/Piso_seccion2" instance=ExtResource( 17 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0 )
 
-[node name="Floor2" parent="Objetos_escena/Piso/Piso_seccion2" instance=ExtResource( 17 )]
+[node name="Floor2" parent="Objetos_escena_02/Piso/Piso_seccion2" instance=ExtResource( 17 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.99344, 0.00496149, -0.00490761 )
 
-[node name="Piso_seccion3" type="Spatial" parent="Objetos_escena/Piso"]
+[node name="Piso_seccion3" type="Spatial" parent="Objetos_escena_02/Piso"]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 5.65656 )
 
-[node name="Floor" parent="Objetos_escena/Piso/Piso_seccion3" instance=ExtResource( 17 )]
+[node name="Floor" parent="Objetos_escena_02/Piso/Piso_seccion3" instance=ExtResource( 17 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0 )
 
-[node name="Floor2" parent="Objetos_escena/Piso/Piso_seccion3" instance=ExtResource( 17 )]
+[node name="Floor2" parent="Objetos_escena_02/Piso/Piso_seccion3" instance=ExtResource( 17 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.99344, 0.00496149, -0.00490761 )
 
-[node name="Piso_seccion4" type="Spatial" parent="Objetos_escena/Piso"]
+[node name="Piso_seccion4" type="Spatial" parent="Objetos_escena_02/Piso"]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 9.65656 )
 
-[node name="Floor" parent="Objetos_escena/Piso/Piso_seccion4" instance=ExtResource( 17 )]
+[node name="Floor" parent="Objetos_escena_02/Piso/Piso_seccion4" instance=ExtResource( 17 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0 )
 
-[node name="Floor2" parent="Objetos_escena/Piso/Piso_seccion4" instance=ExtResource( 17 )]
+[node name="Floor2" parent="Objetos_escena_02/Piso/Piso_seccion4" instance=ExtResource( 17 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.99344, 0.00496149, -0.00490761 )
 
-[node name="Piso_seccion6" type="Spatial" parent="Objetos_escena/Piso/Piso_seccion4/Floor2"]
+[node name="Piso_seccion6" type="Spatial" parent="Objetos_escena_02/Piso/Piso_seccion4/Floor2"]
 transform = Transform( 1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 4.00491, -0.00496149, 0.99344 )
 
-[node name="Floor" parent="Objetos_escena/Piso/Piso_seccion4/Floor2/Piso_seccion6" instance=ExtResource( 17 )]
+[node name="Floor" parent="Objetos_escena_02/Piso/Piso_seccion4/Floor2/Piso_seccion6" instance=ExtResource( 17 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0 )
 
-[node name="Floor3" parent="Objetos_escena/Piso/Piso_seccion4/Floor2/Piso_seccion6" instance=ExtResource( 17 )]
+[node name="Floor3" parent="Objetos_escena_02/Piso/Piso_seccion4/Floor2/Piso_seccion6" instance=ExtResource( 17 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 8.17067e-08, 0, -0.541119, -2.62823, 0.101023, -0.238062 )
 
-[node name="Floor4" parent="Objetos_escena/Piso/Piso_seccion4/Floor2/Piso_seccion6" instance=ExtResource( 17 )]
+[node name="Floor4" parent="Objetos_escena_02/Piso/Piso_seccion4/Floor2/Piso_seccion6" instance=ExtResource( 17 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 8.17067e-08, 0, -0.541119, -4.62823, 0.101023, -0.238062 )
 
-[node name="Floor5" parent="Objetos_escena/Piso/Piso_seccion4/Floor2/Piso_seccion6" instance=ExtResource( 17 )]
+[node name="Floor5" parent="Objetos_escena_02/Piso/Piso_seccion4/Floor2/Piso_seccion6" instance=ExtResource( 17 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 8.17067e-08, 0, -0.541119, -6.62823, 0.101023, -0.238062 )
 
-[node name="Floor6" parent="Objetos_escena/Piso/Piso_seccion4/Floor2/Piso_seccion6" instance=ExtResource( 17 )]
+[node name="Floor6" parent="Objetos_escena_02/Piso/Piso_seccion4/Floor2/Piso_seccion6" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 2.38419e-07, 0, 1, 0, -1.29013e-07, 0, 0.541119, -6.62823, 0.101023, -1.3203 )
 
-[node name="Floor7" parent="Objetos_escena/Piso/Piso_seccion4/Floor2/Piso_seccion6" instance=ExtResource( 17 )]
+[node name="Floor7" parent="Objetos_escena_02/Piso/Piso_seccion4/Floor2/Piso_seccion6" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 2.38419e-07, 0, 1, 0, -1.29013e-07, 0, 0.541119, -4.62823, 0.101023, -1.3203 )
 
-[node name="Floor8" parent="Objetos_escena/Piso/Piso_seccion4/Floor2/Piso_seccion6" instance=ExtResource( 17 )]
+[node name="Floor8" parent="Objetos_escena_02/Piso/Piso_seccion4/Floor2/Piso_seccion6" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 2.38419e-07, 0, 1, 0, -1.29013e-07, 0, 0.541119, -2.62823, 0.101023, -1.3203 )
 
-[node name="Floor2" parent="Objetos_escena/Piso/Piso_seccion4/Floor2/Piso_seccion6" instance=ExtResource( 17 )]
+[node name="Floor2" parent="Objetos_escena_02/Piso/Piso_seccion4/Floor2/Piso_seccion6" instance=ExtResource( 17 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.99344, 0.00496149, -0.00490761 )
 
-[node name="Piso_seccion5" type="Spatial" parent="Objetos_escena/Piso"]
+[node name="Piso_seccion5" type="Spatial" parent="Objetos_escena_02/Piso"]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 13.6566 )
 
-[node name="Floor" parent="Objetos_escena/Piso/Piso_seccion5" instance=ExtResource( 17 )]
+[node name="Floor" parent="Objetos_escena_02/Piso/Piso_seccion5" instance=ExtResource( 17 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1, 0, 0 )
 
-[node name="Floor2" parent="Objetos_escena/Piso/Piso_seccion5" instance=ExtResource( 17 )]
+[node name="Floor2" parent="Objetos_escena_02/Piso/Piso_seccion5" instance=ExtResource( 17 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.99344, 0.00496149, -0.00490761 )
 
-[node name="Pasillos_vidrio" type="Spatial" parent="Objetos_escena"]
+[node name="Pasillos_vidrio" type="Spatial" parent="Objetos_escena_02"]
 
-[node name="Pasillos_izquierdo" type="Spatial" parent="Objetos_escena/Pasillos_vidrio"]
+[node name="Pasillos_izquierdo" type="Spatial" parent="Objetos_escena_02/Pasillos_vidrio"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0982175, 0, 0 )
 
-[node name="1_Pasillo_VidrioBien" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
 transform = Transform( 0.186627, 0, 0.982431, 0, 1, 0, -0.982431, 0, 0.186627, -7.4601, 4.76837e-07, -2.85609 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 visible = false
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien2" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien2" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
 transform = Transform( 0.00486941, 0, 0.999988, 0, 1, 0, -0.999988, 0, 0.00486941, -7.41932, 0, -0.422852 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien2"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien3" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien3" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
 transform = Transform( -0.0450318, 0, 0.998986, 0, 1, 0, -0.998986, 0, -0.0450318, -7.45741, 0, 1.66641 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien3"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien6" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien6" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
 transform = Transform( 0.8765, 0, 0.481402, 0, 1, 0, -0.481402, 0, 0.8765, -3.43799, 0, -8.46869 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien6"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien6"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien4" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien4" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
 transform = Transform( -0.144874, 0, 0.98945, 0, 1, 0, -0.98945, 0, -0.144874, -6.69633, 0, 3.75783 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien4"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien16" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien16" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
 transform = Transform( -0.0340286, 0.986497, -0.160201, -0.972333, 0.00438792, 0.233555, 0.231104, 0.163717, 0.959055, -13.4037, 0.812312, 11.7913 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien16"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien16"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien5" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien5" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
 transform = Transform( -0.0464266, 0, 0.998922, 0, 1, 0, -0.998922, 0, -0.0464266, -5.67987, 0, 9.65743 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien5"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien5"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien7" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien7" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
 transform = Transform( 0.0143301, 0.330564, 0.943675, 0.999885, -4.37064e-08, -0.0151837, -0.00501913, 0.943784, -0.330526, -3.51109, 1.0604, 12.1533 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien7"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien7"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 visible = false
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien9" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien9" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
 transform = Transform( 0.830751, -0.0240835, 0.556123, 0.551439, -0.100702, -0.828115, 0.0759466, 0.994625, -0.0703777, -3.25077, 4.08104, 11.8671 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien9"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien9"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 visible = false
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien8" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien8" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
 transform = Transform( -0.265438, 0, 0.964128, 0, 1, 0, -0.964128, 0, -0.265438, -5.67987, 0, 18.7717 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien8"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien8"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien12" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien12" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
 transform = Transform( 3.26792e-08, -0.747613, 0.664135, -1, -4.37114e-08, 0, 2.90303e-08, -0.664135, -0.747613, -6.80678, 1, 20.5779 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien12"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien12"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien15" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien15" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
 transform = Transform( -2.85105e-11, -0.910943, -0.412532, 1, -4.37114e-08, 9.64533e-08, -1.05896e-07, -0.412532, 0.910943, -5.76805, 3.04971, 19.0777 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien15"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien15"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien14" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien14" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
 transform = Transform( -0.982284, 1.56701e-15, 0.187398, 1.20869e-15, 1, -2.02638e-15, -0.187398, -1.76398e-15, -0.982284, -10.4092, 0.133353, 19.8575 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien14"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien14"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien13" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien13" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
 transform = Transform( 1.33806e-08, -0.945916, -0.324413, 1, 4.41279e-08, -8.74218e-08, 9.70093e-08, -0.324413, 0.945916, -6.02332, 2.99891, 12.5005 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien13"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien13"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="SpotLight" type="SpotLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien13"]
+[node name="SpotLight" type="SpotLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien13"]
 transform = Transform( 0.924793, 0.0134863, 0.380231, 0.265759, -0.738057, -0.620197, 0.272268, 0.674603, -0.686134, 0.760482, 2.35746, 2.32794 )
 light_color = Color( 1, 0.545098, 0.662745, 1 )
 light_energy = 9.78
@@ -1495,304 +1541,304 @@ light_indirect_energy = 2.83
 spot_range = 7.9015
 spot_angle = 27.2779
 
-[node name="1_Pasillo_VidrioBien10" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien10" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
 transform = Transform( -0.999336, 0, 0.0364517, 0, 1, 0, -0.0364517, 0, -0.999336, -2.50554, -1.90735e-06, 19.6755 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien10"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien10"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien11" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien11" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 20 )]
 transform = Transform( -0.880152, 0.455245, -0.134477, 0.448834, 0.890339, 0.0764489, 0.154533, 0.00692878, -0.987963, -0.336459, 0.167422, 19.6904 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien11"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/1_Pasillo_VidrioBien11"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="2_Pasillo_VidrioBien" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 19 )]
+[node name="2_Pasillo_VidrioBien" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 19 )]
 transform = Transform( -0.0468101, 0, 0.998904, 0, 1, 0, -0.998904, 0, -0.0468101, -5.69838, 0, 9.66873 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 2.41268, 0.984587 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="OmniLight2" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien"]
+[node name="OmniLight2" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13042, 2.41268, 0.984587 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="2_Pasillo_VidrioBien3" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 19 )]
+[node name="2_Pasillo_VidrioBien3" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 19 )]
 transform = Transform( 0.413883, 0, 0.91033, 0, 1, 0, -0.91033, 0, 0.413883, -7.41798, 0, -3.26014 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien3"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 2.41268, 0.984587 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="OmniLight2" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien3"]
+[node name="OmniLight2" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13042, 2.41268, 0.984587 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="2_Pasillo_VidrioBien2" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 19 )]
+[node name="2_Pasillo_VidrioBien2" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 19 )]
 transform = Transform( 0.0616059, 0, 0.9981, 0, 1, 0, -0.9981, 0, 0.0616059, -5.86746, 0.0209441, 15.608 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien2"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 2.41268, 0.984587 )
 visible = false
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="OmniLight2" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien2"]
+[node name="OmniLight2" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13042, 2.41268, 0.984587 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="2_Pasillo_VidrioBien4" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 19 )]
+[node name="2_Pasillo_VidrioBien4" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 19 )]
 transform = Transform( 0.999997, 0.00223403, -9.76526e-11, 0, -4.37114e-08, -1, -0.00223401, 0.999997, -4.37113e-08, -10.8288, 2.02094, 11.4065 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien4"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 2.41268, 0.984587 )
 visible = false
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="OmniLight2" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien4"]
+[node name="OmniLight2" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13042, 2.41268, 0.984587 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="2_Pasillo_VidrioBien5" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 19 )]
+[node name="2_Pasillo_VidrioBien5" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 19 )]
 transform = Transform( 0.991206, -0.00983509, 0.131956, -0.00193471, 0.99605, 0.0887714, -0.132308, -0.0882462, 0.987272, -16.5241, 0.114226, 19.157 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien5"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien5"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 2.41268, 0.984587 )
 visible = false
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="OmniLight2" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien5"]
+[node name="OmniLight2" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien5"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13042, 2.41268, 0.984587 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="2_Pasillo_VidrioBien6" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 19 )]
+[node name="2_Pasillo_VidrioBien6" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 19 )]
 transform = Transform( -0.0988101, 0.0896717, 0.933774, -0.00182493, 0.93892, -0.090359, -0.938068, -0.011272, -0.098182, -17.5867, 0.114226, 20.9538 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien6"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien6"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 2.41268, 0.984587 )
 light_color = Color( 1, 0, 0, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="OmniLight2" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien6"]
+[node name="OmniLight2" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien6"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13042, 2.41268, 0.984587 )
 light_color = Color( 0.921569, 0, 1, 1 )
 light_energy = 4.06
 light_indirect_energy = 4.02
 omni_attenuation = 0.707107
 
-[node name="2_Pasillo_VidrioBien7" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 19 )]
+[node name="2_Pasillo_VidrioBien7" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo" instance=ExtResource( 19 )]
 transform = Transform( 0.221559, 0.0882578, 0.912612, -0.00182493, 0.93892, -0.090359, -0.916867, 0.0194585, 0.220711, -18.0214, 0.114226, 16.6229 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien7"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien7"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 2.41268, 0.984587 )
 light_color = Color( 1, 0, 0, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="OmniLight2" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien7"]
+[node name="OmniLight2" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_izquierdo/2_Pasillo_VidrioBien7"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13042, 2.41268, 0.984587 )
 light_color = Color( 0.529412, 0.294118, 1, 1 )
 light_energy = 4.06
 light_indirect_energy = 4.02
 omni_attenuation = 0.707107
 
-[node name="Pasillos_derecho" type="Spatial" parent="Objetos_escena/Pasillos_vidrio"]
+[node name="Pasillos_derecho" type="Spatial" parent="Objetos_escena_02/Pasillos_vidrio"]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.117299, 0, 11 )
 
-[node name="1_Pasillo_VidrioBien" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
 transform = Transform( -0.0560481, 0, 0.998428, 0, 1, 0, -0.998428, 0, -0.0560481, -5.67987, 0, -2.22104 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 visible = false
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien8" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien8" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
 transform = Transform( 0.394968, 0, 0.918695, 0, 1, 0, -0.918695, 0, 0.394968, -5.40771, 0, -4.77453 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien8"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien8"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien9" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien9" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
 transform = Transform( -3.25491e-08, -0.744638, 0.667469, 1, -4.37114e-08, -4.73656e-16, 2.9176e-08, 0.667469, 0.744638, -2.47042, 1.0811, -8.34639 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien9"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien9"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 visible = false
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien10" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien10" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
 transform = Transform( 7.06049e-08, 0.935191, 0.354144, -1, 7.54979e-08, -6.27638e-15, -2.67371e-08, -0.354144, 0.935191, -5.81395, 3.05674, -7.26583 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien10"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien10"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien6" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien6" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
 transform = Transform( -0.301255, 0, 0.953544, 0, 1, 0, -0.953544, 0, -0.301255, -6.09328, 0.00696993, 16.6025 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien6"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien6"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien7" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien7" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
 transform = Transform( -0.902337, 0, 0.431031, 0, 1, 0, -0.431031, 0, -0.902337, -3.79449, 0.00697041, 19.2527 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien7"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien7"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien2" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien2" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
 transform = Transform( 0.0771888, 0, 0.997016, 0, 1, 0, -0.997016, 0, 0.0771888, -5.67987, 0, -0.143456 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien2"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien3" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien3" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
 transform = Transform( 0.0843387, 0, 0.996437, 0, 1, 0, -0.996437, 0, 0.0843387, -5.8663, 0, 1.80365 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien3"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien4" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien4" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.67987, 0, 3.75783 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien4"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="1_Pasillo_VidrioBien5" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
+[node name="1_Pasillo_VidrioBien5" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 20 )]
 transform = Transform( 0.0989203, 0, 0.995095, 0, 1, 0, -0.995095, 0, 0.0989203, -6.63506, 0, 9.67089 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien5"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho/1_Pasillo_VidrioBien5"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5442, 1 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="2_Pasillo_VidrioBien" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 19 )]
+[node name="2_Pasillo_VidrioBien" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 19 )]
 transform = Transform( 0.124952, 0, 0.992163, 0, 1, 0, -0.992163, 0, 0.124952, -6.67057, 0, 9.67662 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho/2_Pasillo_VidrioBien"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho/2_Pasillo_VidrioBien"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 2.41268, 0.984587 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="OmniLight2" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho/2_Pasillo_VidrioBien"]
+[node name="OmniLight2" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho/2_Pasillo_VidrioBien"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13042, 2.41268, 0.984587 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="2_Pasillo_VidrioBien3" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 19 )]
+[node name="2_Pasillo_VidrioBien3" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 19 )]
 transform = Transform( -0.998755, 0, 0.0498781, 0, 1, 0, -0.0498781, 0, -0.998755, 2.79027, 0, 20.0901 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho/2_Pasillo_VidrioBien3"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho/2_Pasillo_VidrioBien3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 2.41268, 0.984587 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="OmniLight2" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho/2_Pasillo_VidrioBien3"]
+[node name="OmniLight2" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho/2_Pasillo_VidrioBien3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13042, 2.41268, 0.984587 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="2_Pasillo_VidrioBien2" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 19 )]
+[node name="2_Pasillo_VidrioBien2" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho" instance=ExtResource( 19 )]
 transform = Transform( -0.0145032, 0, 0.999895, 0, 1, 0, -0.999895, 0, -0.0145032, -6.86985, 0, 15.9027 )
 
-[node name="OmniLight" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho/2_Pasillo_VidrioBien2"]
+[node name="OmniLight" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho/2_Pasillo_VidrioBien2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 2.41268, 0.984587 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="OmniLight2" type="OmniLight" parent="Objetos_escena/Pasillos_vidrio/Pasillos_derecho/2_Pasillo_VidrioBien2"]
+[node name="OmniLight2" type="OmniLight" parent="Objetos_escena_02/Pasillos_vidrio/Pasillos_derecho/2_Pasillo_VidrioBien2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13042, 2.41268, 0.984587 )
 light_color = Color( 0.294118, 0.717647, 1, 1 )
 light_energy = 2.17
 light_indirect_energy = 4.02
 
-[node name="Puerta" type="Spatial" parent="Objetos_escena"]
+[node name="Puerta" type="Spatial" parent="Objetos_escena_02"]
 transform = Transform( -5.09167e-08, 0, 1.16484, 0, 1.16484, 0, -1.16484, 0, -5.09167e-08, -14.4749, 9.53674e-07, 16.2801 )
 
-[node name="Pasillo_Puerta-Bajo" parent="Objetos_escena/Puerta" instance=ExtResource( 24 )]
+[node name="Pasillo_Puerta-Bajo" parent="Objetos_escena_02/Puerta" instance=ExtResource( 24 )]
 transform = Transform( 0.991174, -0.132568, 0, 0.131181, 0.980805, 0.14427, -0.0191255, -0.142997, 0.989538, 0, 0, 0 )
 
-[node name="Pasillo_Puerta-Arco" parent="Objetos_escena/Puerta" instance=ExtResource( 25 )]
+[node name="Pasillo_Puerta-Arco" parent="Objetos_escena_02/Puerta" instance=ExtResource( 25 )]
 
-[node name="Pasillo_Puerta-Upper" parent="Objetos_escena/Puerta" instance=ExtResource( 23 )]
+[node name="Pasillo_Puerta-Upper" parent="Objetos_escena_02/Puerta" instance=ExtResource( 23 )]
 transform = Transform( 0.997499, 0.0687516, 0.0163942, -0.0430375, 0.406833, 0.912488, 0.0560653, -0.910912, 0.408775, -0.148166, -0.378145, 2.44517 )
 
-[node name="MUXXXES" type="Spatial" parent="Objetos_escena"]
+[node name="MUXXXES" type="Spatial" parent="Objetos_escena_02"]
 
-[node name="idle02" parent="Objetos_escena/MUXXXES" instance=ExtResource( 26 )]
+[node name="idle02" parent="Objetos_escena_02/MUXXXES" instance=ExtResource( 26 )]
 transform = Transform( -0.350646, 0, 1.03131, 0, 1.08929, 0, -1.03131, 0, -0.350646, -15.2883, -2.38419e-07, 16.2102 )
 
-[node name="SpotLight" type="SpotLight" parent="Objetos_escena/MUXXXES/idle02"]
+[node name="SpotLight" type="SpotLight" parent="Objetos_escena_02/MUXXXES/idle02"]
 transform = Transform( 0.898664, -0.025198, 0.18585, -0.00867652, 0.903143, 0.164405, -0.18735, -0.162694, 0.883856, 0.696671, 1.70423, 2.21557 )
 light_color = Color( 0.992157, 0.611765, 0.611765, 1 )
 light_energy = 14.57
 spot_attenuation = 0.5
 spot_angle = 31.3
 
-[node name="idle01" parent="Objetos_escena/MUXXXES" instance=ExtResource( 22 )]
+[node name="idle01" parent="Objetos_escena_02/MUXXXES" instance=ExtResource( 22 )]
 transform = Transform( 0.35638, 0, 1.02934, 0, 1.08929, 0, -1.02934, 0, 0.35638, -16.7892, 0.23819, 15.1659 )
 
 [node name="ColorRect" type="TextureRect" parent="."]
 visible = false
 light_mask = 0
-material = SubResource( 51 )
+material = SubResource( 52 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -2404,12 +2450,13 @@ __meta__ = {
 
 [node name="Piso_6" type="Spatial" parent="Escena_03/Objetos_escena/Tunel"]
 transform = Transform( 0.897859, 0, -0.440284, 0, 1, 0, 0.440284, 0, 0.897859, 1.03014, -14.7328, 0.154447 )
+visible = false
 
 [node name="2_Pasillo_VidrioRoto" parent="Escena_03/Objetos_escena/Tunel/Piso_6" instance=ExtResource( 27 )]
 transform = Transform( 0.218893, 0, 0.975749, 0, 1, 0, -0.975749, 0, 0.218893, -2.87701, -4.76837e-07, -3.79714 )
 
 [node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Tunel/Piso_6/2_Pasillo_VidrioRoto"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1801, 1.78003, 0.885642 )
+transform = Transform( 0.999999, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 0.999999, -4.1801, 1.78003, 0.885642 )
 light_color = Color( 1, 0, 0, 1 )
 light_energy = 5.4
 light_indirect_energy = 9.57
@@ -2638,6 +2685,528 @@ transform = Transform( 0.338935, 0, 0.94081, 0, 1, 0, -0.94081, 0, 0.338935, -4.
 [node name="agonising2" parent="Escena_03/Objetos_escena/MUXXXES" instance=ExtResource( 28 )]
 transform = Transform( 0.338935, 0, 0.94081, 0, 1, 0, -0.94081, 0, 0.338935, -4.94344, 0, 2.64909 )
 
+[node name="Pasillo_rojo" type="Spatial" parent="Escena_03/Objetos_escena"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16.6683, 17.3254 )
+
+[node name="Pasillo_Puerta" parent="Escena_03/Objetos_escena/Pasillo_rojo" instance=ExtResource( 33 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.2988, 0, 0.159285 )
+
+[node name="Pasillo_Puerta2" parent="Escena_03/Objetos_escena/Pasillo_rojo" instance=ExtResource( 33 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 23.6865, 0, -0.16301 )
+
+[node name="Piso" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo"]
+
+[node name="Piso_bloque" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso"]
+
+[node name="Floor" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+
+[node name="Floor2" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque" instance=ExtResource( 17 )]
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 1 )
+
+[node name="Piso_bloque2" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+
+[node name="Floor" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque2" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+
+[node name="Floor2" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque2" instance=ExtResource( 17 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1 )
+
+[node name="Piso_bloque3" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0 )
+
+[node name="Floor" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque3" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+
+[node name="Floor2" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque3" instance=ExtResource( 17 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1 )
+
+[node name="Piso_bloque4" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0 )
+
+[node name="Floor" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque4" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+
+[node name="Floor2" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque4" instance=ExtResource( 17 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1 )
+
+[node name="Piso_bloque5" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0 )
+
+[node name="Floor" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque5" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+
+[node name="Floor2" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque5" instance=ExtResource( 17 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1 )
+
+[node name="Piso_bloque6" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0 )
+
+[node name="Floor" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque6" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+
+[node name="Floor2" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque6" instance=ExtResource( 17 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1 )
+
+[node name="Piso_bloque7" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0 )
+
+[node name="Floor" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque7" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+
+[node name="Floor2" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque7" instance=ExtResource( 17 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1 )
+
+[node name="Piso_bloque8" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0 )
+
+[node name="Floor" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque8" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+
+[node name="Floor2" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque8" instance=ExtResource( 17 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1 )
+
+[node name="Piso_bloque9" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0 )
+
+[node name="Floor" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque9" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+
+[node name="Floor2" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque9" instance=ExtResource( 17 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1 )
+
+[node name="Piso_bloque10" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0 )
+
+[node name="Floor" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque10" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+
+[node name="Floor2" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque10" instance=ExtResource( 17 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1 )
+
+[node name="Piso_bloque11" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0 )
+
+[node name="Floor" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque11" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+
+[node name="Floor2" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque11" instance=ExtResource( 17 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1 )
+
+[node name="Piso_bloque12" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 0 )
+
+[node name="Floor" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque12" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+
+[node name="Floor2" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque12" instance=ExtResource( 17 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 1 )
+
+[node name="Floor3" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque12" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1 )
+
+[node name="Floor4" parent="Escena_03/Objetos_escena/Pasillo_rojo/Piso/Piso_bloque12" instance=ExtResource( 17 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 0, 1 )
+
+[node name="Pasillo_izq" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo"]
+
+[node name="1_Pasillo_VidrioRoto" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.29105, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq/1_Pasillo_VidrioRoto"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto2" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.29882, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq/1_Pasillo_VidrioRoto2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto3" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.31589, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq/1_Pasillo_VidrioRoto3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto4" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.32367, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq/1_Pasillo_VidrioRoto4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto5" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.291, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq/1_Pasillo_VidrioRoto5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto6" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2988, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq/1_Pasillo_VidrioRoto6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto7" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3159, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq/1_Pasillo_VidrioRoto7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto8" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.3237, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq/1_Pasillo_VidrioRoto8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto9" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.291, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq/1_Pasillo_VidrioRoto9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto10" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2988, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq/1_Pasillo_VidrioRoto10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto11" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.3159, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq/1_Pasillo_VidrioRoto11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto12" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3237, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq/1_Pasillo_VidrioRoto12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Pasillo_derecho" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 22.4699, 0, 0 )
+
+[node name="1_Pasillo_VidrioRoto" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.29105, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho/1_Pasillo_VidrioRoto"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto2" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.29882, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho/1_Pasillo_VidrioRoto2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto3" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.31589, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho/1_Pasillo_VidrioRoto3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto4" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.32367, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho/1_Pasillo_VidrioRoto4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto5" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.291, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho/1_Pasillo_VidrioRoto5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto6" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2988, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho/1_Pasillo_VidrioRoto6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto7" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3159, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho/1_Pasillo_VidrioRoto7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto8" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.3237, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho/1_Pasillo_VidrioRoto8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto9" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.291, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho/1_Pasillo_VidrioRoto9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto10" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2988, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho/1_Pasillo_VidrioRoto10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto11" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.3159, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho/1_Pasillo_VidrioRoto11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="1_Pasillo_VidrioRoto12" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.3237, 0, -3.79715 )
+
+[node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_derecho/1_Pasillo_VidrioRoto12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 5.4
+light_indirect_energy = 9.57
+omni_range = 2.19296
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Techo_container" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo"]
+
+[node name="Lampara02" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.75068, 0 )
+
+[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara02"]
+script = ExtResource( 16 )
+tiltilar_time = 1.0
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara02/Spatial"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
+light_color = Color( 0.882353, 0.984314, 1, 1 )
+light_energy = 5.44
+light_indirect_energy = 12.19
+spot_range = 4.3
+spot_attenuation = 0.659754
+
+[node name="Lampara03" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.75068, 0 )
+
+[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara03"]
+script = ExtResource( 16 )
+tiltilar_time = 1.0
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara03/Spatial"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
+light_color = Color( 0.882353, 0.984314, 1, 1 )
+light_energy = 5.44
+light_indirect_energy = 12.19
+spot_range = 4.3
+spot_attenuation = 0.659754
+
+[node name="Lampara04" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2.75068, 0 )
+
+[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara04"]
+script = ExtResource( 16 )
+tiltilar_time = 1.0
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara04/Spatial"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
+light_color = Color( 0.882353, 0.984314, 1, 1 )
+light_energy = 5.44
+light_indirect_energy = 12.19
+spot_range = 4.3
+spot_attenuation = 0.659754
+
+[node name="Lampara05" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2.75068, 0 )
+
+[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara05"]
+script = ExtResource( 16 )
+tiltilar_time = 1.0
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara05/Spatial"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
+light_color = Color( 0.882353, 0.984314, 1, 1 )
+light_energy = 5.44
+light_indirect_energy = 12.19
+spot_range = 4.3
+spot_attenuation = 0.659754
+
+[node name="Lampara06" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0067, 2.75068, 0 )
+
+[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara06"]
+script = ExtResource( 16 )
+tiltilar_time = 1.0
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara06/Spatial"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
+light_color = Color( 0.882353, 0.984314, 1, 1 )
+light_energy = 5.44
+light_indirect_energy = 12.19
+spot_range = 4.3
+spot_attenuation = 0.517632
+spot_angle = 67.1
+spot_angle_attenuation = 1.93187
+
+[node name="MUXXXES" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo"]
+
 [node name="GIProbe_01" type="GIProbe" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.10546, -1.11959, 8.49588 )
 subdiv = 2
@@ -2647,6 +3216,10 @@ interior = true
 data = ExtResource( 29 )
 
 [node name="UI_main" parent="." instance=ExtResource( 30 )]
+
+[node name="muxxxe_disparable" parent="." instance=ExtResource( 34 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.692311 )
+pick_idle = 2
 [connection signal="tween_completed" from="Rieles/Riel_00_intro/Follow_00_intro/Tween_00_intro" to="Rieles" method="_on_Tween_00_intro_tween_completed"]
 [connection signal="tween_completed" from="Rieles/Riel_01_intro/Riel_01_intro/Tween_01_intro" to="Rieles" method="_on_Tween_01_intro_tween_completed"]
 [connection signal="tween_completed" from="Rieles/Riel_02_intro/Follow_02_intro/Tween_02_intro" to="Rieles" method="_on_Tween_02_intro_tween_completed"]
@@ -2661,3 +3234,4 @@ data = ExtResource( 29 )
 [connection signal="tween_completed" from="Rieles/Riel_11_intro/Follow_11_intro/Tween_11_intro" to="Rieles" method="_on_Tween_11_intro_tween_completed"]
 [connection signal="tween_completed" from="Rieles/Riel_12_intro/Follow_12_intro/Tween_12_intro" to="Rieles" method="_on_Tween_12_intro_tween_completed"]
 [connection signal="tween_completed" from="Rieles/Riel_13_intro/Follow_13_intro/Tween_13_intro" to="Rieles" method="_on_Tween_13_intro_tween_completed"]
+[connection signal="tween_completed" from="Rieles/Riel_14_tunel/Follow_14_tunel/Tween_14_tunel" to="Rieles" method="_on_Tween_14_tunel_tween_completed"]
