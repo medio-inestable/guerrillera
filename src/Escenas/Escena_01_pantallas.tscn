@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=88 format=2]
 
 [ext_resource path="res://Assets/Modelos/Escena_tamaños_inicio.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Rieles.gd" type="Script" id=2]
@@ -451,6 +451,9 @@ nodes/fragment/connections = PoolIntArray( 5, 0, 4, 1, 4, 0, 7, 1, 15, 0, 16, 0,
 [sub_resource type="ShaderMaterial" id=52]
 shader = SubResource( 51 )
 
+[sub_resource type="BoxShape" id=53]
+extents = Vector3( 12.5933, 0.0125104, 3.79245 )
+
 [node name="Escena_01_intro" type="Spatial"]
 
 [node name="Rieles" type="Spatial" parent="."]
@@ -877,7 +880,7 @@ loop = false
 [node name="Camara" parent="Rieles/Riel_15_tunel/Follow_15_tunel" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 cosa_mirar_node = NodePath("../../Mira_15_tunel")
-fov_cam = 135
+fov_cam = 60
 
 [node name="Tween_15_tunel" type="Tween" parent="Rieles/Riel_15_tunel/Follow_15_tunel"]
 
@@ -3174,19 +3177,7 @@ spot_range = 4.3
 spot_attenuation = 0.659754
 
 [node name="Lampara05" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2.75068, 0 )
-
-[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara05"]
-script = ExtResource( 16 )
-tiltilar_time = 1.0
-
-[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara05/Spatial"]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
-light_color = Color( 0.882353, 0.984314, 1, 1 )
-light_energy = 5.44
-light_indirect_energy = 12.19
-spot_range = 4.3
-spot_attenuation = 0.659754
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1037, 2.75068, 0 )
 
 [node name="Lampara06" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0067, 2.75068, 0 )
@@ -3198,14 +3189,82 @@ tiltilar_time = 1.0
 [node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara06/Spatial"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
 light_color = Color( 0.882353, 0.984314, 1, 1 )
-light_energy = 5.44
-light_indirect_energy = 12.19
+light_energy = 1.33
+light_indirect_energy = 2.39
 spot_range = 4.3
 spot_attenuation = 0.517632
 spot_angle = 67.1
 spot_angle_attenuation = 1.93187
 
 [node name="MUXXXES" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+
+[node name="muxxxe_disparable" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES" instance=ExtResource( 34 )]
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.300177, 0, 14.4041 )
+corre_muxxxe = false
+velocidad = 1.0
+
+[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES/muxxxe_disparable"]
+transform = Transform( 1.94707e-07, 0, 1, 0, 1, 0, -1, 0, 1.94707e-07, 0.555422, 2.75068, 1.30036 )
+script = ExtResource( 16 )
+tiltilar_time = 0.1
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES/muxxxe_disparable/Spatial"]
+transform = Transform( 0.261195, 2.54351e-08, -0.965286, 0.965286, -1.86866e-08, 0.261195, -1.13944e-08, -1, -2.9433e-08, 0, -0.644973, 0 )
+light_color = Color( 0.882353, 0.984314, 1, 1 )
+light_energy = 11.97
+light_indirect_energy = 16.0
+spot_range = 6.48185
+spot_attenuation = 0.659754
+spot_angle = 30.407
+
+[node name="muxxxe_disparable5" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES" instance=ExtResource( 34 )]
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -1.37425, 0, 17.4819 )
+corre_muxxxe = false
+pick_idle = 2
+velocidad = 1.0
+
+[node name="muxxxe_disparable6" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES" instance=ExtResource( 34 )]
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 1.25503, 0, 17.2533 )
+corre_muxxxe = false
+velocidad = 1.0
+
+[node name="muxxxe_disparable7" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES" instance=ExtResource( 34 )]
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.894619, 0, 16.0687 )
+corre_muxxxe = false
+velocidad = 1.0
+
+[node name="muxxxe_disparable8" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES" instance=ExtResource( 34 )]
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.154854, 0, 18.4722 )
+corre_muxxxe = false
+pick_idle = 2
+velocidad = 1.0
+
+[node name="muxxxe_disparable2" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES" instance=ExtResource( 34 )]
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.27873, 0, 16.3546 )
+corre_muxxxe = false
+pick_idle = 2
+velocidad = 1.0
+
+[node name="muxxxe_disparable3" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES" instance=ExtResource( 34 )]
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.821365, 0, 14.739 )
+corre_muxxxe = false
+pick_idle = 2
+velocidad = 1.0
+
+[node name="muxxxe_disparable4" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES" instance=ExtResource( 34 )]
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -1.19938, 0, 15.7057 )
+corre_muxxxe = false
+pick_idle = 2
+velocidad = 1.0
+
+[node name="Colisiones" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo"]
+
+[node name="StaticBody" type="StaticBody" parent="Escena_03/Objetos_escena/Pasillo_rojo/Colisiones"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Escena_03/Objetos_escena/Pasillo_rojo/Colisiones/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1404, 0, 0 )
+shape = SubResource( 53 )
 
 [node name="GIProbe_01" type="GIProbe" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.10546, -1.11959, 8.49588 )
@@ -3216,10 +3275,6 @@ interior = true
 data = ExtResource( 29 )
 
 [node name="UI_main" parent="." instance=ExtResource( 30 )]
-
-[node name="muxxxe_disparable" parent="." instance=ExtResource( 34 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.692311 )
-pick_idle = 2
 [connection signal="tween_completed" from="Rieles/Riel_00_intro/Follow_00_intro/Tween_00_intro" to="Rieles" method="_on_Tween_00_intro_tween_completed"]
 [connection signal="tween_completed" from="Rieles/Riel_01_intro/Riel_01_intro/Tween_01_intro" to="Rieles" method="_on_Tween_01_intro_tween_completed"]
 [connection signal="tween_completed" from="Rieles/Riel_02_intro/Follow_02_intro/Tween_02_intro" to="Rieles" method="_on_Tween_02_intro_tween_completed"]
