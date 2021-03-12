@@ -120,16 +120,17 @@ func _on_Tween_13_intro_tween_completed(object, key):
 func _on_Tween_14_tunel_tween_completed(object, key):
 	_activa_camera(camera_paths[15], camera_paths)	
 	get_node(riel_paths[15])._mueve_camara(tiempo_tweens[15], Tween.TRANS_LINEAR, Tween.EASE_OUT)
-	yield(get_tree().create_timer(1.5), "timeout")
+	yield(get_tree().create_timer(0.5), "timeout")
 	for muxxxe in get_node('../Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES').get_children():
-		#if is_instance_valid(muxxxe.area):
-			
 		muxxxe.corre_muxxxe = true
-		muxxxe.idle.visible = false
-		muxxxe.running.visible = true
-		
-		yield(get_tree().create_timer(rand_range(0.1, 0.5)), "timeout")
-		#get_node('../Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES/muxxxe_disparable').corre_muxxxe = true
+		if muxxxe.vivo:
+			
+			
+			muxxxe.idle.visible = false
+			muxxxe.running.visible = true
+			
+			yield(get_tree().create_timer(rand_range(0.4, 0.8)), "timeout")
+			#get_node('../Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES/muxxxe_disparable').corre_muxxxe = true
 		#get_node('../Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES/muxxxe_disparable').idle.visible = false
 
 	
