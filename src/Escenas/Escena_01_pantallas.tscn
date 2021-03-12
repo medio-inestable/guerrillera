@@ -3131,54 +3131,6 @@ __meta__ = {
 
 [node name="Techo_container" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo"]
 
-[node name="Lampara02" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.75068, 0 )
-
-[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara02"]
-script = ExtResource( 16 )
-tiltilar_time = 1.0
-
-[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara02/Spatial"]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
-light_color = Color( 0.882353, 0.984314, 1, 1 )
-light_energy = 5.44
-light_indirect_energy = 12.19
-spot_range = 4.3
-spot_attenuation = 0.659754
-
-[node name="Lampara03" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.75068, 0 )
-
-[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara03"]
-script = ExtResource( 16 )
-tiltilar_time = 1.0
-
-[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara03/Spatial"]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
-light_color = Color( 0.882353, 0.984314, 1, 1 )
-light_energy = 5.44
-light_indirect_energy = 12.19
-spot_range = 4.3
-spot_attenuation = 0.659754
-
-[node name="Lampara04" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2.75068, 0 )
-
-[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara04"]
-script = ExtResource( 16 )
-tiltilar_time = 1.0
-
-[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara04/Spatial"]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
-light_color = Color( 0.882353, 0.984314, 1, 1 )
-light_energy = 5.44
-light_indirect_energy = 12.19
-spot_range = 4.3
-spot_attenuation = 0.659754
-
-[node name="Lampara05" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1037, 2.75068, 0 )
-
 [node name="Lampara06" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0067, 2.75068, 0 )
 
@@ -3196,67 +3148,227 @@ spot_attenuation = 0.517632
 spot_angle = 67.1
 spot_angle_attenuation = 1.93187
 
+[node name="Lampara07" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0069, 2.75068, 0 )
+
+[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara07"]
+script = ExtResource( 16 )
+tiltilar_time = 1.0
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara07/Spatial"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
+light_color = Color( 0.882353, 0.984314, 1, 1 )
+light_energy = 1.33
+light_indirect_energy = 2.39
+spot_range = 4.3
+spot_attenuation = 0.517632
+spot_angle = 67.1
+spot_angle_attenuation = 1.93187
+
+[node name="Lampara08" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1886, 2.75068, 0 )
+
+[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara08"]
+script = ExtResource( 16 )
+tiltilar_time = 1.0
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara08/Spatial"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
+light_color = Color( 0.882353, 0.984314, 1, 1 )
+light_energy = 1.33
+light_indirect_energy = 2.39
+spot_range = 4.3
+spot_attenuation = 0.517632
+spot_angle = 67.1
+spot_angle_attenuation = 1.93187
+
+[node name="Lampara09" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9786, 2.75068, 0 )
+
+[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara09"]
+script = ExtResource( 16 )
+tiltilar_time = 1.0
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara09/Spatial"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
+light_color = Color( 0.882353, 0.984314, 1, 1 )
+light_energy = 1.33
+light_indirect_energy = 2.39
+spot_range = 4.3
+spot_attenuation = 0.517632
+spot_angle = 67.1
+spot_angle_attenuation = 1.93187
+
+[node name="Lampara10" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9786, 2.75068, 0 )
+visible = false
+
+[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara10"]
+script = ExtResource( 16 )
+tiltilar_time = 1.0
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara10/Spatial"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
+light_color = Color( 0.882353, 0.984314, 1, 1 )
+light_energy = 1.33
+light_indirect_energy = 2.39
+spot_range = 4.3
+spot_attenuation = 0.517632
+spot_angle = 67.1
+spot_angle_attenuation = 1.93187
+
+[node name="Lampara11" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9786, 2.75068, 0 )
+visible = false
+
+[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara11"]
+script = ExtResource( 16 )
+tiltilar_time = 1.0
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara11/Spatial"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
+light_color = Color( 0.882353, 0.984314, 1, 1 )
+light_energy = 1.33
+light_indirect_energy = 2.39
+spot_range = 4.3
+spot_attenuation = 0.517632
+spot_angle = 67.1
+spot_angle_attenuation = 1.93187
+
+[node name="Lampara12" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.97863, 2.75068, 0 )
+visible = false
+
+[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara12"]
+script = ExtResource( 16 )
+tiltilar_time = 1.0
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara12/Spatial"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
+light_color = Color( 0.882353, 0.984314, 1, 1 )
+light_energy = 1.33
+light_indirect_energy = 2.39
+spot_range = 4.3
+spot_attenuation = 0.517632
+spot_angle = 67.1
+spot_angle_attenuation = 1.93187
+
+[node name="Lampara13" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.97863, 2.75068, 0 )
+visible = false
+
+[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara13"]
+script = ExtResource( 16 )
+tiltilar_time = 1.0
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara13/Spatial"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
+light_color = Color( 0.882353, 0.984314, 1, 1 )
+light_energy = 1.33
+light_indirect_energy = 2.39
+spot_range = 4.3
+spot_attenuation = 0.517632
+spot_angle = 67.1
+spot_angle_attenuation = 1.93187
+
+[node name="Lampara14" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97863, 2.75068, 0 )
+
+[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara14"]
+script = ExtResource( 16 )
+tiltilar_time = 1.0
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara14/Spatial"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
+light_color = Color( 0.882353, 0.984314, 1, 1 )
+light_energy = 1.33
+light_indirect_energy = 2.39
+spot_range = 4.3
+spot_attenuation = 0.517632
+spot_angle = 67.1
+spot_angle_attenuation = 1.93187
+
+[node name="Lampara16" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.97863, 2.75068, 0 )
+
+[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara16"]
+script = ExtResource( 16 )
+tiltilar_time = 1.0
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara16/Spatial"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
+light_color = Color( 0.882353, 0.984314, 1, 1 )
+light_energy = 1.33
+light_indirect_energy = 2.39
+spot_range = 4.3
+spot_attenuation = 0.517632
+spot_angle = 67.1
+spot_angle_attenuation = 1.93187
+
+[node name="Lampara15" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.97863, 2.75068, 0 )
+
+[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara15"]
+script = ExtResource( 16 )
+tiltilar_time = 1.0
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Techo_container/Lampara15/Spatial"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.145215, 0 )
+light_color = Color( 0.882353, 0.984314, 1, 1 )
+light_energy = 1.33
+light_indirect_energy = 2.39
+spot_range = 4.3
+spot_attenuation = 0.517632
+spot_angle = 67.1
+spot_angle_attenuation = 1.93187
+
 [node name="MUXXXES" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.89161, 0, 0 )
 
 [node name="muxxxe_disparable" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES" instance=ExtResource( 34 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.300177, 0, 14.4041 )
 corre_muxxxe = false
-velocidad = 1.0
-
-[node name="Spatial" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES/muxxxe_disparable"]
-transform = Transform( 1.94707e-07, 0, 1, 0, 1, 0, -1, 0, 1.94707e-07, 0.555422, 2.75068, 1.30036 )
-script = ExtResource( 16 )
-tiltilar_time = 0.1
-
-[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES/muxxxe_disparable/Spatial"]
-transform = Transform( 0.261195, 2.54351e-08, -0.965286, 0.965286, -1.86866e-08, 0.261195, -1.13944e-08, -1, -2.9433e-08, 0, -0.644973, 0 )
-light_color = Color( 0.882353, 0.984314, 1, 1 )
-light_energy = 11.97
-light_indirect_energy = 16.0
-spot_range = 6.48185
-spot_attenuation = 0.659754
-spot_angle = 30.407
+velocidad = 0.4
 
 [node name="muxxxe_disparable5" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES" instance=ExtResource( 34 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -1.37425, 0, 17.4819 )
 corre_muxxxe = false
 pick_idle = 2
-velocidad = 1.0
+velocidad = 0.5
 
 [node name="muxxxe_disparable6" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES" instance=ExtResource( 34 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 1.25503, 0, 17.2533 )
 corre_muxxxe = false
-velocidad = 1.0
+velocidad = 0.5
 
 [node name="muxxxe_disparable7" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES" instance=ExtResource( 34 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.894619, 0, 16.0687 )
 corre_muxxxe = false
-velocidad = 1.0
+velocidad = 0.5
 
 [node name="muxxxe_disparable8" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES" instance=ExtResource( 34 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.154854, 0, 18.4722 )
 corre_muxxxe = false
 pick_idle = 2
-velocidad = 1.0
+velocidad = 0.5
 
 [node name="muxxxe_disparable2" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES" instance=ExtResource( 34 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.27873, 0, 16.3546 )
 corre_muxxxe = false
 pick_idle = 2
-velocidad = 1.0
+velocidad = 0.5
 
 [node name="muxxxe_disparable3" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES" instance=ExtResource( 34 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.821365, 0, 14.739 )
 corre_muxxxe = false
 pick_idle = 2
-velocidad = 1.0
+velocidad = 0.5
 
 [node name="muxxxe_disparable4" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES" instance=ExtResource( 34 )]
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -1.19938, 0, 15.7057 )
 corre_muxxxe = false
 pick_idle = 2
-velocidad = 1.0
+velocidad = 0.5
 
 [node name="Colisiones" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo"]
 

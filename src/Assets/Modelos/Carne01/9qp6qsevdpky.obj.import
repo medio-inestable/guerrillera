@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/9qp6qsevdpky.obj-4164f13bacd9dcecd2c0f294f9084d01.mesh"
+
+[deps]
+
+files=[ "res://.import/9qp6qsevdpky.obj-4164f13bacd9dcecd2c0f294f9084d01.mesh" ]
+
+source_file="res://Assets/Modelos/Carne01/9qp6qsevdpky.obj"
+dest_files=[ "res://.import/9qp6qsevdpky.obj-4164f13bacd9dcecd2c0f294f9084d01.mesh", "res://.import/9qp6qsevdpky.obj-4164f13bacd9dcecd2c0f294f9084d01.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
