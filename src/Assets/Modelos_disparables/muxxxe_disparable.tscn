@@ -39,7 +39,7 @@ params_billboard_mode = 3
 particles_anim_h_frames = 1
 particles_anim_v_frames = 1
 particles_anim_loop = false
-albedo_color = Color( 0.933333, 0.615686, 0.0705882, 1 )
+albedo_color = Color( 0.933333, 0.152941, 0.0705882, 1 )
 
 [sub_resource type="QuadMesh" id=6]
 material = SubResource( 5 )
@@ -123,6 +123,7 @@ draw_pass_1 = SubResource( 6 )
 
 [node name="Particles3" type="Particles" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.897855, 0 )
+visible = false
 emitting = false
 amount = 10
 lifetime = 1.89
@@ -134,6 +135,7 @@ draw_pass_1 = SubResource( 8 )
 
 [node name="Particles4" type="Particles" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.897855, 0 )
+visible = false
 emitting = false
 amount = 10
 lifetime = 1.89
@@ -145,6 +147,7 @@ draw_pass_1 = SubResource( 10 )
 
 [node name="Particles5" type="Particles" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.897855, 0 )
+visible = false
 emitting = false
 amount = 10
 lifetime = 1.89

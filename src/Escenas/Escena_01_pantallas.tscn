@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=2]
+[gd_scene load_steps=101 format=2]
 
 [ext_resource path="res://Assets/Modelos/Escena_tamaños_inicio.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Rieles.gd" type="Script" id=2]
@@ -34,6 +34,10 @@
 [ext_resource path="res://Assets/Modelos_escenas/Lampara02.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Assets/Modelos_escenas/Pasillo_Puerta.tscn" type="PackedScene" id=33]
 [ext_resource path="res://Assets/Modelos_disparables/muxxxe_disparable.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Scripts/arco_up.gd" type="Script" id=35]
+[ext_resource path="res://Escenas/Laboratorio_escena.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Assets/Modelos_disparables/boss_muxxxe.tscn" type="PackedScene" id=37]
+[ext_resource path="res://Scripts/Escena_01_pantallas.gd" type="Script" id=38]
 
 [sub_resource type="Curve3D" id=1]
 _data = {
@@ -151,124 +155,178 @@ _data = {
 
 [sub_resource type="Curve3D" id=20]
 _data = {
-"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -0.319808, -15.1202, 17.4093, 0, 0, 0, 0, 0, 0, -0.344489, -15.2537, 17.5189, 0, 0, 0, 0, 0, 0, -0.294165, -15.1189, 17.4592, 0, 0, 0, 0, 0, 0, -0.23646, -15.2744, 17.5306, 0, 0, 0, 0, 0, 0, -0.224501, -15.1562, 17.5714, 0, 0, 0, 0, 0, 0, -0.161666, -15.2788, 17.4943 ),
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 0.998224, -14.9822, 17.6704, 0, 0, 0, 0, 0, 0, 1.37043, -15.0028, 17.6635 ),
+"tilts": PoolRealArray( 0, 0 )
+}
+
+[sub_resource type="Curve3D" id=21]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 0.24142, -15.0882, 17.2682, 0, 0, 0, 0, 0, 0, 0.323298, -15.0402, 16.8504 ),
+"tilts": PoolRealArray( 0, 0 )
+}
+
+[sub_resource type="Curve3D" id=22]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 0.167909, -15.5028, 17.2603, -0.198528, -0.129425, -0.132061, 0.198528, 0.129425, 0.132061, 0.763176, -15.4951, 17.9355, -0.178564, -0.137331, 0.0342484, 0.178564, 0.137331, -0.0342484, 1.3756, -15.4314, 18.0997, -0.210641, 0.0996437, 0.151663, 0.210641, -0.0996437, -0.151663, 2.24957, -15.5447, 18.1979, -0.0903215, -0.145034, 0.134546, 0.0903215, 0.145034, -0.134546, 2.5823, -15.4248, 17.8536, -0.312028, 0.0432911, 0.0844059, 0.312028, -0.0432911, -0.0844059, 3.29165, -15.4783, 17.7384, -0.101028, 0.0378141, 0.250862, 0.101028, -0.0378141, -0.250862, 3.92502, -15.5262, 17.0406, -0.187422, -0.173167, -0.248657, 0.187422, 0.173167, 0.248657, 4.6917, -15.5073, 16.7841, 0.00552654, 0.0270357, -0.424919, -0.00552654, -0.0270357, 0.424919, 4.9737, -15.2238, 17.3901, -0.185792, -0.0698004, -0.0177231, 0.185792, 0.0698004, 0.0177231, 5.3657, -15.1286, 18.0019, -0.209047, -0.0444956, 0.134491, 0.209047, 0.0444956, -0.134491, 6.11482, -15.0178, 17.8688, -0.208834, 0.102826, -0.0454388, 0.208834, -0.102826, 0.0454388, 6.66019, -15.2747, 16.932, -0.231181, -0.0967426, -0.172562, 0.231181, 0.0967426, 0.172562, 7.10642, -15.324, 17.0818, -0.0330849, 0.0354071, -0.198746, 0.0330849, -0.0354071, 0.198746, 7.25872, -15.2917, 17.5746, -0.0705819, -0.0388975, -0.0681629, 0.0705819, 0.0388975, 0.0681629, 7.56619, -15.3068, 18.02, -0.186502, -0.0466976, -0.141348, 0.186502, 0.0466976, 0.141348, 7.82788, -15.2754, 18.3458, -0.0940814, -0.00801373, -0.00572586, 0.0940814, 0.00801373, 0.00572586, 8.12195, -15.3238, 18.5207, -0.259233, 0.0134621, 0.0955486, 0.259233, -0.0134621, -0.0955486, 8.51919, -15.4578, 18.4555, -0.0309534, 0.0634756, 0.0482922, 0.0309534, -0.0634756, -0.0482922, 8.97724, -15.5579, 18.0375, 0.0421591, 0.027276, 0.172091, -0.0421591, -0.027276, -0.172091, 9.16387, -15.5852, 17.5653, -0.0860891, 0.15996, 0.284771, 0.0860891, -0.15996, -0.284771, 9.14235, -15.553, 16.9893, 0, 0, 0, 0, 0, 0, 9.51366, -15.5978, 16.9165 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="Curve3D" id=23]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 20.581, -15.4856, 18.1436, 0.133211, -0.0868692, 0.951664, -0.133211, 0.0868692, -0.951664, 21.8176, -15.5418, 17.9665, -0.148533, 0.339328, -0.679964, 0.148533, -0.339328, 0.679964, 20.6907, -14.6929, 16.8246, 0.144609, 0.394366, -0.156267, -0.144609, -0.394366, 0.156267, 20.3679, -15.3886, 17.5598, 0.525015, -0.511553, -0.19101, -0.525015, 0.511553, 0.19101, 19.6749, -16.451, 19.5715, 0.061655, 0.0352392, 0.485628, -0.061655, -0.0352392, -0.485628, 17.4708, -14.7383, 18.4572, 0.0826912, -0.30939, 0.536125, -0.0826912, 0.30939, -0.536125, 16.4022, -15.2599, 17.5029, -0.119747, 0.193391, 0.807515, 0.119747, -0.193391, -0.807515, 17.8289, -14.0435, 15.4668, 0.0391712, 0.548831, -0.220567, -0.0391712, -0.548831, 0.220567, 17.3065, -15.3062, 14.5142, -0.182718, -0.237277, -1.29532, 0.182718, 0.237277, 1.29532, 17.5202, -15.8813, 16.8817, -0.107367, -0.811725, -0.0885124, 0.107367, 0.811725, 0.0885124, 17.9325, -13.9956, 18.4536, 0.131044, -0.0124846, 1.11152, -0.131044, 0.0124846, -1.11152, 18.0144, -13.1214, 18.2665, -0.128189, 0.782832, -0.0356617, 0.128189, -0.782832, 0.0356617, 17.726, -14.2578, 16.9838, 0, 0, 0, 0, 0, 0, 17.6864, -16.5182, 18.9135 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="Curve3D" id=24]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 22.8606, -15.2517, 17.347, 0, 0, 0, 0, 0, 0, 22.1995, -15.2799, 17.3263 ),
+"tilts": PoolRealArray( 0, 0 )
+}
+
+[sub_resource type="Curve3D" id=58]
+_data = {
+"points": PoolVector3Array( -0.439043, -0.706122, -0.985933, 0.439043, 0.706122, 0.985933, 28.0425, -13.02, 19.6201, -1.727, -1.27175, -1.35081, 1.727, 1.27175, 1.35081, 34.5347, -13.7113, 22.7706 ),
+"tilts": PoolRealArray( 0, 0 )
+}
+
+[sub_resource type="Curve3D" id=59]
+_data = {
+"points": PoolVector3Array( 0.437599, 0.717279, -1.41044, -0.437599, -0.717279, 1.41044, 41.0188, -9.85606, 11.7179, 0.918602, 1.50757, -2.87244, -0.918602, -1.50757, 2.87244, 44.1219, -11.7717, 15.033 ),
+"tilts": PoolRealArray( 0, 0 )
+}
+
+[sub_resource type="Curve3D" id=60]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 37.9633, -15.4443, 18.8504, 0.58625, -9.53674e-06, 1.31674, -0.58625, 9.53674e-06, -1.31674, 35.9116, -15.4025, 18.022, 0, 0, 0, 0, 0, 0, 36.6252, -15.2204, 15.8951, -0.49559, -0.00535583, -1.39288, 0.49559, 0.00535583, 1.39288, 35.8323, -15.2455, 18.0446, -0.799911, -0.2801, 0.103083, 0.799911, 0.2801, -0.103083, 38.6331, -15.2572, 19.1934, 0.783222, -0.252272, 0.897585, -0.783222, 0.252272, -0.897585, 39.2227, -15.7811, 16.2507 ),
 "tilts": PoolRealArray( 0, 0, 0, 0, 0, 0 )
 }
 
-[sub_resource type="CubeMesh" id=21]
+[sub_resource type="Curve3D" id=61]
+_data = {
+"points": PoolVector3Array( -0.0658321, -0.0610533, -0.023243, 0.0658321, 0.0610533, 0.023243, 28.8967, -15.1657, 16.8712, -0.0739307, -0.0144892, -0.0973969, 0.0739307, 0.0144892, 0.0973969, 29.5182, -15.3057, 17.1991, -0.0478344, 0.0119104, -0.100758, 0.0478344, -0.0119104, 0.100758, 29.6486, -15.2251, 17.6673, -0.0836353, -0.0266733, -0.0570831, 0.0836353, 0.0266733, 0.0570831, 29.8152, -15.2578, 18.0191, -0.160671, -0.0781145, -0.0929966, 0.160671, 0.0781145, 0.0929966, 30.0667, -15.1489, 18.3898, -0.0956497, 0.165551, -0.510256, 0.0956497, -0.165551, 0.510256, 31.0496, -15.399, 18.804, -0.261459, -0.0324831, -0.211985, 0.261459, 0.0324831, 0.211985, 31.0965, -15.3615, 19.678, -0.193632, 0.0164003, 0.00942612, 0.193632, -0.0164003, -0.00942612, 31.861, -15.1012, 20.1978, -0.213425, -0.0476398, -0.25288, 0.213425, 0.0476398, 0.25288, 32.4784, -15.1529, 20.5977, -0.373154, 0.0674677, 0.00209045, 0.373154, -0.0674677, -0.00209045, 33.6151, -15.184, 20.8967, -0.199146, -0.00655174, -0.0116062, 0.199146, 0.00655174, 0.0116062, 34.2605, -15.1509, 20.9411, -0.0452614, 0.0377855, -0.267044, 0.0452614, -0.0377855, 0.267044, 34.7178, -14.9366, 21.3897, -0.061779, 0.0113363, -0.519899, 0.061779, -0.0113363, 0.519899, 34.4803, -15.1054, 22.4192, -0.0862656, 0.00558758, -0.178032, 0.0862656, -0.00558758, 0.178032, 34.5287, -15.1669, 22.9718, -0.0710106, -0.0227833, -0.055603, 0.0710106, 0.0227833, 0.055603, 34.9018, -15.1166, 23.1584, -0.0690117, -0.0233316, -0.0469398, 0.0690117, 0.0233316, 0.0469398, 35.1945, -15.1245, 23.4068, -0.0964127, -0.0224285, -0.0893497, 0.0964127, 0.0224285, 0.0893497, 35.437, -15.0458, 23.5909, -0.0956345, 0.0218306, -0.0594425, 0.0956345, -0.0218306, 0.0594425, 35.6162, -14.9666, 23.7271, 0.043087, -0.00410175, -0.199343, -0.043087, 0.00410175, 0.199343, 35.7436, -14.9138, 24.077, -0.186642, 0.0215569, -0.201332, 0.186642, -0.0215569, 0.201332, 35.8966, -14.7895, 24.6938, -0.138794, -0.145439, -0.25382, 0.138794, 0.145439, 0.25382, 36.5017, -14.84, 25.2518, -0.130325, 0.00179863, -0.26342, 0.130325, -0.00179863, 0.26342, 37.1405, -14.7921, 25.6646, -0.0403862, 0.0456343, -0.223049, 0.0403862, -0.0456343, 0.223049, 37.6771, -14.7049, 26.4531, -0.222195, -0.0313272, -0.34149, 0.222195, 0.0313272, 0.34149, 37.9245, -14.8474, 27.3904, -0.159798, 0.0931768, -0.0180874, 0.159798, -0.0931768, 0.0180874, 38.3189, -14.8267, 28.0482, -0.125195, -0.0385647, 0.0657825, 0.125195, 0.0385647, -0.0657825, 39.055, -14.9264, 28.1831, -0.138271, 0.354671, -0.0420208, 0.138271, -0.354671, 0.0420208, 39.811, -15.241, 28.0859, -0.0967751, 0.0186281, 0.104752, 0.0967751, -0.0186281, -0.104752, 40.1165, -15.578, 28.089, -0.141914, 0.0282021, 0.3622, 0.141914, -0.0282021, -0.3622, 40.9882, -15.8465, 27.7132, 0.0248528, -0.0124426, 0.317276, -0.0248528, 0.0124426, -0.317276, 41.2436, -15.8553, 27.0024, 0.0684242, 0.071701, 0.240572, -0.0684242, -0.071701, -0.240572, 41.2713, -15.92, 26.4936, -0.11768, -0.0903082, 0.20027, 0.11768, 0.0903082, -0.20027, 41.3755, -15.9839, 26.0589, 0.0205383, -0.0141973, 0.130562, -0.0205383, 0.0141973, -0.130562, 41.4624, -15.908, 25.7713, 0.00840378, -0.0320301, 0.0118484, -0.00840378, 0.0320301, -0.0118484, 41.3509, -15.9323, 25.5344, -0.0136566, -0.0816469, 0.0737667, 0.0136566, 0.0816469, -0.0737667, 41.4888, -15.7185, 25.4243, -0.119148, 0.0198183, 0.09729, 0.119148, -0.0198183, -0.09729, 42.7809, -15.2646, 24.6071, 0, 0, 0, 0, 0, 0, 42.9146, -15.1893, 24.3232, -0.255638, -0.00790691, 0.297903, 0.255638, 0.00790691, -0.297903, 43.2141, -14.8637, 23.3665, -0.176533, -0.111348, 0.208014, 0.176533, 0.111348, -0.208014, 43.6923, -14.7962, 22.5788, 0.059124, -0.00414944, 0.225769, -0.059124, 0.00414944, -0.225769, 43.7273, -14.7643, 21.9033, -0.120682, -0.0301228, 0.0397568, 0.120682, 0.0301228, -0.0397568, 43.8588, -14.849, 21.4834, 0.0732269, -0.0947237, 0.170259, -0.0732269, 0.0947237, -0.170259, 44.2491, -14.85, 20.9181, -0.0262909, -0.101569, 0.147306, 0.0262909, 0.101569, -0.147306, 44.3856, -14.9896, 19.9284, -0.107193, -0.127071, 0.155022, 0.107193, 0.127071, -0.155022, 44.3992, -14.9319, 18.9468, -0.0902748, 0.187422, 0.110912, 0.0902748, -0.187422, -0.110912, 44.42, -14.5618, 17.9797, -0.0649452, 0.0828848, 0.0693741, 0.0649452, -0.0828848, -0.0693741, 44.5609, -14.8929, 17.853, -0.0173836, -0.0589714, 0.126648, 0.0173836, 0.0589714, -0.126648, 44.6634, -14.8839, 17.5669, -0.049984, -0.0807629, 0.133348, 0.049984, 0.0807629, -0.133348, 44.7832, -14.8424, 17.1337, 0.0887756, -0.053896, 0.0123463, -0.0887756, 0.053896, -0.0123463, 44.6638, -14.7276, 16.5938, -0.0387268, 0.0357542, 0.145703, 0.0387268, -0.0357542, -0.145703, 44.1863, -14.7301, 15.8558, -0.0410728, -0.0131397, 0.131775, 0.0410728, 0.0131397, -0.131775, 44.0304, -14.7363, 15.3011, 0.187855, 0.0316229, 0.239605, -0.187855, -0.0316229, -0.239605, 44.0081, -14.8344, 14.5389, 0.0847168, -0.0894518, 0.366902, -0.0847168, 0.0894518, -0.366902, 43.4362, -14.674, 13.5824, 0.127289, -0.0192556, 0.114944, -0.127289, 0.0192556, -0.114944, 43.0254, -14.6341, 13.0766, 0.117168, -0.0817194, 0.132507, -0.117168, 0.0817194, -0.132507, 42.5358, -14.7808, 12.8271, 0.200138, 0.13535, 0.140965, -0.200138, -0.13535, -0.140965, 42.0363, -14.9285, 12.4259, 0.121109, -0.0515471, 0.0256968, -0.121109, 0.0515471, -0.0256968, 41.3976, -14.968, 12.4396, 0.140789, -0.0483999, 0.100432, -0.140789, 0.0483999, -0.100432, 40.752, -15.0916, 12.3091, 0.157822, -0.0638714, 0.0849085, -0.157822, 0.0638714, -0.0849085, 40.3766, -15.0783, 11.8925, 0.152027, -0.0300388, 0.172477, -0.152027, 0.0300388, -0.172477, 39.7293, -15.0583, 11.617, 0.019928, 0.0707006, 0.237536, -0.019928, -0.0707006, -0.237536, 39.5478, -15.0505, 11.2076, -0.053093, -0.0465498, 0.0835867, 0.053093, 0.0465498, -0.0835867, 39.571, -15.0825, 10.4821, 0.0439186, -0.0318098, 0.0373268, -0.0439186, 0.0318098, -0.0373268, 39.398, -15.0379, 9.96415, 0.0972328, -0.0946054, 0.0142784, -0.0972328, 0.0946054, -0.0142784, 39.1287, -15.0163, 9.63907, 0.122601, -0.0309076, -0.00459194, -0.122601, 0.0309076, 0.00459194, 38.7387, -15.0135, 9.3599, 0.174469, -0.0286884, 0.096427, -0.174469, 0.0286884, -0.096427, 38.3212, -15.0035, 9.32129, 0.0328712, -0.0385742, 0.38995, -0.0328712, 0.0385742, -0.38995, 37.8121, -15.0829, 8.4067, 0.150848, -0.0264025, 0.0469675, -0.150848, 0.0264025, -0.0469675, 37.3655, -15.1383, 7.47556, 0.150398, -0.0139532, 0.172318, -0.150398, 0.0139532, -0.172318, 36.5819, -15.1741, 7.23315, 0.268211, 0.00251865, 0.172866, -0.268211, -0.00251865, -0.172866, 35.7909, -15.1766, 7.057, 0.323711, -0.000261307, 0.0537491, -0.323711, 0.000261307, -0.0537491, 34.4236, -15.1792, 6.94085, 0.206932, -0.0184231, -0.114398, -0.206932, 0.0184231, 0.114398, 33.7626, -15.1762, 7.36429, 0.333263, -0.117786, -0.355364, -0.333263, 0.117786, 0.355364, 32.9666, -15.0116, 8.03662, 0.313192, -0.173576, -0.180764, -0.313192, 0.173576, 0.180764, 31.9495, -14.9186, 8.95065, 0.29582, -0.11013, -0.263724, -0.29582, 0.11013, 0.263724, 30.9989, -14.9629, 9.30118, 0.0515594, 0.115758, -0.22181, -0.0515594, -0.115758, 0.22181, 30.4445, -15.1942, 10.0262, 0.138769, -0.029912, -0.218025, -0.138769, 0.029912, 0.218025, 30.4866, -15.3023, 10.7608, 0.120325, -0.0100079, -0.209649, -0.120325, 0.0100079, 0.209649, 30.3998, -15.2792, 11.589, 0.0855522, 0.0697498, -0.248283, -0.0855522, -0.0697498, 0.248283, 30.0927, -15.2232, 12.1182, 0.0103111, 0.048337, -0.0755625, -0.0103111, -0.048337, 0.0755625, 29.8997, -15.26, 12.8092, 0.0752964, -0.0722675, -0.103792, -0.0752964, 0.0722675, 0.103792, 29.8317, -15.2333, 13.2992, 0.23737, -0.124184, -0.109632, -0.23737, 0.124184, 0.109632, 29.5946, -15.1094, 13.6296, 0.0569782, 0.0802126, -0.114883, -0.0569782, -0.0802126, 0.114883, 29.065, -14.9985, 13.8556, 0.114357, 0.000769615, -0.179129, -0.114357, -0.000769615, 0.179129, 28.9089, -14.9795, 14.4012, -0.0477829, 0.195535, -0.384991, 0.0477829, -0.195535, 0.384991, 29.0783, -15.475, 14.8127, 0.136271, -0.00353622, -0.261354, -0.136271, 0.00353622, 0.261354, 29.1651, -15.5574, 15.8541, 0, 0, 0, 0, 0, 0, 28.8947, -15.2482, 16.5953, 0.0359402, -0.0468702, -0.0343571, -0.0359402, 0.0468702, 0.0343571, 28.865, -15.1664, 16.6957, 0, 0, 0, 0, 0, 0, 28.8967, -15.1657, 16.8712 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+}
 
-[sub_resource type="VisualShaderNodeInput" id=22]
+[sub_resource type="Curve3D" id=62]
+_data = {
+"points": PoolVector3Array( 0.0772514, -0.103806, -0.0237522, -0.0772514, 0.103806, 0.0237522, 37.4696, -14.1392, 17.4065, 0.0405388, 0.336063, -0.0339794, -0.0405388, -0.336063, 0.0339794, 38.1825, -14.7562, 17.1768, 0.0819206, -0.0102558, -0.259552, -0.0819206, 0.0102558, 0.259552, 38.0265, -14.7422, 18.0646, 0, 0, 0, -0.232792, 0.0548563, 0.772196, 35.8093, -15.1142, 20.6426, 0.475502, 0.501286, 0.128117, -0.475502, -0.501286, -0.128117, 33.8577, -14.0823, 23.2903, -0.357777, -0.0807495, -0.381256, 0.357777, 0.0807495, 0.381256, 33.4795, -14.7406, 25.4424, -0.477722, -0.261841, -0.14698, 0.477722, 0.261841, 0.14698, 34.5006, -14.9583, 27.5638, -0.440128, -0.000329971, -0.0137196, 0.440128, 0.000329971, 0.0137196, 38.0297, -14.8098, 23.0597, -0.427414, -0.0979786, -0.330141, 0.427414, 0.0979786, 0.330141, 39.1626, -14.235, 23.8512, -0.248184, -0.200722, 0.294842, 0.248184, 0.200722, -0.294842, 40.0629, -15.3852, 22.4912, -0.602627, -0.0328894, 0.201021, 0.602627, 0.0328894, -0.201021, 41.5807, -14.6837, 21.2841, -0.0550117, -0.282473, -0.0619526, 0.0550117, 0.282473, 0.0619526, 44.5463, -14.5117, 19.9117, -0.355225, 0.30029, 0.482893, 0.355225, -0.30029, -0.482893, 43.8189, -14.6853, 18.9397, -0.496864, 0.282631, 0.498634, 0.496864, -0.282631, -0.498634, 45.0503, -14.8267, 18.4234, 0.94194, -0.445107, 1.68651, -0.94194, 0.445107, -1.68651, 41.5331, -14.8216, 16.452, 0.403946, -0.0263224, 0.923845, -0.403946, 0.0263224, -0.923845, 44.2262, -14.503, 12.8138, 0.798332, -0.651628, 1.31842, -0.798332, 0.651628, -1.31842, 40.3187, -14.5322, 14.8186, -0.589069, 0.74471, 0.455057, 0.589069, -0.74471, -0.455057, 41.6931, -15.0084, 8.87685, 1.20763, -0.200179, 0.231589, -1.20763, 0.200179, -0.231589, 39.0505, -15.5079, 6.54759, 0.301811, -0.654192, -0.142256, -0.301811, 0.654192, 0.142256, 36.1597, -14.788, 10.4655, 0.507133, -0.110126, -0.35939, -0.507133, 0.110126, 0.35939, 33.641, -13.977, 9.39203, -0.567417, 0.482958, -0.382027, 0.567417, -0.482958, 0.382027, 32.1324, -14.8433, 10.2298, 0.12583, -0.164059, -1.03661, -0.12583, 0.164059, 1.03661, 29.7792, -15.0195, 13.6427, -0.388752, -0.125131, -0.358953, 0.388752, 0.125131, 0.358953, 30.8439, -15.0786, 15.4464, -0.174179, -0.20006, -0.0402107, 0.174179, 0.20006, 0.0402107, 37.007, -14.4371, 16.804, 0.0536766, -0.0595503, -0.188795, -0.0536766, 0.0595503, 0.188795, 37.4696, -14.1392, 17.4065, 0, 0, 0, 0, 0, 0, 37.4696, -14.1392, 17.4065 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="CubeMesh" id=25]
+
+[sub_resource type="VisualShaderNodeInput" id=26]
 output_port_for_preview = 0
 input_name = "screen_uv"
 
-[sub_resource type="VisualShaderNodeVectorOp" id=23]
+[sub_resource type="VisualShaderNodeVectorOp" id=27]
 output_port_for_preview = 0
 default_input_values = [ 0, Vector3( 0, 0, 0 ), 1, Vector3( 0.01, 0, 0 ) ]
-
-[sub_resource type="VisualShaderNodeVectorCompose" id=24]
-output_port_for_preview = 0
-
-[sub_resource type="VisualShaderNodeTexture" id=25]
-output_port_for_preview = 0
-texture = ExtResource( 14 )
-
-[sub_resource type="VisualShaderNodeVectorOp" id=26]
-output_port_for_preview = 0
-default_input_values = [ 0, Vector3( 0, 0, 0 ), 1, Vector3( 2, 0.1, 0.1 ) ]
-operator = 2
-
-[sub_resource type="VisualShaderNodeTexture" id=27]
-texture = ExtResource( 13 )
 
 [sub_resource type="VisualShaderNodeVectorCompose" id=28]
 output_port_for_preview = 0
 
-[sub_resource type="VisualShaderNodeVectorOp" id=29]
+[sub_resource type="VisualShaderNodeTexture" id=29]
 output_port_for_preview = 0
+texture = ExtResource( 14 )
 
-[sub_resource type="VisualShaderNodeScalarOp" id=30]
-default_input_values = [ 0, 0.0, 1, 0.5 ]
+[sub_resource type="VisualShaderNodeVectorOp" id=30]
+output_port_for_preview = 0
+default_input_values = [ 0, Vector3( 0, 0, 0 ), 1, Vector3( 2, 0.1, 0.1 ) ]
 operator = 2
 
 [sub_resource type="VisualShaderNodeTexture" id=31]
+texture = ExtResource( 13 )
+
+[sub_resource type="VisualShaderNodeVectorCompose" id=32]
+output_port_for_preview = 0
+
+[sub_resource type="VisualShaderNodeVectorOp" id=33]
+output_port_for_preview = 0
+
+[sub_resource type="VisualShaderNodeScalarOp" id=34]
+default_input_values = [ 0, 0.0, 1, 0.5 ]
+operator = 2
+
+[sub_resource type="VisualShaderNodeTexture" id=35]
 output_port_for_preview = 0
 texture = ExtResource( 12 )
 
-[sub_resource type="VisualShaderNodeDotProduct" id=32]
+[sub_resource type="VisualShaderNodeDotProduct" id=36]
 output_port_for_preview = 0
 default_input_values = [ 0, Vector3( 0, 0, 0 ), 1, Vector3( 12.9898, 78.233, 0 ) ]
 
-[sub_resource type="VisualShaderNodeVectorCompose" id=33]
+[sub_resource type="VisualShaderNodeVectorCompose" id=37]
 default_input_values = [ 0, 5.0, 1, 400.0, 2, 0.0 ]
 
-[sub_resource type="VisualShaderNodeScalarFunc" id=34]
+[sub_resource type="VisualShaderNodeScalarFunc" id=38]
 output_port_for_preview = 0
 function = 0
 
-[sub_resource type="VisualShaderNodeScalarOp" id=35]
+[sub_resource type="VisualShaderNodeScalarOp" id=39]
 output_port_for_preview = 0
 default_input_values = [ 0, 0.0, 1, 43758.5 ]
 operator = 2
 
-[sub_resource type="VisualShaderNodeScalarFunc" id=36]
+[sub_resource type="VisualShaderNodeScalarFunc" id=40]
 output_port_for_preview = 0
 function = 17
 
-[sub_resource type="VisualShaderNodeInput" id=37]
+[sub_resource type="VisualShaderNodeInput" id=41]
 output_port_for_preview = 0
 input_name = "uv"
 
-[sub_resource type="VisualShaderNodeVectorOp" id=38]
+[sub_resource type="VisualShaderNodeVectorOp" id=42]
 
-[sub_resource type="VisualShaderNodeScalarOp" id=39]
+[sub_resource type="VisualShaderNodeScalarOp" id=43]
 output_port_for_preview = 0
 default_input_values = [ 0, 0.0, 1, 0.3 ]
 operator = 2
 
-[sub_resource type="VisualShaderNodeScalarOp" id=40]
+[sub_resource type="VisualShaderNodeScalarOp" id=44]
 output_port_for_preview = 0
 default_input_values = [ 0, 0.5, 1, 0.0 ]
 operator = 2
 
-[sub_resource type="VisualShaderNodeVectorCompose" id=41]
+[sub_resource type="VisualShaderNodeVectorCompose" id=45]
 output_port_for_preview = 0
 
-[sub_resource type="VisualShaderNodeVectorDerivativeFunc" id=42]
+[sub_resource type="VisualShaderNodeVectorDerivativeFunc" id=46]
 output_port_for_preview = 0
 function = 2
 
-[sub_resource type="VisualShaderNodeScalarOp" id=43]
+[sub_resource type="VisualShaderNodeScalarOp" id=47]
 output_port_for_preview = 0
 operator = 2
 
-[sub_resource type="VisualShaderNodeVectorDerivativeFunc" id=44]
+[sub_resource type="VisualShaderNodeVectorDerivativeFunc" id=48]
 output_port_for_preview = 0
 function = 1
 
-[sub_resource type="VisualShaderNodeScalarOp" id=45]
+[sub_resource type="VisualShaderNodeScalarOp" id=49]
 default_input_values = [ 0, 0.0, 1, 0.4 ]
 operator = 2
 
-[sub_resource type="VisualShaderNodeScalarFunc" id=46]
+[sub_resource type="VisualShaderNodeScalarFunc" id=50]
 output_port_for_preview = 0
 function = 0
 
-[sub_resource type="VisualShaderNodeInput" id=47]
+[sub_resource type="VisualShaderNodeInput" id=51]
 output_port_for_preview = 0
 input_name = "time"
 
-[sub_resource type="VisualShaderNodeScalarOp" id=48]
+[sub_resource type="VisualShaderNodeScalarOp" id=52]
 output_port_for_preview = 0
 default_input_values = [ 0, 0.5, 1, 0.0 ]
 
-[sub_resource type="CameraTexture" id=49]
+[sub_resource type="CameraTexture" id=53]
 
-[sub_resource type="VisualShaderNodeTexture" id=50]
+[sub_resource type="VisualShaderNodeTexture" id=54]
 output_port_for_preview = 0
 source = 1
-texture = SubResource( 49 )
+texture = SubResource( 53 )
 
-[sub_resource type="VisualShader" id=51]
+[sub_resource type="VisualShader" id=55]
 code = "shader_type canvas_item;
 uniform sampler2D tex_frg_19;
 uniform sampler2D tex_frg_21;
@@ -390,78 +448,79 @@ graph_offset = Vector2( 54, -123 )
 mode = 1
 flags/light_only = false
 nodes/fragment/0/position = Vector2( 960, -20 )
-nodes/fragment/4/node = SubResource( 40 )
+nodes/fragment/4/node = SubResource( 44 )
 nodes/fragment/4/position = Vector2( -440, 640 )
-nodes/fragment/5/node = SubResource( 46 )
+nodes/fragment/5/node = SubResource( 50 )
 nodes/fragment/5/position = Vector2( -680, 420 )
-nodes/fragment/6/node = SubResource( 47 )
+nodes/fragment/6/node = SubResource( 51 )
 nodes/fragment/6/position = Vector2( -960, 680 )
-nodes/fragment/7/node = SubResource( 48 )
+nodes/fragment/7/node = SubResource( 52 )
 nodes/fragment/7/position = Vector2( -229, 682 )
-nodes/fragment/8/node = SubResource( 50 )
+nodes/fragment/8/node = SubResource( 54 )
 nodes/fragment/8/position = Vector2( 680, -60 )
-nodes/fragment/15/node = SubResource( 22 )
+nodes/fragment/15/node = SubResource( 26 )
 nodes/fragment/15/position = Vector2( 140, -60 )
-nodes/fragment/16/node = SubResource( 23 )
+nodes/fragment/16/node = SubResource( 27 )
 nodes/fragment/16/position = Vector2( 440, -40 )
-nodes/fragment/18/node = SubResource( 24 )
+nodes/fragment/18/node = SubResource( 28 )
 nodes/fragment/18/position = Vector2( -400, -160 )
-nodes/fragment/19/node = SubResource( 25 )
+nodes/fragment/19/node = SubResource( 29 )
 nodes/fragment/19/position = Vector2( -740, -180 )
-nodes/fragment/20/node = SubResource( 26 )
+nodes/fragment/20/node = SubResource( 30 )
 nodes/fragment/20/position = Vector2( 220, 80 )
-nodes/fragment/21/node = SubResource( 27 )
+nodes/fragment/21/node = SubResource( 31 )
 nodes/fragment/21/position = Vector2( -760, 160 )
-nodes/fragment/22/node = SubResource( 28 )
+nodes/fragment/22/node = SubResource( 32 )
 nodes/fragment/22/position = Vector2( -460, 140 )
-nodes/fragment/23/node = SubResource( 29 )
+nodes/fragment/23/node = SubResource( 33 )
 nodes/fragment/23/position = Vector2( -240, 60 )
-nodes/fragment/24/node = SubResource( 30 )
+nodes/fragment/24/node = SubResource( 34 )
 nodes/fragment/24/position = Vector2( -860, 420 )
-nodes/fragment/25/node = SubResource( 31 )
+nodes/fragment/25/node = SubResource( 35 )
 nodes/fragment/25/position = Vector2( 500, 200 )
-nodes/fragment/27/node = SubResource( 32 )
+nodes/fragment/27/node = SubResource( 36 )
 nodes/fragment/27/position = Vector2( 311.168, 799.88 )
-nodes/fragment/29/node = SubResource( 33 )
+nodes/fragment/29/node = SubResource( 37 )
 nodes/fragment/29/position = Vector2( 91.168, 909.88 )
-nodes/fragment/30/node = SubResource( 34 )
+nodes/fragment/30/node = SubResource( 38 )
 nodes/fragment/30/position = Vector2( 517.168, 806.88 )
-nodes/fragment/31/node = SubResource( 35 )
+nodes/fragment/31/node = SubResource( 39 )
 nodes/fragment/31/position = Vector2( 781.328, 704.416 )
-nodes/fragment/32/node = SubResource( 36 )
+nodes/fragment/32/node = SubResource( 40 )
 nodes/fragment/32/position = Vector2( -440, 460 )
-nodes/fragment/33/node = SubResource( 37 )
+nodes/fragment/33/node = SubResource( 41 )
 nodes/fragment/33/position = Vector2( -105.832, 914.88 )
-nodes/fragment/34/node = SubResource( 38 )
+nodes/fragment/34/node = SubResource( 42 )
 nodes/fragment/34/position = Vector2( 100.168, 769.88 )
-nodes/fragment/39/node = SubResource( 39 )
+nodes/fragment/39/node = SubResource( 43 )
 nodes/fragment/39/position = Vector2( 0, 200 )
-nodes/fragment/41/node = SubResource( 41 )
+nodes/fragment/41/node = SubResource( 45 )
 nodes/fragment/41/position = Vector2( -240, 320 )
-nodes/fragment/43/node = SubResource( 42 )
+nodes/fragment/43/node = SubResource( 46 )
 nodes/fragment/43/position = Vector2( -200, 540 )
-nodes/fragment/45/node = SubResource( 43 )
+nodes/fragment/45/node = SubResource( 47 )
 nodes/fragment/45/position = Vector2( 480, 280 )
-nodes/fragment/46/node = SubResource( 44 )
+nodes/fragment/46/node = SubResource( 48 )
 nodes/fragment/46/position = Vector2( 60, 540 )
-nodes/fragment/47/node = SubResource( 45 )
+nodes/fragment/47/node = SubResource( 49 )
 nodes/fragment/47/position = Vector2( -30.9865, 110 )
 nodes/fragment/connections = PoolIntArray( 5, 0, 4, 1, 4, 0, 7, 1, 15, 0, 16, 0, 6, 0, 24, 0, 24, 0, 5, 0, 18, 0, 23, 0, 27, 0, 30, 0, 30, 0, 31, 0, 31, 0, 32, 0, 7, 0, 34, 0, 33, 0, 29, 0, 33, 0, 29, 1, 33, 0, 29, 2, 33, 0, 34, 1, 22, 0, 23, 1, 32, 0, 43, 0, 41, 0, 39, 0, 43, 0, 46, 0, 46, 0, 41, 1, 5, 0, 41, 0, 19, 0, 18, 0, 21, 0, 22, 1, 21, 0, 22, 0, 23, 0, 47, 0, 47, 0, 20, 0, 39, 0, 20, 1, 25, 0, 45, 1, 46, 0, 45, 0, 34, 0, 27, 0, 16, 0, 8, 0, 8, 0, 0, 0, 20, 0, 16, 1, 18, 0, 47, 1 )
 
-[sub_resource type="ShaderMaterial" id=52]
-shader = SubResource( 51 )
+[sub_resource type="ShaderMaterial" id=56]
+shader = SubResource( 55 )
 
-[sub_resource type="BoxShape" id=53]
+[sub_resource type="BoxShape" id=57]
 extents = Vector3( 12.5933, 0.0125104, 3.79245 )
 
 [node name="Escena_01_intro" type="Spatial"]
+script = ExtResource( 38 )
 
 [node name="Rieles" type="Spatial" parent="."]
 script = ExtResource( 2 )
-riel_paths = [ NodePath("Riel_00_intro"), NodePath("Riel_01_intro"), NodePath("Riel_02_intro"), NodePath("Riel_03_intro"), NodePath("Riel_04_intro"), NodePath("Riel_05_intro"), NodePath("Riel_06_intro"), NodePath("Riel_07_intro"), NodePath("Riel_08_intro"), NodePath("Riel_09_intro"), NodePath("Riel_10_intro"), NodePath("Riel_11_intro"), NodePath("Riel_12_intro"), NodePath("Riel_13_intro"), NodePath("Riel_14_tunel"), NodePath("Riel_15_tunel") ]
-follow_paths = [ NodePath("Riel_00_intro/Follow_00_intro"), NodePath("Riel_01_intro/Riel_01_intro"), NodePath("Riel_02_intro/Follow_02_intro"), NodePath("Riel_03_intro/Follow_03_intro"), NodePath("Riel_04_intro/Follow_04_intro"), NodePath("Riel_05_intro/Follow_05_intro"), NodePath("Riel_06_intro/Follow_06_intro"), NodePath("Riel_07_intro/Follow_07_intro"), NodePath("Riel_08_intro/Follow_08_intro"), NodePath("Riel_09_intro/Follow_09_intro"), NodePath("Riel_10_intro/Follow_10_intro"), NodePath("Riel_11_intro/Follow_11_intro"), NodePath("Riel_12_intro/Follow_12_intro"), NodePath("Riel_13_intro/Follow_13_intro"), NodePath("Riel_14_tunel/Follow_14_tunel"), NodePath("Riel_15_tunel/Follow_15_tunel") ]
-camera_paths = [ NodePath("Riel_00_intro/Follow_00_intro/Camara"), NodePath("Riel_01_intro/Riel_01_intro/Camara"), NodePath("Riel_02_intro/Follow_02_intro/Camara"), NodePath("Riel_03_intro/Follow_03_intro/Camara"), NodePath("Riel_04_intro/Follow_04_intro/Camara"), NodePath("Riel_05_intro/Follow_05_intro/Camara"), NodePath("Riel_06_intro/Follow_06_intro/Camara"), NodePath("Riel_07_intro/Follow_07_intro/Camara"), NodePath("Riel_08_intro/Follow_08_intro/Camara"), NodePath("Riel_09_intro/Follow_09_intro/Camara"), NodePath("Riel_10_intro/Follow_10_intro/Camara"), NodePath("Riel_11_intro/Follow_11_intro/Camara"), NodePath("Riel_12_intro/Follow_12_intro/Camara"), NodePath("Riel_13_intro/Follow_13_intro/Camara"), NodePath("Riel_14_tunel/Follow_14_tunel/Camara"), NodePath("Riel_15_tunel/Follow_15_tunel/Camara") ]
-tiempo_tweens = [ 0.01, 1.982, 2.938, 0.669, 0.618, 0.6, 0.604, 0.696, 0.743, 0.866, 16.0, 0.4, 0.3, 0.6, 4.0, 6.0 ]
+riel_paths = [ NodePath("Riel_00_intro"), NodePath("Riel_01_intro"), NodePath("Riel_02_intro"), NodePath("Riel_03_intro"), NodePath("Riel_04_intro"), NodePath("Riel_05_intro"), NodePath("Riel_06_intro"), NodePath("Riel_07_intro"), NodePath("Riel_08_intro"), NodePath("Riel_09_intro"), NodePath("Riel_10_intro"), NodePath("Riel_11_intro"), NodePath("Riel_12_intro"), NodePath("Riel_13_intro"), NodePath("Riel_14_tunel"), NodePath("Riel_15_tunel"), NodePath("Riel_16_tunel"), NodePath("Riel_17_tunel"), NodePath("Riel_18_tunel"), NodePath("Riel_19_lab"), NodePath("Riel_20_lab"), NodePath("Riel_21_lab"), NodePath("Riel_22_lab") ]
+follow_paths = [ NodePath("Riel_00_intro/Follow_00_intro"), NodePath("Riel_01_intro/Riel_01_intro"), NodePath("Riel_02_intro/Follow_02_intro"), NodePath("Riel_03_intro/Follow_03_intro"), NodePath("Riel_04_intro/Follow_04_intro"), NodePath("Riel_05_intro/Follow_05_intro"), NodePath("Riel_06_intro/Follow_06_intro"), NodePath("Riel_07_intro/Follow_07_intro"), NodePath("Riel_08_intro/Follow_08_intro"), NodePath("Riel_09_intro/Follow_09_intro"), NodePath("Riel_10_intro/Follow_10_intro"), NodePath("Riel_11_intro/Follow_11_intro"), NodePath("Riel_12_intro/Follow_12_intro"), NodePath("Riel_13_intro/Follow_13_intro"), NodePath("Riel_14_tunel/Follow_14_tunel"), NodePath("Riel_15_tunel/Follow_15_tunel"), NodePath("Riel_16_tunel/Follow_16_tunel"), NodePath("Riel_17_tunel/Follow_17_tunel"), NodePath("Riel_18_tunel/Follow_18_tunel"), NodePath("Riel_19_lab/Follow_19_lab"), NodePath("Riel_20_lab/Follow_20_lab"), NodePath("Riel_21_lab/Follow_21_lab"), NodePath("Riel_22_lab/Follow_22_lab") ]
+camera_paths = [ NodePath("Riel_00_intro/Follow_00_intro/Camara"), NodePath("Riel_01_intro/Riel_01_intro/Camara"), NodePath("Riel_02_intro/Follow_02_intro/Camara"), NodePath("Riel_03_intro/Follow_03_intro/Camara"), NodePath("Riel_04_intro/Follow_04_intro/Camara"), NodePath("Riel_05_intro/Follow_05_intro/Camara"), NodePath("Riel_06_intro/Follow_06_intro/Camara"), NodePath("Riel_07_intro/Follow_07_intro/Camara"), NodePath("Riel_08_intro/Follow_08_intro/Camara"), NodePath("Riel_09_intro/Follow_09_intro/Camara"), NodePath("Riel_10_intro/Follow_10_intro/Camara"), NodePath("Riel_11_intro/Follow_11_intro/Camara"), NodePath("Riel_12_intro/Follow_12_intro/Camara"), NodePath("Riel_13_intro/Follow_13_intro/Camara"), NodePath("Riel_14_tunel/Follow_14_tunel/Camara"), NodePath("Riel_15_tunel/Follow_15_tunel/Camara"), NodePath("Riel_16_tunel/Follow_16_tunel/Camara"), NodePath("Riel_17_tunel/Follow_17_tunel/Camara"), NodePath("Riel_18_tunel/Follow_18_tunel/Camara"), NodePath("Riel_19_lab/Follow_19_lab/Camara"), NodePath("Riel_20_lab/Follow_20_lab/Camara"), NodePath("Riel_21_lab/Follow_21_lab/Camara"), NodePath("Riel_22_lab/Follow_22_lab/Camara") ]
+tiempo_tweens = [ 0.01, 1.982, 2.938, 0.669, 0.618, 0.6, 0.604, 0.696, 0.743, 0.866, 16.0, 0.4, 0.3, 0.6, 4.0, 2.0, 2.0, 7.2, 4.0, 3.0, 2.0, 2.0, 25.0 ]
 main_muxxxe = NodePath("../idle01")
 
 [node name="Riel_00_intro" type="Path" parent="Rieles"]
@@ -880,12 +939,190 @@ loop = false
 [node name="Camara" parent="Rieles/Riel_15_tunel/Follow_15_tunel" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 cosa_mirar_node = NodePath("../../Mira_15_tunel")
-fov_cam = 60
+fov_cam = 100
 
 [node name="Tween_15_tunel" type="Tween" parent="Rieles/Riel_15_tunel/Follow_15_tunel"]
 
 [node name="Mira_15_tunel" type="Spatial" parent="Rieles/Riel_15_tunel"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9312, -15.2225, 17.3405 )
+
+[node name="Riel_16_tunel" type="Path" parent="Rieles"]
+curve = SubResource( 21 )
+script = ExtResource( 4 )
+pathFnode = NodePath("Follow_16_tunel")
+tweenNode = NodePath("Follow_16_tunel/Tween_16_tunel")
+camNode = NodePath("Follow_16_tunel/Camara")
+camNumero = 17
+
+[node name="Follow_16_tunel" type="PathFollow" parent="Rieles/Riel_16_tunel"]
+rotation_mode = 0
+loop = false
+
+[node name="Camara" parent="Rieles/Riel_16_tunel/Follow_16_tunel" instance=ExtResource( 3 )]
+cosa_mirar_node = NodePath("../../Mira_16_tunel")
+fov_cam = 35
+
+[node name="Tween_16_tunel" type="Tween" parent="Rieles/Riel_16_tunel/Follow_16_tunel"]
+
+[node name="Mira_16_tunel" type="Spatial" parent="Rieles/Riel_16_tunel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.213157, -14.7035, 14.3332 )
+
+[node name="Riel_17_tunel" type="Path" parent="Rieles"]
+curve = SubResource( 22 )
+script = ExtResource( 4 )
+pathFnode = NodePath("Follow_17_tunel")
+tweenNode = NodePath("Follow_17_tunel/Tween_17_tunel")
+camNode = NodePath("Follow_17_tunel/Camara")
+camNumero = 18
+
+[node name="Follow_17_tunel" type="PathFollow" parent="Rieles/Riel_17_tunel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38687, -15.5471, 17.5433 )
+offset = 0.360757
+rotation_mode = 0
+loop = false
+
+[node name="Camara" parent="Rieles/Riel_17_tunel/Follow_17_tunel" instance=ExtResource( 3 )]
+cosa_mirar_node = NodePath("../../Riel_Mira_17_tunel/Follow_Mira_17_tunel")
+fov_cam = 55
+
+[node name="Tween_17_tunel" type="Tween" parent="Rieles/Riel_17_tunel/Follow_17_tunel"]
+
+[node name="Riel_Mira_17_tunel" type="Path" parent="Rieles/Riel_17_tunel"]
+curve = SubResource( 23 )
+script = ExtResource( 6 )
+follow_node = NodePath("Follow_Mira_17_tunel")
+tween_node = NodePath("Follow_Mira_17_tunel/Mira_17_tunel/Tween_Mira_17_tunel")
+tiempo_tween = 7.6
+
+[node name="Follow_Mira_17_tunel" type="PathFollow" parent="Rieles/Riel_17_tunel/Riel_Mira_17_tunel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.727, -15.5002, 18.2186 )
+offset = 0.166984
+rotation_mode = 0
+loop = false
+
+[node name="Mira_17_tunel" type="Spatial" parent="Rieles/Riel_17_tunel/Riel_Mira_17_tunel/Follow_Mira_17_tunel"]
+
+[node name="Tween_Mira_17_tunel" type="Tween" parent="Rieles/Riel_17_tunel/Riel_Mira_17_tunel/Follow_Mira_17_tunel/Mira_17_tunel"]
+
+[node name="Tween" type="Tween" parent="Rieles/Riel_17_tunel"]
+
+[node name="Riel_18_tunel" type="Path" parent="Rieles"]
+curve = SubResource( 24 )
+script = ExtResource( 4 )
+pathFnode = NodePath("Follow_18_tunel")
+tweenNode = NodePath("Follow_18_tunel/Tween_18_tunel")
+camNode = NodePath("Follow_18_tunel/Camara")
+camNumero = 19
+
+[node name="Follow_18_tunel" type="PathFollow" parent="Rieles/Riel_18_tunel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.86, -15.2517, 17.347 )
+offset = 0.00125777
+rotation_mode = 0
+loop = false
+
+[node name="Camara" parent="Rieles/Riel_18_tunel/Follow_18_tunel" instance=ExtResource( 3 )]
+cosa_mirar_node = NodePath("../../Mira_18_tunel")
+fov_cam = 60
+
+[node name="Tween_18_tunel" type="Tween" parent="Rieles/Riel_18_tunel/Follow_18_tunel"]
+
+[node name="Mira_18_tunel" type="Spatial" parent="Rieles/Riel_18_tunel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5883, -15.3229, 17.3214 )
+
+[node name="Riel_19_lab" type="Path" parent="Rieles"]
+curve = SubResource( 58 )
+script = ExtResource( 4 )
+pathFnode = NodePath("Follow_19_lab")
+tweenNode = NodePath("Follow_19_lab/Tween_19_lab")
+camNode = NodePath("Follow_19_lab/Camara")
+camNumero = 20
+
+[node name="Follow_19_lab" type="PathFollow" parent="Rieles/Riel_19_lab"]
+
+[node name="Camara" parent="Rieles/Riel_19_lab/Follow_19_lab" instance=ExtResource( 3 )]
+cosa_mirar_node = NodePath("../../Mira_19_lab")
+fov_cam = 60
+
+[node name="Tween_19_lab" type="Tween" parent="Rieles/Riel_19_lab/Follow_19_lab"]
+
+[node name="Mira_19_lab" type="Spatial" parent="Rieles/Riel_19_lab"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.7589, -14.3164, 17.1397 )
+
+[node name="Riel_20_lab" type="Path" parent="Rieles"]
+curve = SubResource( 59 )
+script = ExtResource( 4 )
+pathFnode = NodePath("Follow_20_lab")
+tweenNode = NodePath("Follow_20_lab/Tween_20_lab")
+camNode = NodePath("Follow_20_lab/Camara")
+camNumero = 21
+
+[node name="Follow_20_lab" type="PathFollow" parent="Rieles/Riel_20_lab"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.0162, -9.86248, 11.7304 )
+offset = 0.0232977
+rotation_mode = 0
+loop = false
+
+[node name="Camara" parent="Rieles/Riel_20_lab/Follow_20_lab" instance=ExtResource( 3 )]
+cosa_mirar_node = NodePath("../../Mira_20_lab")
+fov_cam = 60
+
+[node name="Tween_20_lab" type="Tween" parent="Rieles/Riel_20_lab/Follow_20_lab"]
+
+[node name="Mira_20_lab" type="Spatial" parent="Rieles/Riel_20_lab"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.8942, -15.1272, 17.1348 )
+
+[node name="Riel_21_lab" type="Path" parent="Rieles"]
+curve = SubResource( 60 )
+script = ExtResource( 4 )
+pathFnode = NodePath("Follow_21_lab")
+tweenNode = NodePath("Follow_21_lab/Tween_21_lab")
+camNode = NodePath("Follow_21_lab/Camara")
+camNumero = 22
+
+[node name="Follow_21_lab" type="PathFollow" parent="Rieles/Riel_21_lab"]
+
+[node name="Camara" parent="Rieles/Riel_21_lab/Follow_21_lab" instance=ExtResource( 3 )]
+cosa_mirar_node = NodePath("../../Mira_21_lab")
+fov_cam = 85
+
+[node name="Tween_21_lab" type="Tween" parent="Rieles/Riel_21_lab/Follow_21_lab"]
+
+[node name="Mira_21_lab" type="Spatial" parent="Rieles/Riel_21_lab"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.84, -13.9406, 17.1291 )
+
+[node name="Riel_22_lab" type="Path" parent="Rieles"]
+curve = SubResource( 61 )
+script = ExtResource( 4 )
+pathFnode = NodePath("Follow_22_lab")
+tweenNode = NodePath("Follow_22_lab/Tween_22_lab")
+camNode = NodePath("Follow_22_lab/Camara")
+camNumero = 23
+
+[node name="Follow_22_lab" type="PathFollow" parent="Rieles/Riel_22_lab"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.8995, -15.1659, 16.8723 )
+offset = 0.00570835
+rotation_mode = 0
+loop = false
+
+[node name="Camara" parent="Rieles/Riel_22_lab/Follow_22_lab" instance=ExtResource( 3 )]
+cosa_mirar_node = NodePath("../../Riel_Mira_22_lab/Follow_Mira_22_lab")
+fov_cam = 60
+
+[node name="Tween_22_lab" type="Tween" parent="Rieles/Riel_22_lab/Follow_22_lab"]
+
+[node name="Riel_Mira_22_lab" type="Path" parent="Rieles/Riel_22_lab"]
+curve = SubResource( 62 )
+script = ExtResource( 6 )
+follow_node = NodePath("Follow_Mira_22_lab")
+tween_node = NodePath("Follow_Mira_22_lab/Tween_Mira_22_lab")
+tiempo_tween = 25.0
+
+[node name="Follow_Mira_22_lab" type="PathFollow" parent="Rieles/Riel_22_lab/Riel_Mira_22_lab"]
+
+[node name="Mira_22_lab" type="Spatial" parent="Rieles/Riel_22_lab/Riel_Mira_22_lab/Follow_Mira_22_lab"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.7408, -14.0911, 17.2698 )
+
+[node name="Tween_Mira_22_lab" type="Tween" parent="Rieles/Riel_22_lab/Riel_Mira_22_lab/Follow_Mira_22_lab"]
 
 [node name="idle01" parent="." instance=ExtResource( 22 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0876109, -0.150241 )
@@ -903,115 +1140,115 @@ autoplay = true
 [node name="Techo" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 13.7165, 0, 0, 0, 0.1, 0, 0, 0, 6.22194, -4.09549, 4.31002, 15.2828 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Techo6" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 9.77366, 0, 0, 0, 0.0813659, 3.61708, 0, -0.0581342, 5.06254, -0.795314, 6.9911, -4.79297 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Techo5" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 9.77366, 0, 0, 0, 0.08845, -2.90279, 0, 0.0466541, 5.5033, -0.795314, 7.12324, 6.15349 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Techo3" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 8.433, 0, 0, 0, 0.0663508, 2.47665, 0, -0.0748169, 2.1964, 0.0123322, 4.70405, -8.57894 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Techo2" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 7.60888, 0, 0, 0, 0.1, 0, 0, 0, 18.004, 0.0123322, -0.117429, 7.01591 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Techo4" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 6.55639, 0, 0, 0, 0.1, 0, 0, 0, 9.62968, -11.8261, -0.117429, 11.2722 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Techo7" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 6.90689, 0, 0, 0, 0.152122, 0, 0, 0, 6.53871, -13.786, -15.3239, 18.1131 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Techo8" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 22.194, 0, 0, 0, 0.152122, 0, 0, 0, 6.53871, 1.11925, -16.83, 18.1131 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Techo9" type="MeshInstance" parent="Pasillos"]
-transform = Transform( 15.8483, 0, 0, 0, 0.152122, 0, 0, 0, 6.53871, 13.1227, -13.7212, 18.1131 )
+transform = Transform( 15.8483, 0, 0, 0, 0.152122, 0, 0, 0, 6.53871, 7.6531, -13.7212, 18.1131 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared" type="MeshInstance" parent="Pasillos"]
 transform = Transform( -1.83309e-07, 0.1, 0, -9.09493, -9.47989e-09, 0, 0, 0, 16.6033, 7.21084, 1.94909, 7.03953 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared2" type="MeshInstance" parent="Pasillos"]
 transform = Transform( -1.97815e-07, 0.0987938, 0, -8.98523, -8.57412e-09, 0, 0, 0, 11.1303, -7.70722, 1.94909, 1.22508 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared3" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 5.9309e-15, -3.23544e-09, -8.55146, -3.53542, -3.68506e-09, 0, -1.83309e-07, 0.1, -5.05003e-07, -0.0562046, 3.53873, -9.85317 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared4" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 1.02889e-14, -5.61281e-09, -14.835, -2.24418, -2.33917e-09, 0, -1.83309e-07, 0.1, -5.05003e-07, -3.54269, 1.94909, 20.567 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared7" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 4.75587e-15, -2.59443e-09, -6.85723, -12.3001, -1.28208e-08, 0, -1.83309e-07, 0.1, -5.05003e-07, -13.661, -10.769, 23.0133 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared8" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 4.75587e-15, -2.59443e-09, -6.85723, -12.3001, -1.28208e-08, 0, -1.83309e-07, 0.1, -5.05003e-07, -13.661, -10.769, 11.5611 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared9" type="MeshInstance" parent="Pasillos"]
 transform = Transform( -1.83309e-07, 0.1, -2.8306e-07, -12.3001, -1.28208e-08, 0, 6.1044e-15, -3.33014e-09, 6.90126, -19.6035, -10.769, 17.3259 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared10" type="MeshInstance" parent="Pasillos"]
 transform = Transform( -1.83309e-07, 0.1, -2.8306e-07, -12.3001, -1.28208e-08, 0, 6.1044e-15, -3.33014e-09, 6.90126, -8.0418, -13.9802, 17.3259 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared5" type="MeshInstance" parent="Pasillos"]
 transform = Transform( 4.30729e-15, -2.34973e-09, -6.21047, -2.24418, -2.33917e-09, 0, -1.83309e-07, 0.1, -5.05003e-07, -12.8895, 1.94909, 10.9233 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Pared6" type="MeshInstance" parent="Pasillos"]
 transform = Transform( -1.83309e-07, 0.1, -2.67128e-07, -2.24418, -2.33917e-09, 0, 4.23841e-15, -2.31218e-09, 5.44195, -17.9426, 1.94909, 14.8138 )
 use_in_baked_light = true
-mesh = SubResource( 21 )
+mesh = SubResource( 25 )
 material/0 = ExtResource( 21 )
 
 [node name="Luces" type="Spatial" parent="."]
@@ -1841,7 +2078,7 @@ transform = Transform( 0.35638, 0, 1.02934, 0, 1.08929, 0, -1.02934, 0, 0.35638,
 [node name="ColorRect" type="TextureRect" parent="."]
 visible = false
 light_mask = 0
-material = SubResource( 52 )
+material = SubResource( 56 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -1858,6 +2095,7 @@ __meta__ = {
 }
 
 [node name="Escena_03" type="Spatial" parent="."]
+visible = false
 
 [node name="Objetos_escena" type="Spatial" parent="Escena_03"]
 
@@ -2694,8 +2932,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16.6683, 17.3254 )
 [node name="Pasillo_Puerta" parent="Escena_03/Objetos_escena/Pasillo_rojo" instance=ExtResource( 33 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.2988, 0, 0.159285 )
 
-[node name="Pasillo_Puerta2" parent="Escena_03/Objetos_escena/Pasillo_rojo" instance=ExtResource( 33 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 23.6865, 0, -0.16301 )
+[node name="Pasillo_Puerta-Arco" parent="Escena_03/Objetos_escena/Pasillo_rojo" instance=ExtResource( 25 )]
+transform = Transform( 7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 23.6865, 0, -0.16301 )
+
+[node name="Pasillo_Puerta-Bajo" parent="Escena_03/Objetos_escena/Pasillo_rojo" instance=ExtResource( 24 )]
+transform = Transform( 7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 23.6865, 0, -0.16301 )
+
+[node name="Pasillo_Puerta-Upper" parent="Escena_03/Objetos_escena/Pasillo_rojo" instance=ExtResource( 23 )]
+transform = Transform( 7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 23.6865, 0, -0.16301 )
+script = ExtResource( 35 )
+
+[node name="Tween" type="Tween" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_Puerta-Upper"]
 
 [node name="Piso" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo"]
 
@@ -2945,7 +3192,7 @@ __meta__ = {
 }
 
 [node name="1_Pasillo_VidrioRoto11" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq" instance=ExtResource( 31 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.3159, 0, -3.79715 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.3179, 0, -3.77829 )
 
 [node name="OmniLight" type="OmniLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_izq/1_Pasillo_VidrioRoto11"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1801, 1.59019, 0.885642 )
@@ -3376,17 +3623,95 @@ velocidad = 0.5
 
 [node name="CollisionShape" type="CollisionShape" parent="Escena_03/Objetos_escena/Pasillo_rojo/Colisiones/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1404, 0, 0 )
-shape = SubResource( 53 )
+shape = SubResource( 57 )
+
+[node name="MUXXXES_ESTATICA" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo"]
+
+[node name="agonising" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES_ESTATICA" instance=ExtResource( 28 )]
+transform = Transform( 1.74751, 0, 0, 0, 1.74751, 0, 0, 0, 1.74751, 0.291736, -0.43763, -3.39279 )
+
+[node name="luz" type="Spatial" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES_ESTATICA/agonising"]
+script = ExtResource( 16 )
+tiltilar_time = 0.2
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES_ESTATICA/agonising/luz"]
+transform = Transform( 0.686552, 0, 0, 0, 0.615496, 0.30417, 0, -0.30417, 0.615496, 0, 1.76014, 0.811263 )
+light_color = Color( 1, 0.87451, 0.831373, 1 )
+light_energy = 6.92
+light_indirect_energy = 7.2
+spot_range = 7.7
+spot_attenuation = 1.36604
+spot_angle_attenuation = 0.757858
+
+[node name="SpotLight" type="SpotLight" parent="Escena_03/Objetos_escena/Pasillo_rojo"]
+transform = Transform( -4.26167e-08, 0.222399, -0.974956, 9.72139e-09, 0.974956, 0.222399, 1, -8.88179e-16, -4.37114e-08, 21.5239, 1.80083, 0 )
+light_color = Color( 0, 1, 0.27451, 1 )
+light_energy = 6.27
+light_indirect_energy = 7.85
+spot_range = 4.7
+spot_attenuation = 1.7411
+spot_angle = 28.9
+spot_angle_attenuation = 0.366021
+
+[node name="UI_main" parent="." instance=ExtResource( 30 )]
+
+[node name="Escena_04" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.9423, -16.2065, 17.1498 )
+visible = false
+
+[node name="boss_muxxxe" parent="Escena_04" instance=ExtResource( 37 )]
+transform = Transform( -4.48617e-08, 0, -1.02632, 0, 1.02632, 0, 1.02632, 0, -4.48617e-08, 0, 0.528975, 0 )
+
+[node name="Laboratorio_escena" parent="Escena_04" instance=ExtResource( 36 )]
+
+[node name="Luces" type="Spatial" parent="Escena_04"]
+
+[node name="OmniLight" type="OmniLight" parent="Escena_04/Luces"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03154, 0 )
+light_color = Color( 0, 1, 0.109804, 1 )
+light_energy = 7.36
+light_indirect_energy = 10.47
+omni_range = 11.1476
+
+[node name="SpotLight" type="SpotLight" parent="Escena_04/Luces"]
+transform = Transform( -0.861576, 0, -0.507628, 0, 1, 0, 0.507628, 0, -0.861576, -5.52702, 0.787371, -11.9794 )
+light_color = Color( 0.168627, 1, 0.219608, 1 )
+light_energy = 2.55
+light_indirect_energy = 1.41
+spot_range = 5.5
+spot_attenuation = 2.0
+spot_angle_attenuation = 1.56917
+
+[node name="SpotLight2" type="SpotLight" parent="Escena_04/Luces"]
+transform = Transform( 0.467467, 0, -0.884011, 0, 1, 0, 0.884011, 0, 0.467467, -1.37051, 1.4883, 10.0009 )
+light_color = Color( 0.168627, 1, 0.219608, 1 )
+light_energy = 2.07
+light_indirect_energy = 1.62
+spot_range = 5.5
+spot_attenuation = 2.0
+spot_angle_attenuation = 1.56917
 
 [node name="GIProbe_01" type="GIProbe" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.10546, -1.11959, 8.49588 )
+visible = false
 subdiv = 2
-extents = Vector3( 40.8085, 32.6466, 43.5736 )
+extents = Vector3( 64.7837, 32.6466, 43.5736 )
 energy = 0.5
 interior = true
 data = ExtResource( 29 )
 
-[node name="UI_main" parent="." instance=ExtResource( 30 )]
+[node name="fadeout" type="ColorRect" parent="."]
+margin_left = -34.7058
+margin_top = -16.0181
+margin_right = 1975.29
+margin_bottom = 1112.98
+mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="fadeout"]
 [connection signal="tween_completed" from="Rieles/Riel_00_intro/Follow_00_intro/Tween_00_intro" to="Rieles" method="_on_Tween_00_intro_tween_completed"]
 [connection signal="tween_completed" from="Rieles/Riel_01_intro/Riel_01_intro/Tween_01_intro" to="Rieles" method="_on_Tween_01_intro_tween_completed"]
 [connection signal="tween_completed" from="Rieles/Riel_02_intro/Follow_02_intro/Tween_02_intro" to="Rieles" method="_on_Tween_02_intro_tween_completed"]
@@ -3402,3 +3727,11 @@ data = ExtResource( 29 )
 [connection signal="tween_completed" from="Rieles/Riel_12_intro/Follow_12_intro/Tween_12_intro" to="Rieles" method="_on_Tween_12_intro_tween_completed"]
 [connection signal="tween_completed" from="Rieles/Riel_13_intro/Follow_13_intro/Tween_13_intro" to="Rieles" method="_on_Tween_13_intro_tween_completed"]
 [connection signal="tween_completed" from="Rieles/Riel_14_tunel/Follow_14_tunel/Tween_14_tunel" to="Rieles" method="_on_Tween_14_tunel_tween_completed"]
+[connection signal="tween_completed" from="Rieles/Riel_15_tunel/Follow_15_tunel/Tween_15_tunel" to="Rieles" method="_on_Tween_15_tunel_tween_completed"]
+[connection signal="tween_completed" from="Rieles/Riel_16_tunel/Follow_16_tunel/Tween_16_tunel" to="Rieles" method="_on_Tween_16_tunel_tween_completed"]
+[connection signal="tween_completed" from="Rieles/Riel_17_tunel/Follow_17_tunel/Tween_17_tunel" to="Rieles" method="_on_Tween_17_tunel_tween_completed"]
+[connection signal="tween_completed" from="Rieles/Riel_18_tunel/Follow_18_tunel/Tween_18_tunel" to="Rieles" method="_on_Tween_18_tunel_tween_completed"]
+[connection signal="tween_completed" from="Rieles/Riel_19_lab/Follow_19_lab/Tween_19_lab" to="Rieles" method="_on_Tween_19_lab_tween_completed"]
+[connection signal="tween_completed" from="Rieles/Riel_20_lab/Follow_20_lab/Tween_20_lab" to="Rieles" method="_on_Tween_20_lab_tween_completed"]
+[connection signal="tween_completed" from="Rieles/Riel_21_lab/Follow_21_lab/Tween_21_lab" to="Rieles" method="_on_Tween_21_lab_tween_completed"]
+[connection signal="finished" from="Guerrillera" to="." method="_on_Guerrillera_finished"]

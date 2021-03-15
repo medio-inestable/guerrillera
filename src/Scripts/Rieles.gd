@@ -98,6 +98,7 @@ func _on_Tween_10_intro_tween_completed(object, key):
 	get_node("Riel_11_intro/Riel_Mira_11_intro")._mueve_mira()
 	_activa_camera(camera_paths[11], camera_paths)	
 	get_node(riel_paths[11])._mueve_camara(tiempo_tweens[11], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	get_node('../Escena_03').visible = true
 	
 
 func _on_Tween_11_intro_tween_completed(object, key):
@@ -108,19 +109,20 @@ func _on_Tween_11_intro_tween_completed(object, key):
 func _on_Tween_12_intro_tween_completed(object, key):
 	_activa_camera(camera_paths[13], camera_paths)	
 	get_node(riel_paths[13])._mueve_camara(tiempo_tweens[13], Tween.TRANS_LINEAR, Tween.EASE_OUT)
-	
+
 	
 func _on_Tween_13_intro_tween_completed(object, key):
 	get_node("Riel_14_tunel/Riel_Mira_14_tunel")._mueve_mira()
 	_activa_camera(camera_paths[14], camera_paths)	
 	get_node(riel_paths[14])._mueve_camara(tiempo_tweens[14], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	get_node('../Objetos_escena_02').visible = false
 	$'../Objetos_escena_02'.queue_free()
 	
 
 func _on_Tween_14_tunel_tween_completed(object, key):
 	_activa_camera(camera_paths[15], camera_paths)	
 	get_node(riel_paths[15])._mueve_camara(tiempo_tweens[15], Tween.TRANS_LINEAR, Tween.EASE_OUT)
-	yield(get_tree().create_timer(0.5), "timeout")
+	yield(get_tree().create_timer(1), "timeout")
 	for muxxxe in get_node('../Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES').get_children():
 		muxxxe.corre_muxxxe = true
 		if muxxxe.vivo:
@@ -130,14 +132,57 @@ func _on_Tween_14_tunel_tween_completed(object, key):
 			muxxxe.running.visible = true
 			
 			yield(get_tree().create_timer(rand_range(0.4, 0.8)), "timeout")
-			#get_node('../Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES/muxxxe_disparable').corre_muxxxe = true
-		#get_node('../Escena_03/Objetos_escena/Pasillo_rojo/MUXXXES/muxxxe_disparable').idle.visible = false
+			
 
+func _on_Tween_15_tunel_tween_completed(object, key):
+	_activa_camera(camera_paths[16], camera_paths)	
+	get_node(riel_paths[16])._mueve_camara(tiempo_tweens[16], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	
+
+
+func _on_Tween_16_tunel_tween_completed(object, key):
+	get_node("Riel_17_tunel/Riel_Mira_17_tunel")._mueve_mira()
+	_activa_camera(camera_paths[17], camera_paths)	
+	get_node(riel_paths[17])._mueve_camara(tiempo_tweens[17], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	get_node('../Escena_04').visible = true
+
+
+func _on_Tween_17_tunel_tween_completed(object, key):
+	_activa_camera(camera_paths[18], camera_paths)	
+	get_node(riel_paths[18])._mueve_camara(tiempo_tweens[18], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	yield(get_tree().create_timer(0.5), "timeout")
+	get_node('../Escena_03/Objetos_escena/Pasillo_rojo/Pasillo_Puerta-Upper')._sube_puerta()
+
+
+func _on_Tween_18_tunel_tween_completed(object, key):
+	_activa_camera(camera_paths[19], camera_paths)	
+	get_node(riel_paths[19])._mueve_camara(tiempo_tweens[19], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	get_node('../Escena_03').queue_free()
+
+func _on_Tween_19_lab_tween_completed(object, key):
+	_activa_camera(camera_paths[20], camera_paths)	
+	get_node(riel_paths[20])._mueve_camara(tiempo_tweens[20], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	
+	
+func _on_Tween_20_lab_tween_completed(object, key):
+	_activa_camera(camera_paths[21], camera_paths)	
+	get_node(riel_paths[21])._mueve_camara(tiempo_tweens[21], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	
+	
+func _on_Tween_21_lab_tween_completed(object, key):
+	get_node("Riel_22_lab/Riel_Mira_22_lab")._ultima_mira()
+	_activa_camera(camera_paths[22], camera_paths)	
+	get_node(riel_paths[22])._ultimo_loop(tiempo_tweens[22], Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	
+	
 	
 	
 func _on_tween_01_01_tween_completed(object, key):
 	_activa_camera(camera_paths[1], camera_paths)	
 	get_node(riel_paths[1])._mueve_camara(tiempo_tweens[1], Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+
+
+
 
 
 
