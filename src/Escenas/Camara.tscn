@@ -89,9 +89,9 @@ shape = SubResource( 10 )
 
 [node name="Tween" type="Tween" parent="."]
 
-[node name="gunshot" type="AudioStreamPlayer3D" parent="."]
+[node name="gunshot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-unit_db = -13.827
+volume_db = -15.139
 pitch_scale = 0.79
 
 [node name="flash" type="OmniLight" parent="."]

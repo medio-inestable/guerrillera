@@ -1,0 +1,415 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Assets/Modelos_escenas/LabAbandonado_COMPLETO.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Modelos_escenas/Lab_Columna_6.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Modelos_escenas/Lab_Compu_Brazo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Modelos_escenas/Lab_PiezaCentral.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Modelos_escenas/Lab_Columna_Singular.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Modelos_escenas/Lab_PanelControl_01.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Modelos_escenas/Lab_PanelControl_02.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Modelos_escenas/Lab_panelControl.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Modelos_escenas/Lab_Servidores.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Modelos_escenas/Lab_mesaTrabajo.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Modelos_escenas/Lab_locker.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/Modelos_escenas/Lab_Terminal-Monitor.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/Modelos_escenas/Lab_miniTele.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Modelos_escenas/Lab_cajoncitos.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Assets/Modelos_escenas/Lab_lucesChiquitas.tscn" type="PackedScene" id=15]
+
+[node name="Laboratorio_escena" type="Spatial"]
+transform = Transform( 0, 0, -1, 0, 1, 0, 1, 0, 0, 0, 0, 0 )
+
+[node name="LabAbandonado_COMPLETO" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 0, 0 )
+
+[node name="Lab_Columna_6" parent="." instance=ExtResource( 2 )]
+
+[node name="Lab_Columna_Singular" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.784744, 0.606312, -0.128698, 0, 0.207638, 0.978206, 0.61982, -0.767641, 0.162943, 2.2507, 0, 12.3156 )
+
+[node name="Lab_Columna_Singular2" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.464371, -0.845695, -0.262975, 0.527832, 0.0258445, 0.848955, -0.711161, -0.533037, 0.458387, -0.795306, 0.192731, 2.75702 )
+
+[node name="Lab_Columna_Singular3" parent="." instance=ExtResource( 5 )]
+transform = Transform( -0.839146, -0.138573, 0.525953, 0.527832, 0.0258445, 0.848955, -0.131236, 0.990012, 0.0514562, 4.48366, 0.19273, 4.12864 )
+
+[node name="Lab_Columna_Singular4" parent="." instance=ExtResource( 5 )]
+transform = Transform( -0.983057, -0.138573, 0.119961, 0.117498, 0.0258444, 0.992736, -0.140667, 0.990012, -0.00912447, -4.44515, 0.566003, 8.35212 )
+
+[node name="Lab_Compu_Brazo" parent="." instance=ExtResource( 3 )]
+
+[node name="Lab_PiezaCentral" parent="." instance=ExtResource( 4 )]
+
+[node name="Paneles" type="Spatial" parent="."]
+
+[node name="Lab_panelControl" parent="Paneles" instance=ExtResource( 8 )]
+transform = Transform( 0.247712, 0, 0, 0, 0.247712, 0, 0, 0, 0.247712, -0.0596447, 0, -8.49363 )
+
+[node name="Lab_panelControl3" parent="Paneles" instance=ExtResource( 8 )]
+transform = Transform( 0.235558, 0, -0.0766375, 0, 0.247712, 0, 0.0766375, 0, 0.235558, 6.93881, 0, -7.26649 )
+
+[node name="Lab_panelControl4" parent="Paneles" instance=ExtResource( 8 )]
+transform = Transform( 0.144392, -0.170803, -0.106481, -0.0584205, 0.0898407, -0.223331, 0.192611, 0.155293, 0.0120859, 9.62072, 0.0879035, -6.51088 )
+
+[node name="Lab_panelControl2" parent="Paneles" instance=ExtResource( 8 )]
+transform = Transform( 0.24549, 0, 0.0330999, 0, 0.247712, 0, -0.0330999, 0, 0.24549, -2.03797, 0, -8.25354 )
+
+[node name="Lab_panelControl13" parent="Paneles" instance=ExtResource( 8 )]
+transform = Transform( 0.131502, 0, 0.209924, 0, 0.247712, 0, -0.209924, 0, 0.131502, -9.53426, 0, -4.40295 )
+
+[node name="Lab_panelControl9" parent="Paneles" instance=ExtResource( 8 )]
+transform = Transform( -0.164436, 0, 0.185261, 0, 0.247712, 0, -0.185261, 0, -0.164436, -7.5827, -2.38419e-07, 9.39113 )
+
+[node name="Lab_panelControl10" parent="Paneles" instance=ExtResource( 8 )]
+transform = Transform( -0.245056, 0, 0.0361735, 0, 0.247712, 0, -0.0361735, 0, -0.245056, -9.35115, -4.76837e-07, 8.26948 )
+
+[node name="Lab_panelControl11" parent="Paneles" instance=ExtResource( 8 )]
+transform = Transform( 0.0121438, 0, 0.247413, 0, 0.247712, 0, -0.247413, 0, 0.0121438, -12.2352, -7.15256e-07, 4.8826 )
+
+[node name="Lab_panelControl5" parent="Paneles" instance=ExtResource( 8 )]
+transform = Transform( 0.00524639, 0.216995, -0.119358, -0.247639, 0.00598729, -1.78435e-10, 0.00288494, 0.119324, 0.217058, -9.66971, 1.14259, -7.9443 )
+
+[node name="Lab_PanelControl_01" parent="Paneles" instance=ExtResource( 6 )]
+transform = Transform( 0.986265, 0, -0.165168, 0, 1, 0, 0.165168, 0, 0.986265, 3.31468, 0, 0 )
+
+[node name="Lab_PanelControl_08" parent="Paneles" instance=ExtResource( 6 )]
+transform = Transform( -0.0130197, 0, -0.999914, 0, 1, 0, 0.999914, 0, -0.0130197, -6.18816, 0, 5.70219 )
+
+[node name="Lab_PanelControl_09" parent="Paneles" instance=ExtResource( 6 )]
+transform = Transform( -0.201915, 0, 0.979401, 0, 1, 0, -0.979401, 0, -0.201915, -8.42084, 2.38419e-07, 1.20572 )
+
+[node name="Lab_PanelControl_06" parent="Paneles" instance=ExtResource( 6 )]
+transform = Transform( -0.960831, 0, -0.27713, 0, 1, 0, 0.27713, 0, -0.960831, 6.11103, 0, 0 )
+
+[node name="Lab_PanelControl_07" parent="Paneles" instance=ExtResource( 6 )]
+transform = Transform( -0.259925, 0.804696, 0.533761, 0.951588, 0.307373, 0, -0.164064, 0.507922, -0.845633, 4.96605, -0.138616, 1.50297 )
+
+[node name="Lab_PanelControl_02" parent="Paneles" instance=ExtResource( 7 )]
+transform = Transform( -0.669583, 0, -0.742735, 0, 1, 0, 0.742735, 0, -0.669583, 2.38368, 0.0195351, -2.3335 )
+
+[node name="Lab_PanelControl_10" parent="Paneles" instance=ExtResource( 7 )]
+transform = Transform( -0.996692, -0.0129584, -0.0802023, 0, 0.987198, -0.159502, 0.0812425, -0.158975, -0.983931, 13.8662, 0.275715, -0.275024 )
+
+[node name="Lab_PanelControl_04" parent="Paneles" instance=ExtResource( 7 )]
+transform = Transform( -0.163481, 0, -0.986545, 0, 1, 0, 0.986545, 0, -0.163481, -0.0527766, 0, -2.943 )
+
+[node name="Lab_PanelControl_03" parent="Paneles" instance=ExtResource( 7 )]
+transform = Transform( 0.7434, 0, -0.668844, 0, 1, 0, 0.668844, 0, 0.7434, -2.10574, -2.38419e-07, -1.84889 )
+
+[node name="Lab_PanelControl_05" parent="Paneles" instance=ExtResource( 7 )]
+transform = Transform( -0.589077, 0.436407, -0.680097, 0.61787, 0.785665, -0.0310318, 0.520787, -0.438494, -0.73246, -2.65396, -0.12028, 0.255845 )
+
+[node name="Lab_Servidores" parent="Paneles" instance=ExtResource( 9 )]
+transform = Transform( 0.325564, 0, 0, 0, 0.325564, 0, 0, 0, 0.325564, 1.82804, 0, -8.66986 )
+
+[node name="Lab_panelControl6" parent="Paneles" instance=ExtResource( 8 )]
+transform = Transform( -0.0332328, 0, -0.245472, 0, 0.247712, 0, 0.245472, 0, -0.0332328, 10.2744, -2.38419e-07, 1.84964 )
+
+[node name="Lab_panelControl14" parent="Paneles" instance=ExtResource( 8 )]
+transform = Transform( 0.151082, 0, -0.196304, 0, 0.247712, 0, 0.196304, 0, 0.151082, 12.8322, -2.38419e-07, -2.07554 )
+
+[node name="Lab_panelControl8" parent="Paneles" instance=ExtResource( 8 )]
+transform = Transform( -0.0332328, 0, -0.245472, 0, 0.247712, 0, 0.245472, 0, -0.0332328, 6.9324, 0, 7.24586 )
+
+[node name="Lab_panelControl12" parent="Paneles" instance=ExtResource( 8 )]
+transform = Transform( 0.0671015, 0, -0.23845, 0, 0.247712, 0, 0.23845, 0, 0.0671015, 2.82362, 0, 8.78555 )
+
+[node name="Lab_Servidores5" parent="Paneles" instance=ExtResource( 9 )]
+transform = Transform( -0.0436774, 0, -0.32262, 0, 0.325564, 0, 0.32262, 0, -0.0436774, 10.1958, -2.38419e-07, 3.7439 )
+
+[node name="Lab_Servidores16" parent="Paneles" instance=ExtResource( 9 )]
+transform = Transform( -0.0122772, 0.164278, -0.280809, -0.324658, -0.0242631, -9.72703e-10, -0.0209276, 0.280028, 0.164736, 11.8678, 0.577207, 1.61826 )
+
+[node name="Lab_panelControl7" parent="Paneles" instance=ExtResource( 8 )]
+transform = Transform( -0.134612, 0, -0.207943, 0, 0.247712, 0, 0.207943, 0, -0.134612, 9.21309, -2.38419e-07, 5.54181 )
+
+[node name="Lab_Servidores6" parent="Paneles" instance=ExtResource( 9 )]
+transform = Transform( -0.176919, 0, -0.273297, 0, 0.325564, 0, 0.273297, 0, -0.176919, 8.33522, -2.38419e-07, 7.22222 )
+
+[node name="Lab_Servidores8" parent="Paneles" instance=ExtResource( 9 )]
+transform = Transform( -0.176919, 0, -0.273297, 0, 0.325564, 0, 0.273297, 0, -0.176919, 5.96414, -2.38419e-07, 9.20021 )
+
+[node name="Lab_Servidores7" parent="Paneles" instance=ExtResource( 9 )]
+transform = Transform( -0.176919, -0.272652, -0.0187643, 0, 0.0223529, -0.324795, 0.273297, -0.176502, -0.0121471, 7.79781, 0.532704, 5.55844 )
+
+[node name="Lab_Servidores3" parent="Paneles" instance=ExtResource( 9 )]
+transform = Transform( 0.325564, 0, 0, 0, 0.325564, 0, 0, 0, 0.325564, -5.04607, 0, -9.1549 )
+
+[node name="Lab_Servidores4" parent="Paneles" instance=ExtResource( 9 )]
+transform = Transform( 0.24064, 0, 0.219281, 0, 0.325564, 0, -0.219281, 0, 0.24064, -6.98776, 0, -8.07229 )
+
+[node name="Lab_Servidores13" parent="Paneles" instance=ExtResource( 9 )]
+transform = Transform( 0.133953, 0, 0.296729, 0, 0.325564, 0, -0.296729, 0, 0.133953, -11.8725, 0, -2.23975 )
+
+[node name="Lab_Servidores14" parent="Paneles" instance=ExtResource( 9 )]
+transform = Transform( 0.0673827, 0, 0.318514, 0, 0.325564, 0, -0.318514, 0, 0.0673827, -13.7933, 0, -0.320301 )
+
+[node name="Lab_Servidores9" parent="Paneles" instance=ExtResource( 9 )]
+transform = Transform( -0.155525, 0, 0.286013, 0, 0.325564, 0, -0.286013, 0, -0.155525, -6.93329, 0, 2.26466 )
+
+[node name="Lab_Servidores12" parent="Paneles" instance=ExtResource( 9 )]
+transform = Transform( -0.155525, 0, 0.286013, 0, 0.325564, 0, -0.286013, 0, -0.155525, -11.2438, 0, 7.02443 )
+
+[node name="Lab_Servidores10" parent="Paneles" instance=ExtResource( 9 )]
+transform = Transform( 0.155525, 0, -0.286013, 0, 0.325564, 0, 0.286013, 0, 0.155525, -7.99149, 0, 2.37228 )
+
+[node name="Lab_Servidores11" parent="Paneles" instance=ExtResource( 9 )]
+transform = Transform( 0.134786, -0.233018, 0.183103, 0, 0.201153, 0.255986, -0.296351, -0.105981, 0.0832789, -6.32384, 0, 4.70375 )
+
+[node name="Lab_Servidores2" parent="Paneles" instance=ExtResource( 9 )]
+transform = Transform( 0.316289, 0, -0.0771556, 0, 0.325564, 0, 0.0771556, 0, 0.316289, 3.86127, -2.38419e-07, -8.37037 )
+
+[node name="Lab_Servidores15" parent="Paneles" instance=ExtResource( 9 )]
+transform = Transform( 0.200383, 0, -0.256589, 0, 0.325564, 0, 0.256589, 0, 0.200383, 11.9507, 0, -3.77832 )
+
+[node name="Lab_Terminal-Monitor" parent="Paneles" instance=ExtResource( 12 )]
+transform = Transform( -4.37114e-08, 0, -0.999999, 0, 1, 0, 0.999999, 0, -4.37114e-08, 0.84562, 0, -4.74323 )
+
+[node name="Lab_Terminal-Monitor12" parent="Paneles" instance=ExtResource( 12 )]
+transform = Transform( -5.79169e-09, -0.991183, -0.132498, 0.999772, 0.00282338, -0.0211209, 0.0213088, -0.132468, 0.990957, 0.412745, 0.220194, -4.76026 )
+
+[node name="Lab_Terminal-Monitor13" parent="Paneles" instance=ExtResource( 12 )]
+transform = Transform( -0.0212111, 0.226638, -0.973747, 0.999772, 0.00282338, -0.0211209, -0.00203755, -0.973974, -0.226647, 0.551255, 0.220194, -5.02919 )
+
+[node name="Lab_Terminal-Monitor5" parent="Paneles" instance=ExtResource( 12 )]
+transform = Transform( 0.490857, 0.871007, 0.0200832, 4.19516e-08, -0.0230513, 0.999733, 0.871238, -0.490727, -0.011315, -5.99119, 0.373635, -7.32494 )
+
+[node name="Lab_Terminal-Monitor2" parent="Paneles" instance=ExtResource( 12 )]
+transform = Transform( -4.37113e-08, 0, -0.999999, 0, 1, 0, 0.999999, 0, -4.37113e-08, 1.64713, 0, -4.74323 )
+
+[node name="Lab_Terminal-Monitor10" parent="Paneles" instance=ExtResource( 12 )]
+transform = Transform( 0.446807, 0, -0.89463, 0, 1, 0, 0.89463, 0, 0.446807, -5.7885, 2.38419e-07, -6.48293 )
+
+[node name="Lab_Terminal-Monitor11" parent="Paneles" instance=ExtResource( 12 )]
+transform = Transform( 0.446806, 0, -0.89463, 0, 1, 0, 0.89463, 0, 0.446806, -5.07144, 2.38419e-07, -6.84105 )
+
+[node name="Lab_Terminal-Monitor15" parent="Paneles" instance=ExtResource( 12 )]
+transform = Transform( 0.869303, 0.494275, -2.16054e-08, 0, -4.37114e-08, -0.999998, -0.494275, 0.869305, -3.79984e-08, -10.6627, 1.44796, -3.60871 )
+
+[node name="Lab_Terminal-Monitor14" parent="Paneles" instance=ExtResource( 12 )]
+transform = Transform( 0.446806, 0, -0.894629, 0.830888, 0.370703, 0.414972, 0.331642, -0.928751, 0.165632, -5.28015, 0.486002, 2.01411 )
+
+[node name="Lab_Terminal-Monitor7" parent="Paneles" instance=ExtResource( 12 )]
+transform = Transform( -0.900386, 0, -0.435089, 0, 1, 0, 0.435089, 0, -0.900386, 9.97981, 0, -4.83875 )
+
+[node name="Lab_Terminal-Monitor8" parent="Paneles" instance=ExtResource( 12 )]
+transform = Transform( -0.699862, 0, -0.714276, 0, 1, 0, 0.714276, 0, -0.699862, 10.5163, -2.38419e-07, -4.06349 )
+
+[node name="Lab_Terminal-Monitor9" parent="Paneles" instance=ExtResource( 12 )]
+transform = Transform( -0.699861, 0, -0.714276, 0, 1, 0, 0.714276, 0, -0.699861, 10.2234, -2.38419e-07, -1.29376 )
+
+[node name="Lab_Terminal-Monitor6" parent="Paneles" instance=ExtResource( 12 )]
+transform = Transform( 0.95301, -0.289825, -0.0881549, 0, 0.291003, -0.956721, 0.302935, 0.911766, 0.277328, 8.44, 2.38419e-07, -7.64076 )
+
+[node name="Lab_Terminal-Monitor3" parent="Paneles" instance=ExtResource( 12 )]
+transform = Transform( -4.37114e-08, 0, 0.999999, 0, 1, 0, -0.999999, 0, -4.37114e-08, 1.64713, 0, -5.29352 )
+
+[node name="Lab_Terminal-Monitor4" parent="Paneles" instance=ExtResource( 12 )]
+transform = Transform( -4.37113e-08, 0, 0.999999, 0, 1, 0, -0.999999, 0, -4.37113e-08, 0.845619, 0, -5.29352 )
+
+[node name="Lab_mesaTrabajo" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( -0.120722, -0.110056, -0.141794, -0.172818, 0.0250988, 0.127655, -0.0484956, 0.184526, -0.101933, -8.11121, 0.853684, -5.75318 )
+
+[node name="Lab_mesaTrabajo16" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( -0.00145833, -0.110056, -0.186218, -0.21445, 0.0250988, -0.013154, 0.0282993, 0.184525, -0.109277, -5.11112, 0.369563, 3.31948 )
+
+[node name="Lab_mesaTrabajo7" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( 0.024612, -0.214854, -0.0049193, 0.210686, 0.0250988, -0.0421107, 0.042397, 0, 0.212119, -8.44069, 0.414378, -5.69825 )
+
+[node name="Lab_mesaTrabajo4" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( 0.184387, 0, 0.113108, 0, 0.216315, 0, -0.113108, 0, 0.184387, -8.47869, 0.224519, -2.88511 )
+
+[node name="Lab_miniTele" parent="Paneles/Lab_mesaTrabajo4" instance=ExtResource( 13 )]
+transform = Transform( 0.249197, 0, 0.968453, 0, 1, 0, -0.968453, 0, 0.249197, 0, 4.2599, 0 )
+
+[node name="Lab_miniTele2" parent="Paneles/Lab_mesaTrabajo4" instance=ExtResource( 13 )]
+transform = Transform( 0.485481, 0, -0.874247, 0, 1, 0, 0.874247, 0, 0.485481, 1.26328, 4.2599, -1.97712 )
+
+[node name="Lab_miniTele3" parent="Paneles/Lab_mesaTrabajo4" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, -0.000977606, 0, 1, 0, 0.000977606, 0, 1, 1.41129, 4.06526, 2.33373 )
+
+[node name="Lab_miniTele4" parent="Paneles/Lab_mesaTrabajo4" instance=ExtResource( 13 )]
+transform = Transform( 0.443947, 0, -0.896053, 0, 1, 0, 0.896053, 0, 0.443947, -0.873632, 4.09713, 2.03357 )
+
+[node name="Lab_mesaTrabajo6" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( -0.0559862, 0, -0.208943, 0, 0.216315, 0, 0.208943, 0, -0.0559862, -10.8881, 0.0290445, -3.51586 )
+
+[node name="Lab_mesaTrabajo17" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( -0.210823, 0, -0.0484283, 0, 0.216315, 0, 0.0484283, 0, -0.210823, -9.47944, 0.224519, -1.8879 )
+
+[node name="Lab_mesaTrabajo19" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( -0.201479, 0, 0.0787276, 0, 0.216315, 0, -0.0787276, 0, -0.201479, -13.186, 0.224519, 1.92901 )
+
+[node name="Lab_mesaTrabajo20" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( -0.210823, 0, -0.0484283, 0, 0.216315, 0, 0.0484283, 0, -0.210823, -12.3544, -0.0260674, 3.04734 )
+
+[node name="Lab_mesaTrabajo18" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( -0.210823, 0, -0.0484283, 0, 0.216315, 0, 0.0484283, 0, -0.210823, -6.48651, 0.224519, 0.312479 )
+
+[node name="Lab_mesaTrabajo5" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( 0.216314, 0, 0, 0, 0.216315, 0, 0, 0, 0.216314, -6.6828, 0, -3.15007 )
+
+[node name="Lab_miniTele" parent="Paneles/Lab_mesaTrabajo5" instance=ExtResource( 13 )]
+transform = Transform( 0.575162, 0, 0.81804, 0, 1, 0, -0.81804, 0, 0.575162, 0, 4.09654, 0 )
+
+[node name="Lab_miniTele2" parent="Paneles/Lab_mesaTrabajo5" instance=ExtResource( 13 )]
+transform = Transform( 0.575162, 0.817116, 0.0388625, 0, 0.0475069, -0.998871, -0.81804, 0.574513, 0.0273242, 1.09242, 4.7254, 0.768084 )
+
+[node name="Lab_mesaTrabajo8" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( 0.216314, 0, 0, 0, 0.216315, 0, 0, 0, 0.216314, 6.36497, 2.38419e-07, -2.69943 )
+
+[node name="Lab_miniTele" parent="Paneles/Lab_mesaTrabajo8" instance=ExtResource( 13 )]
+transform = Transform( 0.575162, 0, 0.81804, 0, 1, 0, -0.81804, 0, 0.575162, 0, 4.09918, 0 )
+
+[node name="Lab_miniTele2" parent="Paneles/Lab_mesaTrabajo8" instance=ExtResource( 13 )]
+transform = Transform( 0.575162, 0.817116, 0.0388625, 0, 0.0475069, -0.998871, -0.81804, 0.574513, 0.0273242, 1.09242, 4.7254, 0.768084 )
+
+[node name="Lab_mesaTrabajo14" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( -0.09302, 0, -0.195292, 0, 0.216315, 0, 0.195292, 0, -0.09302, 7.39395, 2.38419e-07, 3.56738 )
+
+[node name="Lab_miniTele" parent="Paneles/Lab_mesaTrabajo14" instance=ExtResource( 13 )]
+transform = Transform( 0.575162, 0, 0.818039, 0, 1, 0, -0.818039, 0, 0.575162, 0, 4.0877, 0 )
+
+[node name="Lab_miniTele2" parent="Paneles/Lab_mesaTrabajo14" instance=ExtResource( 13 )]
+transform = Transform( 0.575162, 0.817116, 0.0388625, 0, 0.0475069, -0.998871, -0.81804, 0.574513, 0.0273242, 1.09242, 4.7254, 0.768084 )
+
+[node name="Lab_mesaTrabajo15" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( 0.0428983, 0.210289, -0.0270251, 0.211949, -0.0432372, 0, -0.00540181, -0.0264798, -0.214619, 6.42164, 1.78621, 5.26178 )
+
+[node name="Lab_mesaTrabajo13" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( 0.216314, 0, 0, 0, 0.216315, 0, 0, 0, 0.216314, 7.4371, 2.38419e-07, -0.671381 )
+
+[node name="Lab_miniTele2" parent="Paneles/Lab_mesaTrabajo13" instance=ExtResource( 13 )]
+transform = Transform( 0.575162, 0.817116, 0.0388625, 0, 0.0475069, -0.998871, -0.81804, 0.574513, 0.0273242, 1.09242, 4.7254, 0.768084 )
+
+[node name="Lab_miniTele3" parent="Paneles/Lab_mesaTrabajo13" instance=ExtResource( 13 )]
+transform = Transform( 0.575162, 0.817116, 0.0388625, 0, 0.0475069, -0.998871, -0.81804, 0.574513, 0.0273242, -0.463116, 4.63496, -0.325608 )
+
+[node name="Lab_miniTele4" parent="Paneles/Lab_mesaTrabajo13" instance=ExtResource( 13 )]
+transform = Transform( 0.575162, 0.817116, 0.0388625, 0.440169, -0.349176, 0.82724, 0.689521, -0.458691, -0.560505, -0.258839, 5.59211, 3.39368 )
+
+[node name="Lab_mesaTrabajo9" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( 0.0105065, -0.216059, 0, 0.216059, 0.0105066, 0, 0, 0, 0.216314, 8.52994, 0.462083, -2.06139 )
+
+[node name="Lab_mesaTrabajo10" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( 0.0105065, 0.0327484, 0.213562, 0.216059, -0.0015925, -0.0103852, 2.51823e-09, 0.213815, -0.032787, 8.69308, 0.45415, -1.05354 )
+
+[node name="Lab_mesaTrabajo11" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( 0.0105065, 0.0327484, 0.213562, 0.216059, -0.0015925, -0.0103852, 2.51823e-09, 0.213815, -0.032787, 9.40565, 0.419498, -2.3348 )
+
+[node name="Lab_mesaTrabajo12" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( 0.0105065, 0.150141, 0.155367, 0.216059, -0.0073011, -0.00755521, 4.43208e-09, 0.155551, -0.150319, 8.61113, 1.36335, -1.58028 )
+
+[node name="Lab_mesaTrabajo3" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( 0.216314, 0, 0, 0, 0.216315, 0, 0, 0, 0.216314, -6.7529, 0, -5.71877 )
+
+[node name="Lab_miniTele" parent="Paneles/Lab_mesaTrabajo3" instance=ExtResource( 13 )]
+transform = Transform( 0.249197, 0, 0.968453, 0, 1, 0, -0.968453, 0, 0.249197, 0, 4.11057, 0 )
+
+[node name="Lab_mesaTrabajo2" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( -0.0651463, 0.146523, -0.0516953, 0.154864, 0.0657751, -0.00872896, 0.0125907, -0.0508928, -0.160115, -1.75932, 0.265731, -0.528774 )
+
+[node name="Lab_cajoncitos" parent="Paneles" instance=ExtResource( 14 )]
+transform = Transform( -8.47433e-09, 0, -0.19387, 0, 0.19387, 0, 0.19387, 0, -8.47433e-09, -3.03894, 0, -3.07913 )
+
+[node name="Lab_cajoncitos2" parent="Paneles" instance=ExtResource( 14 )]
+transform = Transform( -2.29076e-10, -8.47124e-09, -0.19387, -0.193799, 0.00524066, 1.14749e-16, 0.00524065, 0.1938, -8.47432e-09, -1.12541, 0.293079, 0.522476 )
+
+[node name="Lab_locker" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -1.25989e-08, 0, -0.288228, 0, 0.288229, 0, 0.288228, 0, -1.25989e-08, 5.04837, 0, -7.5597 )
+
+[node name="Lab_locker8" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -1.25989e-08, 0, -0.288228, 0, 0.288229, 0, 0.288228, 0, -1.25989e-08, 5.57239, 0, -7.19829 )
+
+[node name="Lab_lucesChiquitas" parent="Paneles" instance=ExtResource( 15 )]
+transform = Transform( -0.130036, 0, 0.13929, 0, 0.190555, 0, -0.13929, 0, -0.130036, -11.7397, 0.876029, 5.67221 )
+
+[node name="Lab_locker20" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( 0.106833, 0, 0.267698, 0, 0.288229, 0, -0.267698, 0, 0.106833, -10.5809, 2.38419e-07, -2.21547 )
+
+[node name="Lab_locker21" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( 0.106833, 0, 0.267698, 0, 0.288229, 0, -0.267698, 0, 0.106833, -11.4944, 0, 0.75248 )
+
+[node name="Lab_locker22" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -0.00105039, 0.235095, -0.166747, 0.288225, 0.00128778, 2.84635e-09, 0.000745015, -0.166746, -0.235096, -11.538, 0.197234, 3.52647 )
+
+[node name="Lab_locker23" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -0.0350812, 0, 0.286085, 0, 0.288229, 0, -0.286085, 0, -0.0350812, -11.6783, 0, 1.33115 )
+
+[node name="Lab_locker9" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -1.25989e-08, 0, -0.288228, 0, 0.288229, 0, 0.288228, 0, -1.25989e-08, 10.5106, 0, -5.19208 )
+
+[node name="Lab_locker10" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -1.25989e-08, 0, -0.288228, 0, 0.288229, 0, 0.288228, 0, -1.25989e-08, 9.83658, 0, -4.02083 )
+
+[node name="Lab_locker15" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -6.31427e-09, -0.249417, -0.144454, -1.09023e-08, 0.144454, -0.249416, 0.288228, 0, -1.25988e-08, 6.31341, 4.76837e-07, 5.95207 )
+
+[node name="Lab_locker16" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -0.287973, 0.0080395, 0.00906976, -1.09023e-08, 0.21569, -0.191189, -0.01212, -0.19102, -0.215499, 5.65652, 4.76837e-07, 7.06829 )
+
+[node name="Lab_locker11" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -1.25988e-08, 0, -0.288228, 0, 0.288229, 0, 0.288228, 0, -1.25988e-08, 11.4684, 0, 0.0671329 )
+
+[node name="Lab_locker3" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -1.25169e-08, 0.0328183, -0.286353, 1.43453e-09, 0.286354, 0.0328183, 0.288228, 0, -1.25988e-08, -3.43333, 0, -8.40861 )
+
+[node name="Lab_locker4" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -1.25169e-08, 0.0328183, -0.286353, 1.43453e-09, 0.286354, 0.0328183, 0.288228, 0, -1.25988e-08, -3.91898, 0, -8.40861 )
+
+[node name="Lab_locker5" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -0.2863, 0.0264601, -0.0201813, 1.00176e-08, 0.174795, 0.229177, 0.0332779, 0.227645, -0.173625, -11.5047, -4.76837e-07, -5.52085 )
+
+[node name="Lab_locker19" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -0.256579, 0.104408, -0.0796321, 1.00176e-08, 0.174795, 0.229177, 0.131309, 0.204013, -0.155601, -9.38071, -7.15256e-07, 2.74242 )
+
+[node name="Lab_locker12" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -0.282446, -0.00654011, 0.0570652, 1.43453e-09, 0.286354, 0.0328183, -0.0574387, 0.03216, -0.280609, -10.556, -4.76837e-07, -4.33762 )
+
+[node name="Lab_locker13" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( 0.152028, -0.0278817, 0.24328, 1.43453e-09, 0.286354, 0.0328183, -0.244872, -0.0173103, 0.15104, -7.9699, -4.76837e-07, -6.13207 )
+
+[node name="Lab_mesaTrabajo21" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( 0.0802665, -0.146469, 0.137462, -0.172818, 0.0250988, 0.127655, -0.102386, -0.15719, -0.107704, -2.85169, 0.853684, 5.54315 )
+
+[node name="Lab_mesaTrabajo22" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( -0.047582, 0.0599746, -0.202314, 0.210686, 0.0250988, -0.0421107, 0.0117988, -0.206313, -0.0639349, -2.81246, 0.414378, 5.21143 )
+
+[node name="Lab_mesaTrabajo24" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( 0.0273447, 0.156957, -0.146316, -0.21445, 0.0250988, -0.013154, 0.00743246, 0.146719, 0.158777, 11.1804, 0.369562, 3.71741 )
+
+[node name="Lab_mesaTrabajo25" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( -0.0830138, -0.1847, -0.0760688, -0.172818, 0.0250988, 0.127655, -0.100172, 0.109763, -0.157192, 13.8331, 0.853683, 1.98151 )
+
+[node name="Lab_mesaTrabajo26" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( 0.00142925, -0.188879, -0.105425, 0.210686, 0.0250988, -0.0421107, 0.0490021, -0.102404, 0.18413, 13.5172, 0.414378, 1.87275 )
+
+[node name="Lab_mesaTrabajo23" parent="Paneles" instance=ExtResource( 10 )]
+transform = Transform( -0.0603824, 0, -0.207716, 0, 0.216315, 0, 0.207716, 0, -0.0603824, -3.26389, -3.57628e-07, 6.83786 )
+
+[node name="Lab_miniTele" parent="Paneles/Lab_mesaTrabajo23" instance=ExtResource( 13 )]
+transform = Transform( 0.249197, 0, 0.968453, 0, 1, 0, -0.968453, 0, 0.249197, 0, 4.11074, 0 )
+
+[node name="Lab_locker24" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( 0.0231504, 0.287212, 0.00699803, -0.191305, 0.0101732, 0.215346, 0.214339, -0.0219414, 0.191448, 0.431549, 0.175537, 7.4264 )
+
+[node name="Lab_locker14" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( 0.089665, 0.217806, -0.166121, 1.00176e-08, 0.174795, 0.229177, 0.273926, -0.071295, 0.054377, -4.40377, 0, -7.24313 )
+
+[node name="Lab_locker2" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -0.139524, -0.251985, 0.0105744, 1.25294e-08, 0.0120847, 0.287975, -0.252206, 0.139402, -0.00584989, -3.42823, 0.180687, -0.981689 )
+
+[node name="Lab_locker6" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -0.115827, -0.263719, 0.0105744, -0.00110827, 0.0120337, 0.287975, -0.263928, 0.115684, -0.00584991, -3.4096, 0.687934, -0.991992 )
+
+[node name="Lab_locker17" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -0.233868, 0.168318, -0.00706336, 1.25294e-08, 0.0120847, 0.287975, 0.168466, 0.233662, -0.00980551, -8.86258, 0.180687, 4.30854 )
+
+[node name="Lab_locker18" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( -0.248318, 0.146161, -0.00706337, -0.00110827, 0.0120337, 0.287975, 0.146327, 0.248128, -0.00980552, -8.87502, 0.687934, 4.29127 )
+
+[node name="Lab_locker7" parent="Paneles" instance=ExtResource( 11 )]
+transform = Transform( 0.241547, -0.151039, -0.0437824, -0.0120543, -0.0977935, 0.270863, -0.156794, -0.225164, -0.0882724, -2.90463, 0.947444, -0.835613 )
+
+[node name="Lab_lucesChiquitas" parent="." instance=ExtResource( 15 )]
+transform = Transform( -0.112352, 0, -0.171554, 0, 0.20507, 0, 0.171554, 0, -0.112352, 2.29784, 0.895268, 8.73329 )

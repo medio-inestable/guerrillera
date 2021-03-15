@@ -128,42 +128,46 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[sub_resource type="AtlasTexture" id=69]
+[sub_resource type="DynamicFont" id=69]
+size = 24
+font_data = ExtResource( 12 )
+
+[sub_resource type="AtlasTexture" id=22]
 flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 972, 99 )
 
-[sub_resource type="AtlasTexture" id=70]
+[sub_resource type="AtlasTexture" id=23]
 flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 99, 972, 99 )
 
-[sub_resource type="AtlasTexture" id=71]
+[sub_resource type="AtlasTexture" id=24]
 flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 198, 972, 99 )
 
-[sub_resource type="AtlasTexture" id=72]
+[sub_resource type="AtlasTexture" id=25]
 flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 297, 972, 99 )
 
-[sub_resource type="AtlasTexture" id=73]
+[sub_resource type="AtlasTexture" id=26]
 flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 396, 972, 99 )
 
-[sub_resource type="AtlasTexture" id=74]
+[sub_resource type="AtlasTexture" id=27]
 flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 495, 972, 99 )
 
-[sub_resource type="AtlasTexture" id=75]
+[sub_resource type="AtlasTexture" id=28]
 flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 594, 972, 99 )
 
-[sub_resource type="AtlasTexture" id=76]
+[sub_resource type="AtlasTexture" id=29]
 flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 693, 972, 99 )
@@ -220,7 +224,7 @@ region = Rect2( 0, 1008, 1920, 112 )
 
 [sub_resource type="SpriteFrames" id=40]
 animations = [ {
-"frames": [ SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ) ],
+"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ) ],
 "loop": true,
 "name": "default",
 "speed": 8.0
@@ -383,10 +387,6 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[sub_resource type="DynamicFont" id=77]
-size = 41
-font_data = ExtResource( 12 )
-
 [node name="UI_main" type="Node2D"]
 script = ExtResource( 11 )
 
@@ -400,20 +400,36 @@ texture = ExtResource( 5 )
 visible = false
 position = Vector2( 374.719, 226.787 )
 frames = SubResource( 9 )
-frame = 5
 playing = true
 
 [node name="hielocos" type="AnimatedSprite" parent="."]
 visible = false
 position = Vector2( 1333.45, 890.498 )
 frames = SubResource( 21 )
-frame = 6
+frame = 5
 playing = true
+
+[node name="texto_puntaje" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 100.734
+margin_top = 126.746
+margin_right = 1100.73
+margin_bottom = 416.746
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 69 )
+custom_colors/default_color = Color( 0, 1, 0.439216, 1 )
+text = "SCORE: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="adn" type="AnimatedSprite" parent="."]
 position = Vector2( 528.024, 103.09 )
 frames = SubResource( 40 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -425,7 +441,7 @@ visible = false
 position = Vector2( 1598, 564 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 50 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="Sprite2" type="AnimatedSprite" parent="."]
@@ -433,7 +449,7 @@ visible = false
 position = Vector2( 1586, 696 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 50 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="Sprite4" type="Sprite" parent="."]
@@ -446,14 +462,13 @@ visible = false
 position = Vector2( 1648.15, 465.805 )
 scale = Vector2( 1.07778, 1.07778 )
 frames = SubResource( 50 )
-frame = 2
 playing = true
 
 [node name="letra_c_01" type="AnimatedSprite" parent="."]
 position = Vector2( 1595.06, 509.008 )
 scale = Vector2( 1e-05, 1e-05 )
 frames = SubResource( 59 )
-frame = 6
+frame = 4
 playing = true
 
 [node name="Tween" type="Tween" parent="letra_c_01"]
@@ -462,13 +477,13 @@ playing = true
 position = Vector2( 1590.02, 506.489 )
 scale = Vector2( 1e-05, 1e-05 )
 frames = SubResource( 68 )
-frame = 1
+frame = 7
 playing = true
 
 [node name="Tween" type="Tween" parent="letra_c_02"]
 
 [node name="D" type="Sprite" parent="."]
-position = Vector2( 1539.78, 530.192 )
+position = Vector2( 1701.05, 401.68 )
 rotation = 0.246102
 scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 9 )
@@ -476,7 +491,7 @@ texture = ExtResource( 9 )
 [node name="Tween" type="Tween" parent="D"]
 
 [node name="C" type="Sprite" parent="."]
-position = Vector2( 1587.66, 547.831 )
+position = Vector2( 1748.93, 419.319 )
 rotation = 0.246102
 scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 13 )
@@ -484,7 +499,7 @@ texture = ExtResource( 13 )
 [node name="Tween" type="Tween" parent="C"]
 
 [node name="B" type="Sprite" parent="."]
-position = Vector2( 1595.22, 535.232 )
+position = Vector2( 1756.49, 406.72 )
 rotation = -0.157878
 scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 14 )
@@ -492,7 +507,7 @@ texture = ExtResource( 14 )
 [node name="Tween" type="Tween" parent="B"]
 
 [node name="A" type="Sprite" parent="."]
-position = Vector2( 1587.66, 517.593 )
+position = Vector2( 1748.93, 389.081 )
 rotation = 0.102247
 scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 15 )
@@ -500,7 +515,7 @@ texture = ExtResource( 15 )
 [node name="Tween" type="Tween" parent="A"]
 
 [node name="S" type="Sprite" parent="."]
-position = Vector2( 1585.14, 497.434 )
+position = Vector2( 1746.41, 368.922 )
 rotation = -0.0629586
 scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 16 )
@@ -516,12 +531,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 1456.41
-margin_top = 623.155
-margin_right = 1902.41
-margin_bottom = 913.155
+margin_left = 1665.56
+margin_top = 466.925
+margin_right = 2111.56
+margin_bottom = 756.925
 mouse_filter = 2
-custom_fonts/normal_font = SubResource( 77 )
+custom_fonts/normal_font = SubResource( 69 )
+custom_colors/default_color = Color( 1, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

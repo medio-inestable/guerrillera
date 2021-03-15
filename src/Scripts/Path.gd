@@ -34,6 +34,12 @@ func _mueve_camara(_segundos: float, _tween_s, _tween_e) -> void:
 	tween_node.start()
 
 
+func _ultimo_loop(_segundos: float, _tween_s, _tween_e) -> void:
+	tween_node.interpolate_property(pathF, 'unit_offset', 0.0001, 0.9999, _segundos, _tween_s, _tween_e)
+	tween_node.start()
+	yield(get_tree().create_timer(_segundos), "timeout")
+	_ultimo_loop(_segundos, _tween_s, _tween_e)
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 	#pass

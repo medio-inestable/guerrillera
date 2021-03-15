@@ -1,350 +1,353 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Assets/Modelos/Animaciones/Boss/pain.gltf" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/pain_animation.gd" type="Script" id=2]
 
 [node name="pain" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+animation = NodePath("AnimationPlayer")
 
 [node name="mixamorigHips" parent="Armature" index="0"]
-transform = Transform( 0.758916, 0.246245, -0.602835, 0.637237, -0.0902338, 0.765367, 0.134071, -0.964998, -0.225396, 13.9374, -1.43742, -102.01 )
+transform = Transform( 0.989407, -0.0357507, 0.140697, -0.136298, 0.104822, 0.985107, -0.0499664, -0.993848, 0.098839, 14.4006, -7.76746, -103.55 )
 
 [node name="mixamorigSpine" parent="Armature/mixamorigHips" index="0"]
-transform = Transform( 0.996203, 0.0793187, 0.0358805, -0.0717481, 0.981477, -0.177637, -0.0493059, 0.174388, 0.983442, -2.40741e-07, 10.5695, -1.04292 )
+transform = Transform( 0.995287, -0.0968124, 0.00551245, 0.0926713, 0.932899, -0.34801, 0.0285492, 0.346881, 0.937474, 1.14099e-11, 10.5695, -1.04293 )
 
 [node name="mixamorigSpine1" parent="Armature/mixamorigHips/mixamorigSpine" index="0"]
-transform = Transform( 0.994451, -0.0371572, 0.0984174, 0.0498611, 0.990267, -0.129946, -0.092631, 0.134132, 0.986625, 4.77334e-07, 12.391, 2.38421e-07 )
+transform = Transform( 0.996885, 0.0786657, -0.00566045, -0.0785492, 0.996739, 0.0184789, 0.00709564, -0.0179767, 0.999813, 2.21943e-06, 12.391, -8.25048e-07 )
 
 [node name="mixamorigSpine2" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1" index="0"]
-transform = Transform( 0.994924, -0.0390818, 0.0927269, 0.0513345, 0.989695, -0.133671, -0.0865473, 0.137752, 0.986678, 2.37157e-07, 14.1611, -4.76811e-07 )
+transform = Transform( 0.996865, 0.0777022, -0.0149014, -0.0773623, 0.996757, 0.0221737, 0.016576, -0.0209514, 0.999643, 1.37557e-06, 14.1611, 3.33777e-06 )
 
 [node name="mixamorigNeck" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2" index="0"]
-transform = Transform( 0.993131, -0.0996904, 0.0612679, 0.105716, 0.988882, -0.104577, -0.0501614, 0.110336, 0.992628, -4.77341e-07, 15.9313, 5.5111e-06 )
+transform = Transform( 0.999508, -0.0269133, -0.0160807, 0.0261902, 0.998705, -0.0436014, 0.0172334, 0.0431588, 0.998919, -4.2191e-07, 15.9313, 5.39535e-06 )
 
 [node name="mixamorigHead" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigNeck" index="0"]
-transform = Transform( 0.903623, 0.0233562, 0.427692, -0.0426948, 0.998451, 0.0356798, -0.426196, -0.0505014, 0.90322, -9.60873e-07, 5.93647, 1.44503 )
+transform = Transform( 0.996703, -0.0635165, -0.0504887, 0.0727335, 0.975209, 0.208993, 0.0359625, -0.211976, 0.976613, -1.21954e-06, 5.93647, 1.44503 )
 
 [node name="mixamorigHeadTop_End" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigNeck/mixamorigHead" index="0"]
-transform = Transform( 1, -1.28655e-09, -5.14673e-09, 1.28655e-09, 1, -3.27123e-08, 5.14673e-09, 3.27123e-08, 1, -4.25091e-07, 20.1808, 4.91234 )
+transform = Transform( 1, -6.92802e-10, -2.77228e-09, 6.92802e-10, 1, -3.50868e-08, 2.77228e-09, 3.50868e-08, 1, -1.10893e-06, 20.1808, 4.91234 )
 
 [node name="mixamorigHeadTop_Hair01" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigNeck/mixamorigHead/mixamorigHeadTop_End" index="0"]
-transform = Transform( 0.954626, 0.0655629, 0.290501, -0.26748, -0.240109, 0.933168, 0.130933, -0.968529, -0.211677, -2.26836e-06, -1.42904, -10.9896 )
+transform = Transform( 0.944736, 0.173552, 0.278125, -0.248704, -0.173311, 0.952948, 0.213589, -0.969455, -0.12057, 9.60399e-07, -1.42903, -10.9896 )
 
 [node name="mixamorigHeadTop_Hair02" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigNeck/mixamorigHead/mixamorigHeadTop_End/mixamorigHeadTop_Hair01" index="0"]
-transform = Transform( 0.862743, -0.503294, 0.0486773, 0.456017, 0.732865, -0.504933, 0.218456, 0.457825, 0.861785, -5.32594e-06, 14.6365, -3.62792e-06 )
+transform = Transform( 0.972333, -0.214348, 0.0928627, 0.228101, 0.785456, -0.575351, 0.0503861, 0.580615, 0.812618, -7.81591e-06, 14.6365, 1.14366e-05 )
 
 [node name="mixamorigHeadTop_Hair03" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigNeck/mixamorigHead/mixamorigHeadTop_End/mixamorigHeadTop_Hair01/mixamorigHeadTop_Hair02" index="0"]
-transform = Transform( 0.983083, -0.182991, -0.0078174, 0.181571, 0.979284, -0.0896414, 0.024059, 0.0867056, 0.995943, 2.31475e-06, 19.3842, 1.01768e-05 )
+transform = Transform( 0.99197, 0.124183, 0.0239706, -0.125801, 0.949257, 0.288246, 0.0130409, -0.288947, 0.957256, -8.46215e-07, 19.3842, 5.52288e-06 )
 
 [node name="mixamorigHeadTop_Hair04" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigNeck/mixamorigHead/mixamorigHeadTop_End/mixamorigHeadTop_Hair01/mixamorigHeadTop_Hair02/mixamorigHeadTop_Hair03" index="0"]
-transform = Transform( 0.991516, -0.128804, 0.0174898, 0.125875, 0.917857, -0.376422, 0.0324314, 0.375429, 0.926283, -4.96606e-06, 19.1674, 3.12784e-06 )
+transform = Transform( 0.871213, -0.490904, 0.00147263, 0.462183, 0.819222, -0.339504, 0.165457, 0.296461, 0.940603, -1.17e-07, 19.1674, -7.03357e-06 )
 
 [node name="mixamorigLeftShoulder" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2" index="1"]
-transform = Transform( -0.257941, 0.890255, -0.375382, -0.00178963, -0.388969, -0.921249, -0.966159, -0.236957, 0.101924, 6.50995, 14.3831, -0.209687 )
+transform = Transform( -0.153222, 0.741768, -0.652919, 0.0587305, -0.652718, -0.755321, -0.986445, -0.154078, 0.0564461, 6.50995, 14.3831, -0.209682 )
 
 [node name="mixamorigLeftArm" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder" index="0"]
-transform = Transform( 0.909162, 0.0701573, 0.410491, 0.230272, 0.736612, -0.635906, -0.346986, 0.672667, 0.653544, 2.23036e-06, 13.4562, -1.19551e-05 )
+transform = Transform( 0.592599, -0.787555, 0.169065, 0.691134, 0.389335, -0.608893, 0.413714, 0.477676, 0.775026, -2.45362e-07, 13.4562, -1.18507e-05 )
 
 [node name="mixamorigLeftForeArm" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm" index="0"]
-transform = Transform( -0.0206102, -0.993892, 0.108419, 0.990775, -0.0348321, -0.130967, 0.133943, 0.10472, 0.98544, 1.81981e-06, 17.7772, -5.09442e-06 )
+transform = Transform( -0.228089, -0.964117, 0.135845, 0.961093, -0.245274, -0.127044, 0.155804, 0.101582, 0.982551, 6.0545e-06, 17.7772, -2.17564e-06 )
 
 [node name="mixamorigLeftHand" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm" index="0"]
-transform = Transform( 0.959017, 0.108812, 0.261624, -0.16091, 0.969137, 0.186764, -0.233227, -0.221208, 0.946928, -6.61379e-07, 29.8993, 6.8818e-06 )
+transform = Transform( 0.924389, -0.357024, 0.134309, 0.317827, 0.915582, 0.246365, -0.21093, -0.18505, 0.959826, 1.36494e-05, 29.8993, 3.87444e-06 )
 
 [node name="mixamorigLeftHandThumb1" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand" index="0"]
-transform = Transform( 0.963847, -0.0970752, 0.248145, 0.144195, 0.973154, -0.179383, -0.22407, 0.208679, 0.951969, -2.62199, 2.96904, 1.13148 )
+transform = Transform( 0.884774, -0.385748, 0.261482, 0.44215, 0.872132, -0.209496, -0.147235, 0.300971, 0.942199, -2.622, 2.96905, 1.13148 )
 
 [node name="mixamorigLeftHandThumb2" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand/mixamorigLeftHandThumb1" index="0"]
-transform = Transform( 0.99067, -0.126024, -0.0518716, 0.125011, 0.991904, -0.0223367, 0.0542666, 0.0156438, 0.998404, -0.361488, 3.27571, -2.6958e-06 )
+transform = Transform( 0.991408, -0.125812, -0.0357861, 0.125028, 0.991878, -0.0233717, 0.0384359, 0.0186966, 0.999086, -0.361477, 3.27574, 5.5914e-06 )
 
 [node name="mixamorigLeftHandThumb3" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand/mixamorigLeftHandThumb1/mixamorigLeftHandThumb2" index="0"]
-transform = Transform( 0.970209, -0.241336, -0.0212522, 0.238173, 0.934065, 0.266076, -0.0443627, -0.263211, 0.963718, 0.0478458, 2.9619, -2.12035e-05 )
+transform = Transform( 0.970259, -0.241125, -0.0213627, 0.237998, 0.934095, 0.266126, -0.0442149, -0.263295, 0.963702, 0.0478425, 2.9619, -1.12874e-05 )
 
 [node name="mixamorigLeftHandThumb4" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand/mixamorigLeftHandThumb1/mixamorigLeftHandThumb2/mixamorigLeftHandThumb3" index="0"]
-transform = Transform( 1, 2.49099e-08, -2.57275e-08, -2.49099e-08, 1, 3.19573e-08, 2.57275e-08, -3.19573e-08, 1, 0.313625, 2.35923, 4.52986e-06 )
+transform = Transform( 1, 7.03861e-09, -2.50159e-08, -7.03862e-09, 1, 4.95722e-09, 2.50159e-08, -4.95722e-09, 1, 0.313631, 2.35923, 1.53594e-06 )
 
 [node name="mixamorigLeftHandIndex1" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand" index="1"]
-transform = Transform( 0.995861, 0.0611471, 0.0672511, 0.00289281, 0.71819, -0.695841, -0.0908477, 0.693155, 0.71504, -3.11489, 9.8261, 0.121376 )
+transform = Transform( 0.992448, -0.11302, 0.0476836, 0.0892506, 0.931972, 0.351373, -0.0841519, -0.344464, 0.93502, -3.11488, 9.82611, 0.121379 )
 
 [node name="mixamorigLeftHandIndex2" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand/mixamorigLeftHandIndex1" index="0"]
-transform = Transform( 0.991906, 0.0946208, -0.0846701, -0.0944959, 0.104707, -0.990003, -0.0848094, 0.989992, 0.1128, 0.000674721, 2.50762, -5.75836e-06 )
+transform = Transform( 0.999502, 0.0311427, -0.00509745, -0.0311347, 0.946834, -0.320212, -0.00514581, 0.320211, 0.947332, 0.000676539, 2.50763, -1.13793e-06 )
 
 [node name="mixamorigLeftHandIndex3" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand/mixamorigLeftHandIndex1/mixamorigLeftHandIndex2" index="0"]
-transform = Transform( 0.991845, 0.0941808, -0.0858672, -0.09393, 0.0848072, -0.99196, -0.0861414, 0.991936, 0.092962, -0.000998497, 2.39218, -1.70274e-05 )
+transform = Transform( 0.999481, 0.0317204, -0.00549595, -0.0317042, 0.940223, -0.33908, -0.00558831, 0.339078, 0.940741, -0.00100675, 2.39218, -1.66854e-05 )
 
 [node name="mixamorigLeftHandIndex4" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand/mixamorigLeftHandIndex1/mixamorigLeftHandIndex2/mixamorigLeftHandIndex3" index="0"]
-transform = Transform( 1, -3.28417e-08, 2.79813e-09, 3.28417e-08, 1, 6.50912e-09, -2.79813e-09, -6.50912e-09, 1, 0.000328056, 2.12987, 5.30484e-06 )
+transform = Transform( 1, -1.75275e-08, 3.22288e-09, 1.75275e-08, 1, 4.1789e-08, -3.22288e-09, -4.1789e-08, 1, 0.000329158, 2.12987, 1.07455e-05 )
 
 [node name="mixamorigLeftHandMiddle1" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand" index="2"]
-transform = Transform( 0.998719, 0.050112, 0.00701707, -0.0223973, 0.56214, -0.826739, -0.0453741, 0.825523, 0.562542, -0.979289, 9.82501, -0.14968 )
+transform = Transform( 0.99754, -0.0695286, -0.00887307, 0.0700622, 0.98536, 0.155426, -0.0020634, -0.155665, 0.987807, -0.979294, 9.825, -0.149683 )
 
 [node name="mixamorigLeftHandMiddle2" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand/mixamorigLeftHandMiddle1" index="0"]
-transform = Transform( 0.992648, 0.0901275, -0.0807906, -0.0918128, 0.125738, -0.987806, -0.07887, 0.987961, 0.133088, 0.00144481, 3.00287, -1.58201e-05 )
+transform = Transform( 0.999632, 0.0267779, -0.00438963, -0.0268594, 0.953431, -0.300413, -0.00385921, 0.30042, 0.953799, 0.001441, 3.00287, -1.66775e-05 )
 
 [node name="mixamorigLeftHandMiddle3" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand/mixamorigLeftHandMiddle1/mixamorigLeftHandMiddle2" index="0"]
-transform = Transform( 0.990067, 0.0936185, -0.104897, -0.0927019, -0.126267, -0.987655, -0.105708, 0.987569, -0.116334, 0.00433492, 2.83673, -5.16156e-06 )
+transform = Transform( 0.998513, 0.0524937, -0.0147265, -0.052351, 0.847712, -0.527867, -0.0152258, 0.527852, 0.8492, 0.00434384, 2.83673, -3.51379e-06 )
 
 [node name="mixamorigLeftHandMiddle4" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand/mixamorigLeftHandMiddle1/mixamorigLeftHandMiddle2/mixamorigLeftHandMiddle3" index="0"]
-transform = Transform( 1, 1.36423e-08, 1.1829e-07, -1.36423e-08, 1, -1.16453e-08, -1.1829e-07, 1.16453e-08, 1, -0.00578498, 2.52802, 1.57664e-05 )
+transform = Transform( 1, 5.1654e-09, 1.27377e-07, -5.16539e-09, 1, -1.26803e-08, -1.27377e-07, 1.26803e-08, 1, -0.00578943, 2.52802, 1.88461e-05 )
 
 [node name="mixamorigLeftHandRing1" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand" index="3"]
-transform = Transform( 0.998379, 0.0562575, -0.00859466, -0.0262852, 0.321885, -0.946414, -0.0504764, 0.945106, 0.322842, 0.992842, 9.58118, -0.173221 )
+transform = Transform( 0.999954, -0.0011906, 0.00956673, 0.00273925, 0.986533, -0.163541, -0.00924318, 0.16356, 0.98649, 0.992834, 9.58117, -0.173222 )
 
 [node name="mixamorigLeftHandRing2" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand/mixamorigLeftHandRing1" index="0"]
-transform = Transform( 0.992613, 0.0916238, -0.0795228, -0.0905563, 0.123341, -0.988224, -0.0807364, 0.988126, 0.130727, -0.00198185, 2.67011, -1.67241e-05 )
+transform = Transform( 0.999421, 0.0334642, -0.00609538, -0.0333813, 0.930507, -0.364751, -0.0065343, 0.364743, 0.931085, -0.00197742, 2.67012, -1.25979e-05 )
 
 [node name="mixamorigLeftHandRing3" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand/mixamorigLeftHandRing1/mixamorigLeftHandRing2" index="0"]
-transform = Transform( 0.990986, 0.0902287, -0.0990197, -0.091206, -0.0869608, -0.992028, -0.0981202, 0.992117, -0.0779476, -0.00116146, 2.47188, 6.27464e-06 )
+transform = Transform( 0.998703, 0.0487145, -0.0147762, -0.048851, 0.835481, -0.547344, -0.0143184, 0.547356, 0.836777, -0.00116105, 2.47188, 6.00924e-06 )
 
 [node name="mixamorigLeftHandRing4" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand/mixamorigLeftHandRing1/mixamorigLeftHandRing2/mixamorigLeftHandRing3" index="0"]
-transform = Transform( 1, -2.11913e-08, 2.24671e-10, 2.11913e-08, 1, -3.68302e-08, -2.2467e-10, 3.68302e-08, 1, 0.00315167, 2.18526, -1.93161e-05 )
+transform = Transform( 1, -2.83092e-09, -8.07514e-09, 2.83092e-09, 1, -2.1071e-08, 8.07514e-09, 2.1071e-08, 1, 0.00313746, 2.18526, -1.59366e-05 )
 
 [node name="mixamorigLeftHandPinky1" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand" index="4"]
-transform = Transform( 0.97588, -0.0997502, -0.194183, -0.147863, 0.352374, -0.924104, 0.160605, 0.930528, 0.329126, 3.10135, 9.13015, 0.189407 )
+transform = Transform( 0.952778, 0.18625, -0.239842, -0.270526, 0.879388, -0.391781, 0.137945, 0.438164, 0.888247, 3.10135, 9.13014, 0.189405 )
 
 [node name="mixamorigLeftHandPinky2" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand/mixamorigLeftHandPinky1" index="0"]
-transform = Transform( 0.990497, 0.087784, -0.105875, -0.0912148, -0.156854, -0.9834, -0.102934, 0.983713, -0.147356, 0.00269467, 2.00134, 1.76878e-07 )
+transform = Transform( 0.995781, 0.0783808, -0.0477153, -0.0799012, 0.484927, -0.870897, -0.0451232, 0.871035, 0.489144, 0.00270993, 2.00134, 2.55166e-06 )
 
 [node name="mixamorigLeftHandPinky3" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand/mixamorigLeftHandPinky1/mixamorigLeftHandPinky2" index="0"]
-transform = Transform( 0.990046, 0.0931102, -0.105547, -0.0906009, -0.152267, -0.984178, -0.107708, 0.983944, -0.142315, 0.00268907, 1.63096, -2.1585e-06 )
+transform = Transform( 0.995381, 0.0835601, -0.0472765, -0.0823778, 0.490446, -0.867569, -0.0493076, 0.867456, 0.495064, 0.00268738, 1.63096, 2.84507e-06 )
 
 [node name="mixamorigLeftHandPinky4" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigLeftShoulder/mixamorigLeftArm/mixamorigLeftForeArm/mixamorigLeftHand/mixamorigLeftHandPinky1/mixamorigLeftHandPinky2/mixamorigLeftHandPinky3" index="0"]
-transform = Transform( 1, -1.5296e-08, 2.28675e-07, 1.5296e-08, 1, -4.44024e-09, -2.28675e-07, 4.44025e-09, 1, -0.0053863, 1.45678, 1.26747e-07 )
+transform = Transform( 1, 5.10769e-09, 2.2654e-07, -5.10769e-09, 1, -1.58471e-08, -2.2654e-07, 1.58471e-08, 1, -0.00537634, 1.45678, -4.80093e-06 )
 
 [node name="mixamorigRightShoulder" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2" index="2"]
-transform = Transform( 0.0783278, -0.766013, 0.638035, 0.00353751, -0.639784, -0.768546, 0.996921, 0.0624556, -0.0474031, -6.50995, 14.372, -0.0969439 )
+transform = Transform( 0.0389265, -0.764084, 0.643941, -0.0205083, -0.644904, -0.763988, 0.999032, 0.0165333, -0.0407741, -6.50995, 14.372, -0.0969477 )
 
 [node name="mixamorigRightArm" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder" index="0"]
-transform = Transform( 0.774887, 0.629256, 0.0598987, -0.386079, 0.546193, -0.743381, -0.500493, 0.552911, 0.66618, -4.02133e-06, 13.4562, 9.13889e-06 )
+transform = Transform( 0.675579, 0.72682, 0.123794, -0.386354, 0.491997, -0.780173, -0.627952, 0.47924, 0.613193, 2.6043e-06, 13.4562, 4.75083e-06 )
 
 [node name="mixamorigRightForeArm" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm" index="0"]
-transform = Transform( -0.194253, 0.973387, -0.121593, -0.970108, -0.209004, -0.123322, -0.145453, 0.094003, 0.984889, 1.24437e-07, 17.7774, -3.53375e-06 )
+transform = Transform( -0.438554, 0.885646, -0.152649, -0.882663, -0.456416, -0.112206, -0.169046, 0.0855295, 0.98189, -3.10482e-07, 17.7774, -2.82745e-06 )
 
 [node name="mixamorigRightHand" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm" index="0"]
-transform = Transform( 0.735795, 0.0876531, -0.671508, -0.146564, 0.988698, -0.0315388, 0.661154, 0.121625, 0.740326, -5.434e-06, 29.9619, -1.44649e-06 )
+transform = Transform( 0.892005, 0.254216, -0.373767, -0.243933, 0.966853, 0.0754489, 0.380558, 0.0238732, 0.924449, 2.6667e-06, 29.9619, -1.33419e-06 )
 
 [node name="mixamorigRightHandThumb1" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand" index="0"]
-transform = Transform( 0.925367, 0.212775, -0.313725, -0.315072, 0.891888, -0.324445, 0.210774, 0.399077, 0.892363, 2.62554, 3.00246, 1.12599 )
+transform = Transform( 0.846036, 0.452686, -0.281598, -0.507447, 0.845737, -0.165006, 0.163462, 0.282497, 0.945239, 2.62555, 3.00246, 1.12598 )
 
 [node name="mixamorigRightHandThumb2" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand/mixamorigRightHandThumb1" index="0"]
-transform = Transform( 0.999912, 0.0116371, -0.00638462, -0.0116621, 0.999924, -0.00389811, 0.00633877, 0.00397222, 0.999972, 0.317739, 3.30027, 6.11777e-06 )
+transform = Transform( 0.993698, 0.108274, 0.028992, -0.108133, 0.994116, -0.00639809, -0.0295141, 0.00322277, 0.999559, 0.317736, 3.30026, 2.94774e-06 )
 
 [node name="mixamorigRightHandThumb3" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand/mixamorigRightHandThumb1/mixamorigRightHandThumb2" index="0"]
-transform = Transform( 0.95435, -0.273269, -0.120582, 0.295879, 0.920162, 0.25643, 0.0408809, -0.280402, 0.959011, -0.0369499, 2.9536, -1.12223e-05 )
+transform = Transform( 0.989508, -0.124891, -0.0726392, 0.139957, 0.953383, 0.267342, 0.0358643, -0.274703, 0.96086, -0.0369468, 2.95358, -8.91871e-07 )
 
 [node name="mixamorigRightHandThumb4" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand/mixamorigRightHandThumb1/mixamorigRightHandThumb2/mixamorigRightHandThumb3" index="0"]
-transform = Transform( 1, 6.89167e-08, -2.60769e-08, -6.89167e-08, 1, -2.23517e-08, 2.60769e-08, 2.23517e-08, 1, -0.280782, 2.36171, 2.02653e-06 )
+transform = Transform( 1, 7.18122e-08, -9.51428e-09, -7.18122e-08, 1, -2.75308e-08, 9.51428e-09, 2.75308e-08, 1, -0.280778, 2.36171, 4.94075e-06 )
 
 [node name="mixamorigRightHandIndex1" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand" index="1"]
-transform = Transform( 0.95272, 0.268431, -0.142373, -0.255016, 0.961147, 0.105654, 0.165202, -0.0643513, 0.984158, 3.06779, 9.75204, 0.178034 )
+transform = Transform( 0.942862, 0.330919, -0.0387755, -0.282551, 0.855821, 0.433285, 0.176567, -0.397572, 0.900423, 3.06779, 9.75203, 0.178045 )
 
 [node name="mixamorigRightHandIndex2" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand/mixamorigRightHandIndex1" index="0"]
-transform = Transform( 0.999428, -0.0332678, 0.00615208, 0.0330316, 0.9202, -0.390052, 0.00731504, 0.390032, 0.920772, 0.00477838, 2.4947, -4.47468e-06 )
+transform = Transform( 0.999987, -0.00499833, 5.44167e-05, 0.00499044, 0.997669, -0.0680603, 0.000285898, 0.0680597, 0.997681, 0.00477725, 2.49472, -9.27059e-06 )
 
 [node name="mixamorigRightHandIndex3" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand/mixamorigRightHandIndex1/mixamorigRightHandIndex2" index="0"]
-transform = Transform( 0.99928, -0.0367058, 0.00960506, 0.036893, 0.880906, -0.471851, 0.00885847, 0.471865, 0.881626, 0.00235391, 2.46476, -2.59814e-05 )
+transform = Transform( 0.999967, -0.00804836, 0.000508447, 0.0080371, 0.989415, -0.144889, 0.000663056, 0.144889, 0.989448, 0.00236177, 2.46476, -1.52663e-05 )
 
 [node name="mixamorigRightHandIndex4" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand/mixamorigRightHandIndex1/mixamorigRightHandIndex2/mixamorigRightHandIndex3" index="0"]
-transform = Transform( 1, -1.44318e-08, 8.07116e-09, 1.44318e-08, 1, 4.65595e-10, -8.07116e-09, -4.65595e-10, 1, -0.00713523, 1.95055, -7.39935e-06 )
+transform = Transform( 1, -4.55273e-09, -2.15106e-08, 4.55273e-09, 1, 4.50252e-09, 2.15106e-08, -4.50252e-09, 1, -0.00713264, 1.95054, 2.98426e-06 )
 
 [node name="mixamorigRightHandMiddle1" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand" index="2"]
-transform = Transform( 0.995906, 0.0903547, -0.00277372, -0.0903972, 0.995485, -0.0289684, 0.000143762, 0.0291006, 0.999576, 0.952105, 9.73203, -0.157328 )
+transform = Transform( 0.995912, 0.0878958, 0.0208074, -0.089993, 0.94583, 0.311941, 0.00773802, -0.312538, 0.949874, 0.952098, 9.73202, -0.157324 )
 
 [node name="mixamorigRightHandMiddle2" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand/mixamorigRightHandMiddle1" index="0"]
-transform = Transform( 0.998928, -0.0445599, 0.012553, 0.0445471, 0.851424, -0.522582, 0.0125983, 0.522582, 0.852496, 0.00087166, 2.98896, 2.5043e-06 )
+transform = Transform( 0.999853, -0.0170444, 0.0017464, 0.0170428, 0.97889, -0.203677, 0.00176202, 0.203677, 0.979036, 0.000867624, 2.98897, 5.51317e-06 )
 
 [node name="mixamorigRightHandMiddle3" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand/mixamorigRightHandMiddle1/mixamorigRightHandMiddle2" index="0"]
-transform = Transform( 0.997927, -0.0596594, 0.0241415, 0.0597501, 0.719423, -0.691997, 0.0239161, 0.692005, 0.721496, -0.00060797, 2.86021, 2.6371e-05 )
+transform = Transform( 0.99936, -0.0349728, 0.0074708, 0.0350007, 0.913641, -0.405012, 0.00733875, 0.405014, 0.914281, -0.000614689, 2.86022, 1.55684e-05 )
 
 [node name="mixamorigRightHandMiddle4" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand/mixamorigRightHandMiddle1/mixamorigRightHandMiddle2/mixamorigRightHandMiddle3" index="0"]
-transform = Transform( 1, -1.1177e-08, 1.55171e-09, 1.1177e-08, 1, 1.00904e-08, -1.5517e-09, -1.00904e-08, 1, -0.000255744, 2.59538, 7.91681e-06 )
+transform = Transform( 1, -2.4913e-08, 1.41258e-08, 2.4913e-08, 1, 2.93674e-08, -1.41258e-08, -2.93674e-08, 1, -0.000252231, 2.59539, 2.79985e-06 )
 
 [node name="mixamorigRightHandRing1" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand" index="3"]
-transform = Transform( 0.995351, -0.0950104, -0.0157738, 0.089786, 0.974646, -0.20495, 0.0348463, 0.202581, 0.978645, -1.03929, 9.87612, -0.0494284 )
+transform = Transform( 0.988351, -0.152182, -0.00169034, 0.151658, 0.9839, 0.0945565, -0.0127266, -0.0937114, 0.995518, -1.03931, 9.87612, -0.0494216 )
 
 [node name="mixamorigRightHandRing2" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand/mixamorigRightHandRing1" index="0"]
-transform = Transform( 0.998907, -0.0446672, 0.0137497, 0.0446836, 0.826563, -0.561068, 0.0136963, 0.561069, 0.827656, 0.00151115, 2.5349, 1.38647e-05 )
+transform = Transform( 0.999693, -0.0244492, 0.00395945, 0.0244532, 0.948905, -0.314612, 0.00393489, 0.314612, 0.949212, 0.00151652, 2.53492, 1.00085e-05 )
 
 [node name="mixamorigRightHandRing3" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand/mixamorigRightHandRing1/mixamorigRightHandRing2" index="0"]
-transform = Transform( 0.998578, -0.0504197, 0.017349, 0.0505519, 0.791712, -0.608799, 0.0169601, 0.60881, 0.793135, -0.0017045, 2.40726, 2.53057e-05 )
+transform = Transform( 0.999487, -0.0314045, 0.00624189, 0.0314528, 0.926492, -0.374998, 0.00599357, 0.375002, 0.927005, -0.00171258, 2.40725, 1.41899e-05 )
 
 [node name="mixamorigRightHandRing4" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand/mixamorigRightHandRing1/mixamorigRightHandRing2/mixamorigRightHandRing3" index="0"]
-transform = Transform( 1, -1.64164e-08, 1.51194e-08, 1.64164e-08, 1, -1.11906e-08, -1.51194e-08, 1.11906e-08, 1, 0.000180173, 2.0145, 3.04298e-06 )
+transform = Transform( 1, 3.05129e-08, -1.71563e-09, -3.05129e-08, 1, -2.6091e-08, 1.71563e-09, 2.6091e-08, 1, 0.000191629, 2.0145, -6.52079e-06 )
 
 [node name="mixamorigRightHandPinky1" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand" index="4"]
-transform = Transform( 0.946447, -0.202015, 0.251848, 0.258995, 0.940803, -0.218658, -0.192767, 0.272175, 0.942742, -2.98059, 8.70158, 0.103219 )
+transform = Transform( 0.945865, -0.205158, 0.251497, 0.26234, 0.939504, -0.220251, -0.191096, 0.274305, 0.942464, -2.9806, 8.70156, 0.103228 )
 
 [node name="mixamorigRightHandPinky2" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand/mixamorigRightHandPinky1" index="0"]
-transform = Transform( 0.997275, -0.0677502, 0.0291879, 0.0679945, 0.690716, -0.719922, 0.0286144, 0.719945, 0.693441, -0.00201174, 2.12277, -1.81168e-05 )
+transform = Transform( 0.997267, -0.067837, 0.0292803, 0.068082, 0.689722, -0.720866, 0.0287061, 0.720889, 0.692456, -0.00201681, 2.12278, -1.97695e-05 )
 
 [node name="mixamorigRightHandPinky3" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand/mixamorigRightHandPinky1/mixamorigRightHandPinky2" index="0"]
-transform = Transform( 0.997905, -0.0609074, 0.0218101, 0.0605703, 0.76115, -0.645742, 0.0227297, 0.64571, 0.763244, 0.000365346, 1.77814, -5.83261e-06 )
+transform = Transform( 0.997957, -0.0602527, 0.0212623, 0.0599235, 0.767113, -0.638708, 0.0221732, 0.638677, 0.769156, 0.000358966, 1.77814, 5.69577e-06 )
 
 [node name="mixamorigRightHandPinky4" parent="Armature/mixamorigHips/mixamorigSpine/mixamorigSpine1/mixamorigSpine2/mixamorigRightShoulder/mixamorigRightArm/mixamorigRightForeArm/mixamorigRightHand/mixamorigRightHandPinky1/mixamorigRightHandPinky2/mixamorigRightHandPinky3" index="0"]
-transform = Transform( 1, 8.50663e-09, 3.72432e-09, -8.50663e-09, 1, -1.97824e-08, -3.72432e-09, 1.97824e-08, 1, 0.00164957, 1.57698, 2.08425e-05 )
+transform = Transform( 1, 3.03604e-09, -8.52886e-09, -3.03604e-09, 1, -1.11207e-08, 8.52886e-09, 1.11207e-08, 1, 0.00165844, 1.57698, 3.14123e-05 )
 
 [node name="mixamorigLeftUpLeg" parent="Armature/mixamorigHips" index="1"]
-transform = Transform( -0.909695, 0.284791, 0.302228, -0.272982, -0.958554, 0.0815799, 0.312944, -0.00829028, 0.949709, 9.6987, -5.86792, 0.0415252 )
+transform = Transform( -0.981203, 0.171364, 0.0887326, -0.108784, -0.87098, 0.47911, 0.159391, 0.460465, 0.873227, 9.6987, -5.86791, 0.0415287 )
 
 [node name="mixamorigLeftLeg" parent="Armature/mixamorigHips/mixamorigLeftUpLeg" index="0"]
-transform = Transform( 0.963395, -0.203444, -0.174586, 0.267722, 0.696198, 0.666058, -0.0139594, -0.688417, 0.725181, -8.19757e-07, 44.5799, 8.86511e-07 )
+transform = Transform( 0.986981, -0.103997, 0.122693, 0.0294294, 0.866726, 0.497915, -0.158123, -0.487822, 0.858502, 1.17897e-06, 44.5799, 1.00559e-06 )
 
 [node name="mixamorigLeftFoot" parent="Armature/mixamorigHips/mixamorigLeftUpLeg/mixamorigLeftLeg" index="0"]
-transform = Transform( 0.859288, -0.20447, -0.468845, -0.390824, 0.328861, -0.859713, 0.32997, 0.921978, 0.202675, -1.67923e-06, 47.9558, -3.73888e-08 )
+transform = Transform( 0.945332, -0.0565843, -0.321161, -0.241514, 0.540281, -0.806081, 0.219129, 0.83958, 0.49708, 6.09462e-06, 47.9558, 1.87698e-07 )
 
 [node name="mixamorigLeftToeBase" parent="Armature/mixamorigHips/mixamorigLeftUpLeg/mixamorigLeftLeg/mixamorigLeftFoot" index="0"]
-transform = Transform( 0.99695, -0.053183, -0.0571097, 0.000702592, 0.737905, -0.674904, 0.078035, 0.672806, 0.735692, 1.31708e-06, 18.5652, 6.49036e-08 )
+transform = Transform( 0.997005, -0.0529627, -0.0563602, 0.00130314, 0.740131, -0.672461, 0.0773293, 0.670374, 0.737983, -5.95991e-07, 18.5652, 8.93962e-08 )
 
 [node name="mixamorigLeftToe_End" parent="Armature/mixamorigHips/mixamorigLeftUpLeg/mixamorigLeftLeg/mixamorigLeftFoot/mixamorigLeftToeBase" index="0"]
-transform = Transform( 1, 3.11267e-08, -2.58513e-07, -3.11267e-08, 1, -2.13671e-07, 2.58513e-07, 2.13671e-07, 1, 2.95112e-07, 6.65044, 7.56806e-07 )
+transform = Transform( 1, 3.11259e-08, -2.58333e-07, -3.1126e-08, 1, -2.12241e-07, 2.58333e-07, 2.12241e-07, 1, 8.08143e-07, 6.65044, 9.07777e-07 )
 
 [node name="mixamorigRightUpLeg" parent="Armature/mixamorigHips" index="2"]
-transform = Transform( -0.992622, 0.00228609, 0.121284, 0.0210132, -0.981465, 0.190491, 0.119467, 0.191625, 0.974209, -9.6987, -5.8679, -0.904348 )
+transform = Transform( -0.909261, -0.401294, -0.110532, 0.311743, -0.832495, 0.458024, -0.275811, 0.381989, 0.882086, -9.6987, -5.86792, -0.904349 )
 
 [node name="mixamorigRightLeg" parent="Armature/mixamorigHips/mixamorigRightUpLeg" index="0"]
-transform = Transform( 0.977916, 0.168402, -0.123778, -0.0721521, 0.827861, 0.556273, 0.196148, -0.535057, 0.821729, -1.23624e-06, 44.4772, 7.36611e-07 )
+transform = Transform( 0.988557, 0.148221, -0.0280322, -0.108914, 0.829889, 0.547194, 0.104369, -0.53788, 0.836536, 5.48585e-07, 44.4772, -7.50877e-08 )
 
 [node name="mixamorigRightFoot" parent="Armature/mixamorigHips/mixamorigRightUpLeg/mixamorigRightLeg" index="0"]
-transform = Transform( 0.966081, -0.249039, 0.0683217, 0.172645, 0.426101, -0.888049, 0.192047, 0.869723, 0.454643, -2.092e-06, 47.9871, -3.81265e-07 )
+transform = Transform( 0.97024, 0.102132, 0.219552, 0.115062, 0.603335, -0.789144, -0.21306, 0.790921, 0.573629, -2.69146e-06, 47.9871, -1.15383e-06 )
 
 [node name="mixamorigRightToeBase" parent="Armature/mixamorigHips/mixamorigRightUpLeg/mixamorigRightLeg/mixamorigRightFoot" index="0"]
-transform = Transform( 0.99608, 0.0540595, 0.0700111, 0.00884379, 0.726671, -0.686929, -0.0880101, 0.684855, 0.723345, -3.80143e-07, 18.8936, -2.86395e-07 )
+transform = Transform( 0.994617, 0.0569945, 0.0865393, 0.0210839, 0.706367, -0.707532, -0.101454, 0.705548, 0.701362, 1.29503e-07, 18.8936, -5.6408e-07 )
 
 [node name="mixamorigRightToe_End" parent="Armature/mixamorigHips/mixamorigRightUpLeg/mixamorigRightLeg/mixamorigRightFoot/mixamorigRightToeBase" index="0"]
-transform = Transform( 1, 5.18196e-08, -1.23831e-06, -5.18199e-08, 1, -2.48911e-07, 1.23831e-06, 2.48911e-07, 1, -1.95312e-06, 6.93593, -4.30859e-07 )
+transform = Transform( 1, 5.182e-08, -1.23796e-06, -5.18203e-08, 1, -2.47486e-07, 1.23796e-06, 2.47486e-07, 1, -2.92559e-06, 6.93593, -5.52408e-07 )
 
 [node name="mixamorigHips 2" parent="Armature001" index="0"]
-transform = Transform( 0.996958, -0.00183349, 0.0779142, -0.0760087, -0.243818, 0.966838, 0.0172242, -0.969819, -0.243216, -0.218051, -0.855341, -96.6679 )
+transform = Transform( 0.973842, -0.155538, 0.165649, -0.214649, -0.390532, 0.895215, -0.0745489, -0.907355, -0.413703, -1.80634, 6.01263, -94.1185 )
 
 [node name="mixamorigSpine 2" parent="Armature001/mixamorigHips 2" index="0"]
-transform = Transform( 0.999976, -0.00646333, -0.00246032, 0.00564879, 0.968589, -0.248605, 0.00398985, 0.248585, 0.968602, -2.38419e-07, 10.5695, -1.04292 )
+transform = Transform( 0.998801, -0.0410854, -0.0266194, 0.0346745, 0.977563, -0.207768, 0.0345584, 0.206596, 0.977816, -7.15256e-07, 10.5695, -1.04292 )
 
 [node name="mixamorigSpine1 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2" index="0"]
-transform = Transform( 0.999912, -0.0112231, -0.00702715, 0.0102881, 0.992562, -0.121304, 0.00833629, 0.121221, 0.99259, -3.91996e-18, 12.391, 2.38418e-07 )
+transform = Transform( 0.997163, -0.0427719, -0.0619349, 0.0393553, 0.99769, -0.055371, 0.0641601, 0.0527765, 0.996543, -9.53674e-07, 12.391, 2.14577e-06 )
 
 [node name="mixamorigSpine2 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2" index="0"]
-transform = Transform( 0.999913, -0.0111884, -0.00701411, 0.0102552, 0.992562, -0.121308, 0.00831918, 0.121225, 0.99259, 7.45037e-08, 14.1611, 1.43051e-06 )
+transform = Transform( 0.997188, -0.0430392, -0.0613503, 0.0396187, 0.997649, -0.0559205, 0.0636128, 0.0533326, 0.996549, -2.08077e-12, 14.1611, -4.76837e-07 )
 
 [node name="mixamorigNeck 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2" index="0"]
-transform = Transform( 0.999725, 0.00865455, -0.0217838, -0.00609005, 0.993329, 0.115152, 0.0226351, -0.114987, 0.993109, -2.83219e-12, 15.9313, 1.36267e-06 )
+transform = Transform( 0.999742, 0.00722677, -0.0215246, -0.003153, 0.982998, 0.18359, 0.0224854, -0.183475, 0.982767, 5.72204e-06, 15.9313, 2.93578e-06 )
 
 [node name="mixamorigHead 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigNeck 2" index="0"]
-transform = Transform( 0.999531, 3.92916e-05, -0.030612, 0.00846009, 0.960697, 0.277469, 0.0294197, -0.277598, 0.960247, -2.98096e-08, 5.93646, 1.44503 )
+transform = Transform( 0.998174, -0.0439428, -0.0414454, 0.0565524, 0.920942, 0.385575, 0.0212255, -0.387215, 0.921745, -1.90736e-06, 5.93646, 1.44504 )
 
 [node name="mixamorigHeadTop_End 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigNeck 2/mixamorigHead 2" index="0"]
 transform = Transform( 1, -3.46038e-18, -4.65661e-10, -1.41691e-17, 1, -3.78591e-08, 4.65661e-10, 3.78591e-08, 1, -5.96046e-08, 20.1808, 4.91234 )
 
 [node name="mixamorigLeftShoulder 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2" index="1"]
-transform = Transform( 0.126862, 0.917039, -0.378082, 0.0584451, -0.387409, -0.920053, -0.990197, 0.0946224, -0.102744, 6.50995, 14.3831, -0.209682 )
+transform = Transform( 0.236341, 0.949024, -0.208559, 0.034073, -0.222602, -0.974314, -0.971072, 0.223164, -0.084946, 6.50995, 14.3831, -0.209681 )
 
 [node name="mixamorigLeftArm 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2" index="0"]
-transform = Transform( 0.977141, -0.210863, -0.0270571, 0.127603, 0.683529, -0.718683, 0.170038, 0.698802, 0.694811, 2.98023e-07, 13.4562, -1.20103e-05 )
+transform = Transform( 0.907655, -0.156969, -0.38926, 0.0407298, 0.955997, -0.290534, 0.417736, 0.24785, 0.874109, 2.98023e-07, 13.4562, -1.20103e-05 )
 
 [node name="mixamorigLeftForeArm 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2" index="0"]
-transform = Transform( 0.122102, -0.989285, 0.0800423, 0.942752, 0.140818, 0.302307, -0.310339, 0.0385478, 0.949844, 6.65962e-07, 17.7772, -5.49424e-07 )
+transform = Transform( 0.133461, -0.984945, -0.109866, 0.989797, 0.138052, -0.0352667, 0.0499031, -0.104038, 0.99332, 2.64878e-07, 17.7772, -2.58211e-06 )
 
 [node name="mixamorigLeftHand 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2" index="0"]
-transform = Transform( 0.892796, 0.15595, 0.422605, -0.0505466, 0.966918, -0.250029, -0.447617, 0.201864, 0.871143, 1.10936e-06, 29.8993, -3.28811e-06 )
+transform = Transform( 0.992632, -0.118409, 0.0257051, 0.09019, 0.863713, 0.495849, -0.0809148, -0.489878, 0.868028, 6.36629e-06, 29.8993, 4.33135e-06 )
 
 [node name="mixamorigLeftHandThumb1 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2" index="0"]
-transform = Transform( 0.885853, -0.37501, 0.273188, 0.442135, 0.86081, -0.252039, -0.140646, 0.344055, 0.928356, -2.622, 2.96903, 1.13149 )
+transform = Transform( 0.885853, -0.37501, 0.273187, 0.442135, 0.860809, -0.252039, -0.140645, 0.344055, 0.928356, -2.62199, 2.96904, 1.13147 )
 
 [node name="mixamorigLeftHandThumb2 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2/mixamorigLeftHandThumb1 2" index="0"]
-transform = Transform( 0.963375, 0.184161, -0.19492, -0.192469, 0.980999, -0.02441, 0.186721, 0.061032, 0.980516, -0.361476, 3.2757, 2.87104e-06 )
+transform = Transform( 0.960833, 0.194322, -0.197581, -0.203228, 0.978795, -0.025645, 0.188408, 0.0647947, 0.979951, -0.361476, 3.2757, 1.80879e-05 )
 
 [node name="mixamorigLeftHandThumb3 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2/mixamorigLeftHandThumb1 2/mixamorigLeftHandThumb2 2" index="0"]
 transform = Transform( 0.993273, -0.115754, -0.00323844, 0.115755, 0.993278, 5.19269e-05, 0.00321066, -0.000426443, 0.999995, 0.0478458, 2.9619, -2.30655e-05 )
 
 [node name="mixamorigLeftHandThumb4 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2/mixamorigLeftHandThumb1 2/mixamorigLeftHandThumb2 2/mixamorigLeftHandThumb3 2" index="0"]
-transform = Transform( 1, 1.76951e-08, -4.09782e-08, -1.76951e-08, 1, -2.48065e-16, 4.09782e-08, 9.7318e-16, 1, 0.313624, 2.35922, -3.09944e-06 )
+transform = Transform( 1, -4.65661e-09, -1.11759e-08, 4.65661e-09, 1, 1.49012e-08, 1.11759e-08, -1.49012e-08, 1, 0.313624, 2.35923, -1.19209e-06 )
 
 [node name="mixamorigLeftHandIndex1 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2" index="1"]
-transform = Transform( 0.980983, -0.110487, -0.159577, 0.0518044, 0.941386, -0.333329, 0.187052, 0.318723, 0.929208, -3.11489, 9.8261, 0.121378 )
+transform = Transform( 0.979407, -0.10821, -0.170449, 0.0863739, 0.987651, -0.130708, 0.182488, 0.113294, 0.976659, -3.11488, 9.8261, 0.121394 )
 
 [node name="mixamorigLeftHandIndex2 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2/mixamorigLeftHandIndex1 2" index="0"]
-transform = Transform( 0.993977, 0.108873, -0.0125195, -0.105781, 0.923284, -0.369265, -0.0286438, 0.368365, 0.92924, 0.000674725, 2.50761, -9.47371e-06 )
+transform = Transform( 0.997291, 0.0732688, 0.00644753, -0.071523, 0.986495, -0.147351, -0.0171567, 0.146491, 0.989063, 0.0006814, 2.50759, -1.30555e-06 )
 
 [node name="mixamorigLeftHandIndex3 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2/mixamorigLeftHandIndex1 2/mixamorigLeftHandIndex2 2" index="0"]
-transform = Transform( 1, -0.000559364, -7.78612e-07, 0.000559364, 1, 3.02696e-06, 7.76919e-07, -3.0274e-06, 1, -0.00101376, 2.39217, -1.32888e-05 )
+transform = Transform( 1, -0.000559384, -7.78696e-07, 0.000559384, 1, 3.05677e-06, 7.76986e-07, -3.0572e-06, 1, -0.00101852, 2.39219, -2.07495e-05 )
 
 [node name="mixamorigLeftHandIndex4 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2/mixamorigLeftHandIndex1 2/mixamorigLeftHandIndex2 2/mixamorigLeftHandIndex3 2" index="0"]
-transform = Transform( 1, -2.04891e-08, -9.31323e-10, 2.04891e-08, 1, -2.79396e-09, 9.31323e-10, 2.79396e-09, 1, 0.000331879, 2.12987, 5.30482e-06 )
+transform = Transform( 1, 3.72529e-09, 1.39698e-08, -3.72529e-09, 1, 2.32831e-08, -1.39698e-08, -2.32831e-08, 1, 0.000332832, 2.12988, 5.30482e-06 )
 
 [node name="mixamorigLeftHandMiddle1 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2" index="2"]
-transform = Transform( 0.968751, -0.0318131, -0.245986, -0.0691504, 0.917778, -0.391026, 0.2382, 0.395817, 0.886899, -0.979292, 9.825, -0.149692 )
+transform = Transform( 0.956954, -0.132248, -0.258361, 0.0925276, 0.98272, -0.160311, 0.275097, 0.129505, 0.952654, -0.979288, 9.825, -0.14968 )
 
 [node name="mixamorigLeftHandMiddle2 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2/mixamorigLeftHandMiddle1 2" index="0"]
-transform = Transform( 0.99234, 0.111554, 0.0530737, -0.0681892, 0.85287, -0.517652, -0.103011, 0.510068, 0.853944, 0.001441, 3.00287, -1.28354e-05 )
+transform = Transform( 0.996988, 0.0591937, 0.0501035, -0.0423052, 0.956594, -0.288335, -0.0649964, 0.285347, 0.956218, 0.00145197, 3.00287, -2.07169e-05 )
 
 [node name="mixamorigLeftHandMiddle3 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2/mixamorigLeftHandMiddle1 2/mixamorigLeftHandMiddle2 2" index="0"]
-transform = Transform( 0.999993, 0.00381001, 4.795e-05, -0.00381001, 0.999993, -2.69119e-06, -4.79599e-05, 2.50848e-06, 1, 0.00434446, 2.83673, -4.9863e-06 )
+transform = Transform( 0.999993, 0.00380999, 4.79813e-05, -0.00380999, 0.999993, -2.70615e-06, -4.79912e-05, 2.52332e-06, 1, 0.00433207, 2.83673, -1.34893e-05 )
 
 [node name="mixamorigLeftHandMiddle4 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2/mixamorigLeftHandMiddle1 2/mixamorigLeftHandMiddle2 2/mixamorigLeftHandMiddle3 2" index="0"]
-transform = Transform( 1, 5.82075e-10, 1.22003e-07, -5.82074e-10, 1, -7.91624e-09, -1.22003e-07, 7.91624e-09, 1, -0.00579262, 2.52802, 1.67191e-05 )
+transform = Transform( 1, 1.17579e-08, 1.14553e-07, -1.17579e-08, 1, 6.98492e-09, -1.14553e-07, -6.98492e-09, 1, -0.00579166, 2.52802, 3.19779e-05 )
 
 [node name="mixamorigLeftHandRing1 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2" index="3"]
-transform = Transform( 0.981537, -0.0813124, -0.17313, -0.0394742, 0.799545, -0.599307, 0.187157, 0.595076, 0.781573, 0.992839, 9.58118, -0.17323 )
+transform = Transform( 0.973191, -0.152061, -0.172559, 0.0807638, 0.928421, -0.362645, 0.215351, 0.338986, 0.915812, 0.992843, 9.5812, -0.173219 )
 
 [node name="mixamorigLeftHandRing2 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2/mixamorigLeftHandRing1 2" index="0"]
-transform = Transform( 0.998692, 0.0299842, 0.0414212, 0.00283733, 0.776298, -0.630359, -0.051056, 0.629652, 0.775198, -0.00198185, 2.6701, -1.7241e-05 )
+transform = Transform( 0.997588, -0.0599035, 0.0350715, 0.0673904, 0.95692, -0.282423, -0.0166425, 0.284105, 0.958649, -0.00198042, 2.67012, -1.70993e-05 )
 
 [node name="mixamorigLeftHandRing3 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2/mixamorigLeftHandRing1 2/mixamorigLeftHandRing2 2" index="0"]
-transform = Transform( 0.999998, -0.00190423, 2.88218e-05, 0.00190423, 0.999998, -1.49077e-06, -2.88189e-05, 1.54566e-06, 1, -0.00115573, 2.47188, 5.26424e-06 )
+transform = Transform( 0.999998, -0.00190428, 2.88203e-05, 0.00190428, 0.999998, -1.52058e-06, -2.88173e-05, 1.57546e-06, 1, -0.00116861, 2.47189, 6.68379e-06 )
 
 [node name="mixamorigLeftHandRing4 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2/mixamorigLeftHandRing1 2/mixamorigLeftHandRing2 2/mixamorigLeftHandRing3 2" index="0"]
 transform = Transform( 1, -4.98258e-08, 7.68341e-09, 4.98258e-08, 1, -2.10712e-08, -7.68341e-09, 2.10712e-08, 1, 0.00314403, 2.18526, -1.90735e-05 )
 
 [node name="mixamorigLeftHandPinky1 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2" index="4"]
-transform = Transform( 0.976851, -0.0950907, -0.191623, -0.0502435, 0.768726, -0.637601, 0.207936, 0.632469, 0.746153, 3.10134, 9.13015, 0.18941 )
+transform = Transform( 0.979851, -0.0746367, -0.185259, 0.0111843, 0.946602, -0.32221, 0.199415, 0.313646, 0.928364, 3.10134, 9.13016, 0.189403 )
 
 [node name="mixamorigLeftHandPinky2 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2/mixamorigLeftHandPinky1 2" index="0"]
-transform = Transform( 0.990441, -0.0265193, 0.135362, 0.115142, 0.699305, -0.705489, -0.07595, 0.714331, 0.695674, 0.00270611, 2.00136, 6.63195e-06 )
+transform = Transform( 0.987362, -0.106739, 0.117142, 0.152624, 0.839495, -0.521491, -0.0426771, 0.53278, 0.845177, 0.00269467, 2.00132, 2.39412e-06 )
 
 [node name="mixamorigLeftHandPinky3 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2/mixamorigLeftHandPinky1 2/mixamorigLeftHandPinky2 2" index="0"]
-transform = Transform( 0.999986, 0.00536176, 0.000168636, -0.00536176, 0.999985, 4.94273e-07, -0.000168631, -1.39845e-06, 1, 0.00268143, 1.63095, -5.46789e-06 )
+transform = Transform( 0.999986, 0.00536177, 0.000168632, -0.00536177, 0.999985, 5.09185e-07, -0.000168627, -1.41334e-06, 1, 0.00268525, 1.63096, 2.48048e-05 )
 
 [node name="mixamorigLeftHandPinky4 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigLeftShoulder 2/mixamorigLeftArm 2/mixamorigLeftForeArm 2/mixamorigLeftHand 2/mixamorigLeftHandPinky1 2/mixamorigLeftHandPinky2 2/mixamorigLeftHandPinky3 2" index="0"]
-transform = Transform( 1, 6.0536e-09, 2.14204e-07, -6.0536e-09, 1, -2.04891e-08, -2.14204e-07, 2.04891e-08, 1, -0.00538278, 1.45678, -3.5502e-06 )
+transform = Transform( 1, 1.53668e-08, 2.30968e-07, -1.53668e-08, 1, 1.86265e-09, -2.30968e-07, -1.86265e-09, 1, -0.00538564, 1.45677, -7.3649e-06 )
 
 [node name="mixamorigRightShoulder 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2" index="2"]
-transform = Transform( -0.0893013, -0.832103, 0.547384, -0.162252, -0.530085, -0.832276, 0.9827, -0.163138, -0.0876732, -6.50995, 14.372, -0.0969477 )
+transform = Transform( -0.208329, -0.913196, 0.350247, -0.0504077, -0.347603, -0.936286, 0.976759, -0.21271, 0.0263836, -6.50995, 14.372, -0.0969434 )
 
 [node name="mixamorigRightArm 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2" index="0"]
-transform = Transform( 0.933169, 0.356494, 0.0459141, -0.237072, 0.706456, -0.666871, -0.270172, 0.611418, 0.743757, 1.70606e-06, 13.4562, 5.33571e-06 )
+transform = Transform( 0.633055, -0.77199, -0.0572022, 0.723121, 0.616117, -0.312243, 0.276292, 0.156303, 0.948279, -2.82318e-06, 13.4562, 5.33571e-06 )
 
 [node name="mixamorigRightForeArm 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2" index="0"]
-transform = Transform( 0.08408, 0.97697, -0.196114, -0.952151, 0.136806, 0.273301, 0.293837, 0.16375, 0.941725, 1.38485e-06, 17.7774, -7.52086e-06 )
+transform = Transform( 0.181093, 0.440942, -0.879077, -0.982896, 0.111582, -0.146512, 0.0334856, 0.890573, 0.453607, -4.90832e-06, 17.7774, -8.32408e-06 )
 
 [node name="mixamorigRightHand 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2" index="0"]
-transform = Transform( 0.962298, -0.148926, -0.227604, 0.134526, 0.987866, -0.0776106, 0.2364, 0.0440659, 0.970656, -1.3222e-05, 29.9619, 7.2926e-06 )
+transform = Transform( 0.969939, -0.138922, 0.199798, 0.151487, 0.987246, -0.0489626, -0.190448, 0.0777576, 0.978613, -3.71433e-06, 29.9619, -1.83826e-06 )
 
 [node name="mixamorigRightHandThumb1 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2" index="0"]
-transform = Transform( 0.882008, 0.380163, -0.278456, -0.449551, 0.855991, -0.255309, 0.141297, 0.350365, 0.925894, 2.62554, 3.00246, 1.12599 )
+transform = Transform( 0.881978, 0.37477, -0.285767, -0.448938, 0.852604, -0.267433, 0.14342, 0.364161, 0.920227, 2.62555, 3.00246, 1.12599 )
 
 [node name="mixamorigRightHandThumb2 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2/mixamorigRightHandThumb1 2" index="0"]
-transform = Transform( 0.960197, -0.201881, 0.193042, 0.209441, 0.977629, -0.0193716, -0.184813, 0.0590314, 0.980999, 0.317739, 3.30027, 4.32004e-07 )
+transform = Transform( 0.933406, -0.279548, 0.224959, 0.294202, 0.955146, -0.0337861, -0.205424, 0.0977196, 0.973782, 0.317747, 3.30028, -6.82093e-06 )
 
 [node name="mixamorigRightHandThumb3 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2/mixamorigRightHandThumb1 2/mixamorigRightHandThumb2 2" index="0"]
-transform = Transform( 0.994406, 0.105617, 0.00152453, -0.105617, 0.994407, 1.95133e-05, -0.00151394, -0.000180421, 0.999999, -0.0369611, 2.95359, -4.41074e-06 )
+transform = Transform( 0.994406, 0.105617, 0.00152452, -0.105617, 0.994407, 1.94688e-05, -0.00151394, -0.000180376, 0.999999, -0.0369458, 2.95358, -4.14462e-06 )
 
 [node name="mixamorigRightHandThumb4 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2/mixamorigRightHandThumb1 2/mixamorigRightHandThumb2 2/mixamorigRightHandThumb3 2" index="0"]
-transform = Transform( 1, 6.14673e-08, -5.58793e-08, -6.14673e-08, 1, 6.70552e-08, 5.58794e-08, -6.70552e-08, 1, -0.280778, 2.36172, 9.65595e-06 )
+transform = Transform( 1, 9.49949e-08, -1.11759e-08, -9.49949e-08, 1, -3.72529e-08, 1.11759e-08, 3.72529e-08, 1, -0.280784, 2.36171, 9.65595e-06 )
 
 [node name="mixamorigRightHandIndex1 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2" index="1"]
-transform = Transform( 0.981922, 0.101764, 0.159605, -0.0437956, 0.94245, -0.331465, -0.184151, 0.318483, 0.929869, 3.06779, 9.75203, 0.178042 )
+transform = Transform( 0.984941, 0.0359016, 0.169121, 0.0719986, 0.80417, -0.590023, -0.157185, 0.593314, 0.789475, 3.06779, 9.75204, 0.178038 )
 
 [node name="mixamorigRightHandIndex2 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2/mixamorigRightHandIndex1 2" index="0"]
-transform = Transform( 0.993605, -0.112212, 0.0125381, 0.108934, 0.923471, -0.367879, 0.0297018, 0.366892, 0.929789, 0.00477743, 2.49471, -9.40255e-06 )
+transform = Transform( 0.994674, -0.102838, 0.00696086, 0.0999099, 0.94534, -0.310403, 0.025341, 0.309446, 0.950579, 0.00477648, 2.49471, -9.35722e-06 )
 
 [node name="mixamorigRightHandIndex3 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2/mixamorigRightHandIndex1 2/mixamorigRightHandIndex2 2" index="0"]
-transform = Transform( 0.999989, 0.00461371, -0.000272026, -0.00461371, 0.999989, 3.15292e-06, 0.000272038, -1.89783e-06, 1, 0.00234842, 2.46475, -1.67041e-05 )
+transform = Transform( 0.999989, 0.00461374, -0.000272106, -0.00461374, 0.999989, 3.1084e-06, 0.000272117, -1.85294e-06, 1, 0.00235415, 2.46477, -9.8884e-06 )
 
 [node name="mixamorigRightHandIndex4 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2/mixamorigRightHandIndex1 2/mixamorigRightHandIndex2 2/mixamorigRightHandIndex3 2" index="0"]
-transform = Transform( 1, 1.95578e-08, 1.95578e-08, -1.95578e-08, 1, 4.65661e-10, -1.95578e-08, -4.65662e-10, 1, -0.00713444, 1.95055, -4.85778e-06 )
+transform = Transform( 1, -2.79397e-09, 6.51926e-09, 2.79397e-09, 1, -5.23869e-09, -6.51926e-09, 5.23869e-09, 1, -0.00713444, 1.95056, -1.04308e-06 )
 
 [node name="mixamorigRightHandMiddle1 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2" index="2"]
-transform = Transform( 0.968681, 0.0248603, 0.247062, 0.0823182, 0.906559, -0.413975, -0.234268, 0.421347, 0.87612, 0.952104, 9.73203, -0.157317 )
+transform = Transform( 0.966116, 0.0221624, 0.257155, 0.133347, 0.810189, -0.5708, -0.220995, 0.58575, 0.779781, 0.952105, 9.73203, -0.157326 )
 
 [node name="mixamorigRightHandMiddle2 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2/mixamorigRightHandMiddle1 2" index="0"]
-transform = Transform( 0.991502, -0.119522, -0.0513617, 0.0760487, 0.852854, -0.516581, 0.105547, 0.508285, 0.854696, 0.000869751, 2.98896, 1.01215e-05 )
+transform = Transform( 0.992393, -0.114299, -0.0457419, 0.0783174, 0.872789, -0.481774, 0.0949893, 0.474527, 0.875101, 0.000867844, 2.98896, 9.99514e-06 )
 
 [node name="mixamorigRightHandMiddle3 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2/mixamorigRightHandMiddle1 2/mixamorigRightHandMiddle2 2" index="0"]
 transform = Transform( 1, -9.44004e-05, 1.34371e-07, 9.44005e-05, 1, -2.47825e-06, -1.34137e-07, 2.47826e-06, 1, -0.000613689, 2.86022, 1.87378e-05 )
@@ -353,37 +356,37 @@ transform = Transform( 1, -9.44004e-05, 1.34371e-07, 9.44005e-05, 1, -2.47825e-0
 transform = Transform( 1, -5.09899e-08, -2.77069e-08, 5.09899e-08, 1, 1.39698e-09, 2.77068e-08, -1.39698e-09, 1, -0.000255108, 2.59539, 4.73857e-06 )
 
 [node name="mixamorigRightHandRing1 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2" index="3"]
-transform = Transform( 0.982326, 0.0711627, 0.173125, 0.0471171, 0.80112, -0.596647, -0.181152, 0.594259, 0.783608, -1.03931, 9.87612, -0.0494283 )
+transform = Transform( 0.975504, 0.137084, 0.172047, 0.0234867, 0.712721, -0.701054, -0.218725, 0.687922, 0.692042, -1.03931, 9.87613, -0.0494231 )
 
 [node name="mixamorigRightHandRing2 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2/mixamorigRightHandRing1 2" index="0"]
-transform = Transform( 0.998611, -0.0354032, -0.0390278, 0.00288533, 0.776291, -0.630367, 0.0526139, 0.629379, 0.775315, 0.00150925, 2.53491, 6.28372e-06 )
+transform = Transform( 0.998497, -0.041661, -0.0356181, 0.00595043, 0.728381, -0.685146, 0.0544874, 0.683904, 0.727534, 0.00151688, 2.53491, 1.46545e-05 )
 
 [node name="mixamorigRightHandRing3 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2/mixamorigRightHandRing1 2/mixamorigRightHandRing2 2" index="0"]
-transform = Transform( 1, -0.000805465, 1.08566e-05, 0.000805465, 1, -2.47112e-06, -1.08546e-05, 2.47986e-06, 1, -0.00170833, 2.40727, 9.83744e-06 )
+transform = Transform( 1, -0.000805522, 1.08762e-05, 0.000805522, 1, -2.47111e-06, -1.08742e-05, 2.47987e-06, 1, -0.00169688, 2.40726, 1.01075e-05 )
 
 [node name="mixamorigRightHandRing4 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2/mixamorigRightHandRing1 2/mixamorigRightHandRing2 2/mixamorigRightHandRing3 2" index="0"]
-transform = Transform( 1, -3.86499e-08, 7.567e-09, 3.86499e-08, 1, 3.71074e-09, -7.567e-09, -3.71074e-09, 1, 0.00017637, 2.01451, -7.44313e-06 )
+transform = Transform( 1, 2.28174e-08, 3.84171e-09, -2.28174e-08, 1, 1.86119e-08, -3.84171e-09, -1.86119e-08, 1, 0.000184, 2.0145, -8.3968e-06 )
 
 [node name="mixamorigRightHandPinky1 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2" index="4"]
-transform = Transform( 0.975501, 0.0819794, 0.20415, 0.0678719, 0.770558, -0.633746, -0.209263, 0.632076, 0.746116, -2.9806, 8.70156, 0.103229 )
+transform = Transform( 0.954664, 0.20773, 0.213226, 0.0181391, 0.674354, -0.738186, -0.297133, 0.708587, 0.640013, -2.9806, 8.70157, 0.103226 )
 
 [node name="mixamorigRightHandPinky2 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2/mixamorigRightHandPinky1 2" index="0"]
-transform = Transform( 0.991618, 0.00879224, -0.128901, -0.0982162, 0.699499, -0.707852, 0.0839426, 0.714579, 0.6945, -0.0020003, 2.12276, -1.67028e-05 )
+transform = Transform( 0.991506, 0.00128869, -0.130057, -0.101031, 0.63737, -0.763906, 0.0819098, 0.770557, 0.632086, -0.00200793, 2.12277, -1.39746e-05 )
 
 [node name="mixamorigRightHandPinky3 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2/mixamorigRightHandPinky1 2/mixamorigRightHandPinky2 2" index="0"]
-transform = Transform( 1, -0.00085305, -4.44634e-05, 0.00085305, 1, -1.86628e-07, 4.44636e-05, 1.48699e-07, 1, 0.000365347, 1.77813, 1.32744e-07 )
+transform = Transform( 1, -0.000853015, -4.44821e-05, 0.000853015, 1, -1.64284e-07, 4.44822e-05, 1.2634e-07, 1, 0.000353903, 1.77814, 5.64562e-06 )
 
 [node name="mixamorigRightHandPinky4 2" parent="Armature001/mixamorigHips 2/mixamorigSpine 2/mixamorigSpine1 2/mixamorigSpine2 2/mixamorigRightShoulder 2/mixamorigRightArm 2/mixamorigRightForeArm 2/mixamorigRightHand 2/mixamorigRightHandPinky1 2/mixamorigRightHandPinky2 2/mixamorigRightHandPinky3 2" index="0"]
-transform = Transform( 1, 1.15251e-08, -2.79397e-09, -1.15251e-08, 1, -1.234e-08, 2.79397e-09, 1.234e-08, 1, 0.00166482, 1.57698, 1.46478e-05 )
+transform = Transform( 1, -3.31784e-08, 4.65662e-09, 3.31784e-08, 1, -1.234e-08, -4.65662e-09, 1.234e-08, 1, 0.00164956, 1.57699, 1.7032e-05 )
 
 [node name="mixamorigLeftUpLeg 2" parent="Armature001/mixamorigHips 2" index="1"]
-transform = Transform( -0.980045, 0.197454, -0.0228364, -0.194779, -0.931099, 0.308399, 0.0396327, 0.306702, 0.950954, 9.6987, -5.86792, 0.0415254 )
+transform = Transform( -0.992829, 0.0878824, -0.0810272, -0.0949275, -0.99162, 0.0876316, -0.0726489, 0.0946976, 0.992824, 9.6987, -5.86793, 0.0415248 )
 
 [node name="mixamorigLeftLeg 2" parent="Armature001/mixamorigHips 2/mixamorigLeftUpLeg 2" index="0"]
-transform = Transform( 0.99839, -0.0534653, -0.0189394, 0.0438087, 0.514765, 0.856211, -0.0360282, -0.855662, 0.516279, -1.54975e-06, 44.5799, -4.0578e-06 )
+transform = Transform( 0.998479, -0.0524287, -0.0170736, 0.040352, 0.483779, 0.874259, -0.0375765, -0.873618, 0.485158, -2.38767e-07, 44.5799, -3.60693e-06 )
 
 [node name="mixamorigLeftFoot 2" parent="Armature001/mixamorigHips 2/mixamorigLeftUpLeg 2/mixamorigLeftLeg 2" index="0"]
-transform = Transform( 0.964725, -0.0535559, -0.257755, -0.235281, 0.263848, -0.935429, 0.118106, 0.963077, 0.24194, -1.30954e-06, 47.9558, -1.65693e-06 )
+transform = Transform( 0.964324, -0.021814, -0.263822, -0.256304, 0.172396, -0.951098, 0.0662292, 0.984786, 0.160655, 4.2744e-06, 47.9558, -4.06765e-07 )
 
 [node name="mixamorigLeftToeBase 2" parent="Armature001/mixamorigHips 2/mixamorigLeftUpLeg 2/mixamorigLeftLeg 2/mixamorigLeftFoot 2" index="0"]
 transform = Transform( 0.996886, -0.0534433, -0.0579825, -3.12924e-07, 0.7353, -0.677742, 0.0788552, 0.675631, 0.73301, -5.96046e-07, 18.5652, 8.9407e-08 )
@@ -392,13 +395,13 @@ transform = Transform( 0.996886, -0.0534433, -0.0579825, -3.12924e-07, 0.7353, -
 transform = Transform( 1, 6.09288e-08, -2.61702e-07, -6.09289e-08, 1, -2.15252e-07, 2.61702e-07, 2.15252e-07, 1, 5.20796e-06, 6.65044, 7.74861e-07 )
 
 [node name="mixamorigRightUpLeg 2" parent="Armature001/mixamorigHips 2" index="2"]
-transform = Transform( -0.957608, -0.232274, -0.170437, 0.179846, -0.94412, 0.276223, -0.225065, 0.23385, 0.945903, -9.6987, -5.8679, -0.904346 )
+transform = Transform( -0.903989, -0.357406, -0.234688, 0.353901, -0.933459, 0.0583989, -0.239936, -0.0302631, 0.970356, -9.6987, -5.86791, -0.904341 )
 
 [node name="mixamorigRightLeg 2" parent="Armature001/mixamorigHips 2/mixamorigRightUpLeg 2" index="0"]
-transform = Transform( 0.998185, 0.0527768, 0.0290074, -0.0517251, 0.504641, 0.861778, 0.0308436, -0.861715, 0.506455, -4.02593e-07, 44.4772, -1.8662e-07 )
+transform = Transform( 0.998137, 0.0506883, 0.0339618, -0.0521156, 0.41883, 0.906568, 0.0317282, -0.906649, 0.420691, -4.06271e-07, 44.4772, -4.0008e-06 )
 
 [node name="mixamorigRightFoot 2" parent="Armature001/mixamorigHips 2/mixamorigRightUpLeg 2/mixamorigRightLeg 2" index="0"]
-transform = Transform( 0.948765, 0.133408, 0.28644, 0.253051, 0.222099, -0.941614, -0.189237, 0.965854, 0.17696, -1.12944e-06, 47.9871, -4.48265e-07 )
+transform = Transform( 0.935654, 0.145702, 0.321438, 0.314674, 0.0679466, -0.946765, -0.159786, 0.986993, 0.0177261, -1.04721e-06, 47.9871, -7.16809e-08 )
 
 [node name="mixamorigRightToeBase 2" parent="Armature001/mixamorigHips 2/mixamorigRightUpLeg 2/mixamorigRightLeg 2/mixamorigRightFoot 2" index="0"]
 transform = Transform( 0.996989, 0.0516028, 0.0578756, 1.33179e-06, 0.746386, -0.665513, -0.0775399, 0.663509, 0.744139, -2.59204e-07, 18.8936, 1.29534e-06 )
@@ -602,211 +605,208 @@ transform = Transform( 0.981141, 0.105915, 0.161693, 0.107916, 0.393853, -0.9128
 transform = Transform( 1, 5.18192e-08, -1.23819e-06, -5.18195e-08, 1, -2.52156e-07, 1.23819e-06, 2.52156e-07, 1, -1.00955e-06, 6.93594, -3.42726e-07 )
 
 [node name="mixamorigHips 4" parent="MASTER" index="0"]
-transform = Transform( 0.9805, -0.0484892, 0.190441, -0.196153, -0.300495, 0.933395, 0.011967, -0.95255, -0.304146, 1.81001, -4.76879, -101.508 )
+transform = Transform( 0.97242, 0.041011, -0.229604, 0.230778, -0.0265731, 0.972643, 0.0337878, -0.998805, -0.0353045, 17.897, -1.18592, -108.281 )
 
 [node name="mixamorigSpine 4" parent="MASTER/mixamorigHips 4" index="0"]
-transform = Transform( 0.995164, -0.0981123, -0.00475664, 0.0939098, 0.964503, -0.246809, 0.0288028, 0.245169, 0.969052, 1.03509e-07, 10.5695, -1.04293 )
+transform = Transform( 0.999616, -0.00216755, -0.0276333, -0.00156913, 0.990914, -0.134489, 0.0276737, 0.134481, 0.99053, 1.24038e-07, 10.5695, -1.04292 )
 
 [node name="mixamorigSpine1 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4" index="0"]
-transform = Transform( 0.999028, 0.0366564, -0.024467, -0.040762, 0.97961, -0.196729, 0.0167568, 0.197535, 0.980153, -8.44144e-07, 12.391, -5.00221e-07 )
+transform = Transform( 0.999138, 0.0233132, -0.034358, -0.0263809, 0.995435, -0.0917198, 0.0320629, 0.0925471, 0.995192, -3.11135e-07, 12.391, 4.45816e-07 )
 
 [node name="mixamorigSpine2 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4" index="0"]
-transform = Transform( 0.998838, 0.0389467, -0.0284022, -0.0437487, 0.979844, -0.194918, 0.0202384, 0.195934, 0.980408, 4.22075e-07, 14.1611, -1.94609e-06 )
+transform = Transform( 0.999106, 0.0256477, -0.0335924, -0.0285768, 0.995547, -0.0898359, 0.0311387, 0.0907156, 0.99539, 8.70287e-07, 14.1611, -4.76837e-07 )
 
 [node name="mixamorigNeck 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4" index="0"]
-transform = Transform( 0.999528, -0.0265175, 0.0155141, 0.029075, 0.979603, -0.198829, -0.00992521, 0.199187, 0.979911, 2.91171e-07, 15.9313, 1.53484e-06 )
+transform = Transform( 0.996199, 0.0155761, 0.0856945, 0.00181455, 0.979954, -0.199214, -0.0870797, 0.198612, 0.976202, -1.93825e-06, 15.9313, 1.05743e-05 )
 
 [node name="mixamorigHead 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigNeck 4" index="0"]
-transform = Transform( 0.992998, -0.0362433, 0.112432, 0.0711715, 0.943191, -0.32454, -0.0942827, 0.33027, 0.939166, 1.21145e-06, 5.93649, 1.44504 )
+transform = Transform( 0.886936, 0.185215, 0.42313, -0.073915, 0.96119, -0.265802, -0.455939, 0.204473, 0.866205, 2.48113e-07, 5.93646, 1.44503 )
 
 [node name="mixamorigHeadTop_End 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigNeck 4/mixamorigHead 4" index="0"]
-transform = Transform( 1, -1.03198e-09, -4.12868e-09, 1.03198e-09, 1, -3.37304e-08, 4.12868e-09, 3.37304e-08, 1, -7.18288e-07, 20.1808, 4.91234 )
+transform = Transform( 1, -1.17306e-09, -4.69287e-09, 1.17306e-09, 1, -3.31662e-08, 4.69287e-09, 3.31662e-08, 1, -5.55801e-07, 20.1808, 4.91234 )
 
 [node name="mixamorigHeadTop_Hair01 2" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigNeck 4/mixamorigHead 4/mixamorigHeadTop_End 4" index="0"]
-transform = Transform( 0.943523, 0.19572, 0.267316, -0.248179, -0.116978, 0.961625, 0.219479, -0.973658, -0.0617982, -1.06364e-06, -1.42903, -10.9896 )
+transform = Transform( 0.936803, 0.196027, 0.289781, -0.237499, -0.251868, 0.938167, 0.256893, -0.9477, -0.189395, -3.03426e-06, -1.42904, -10.9896 )
 
 [node name="mixamorigHeadTop_Hair02 2" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigNeck 4/mixamorigHead 4/mixamorigHeadTop_End 4/mixamorigHeadTop_Hair01 2" index="0"]
-transform = Transform( 0.975592, -0.129858, 0.177081, 0.219077, 0.52037, -0.825361, 0.0150316, 0.84401, 0.536117, -2.91266e-06, 14.6365, -9.16054e-06 )
+transform = Transform( 0.99255, -0.0959164, 0.0751273, 0.120562, 0.862173, -0.492059, -0.0175762, 0.49745, 0.867314, -6.41816e-06, 14.6365, -5.52727e-06 )
 
 [node name="mixamorigHeadTop_Hair03 2" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigNeck 4/mixamorigHead 4/mixamorigHeadTop_End 4/mixamorigHeadTop_Hair01 2/mixamorigHeadTop_Hair02 2" index="0"]
-transform = Transform( 0.983173, 0.182674, 0.0010613, -0.176713, 0.95253, -0.247908, -0.0462972, 0.243549, 0.968783, 9.91498e-07, 19.3842, -7.70346e-06 )
+transform = Transform( 0.990282, 0.136954, 0.0241816, -0.138855, 0.963963, 0.226925, 0.00776807, -0.228078, 0.973612, 5.58544e-07, 19.3842, -6.44776e-06 )
 
 [node name="mixamorigHeadTop_Hair04 2" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigNeck 4/mixamorigHead 4/mixamorigHeadTop_End 4/mixamorigHeadTop_Hair01 2/mixamorigHeadTop_Hair02 2/mixamorigHeadTop_Hair03 2" index="0"]
-transform = Transform( 0.93402, 0.339076, 0.112405, -0.357222, 0.886875, 0.292994, -0.000341557, -0.313816, 0.949484, 5.22675e-07, 19.1674, 3.10912e-06 )
+transform = Transform( 0.743429, -0.569177, -0.351214, 0.667158, 0.594161, 0.449303, -0.0470549, -0.56834, 0.821447, -9.56777e-07, 19.1674, -2.57039e-06 )
 
 [node name="mixamorigLeftShoulder 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4" index="1"]
-transform = Transform( -0.132695, 0.8321, -0.538517, 0.0212772, -0.540805, -0.840879, -0.990928, -0.123039, 0.0540578, 6.50995, 14.3831, -0.209686 )
+transform = Transform( -0.14195, 0.810309, -0.568551, 0.036025, -0.569758, -0.821023, -0.989218, -0.137026, 0.0516854, 6.50994, 14.3831, -0.209684 )
 
 [node name="mixamorigLeftArm 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4" index="0"]
-transform = Transform( 0.813045, -0.558246, 0.165283, 0.490122, 0.503071, -0.711829, 0.314226, 0.659758, 0.682628, -2.7253e-06, 13.4562, -1.21809e-05 )
+transform = Transform( 0.762457, -0.637982, -0.107883, 0.388508, 0.584733, -0.712144, 0.517418, 0.501065, 0.693695, 3.51785e-06, 13.4562, -1.22033e-05 )
 
 [node name="mixamorigLeftForeArm 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4" index="0"]
-transform = Transform( 0.463085, -0.885197, 0.0444824, 0.88242, 0.455772, -0.116644, 0.0829794, 0.0932686, 0.992177, 5.12835e-06, 17.7772, -4.22185e-06 )
+transform = Transform( -0.307415, -0.940257, 0.146331, 0.937308, -0.325733, -0.1239, 0.164162, 0.0990682, 0.981446, -1.34589e-08, 17.7772, -1.96387e-06 )
 
 [node name="mixamorigLeftHand 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4" index="0"]
-transform = Transform( 0.610389, -0.791266, 0.036394, 0.541817, 0.450595, 0.709506, -0.577806, -0.413355, 0.70376, 2.26982e-06, 29.8993, 4.38814e-06 )
+transform = Transform( 0.934828, -0.164882, 0.3145, 0.138763, 0.984864, 0.103868, -0.326866, -0.053458, 0.943558, 8.70284e-06, 29.8993, 4.3533e-06 )
 
 [node name="mixamorigLeftHandThumb1 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4" index="0"]
-transform = Transform( 0.958736, -0.137315, 0.248935, 0.18596, 0.965218, -0.183772, -0.215042, 0.222481, 0.950925, -2.622, 2.96905, 1.13148 )
+transform = Transform( 0.963852, -0.0970449, 0.248135, 0.144163, 0.973158, -0.179386, -0.224067, 0.208673, 0.951971, -2.62199, 2.96904, 1.13148 )
 
 [node name="mixamorigLeftHandThumb2 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4/mixamorigLeftHandThumb1 4" index="0"]
-transform = Transform( 0.994168, -0.107838, -0.000317368, 0.107811, 0.99398, -0.0195101, 0.00241939, 0.0193621, 0.99981, -0.361484, 3.27571, 2.93583e-06 )
+transform = Transform( 0.990665, -0.126031, -0.0519497, 0.125021, 0.991904, -0.0222679, 0.0543355, 0.0155653, 0.998402, -0.361474, 3.2757, 4.43256e-06 )
 
 [node name="mixamorigLeftHandThumb3 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4/mixamorigLeftHandThumb1 4/mixamorigLeftHandThumb2 4" index="0"]
-transform = Transform( 0.970247, -0.241173, -0.0213674, 0.238045, 0.934084, 0.266123, -0.0442228, -0.263291, 0.963702, 0.047846, 2.9619, -1.40624e-05 )
+transform = Transform( 0.970242, -0.241193, -0.0213694, 0.238065, 0.934079, 0.266122, -0.044226, -0.26329, 0.963703, 0.0478475, 2.9619, -1.52167e-05 )
 
 [node name="mixamorigLeftHandThumb4 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4/mixamorigLeftHandThumb1 4/mixamorigLeftHandThumb2 4/mixamorigLeftHandThumb3 4" index="0"]
-transform = Transform( 1, -4.65641e-09, -2.60772e-08, 4.65641e-09, 1, 1.71146e-09, 2.60772e-08, -1.71146e-09, 1, 0.313626, 2.35922, 4.09183e-06 )
+transform = Transform( 1, 3.27874e-09, -2.93177e-08, -3.27874e-09, 1, 4.89278e-08, 2.93177e-08, -4.89278e-08, 1, 0.313624, 2.35923, -9.23993e-06 )
 
 [node name="mixamorigLeftHandIndex1 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4" index="1"]
-transform = Transform( 0.993649, -0.0892495, 0.0685361, 0.0870378, 0.995604, 0.0346126, -0.0713239, -0.0284276, 0.997048, -3.11488, 9.8261, 0.121377 )
+transform = Transform( 0.993503, -0.101294, 0.0518833, 0.0914206, 0.981831, 0.166281, -0.0677839, -0.160457, 0.984712, -3.1149, 9.82611, 0.121385 )
 
 [node name="mixamorigLeftHandIndex2 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4/mixamorigLeftHandIndex1 4" index="0"]
-transform = Transform( 0.998091, 0.0584928, -0.0198068, -0.058463, 0.791639, -0.608186, -0.0198947, 0.608183, 0.793548, 0.000684751, 2.50762, -8.33413e-06 )
+transform = Transform( 0.998766, 0.0479956, -0.0127599, -0.0479763, 0.86607, -0.497615, -0.0128324, 0.497613, 0.867304, 0.00067671, 2.50764, -9.80377e-06 )
 
 [node name="mixamorigLeftHandIndex3 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4/mixamorigLeftHandIndex1 4/mixamorigLeftHandIndex2 4" index="0"]
-transform = Transform( 0.998076, 0.058577, -0.0203098, -0.0585174, 0.781845, -0.620721, -0.0204809, 0.620715, 0.783768, -0.00102389, 2.39218, -1.40591e-05 )
+transform = Transform( 0.998735, 0.0484738, -0.0133705, -0.0484346, 0.855922, -0.514832, -0.0135117, 0.514828, 0.857187, -0.0010247, 2.39219, -2.64083e-05 )
 
 [node name="mixamorigLeftHandIndex4 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4/mixamorigLeftHandIndex1 4/mixamorigLeftHandIndex2 4/mixamorigLeftHandIndex3 4" index="0"]
-transform = Transform( 1, -2.60767e-08, 2.36631e-09, 2.60768e-08, 1, 7.58899e-09, -2.36631e-09, -7.58899e-09, 1, 0.000330815, 2.12988, 5.30482e-06 )
+transform = Transform( 1, -2.09021e-09, 2.54777e-08, 2.09021e-09, 1, 2.07691e-08, -2.54777e-08, -2.07691e-08, 1, 0.00032242, 2.12987, -3.39375e-07 )
 
 [node name="mixamorigLeftHandMiddle1 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4" index="2"]
-transform = Transform( 0.999181, -0.0393682, 0.00933492, 0.0403773, 0.984972, -0.16793, -0.00258353, 0.168169, 0.985754, -0.979291, 9.825, -0.149684 )
+transform = Transform( 0.99855, -0.0537487, 0.00307406, 0.0538244, 0.997909, -0.0357822, -0.00114438, 0.0358958, 0.999355, -0.979284, 9.82498, -0.149683 )
 
 [node name="mixamorigLeftHandMiddle2 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4/mixamorigLeftHandMiddle1 4" index="0"]
-transform = Transform( 0.998406, 0.0534718, -0.0180521, -0.053833, 0.806275, -0.589086, -0.0169445, 0.589119, 0.807869, 0.00144525, 3.00289, -1.61794e-05 )
+transform = Transform( 0.998993, 0.043345, -0.0115494, -0.0435719, 0.876458, -0.479502, -0.0106615, 0.479522, 0.877465, 0.00144996, 3.00288, -1.98416e-05 )
 
 [node name="mixamorigLeftHandMiddle3 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4/mixamorigLeftHandMiddle1 4/mixamorigLeftHandMiddle2 4" index="0"]
-transform = Transform( 0.996615, 0.0745471, -0.0346747, -0.0742283, 0.634496, -0.769353, -0.0353521, 0.769323, 0.637882, 0.00434403, 2.83673, -4.98615e-06 )
+transform = Transform( 0.997442, 0.0666068, -0.0259345, -0.0663645, 0.728215, -0.682128, -0.0265485, 0.682105, 0.730772, 0.00434679, 2.83673, -1.37312e-05 )
 
 [node name="mixamorigLeftHandMiddle4 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4/mixamorigLeftHandMiddle1 4/mixamorigLeftHandMiddle2 4/mixamorigLeftHandMiddle3 4" index="0"]
-transform = Transform( 1, 4.73534e-09, 1.20934e-07, -4.73534e-09, 1, 4.86928e-08, -1.20934e-07, -4.86928e-08, 1, -0.00579621, 2.52801, 9.08982e-06 )
+transform = Transform( 1, 2.47206e-08, 1.09041e-07, -2.47206e-08, 1, -5.64575e-09, -1.09041e-07, 5.64574e-09, 1, -0.0057898, 2.52802, 2.03781e-05 )
 
 [node name="mixamorigLeftHandRing1 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4" index="3"]
-transform = Transform( 0.999298, 0.0336138, 0.0165577, -0.0238823, 0.911857, -0.409811, -0.0288736, 0.409128, 0.91202, 0.992847, 9.58119, -0.173225 )
+transform = Transform( 0.999775, 0.015993, 0.0139475, -0.0112383, 0.956571, -0.291283, -0.0180002, 0.291061, 0.956535, 0.992844, 9.5812, -0.173236 )
 
 [node name="mixamorigLeftHandRing2 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4/mixamorigLeftHandRing1 4" index="0"]
-transform = Transform( 0.998365, 0.0544361, -0.0174229, -0.0542008, 0.804928, -0.590892, -0.0181417, 0.59087, 0.806563, -0.00197935, 2.67012, -2.29923e-05 )
+transform = Transform( 0.998951, 0.0444282, -0.0111368, -0.0442773, 0.874471, -0.483053, -0.0117224, 0.483039, 0.87552, -0.00198185, 2.67012, -1.71175e-05 )
 
 [node name="mixamorigLeftHandRing3 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4/mixamorigLeftHandRing1 4/mixamorigLeftHandRing2 4" index="0"]
-transform = Transform( 0.997284, 0.0670704, -0.0304375, -0.0673604, 0.663404, -0.745223, -0.02979, 0.745249, 0.66612, -0.00116434, 2.47188, 5.99576e-06 )
+transform = Transform( 0.998052, 0.0583895, -0.0219849, -0.0585964, 0.756208, -0.651702, -0.0214275, 0.651721, 0.758156, -0.00116519, 2.47189, 6.62295e-06 )
 
 [node name="mixamorigLeftHandRing4 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4/mixamorigLeftHandRing1 4/mixamorigLeftHandRing2 4/mixamorigLeftHandRing3 4" index="0"]
-transform = Transform( 1, -2.28661e-08, -7.21769e-09, 2.28661e-08, 1, -1.93603e-08, 7.21769e-09, 1.93603e-08, 1, 0.00314271, 2.18526, -2.6065e-05 )
+transform = Transform( 1, 5.9775e-09, 3.00339e-08, -5.9775e-09, 1, -2.72345e-08, -3.00339e-08, 2.72345e-08, 1, 0.00313258, 2.18526, -2.69413e-05 )
 
 [node name="mixamorigLeftHandPinky1 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4" index="4"]
-transform = Transform( 0.953312, 0.180905, -0.241805, -0.249462, 0.923009, -0.292956, 0.170191, 0.3396, 0.925044, 3.10134, 9.13015, 0.189406 )
+transform = Transform( 0.973346, 0.0399372, -0.225838, -0.0926506, 0.969263, -0.227912, 0.209795, 0.242761, 0.947129, 3.10135, 9.13017, 0.189403 )
 
 [node name="mixamorigLeftHandPinky2 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4/mixamorigLeftHandPinky1 4" index="0"]
-transform = Transform( 0.997012, 0.0693419, -0.0340404, -0.0704176, 0.634708, -0.769537, -0.0317555, 0.769635, 0.637694, 0.00269554, 2.00134, -4.62741e-06 )
+transform = Transform( 0.997776, 0.0615842, -0.0255194, -0.0623844, 0.72769, -0.683063, -0.0234957, 0.683136, 0.729913, 0.0027013, 2.00134, 2.65902e-06 )
 
 [node name="mixamorigLeftHandPinky3 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4/mixamorigLeftHandPinky1 4/mixamorigLeftHandPinky2 4" index="0"]
-transform = Transform( 0.996647, 0.0745465, -0.0337155, -0.0736829, 0.638692, -0.765926, -0.0355633, 0.765842, 0.642044, 0.00269288, 1.63096, -2.5602e-06 )
+transform = Transform( 0.997447, 0.0668025, -0.0252407, -0.0661411, 0.730925, -0.679245, -0.0269263, 0.67918, 0.733477, 0.00269089, 1.63095, -5.30281e-06 )
 
 [node name="mixamorigLeftHandPinky4 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigLeftShoulder 4/mixamorigLeftArm 4/mixamorigLeftForeArm 4/mixamorigLeftHand 4/mixamorigLeftHandPinky1 4/mixamorigLeftHandPinky2 4/mixamorigLeftHandPinky3 4" index="0"]
-transform = Transform( 1, -3.3151e-08, 2.19748e-07, 3.3151e-08, 1, 1.93662e-08, -2.19748e-07, -1.93662e-08, 1, -0.0053802, 1.45677, -2.72998e-06 )
+transform = Transform( 1, -2.32559e-08, 2.24695e-07, 2.32559e-08, 1, 6.17286e-09, -2.24695e-07, -6.17285e-09, 1, -0.00538358, 1.45677, -1.14681e-06 )
 
 [node name="mixamorigRightShoulder 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4" index="2"]
-transform = Transform( 0.0901774, -0.817388, 0.568986, -0.000169307, -0.571326, -0.820723, 0.995925, 0.0739143, -0.0516591, -6.50995, 14.372, -0.0969477 )
+transform = Transform( -0.108376, -0.911993, 0.395629, -0.0144499, -0.396486, -0.917927, 0.994005, -0.105198, 0.0297914, -6.50995, 14.372, -0.0969477 )
 
 [node name="mixamorigRightArm 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4" index="0"]
-transform = Transform( 0.931579, 0.323636, 0.165593, -0.183663, 0.812076, -0.553895, -0.313735, 0.485584, 0.815953, 1.57966e-06, 13.4562, 4.00981e-06 )
+transform = Transform( 0.982587, 0.0829756, 0.166246, 0.0488412, 0.747933, -0.661975, -0.179269, 0.658568, 0.730856, -2.73266e-06, 13.4562, 4.88034e-06 )
 
 [node name="mixamorigRightForeArm 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4" index="0"]
-transform = Transform( 0.00848496, 0.995363, -0.095821, -0.99201, -0.00368345, -0.126106, -0.125874, 0.0961254, 0.987378, 1.62241e-06, 17.7774, -1.48438e-06 )
+transform = Transform( -0.468424, 0.869542, -0.156446, -0.866614, -0.486667, -0.110165, -0.17193, 0.0839742, 0.981523, 1.62077e-06, 17.7774, -4.89875e-07 )
 
 [node name="mixamorigRightHand 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4" index="0"]
-transform = Transform( 0.781738, 0.443391, -0.438508, -0.317321, 0.888168, 0.332363, 0.536836, -0.120673, 0.835012, -3.61045e-06, 29.9619, -3.07376e-06 )
+transform = Transform( 0.852979, -0.177406, -0.49087, 0.0716642, 0.971363, -0.226532, 0.517002, 0.158049, 0.841267, 2.06695e-06, 29.9619, -4.80896e-06 )
 
 [node name="mixamorigRightHandThumb1 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4" index="0"]
-transform = Transform( 0.938178, 0.226172, -0.262047, -0.269538, 0.952303, -0.143069, 0.21719, 0.204856, 0.954391, 2.62554, 3.00247, 1.12599 )
+transform = Transform( 0.949661, 0.171346, -0.262269, -0.214763, 0.965568, -0.146817, 0.228082, 0.195752, 0.953761, 2.62555, 3.00246, 1.126 )
 
 [node name="mixamorigRightHandThumb2 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4/mixamorigRightHandThumb1 4" index="0"]
-transform = Transform( 0.998051, -0.0615231, -0.0104321, 0.061508, 0.998105, -0.00176707, 0.010521, 0.00112197, 0.999944, 0.317731, 3.30027, 8.18127e-06 )
+transform = Transform( 0.993391, -0.114025, -0.01316, 0.113989, 0.993476, -0.00351011, 0.0134743, 0.00198683, 0.999907, 0.31774, 3.30027, -1.27766e-05 )
 
 [node name="mixamorigRightHandThumb3 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4/mixamorigRightHandThumb1 4/mixamorigRightHandThumb2 4" index="0"]
-transform = Transform( 0.911958, -0.380187, -0.154243, 0.408097, 0.879324, 0.245452, 0.0423122, -0.286788, 0.957059, -0.0369522, 2.95358, -4.97264e-06 )
+transform = Transform( 0.909573, -0.385111, -0.156095, 0.413301, 0.877385, 0.243677, 0.0431127, -0.286156, 0.957213, -0.0369534, 2.95359, 7.04979e-06 )
 
 [node name="mixamorigRightHandThumb4 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4/mixamorigRightHandThumb1 4/mixamorigRightHandThumb2 4/mixamorigRightHandThumb3 4" index="0"]
-transform = Transform( 1, 7.84449e-08, -1.61074e-08, -7.84449e-08, 1, -2.79699e-08, 1.61074e-08, 2.79699e-08, 1, -0.280785, 2.36171, 2.02656e-06 )
+transform = Transform( 1, 5.58047e-08, -1.87172e-08, -5.58048e-08, 1, -2.13826e-08, 1.87172e-08, 2.13826e-08, 1, -0.28078, 2.36171, -1.32319e-05 )
 
 [node name="mixamorigRightHandIndex1 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4" index="1"]
-transform = Transform( 0.957209, 0.202148, -0.207092, -0.234022, 0.96166, -0.14298, 0.170249, 0.185326, 0.967817, 3.0678, 9.75205, 0.178042 )
+transform = Transform( 0.957705, 0.19083, -0.215373, -0.230928, 0.956252, -0.179594, 0.171679, 0.221734, 0.959875, 3.0678, 9.75204, 0.178022 )
 
 [node name="mixamorigRightHandIndex2 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4/mixamorigRightHandIndex1 4" index="0"]
-transform = Transform( 0.998468, -0.0526824, 0.0169257, 0.0520709, 0.791048, -0.609533, 0.0187226, 0.609481, 0.79258, 0.00477328, 2.49471, -1.74449e-06 )
+transform = Transform( 0.998269, -0.0556062, 0.0191743, 0.0549173, 0.764378, -0.642425, 0.0210664, 0.642366, 0.766109, 0.00477644, 2.49471, -1.72541e-06 )
 
 [node name="mixamorigRightHandIndex3 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4/mixamorigRightHandIndex1 4/mixamorigRightHandIndex2 4" index="0"]
-transform = Transform( 0.998223, -0.0551733, 0.0225224, 0.0557041, 0.729579, -0.681624, 0.0211756, 0.681668, 0.731356, 0.00235851, 2.46477, -2.44924e-05 )
+transform = Transform( 0.998031, -0.0575965, 0.0248234, 0.058191, 0.702732, -0.709071, 0.0233958, 0.709119, 0.7047, 0.00236219, 2.46477, -1.56167e-05 )
 
 [node name="mixamorigRightHandIndex4 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4/mixamorigRightHandIndex1 4/mixamorigRightHandIndex2 4/mixamorigRightHandIndex3 4" index="0"]
-transform = Transform( 1, 5.9398e-09, 1.10015e-08, -5.9398e-09, 1, -4.08148e-08, -1.10015e-08, 4.08148e-08, 1, -0.00712681, 1.95056, -8.67256e-06 )
+transform = Transform( 1, 2.44489e-08, 6.4585e-09, -2.44489e-08, 1, 1.79816e-09, -6.4585e-09, -1.79816e-09, 1, -0.00713997, 1.95056, -9.18984e-07 )
 
 [node name="mixamorigRightHandMiddle1 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4" index="2"]
-transform = Transform( 0.996508, 0.0823422, -0.0137951, -0.0828175, 0.953972, -0.288234, -0.0105738, 0.288371, 0.95746, 0.952104, 9.73205, -0.157332 )
+transform = Transform( 0.996635, 0.08061, -0.0148347, -0.0810494, 0.942286, -0.324853, -0.0122079, 0.324963, 0.945648, 0.952096, 9.73203, -0.157324 )
 
 [node name="mixamorigRightHandMiddle2 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4/mixamorigRightHandMiddle1 4" index="0"]
-transform = Transform( 0.997742, -0.0617769, 0.0263598, 0.0617496, 0.689294, -0.721845, 0.0264237, 0.721843, 0.691552, 0.000871102, 2.98896, 2.28039e-06 )
+transform = Transform( 0.997513, -0.0642362, 0.0290285, 0.0642063, 0.657994, -0.75028, 0.0290946, 0.750278, 0.660482, 0.000869751, 2.98896, 1.75197e-05 )
 
 [node name="mixamorigRightHandMiddle3 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4/mixamorigRightHandMiddle1 4/mixamorigRightHandMiddle2 4" index="0"]
-transform = Transform( 0.996434, -0.0734717, 0.0414842, 0.0736277, 0.517041, -0.852788, 0.0412067, 0.852802, 0.520607, -0.000620881, 2.86022, 1.82998e-05 )
+transform = Transform( 0.996188, -0.075121, 0.0443433, 0.075288, 0.483661, -0.872011, 0.0440592, 0.872026, 0.487473, -0.000611705, 2.8602, 1.77527e-05 )
 
 [node name="mixamorigRightHandMiddle4 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4/mixamorigRightHandMiddle1 4/mixamorigRightHandMiddle2 4/mixamorigRightHandMiddle3 4" index="0"]
-transform = Transform( 1, 5.25746e-09, 8.20328e-09, -5.25745e-09, 1, 1.71536e-08, -8.20328e-09, -1.71536e-08, 1, -0.000255108, 2.59539, 7.64676e-06 )
+transform = Transform( 1, -2.1956e-08, -3.47869e-09, 2.1956e-08, 1, 2.15876e-08, 3.47869e-09, -2.15876e-08, 1, -0.000261631, 2.59539, 2.03019e-06 )
 
 [node name="mixamorigRightHandRing1 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4" index="3"]
-transform = Transform( 0.998927, -0.040803, -0.021881, 0.0254832, 0.879104, -0.475948, 0.0386558, 0.47488, 0.879201, -1.0393, 9.87613, -0.0494287 )
+transform = Transform( 0.999171, -0.034238, -0.0220432, 0.0184942, 0.863838, -0.50343, 0.0362782, 0.502605, 0.863755, -1.03931, 9.87612, -0.0494215 )
 
 [node name="mixamorigRightHandRing2 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4/mixamorigRightHandRing1 4" index="0"]
-transform = Transform( 0.997806, -0.0602905, 0.0273609, 0.060325, 0.657573, -0.750971, 0.0272846, 0.750974, 0.659768, 0.0015135, 2.53491, 1.43198e-05 )
+transform = Transform( 0.997677, -0.0616674, 0.0289515, 0.0617041, 0.637864, -0.767673, 0.0288733, 0.767676, 0.640188, 0.00151123, 2.53491, 1.33782e-05 )
 
 [node name="mixamorigRightHandRing3 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4/mixamorigRightHandRing1 4/mixamorigRightHandRing2 4" index="0"]
-transform = Transform( 0.997434, -0.0643801, 0.0313223, 0.064617, 0.6211, -0.781063, 0.0308307, 0.781083, 0.623666, -0.00169667, 2.40727, 9.85295e-06 )
+transform = Transform( 0.997294, -0.0656829, 0.0330362, 0.0659324, 0.600127, -0.797183, 0.0325354, 0.797203, 0.602833, -0.00170036, 2.40727, 1.62703e-05 )
 
 [node name="mixamorigRightHandRing4 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4/mixamorigRightHandRing1 4/mixamorigRightHandRing2 4/mixamorigRightHandRing3 4" index="0"]
-transform = Transform( 1, -2.4298e-08, 1.27121e-08, 2.4298e-08, 1, 1.37868e-08, -1.27121e-08, -1.37868e-08, 1, 0.000181529, 2.01451, -8.39686e-06 )
+transform = Transform( 1, -1.14366e-08, 1.17766e-08, 1.14366e-08, 1, 3.25429e-08, -1.17766e-08, -3.25429e-08, 1, 0.000180433, 2.01451, -1.55298e-05 )
 
 [node name="mixamorigRightHandPinky1 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4" index="4"]
-transform = Transform( 0.967572, -0.0478695, 0.248018, 0.181696, 0.813993, -0.551726, -0.175475, 0.578898, 0.796295, -2.98059, 8.70156, 0.103216 )
+transform = Transform( 0.967119, -0.0562581, 0.248023, 0.184729, 0.825685, -0.533029, -0.174802, 0.56132, 0.808928, -2.98059, 8.70156, 0.103222 )
 
 [node name="mixamorigRightHandPinky2 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4/mixamorigRightHandPinky1 4" index="0"]
-transform = Transform( 0.995814, -0.0796192, 0.0448789, 0.0799881, 0.521646, -0.849404, 0.0442179, 0.849438, 0.525832, -0.00199355, 2.12277, -2.21259e-05 )
+transform = Transform( 0.99546, -0.0817848, 0.0486902, 0.0821838, 0.480499, -0.873136, 0.0480136, 0.873173, 0.485039, -0.00202021, 2.12278, -2.50705e-06 )
 
 [node name="mixamorigRightHandPinky3 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4/mixamorigRightHandPinky1 4/mixamorigRightHandPinky2 4" index="0"]
-transform = Transform( 0.996488, -0.0751653, 0.0369015, 0.074609, 0.596952, -0.7988, 0.0380136, 0.798748, 0.600464, 0.000366223, 1.77813, 5.90132e-06 )
+transform = Transform( 0.99617, -0.0775957, 0.0402951, 0.0769908, 0.560053, -0.824872, 0.0414392, 0.824815, 0.563882, 0.00035108, 1.77815, 6.014e-07 )
 
 [node name="mixamorigRightHandPinky4 4" parent="MASTER/mixamorigHips 4/mixamorigSpine 4/mixamorigSpine1 4/mixamorigSpine2 4/mixamorigRightShoulder 4/mixamorigRightArm 4/mixamorigRightForeArm 4/mixamorigRightHand 4/mixamorigRightHandPinky1 4/mixamorigRightHandPinky2 4/mixamorigRightHandPinky3 4" index="0"]
-transform = Transform( 1, 4.07433e-09, 1.03953e-08, -4.07433e-09, 1, -1.40513e-08, -1.03953e-08, 1.40513e-08, 1, 0.00164456, 1.57698, 1.74701e-05 )
+transform = Transform( 1, -1.62054e-08, 3.28713e-08, 1.62054e-08, 1, -1.45448e-08, -3.28713e-08, 1.45448e-08, 1, 0.00164956, 1.57698, 2.02823e-05 )
 
 [node name="mixamorigLeftUpLeg 4" parent="MASTER/mixamorigHips 4" index="1"]
-transform = Transform( -0.974291, 0.218723, 0.0540076, -0.210156, -0.96872, 0.13197, 0.0811852, 0.117231, 0.989753, 9.6987, -5.8679, 0.0415282 )
+transform = Transform( -0.975904, 0.123877, 0.17962, -0.103407, -0.987472, 0.119187, 0.19214, 0.0977442, 0.976461, 9.6987, -5.86791, 0.0415258 )
 
 [node name="mixamorigLeftLeg 4" parent="MASTER/mixamorigHips 4/mixamorigLeftUpLeg 4" index="0"]
-transform = Transform( 0.964305, -0.236491, 0.11911, 0.12551, 0.804303, 0.580813, -0.233157, -0.545132, 0.805276, -1.68909e-06, 44.5799, 3.35174e-08 )
+transform = Transform( 0.99042, -0.13338, -0.0357325, 0.137488, 0.928561, 0.344776, -0.0128065, -0.346386, 0.938004, 3.14619e-06, 44.5799, 1.56551e-07 )
 
 [node name="mixamorigLeftFoot 4" parent="MASTER/mixamorigHips 4/mixamorigLeftUpLeg 4/mixamorigLeftLeg 4" index="0"]
-transform = Transform( 0.95572, 0.139812, -0.258943, -0.294275, 0.45712, -0.839311, 0.00102234, 0.878347, 0.478022, 2.30806e-06, 47.9558, -2.3159e-06 )
+transform = Transform( 0.959189, -0.109207, -0.260828, -0.173515, 0.50101, -0.847869, 0.22327, 0.858524, 0.461614, 5.91244e-06, 47.9558, -1.22948e-06 )
 
 [node name="mixamorigLeftToeBase 4" parent="MASTER/mixamorigHips 4/mixamorigLeftUpLeg 4/mixamorigLeftLeg 4/mixamorigLeftFoot 4" index="0"]
-transform = Transform( 0.99658, -0.0546746, -0.0619559, -0.00325214, 0.723258, -0.69057, 0.0825668, 0.68841, 0.720607, -1.60187e-07, 18.5652, 1.3398e-07 )
+transform = Transform( 0.996635, -0.0544541, -0.0612624, -0.00267846, 0.725382, -0.688342, 0.0819216, 0.68619, 0.722795, 3.12402e-06, 18.5652, 1.43518e-06 )
 
 [node name="mixamorigLeftToe_End 4" parent="MASTER/mixamorigHips 4/mixamorigLeftUpLeg 4/mixamorigLeftLeg 4/mixamorigLeftFoot 4/mixamorigLeftToeBase 4" index="0"]
-transform = Transform( 1, 3.11267e-08, -2.57998e-07, -3.11267e-08, 1, -2.1157e-07, 2.57998e-07, 2.11569e-07, 1, 1.35803e-06, 6.65045, 8.94894e-07 )
+transform = Transform( 1, 3.11267e-08, -2.58251e-07, -3.11267e-08, 1, -2.12626e-07, 2.58251e-07, 2.12626e-07, 1, 8.30266e-07, 6.65045, 8.23701e-07 )
 
 [node name="mixamorigRightUpLeg 4" parent="MASTER/mixamorigHips 4" index="2"]
-transform = Transform( -0.98473, -0.121048, -0.125172, 0.125842, -0.991563, -0.0311002, -0.120347, -0.046375, 0.991688, -9.6987, -5.86791, -0.90435 )
+transform = Transform( -0.97945, -0.193351, -0.0574893, 0.181482, -0.969057, 0.167317, -0.0880584, 0.153439, 0.984266, -9.6987, -5.86792, -0.904349 )
 
 [node name="mixamorigRightLeg 4" parent="MASTER/mixamorigHips 4/mixamorigRightUpLeg 4" index="0"]
-transform = Transform( 0.982255, 0.0807678, 0.169265, -0.178069, 0.684919, 0.706524, -0.0588686, -0.724129, 0.687148, -2.41598e-06, 44.4772, -9.99173e-08 )
+transform = Transform( 0.987497, 0.145364, -0.0609768, -0.115717, 0.931148, 0.345793, 0.107044, -0.334413, 0.936328, 1.15523e-06, 44.4772, -1.01968e-07 )
 
 [node name="mixamorigRightFoot 4" parent="MASTER/mixamorigHips 4/mixamorigRightUpLeg 4/mixamorigRightLeg 4" index="0"]
-transform = Transform( 0.96451, 0.142767, 0.22212, 0.188431, 0.217129, -0.957783, -0.184969, 0.965646, 0.182521, 2.3439e-06, 47.9871, -1.39608e-06 )
+transform = Transform( 0.97386, 0.215601, 0.0715047, -0.0611347, 0.551956, -0.83163, -0.218767, 0.80552, 0.550708, -9.32221e-07, 47.9871, 4.55062e-07 )
 
 [node name="mixamorigRightToeBase 4" parent="MASTER/mixamorigHips 4/mixamorigRightUpLeg 4/mixamorigRightLeg 4/mixamorigRightFoot 4" index="0"]
-transform = Transform( 0.996937, 0.0518291, 0.0585632, 0.000540767, 0.744262, -0.667887, -0.0782024, 0.665873, 0.741955, -1.42032e-06, 18.8936, 5.60201e-07 )
+transform = Transform( 0.996588, 0.0524964, 0.0636839, 0.00413197, 0.738924, -0.673776, -0.0824284, 0.671741, 0.736186, -3.90459e-07, 18.8936, -3.92182e-07 )
 
 [node name="mixamorigRightToe_End 4" parent="MASTER/mixamorigHips 4/mixamorigRightUpLeg 4/mixamorigRightLeg 4/mixamorigRightFoot 4/mixamorigRightToeBase 4" index="0"]
-transform = Transform( 1, 5.18198e-08, -1.23816e-06, -5.18201e-08, 1, -2.483e-07, 1.23816e-06, 2.483e-07, 1, -2.37007e-06, 6.93593, -4.82973e-07 )
-
-[node name="AnimationPlayer" parent="." index="5"]
-autoplay = "ArmaturemixamocomLayer0002"
+transform = Transform( 1, 5.18197e-08, -1.23825e-06, -5.182e-08, 1, -2.48639e-07, 1.23825e-06, 2.48639e-07, 1, -2.139e-06, 6.93593, -4.54092e-07 )

@@ -53,21 +53,21 @@ func _on_Area_input_event(camera, event, click_position, click_normal, shape_idx
 	if event is InputEventMouseButton:
 		#print(self)
 		if event.button_index == BUTTON_LEFT and event.pressed == true:
+			vivo = false
+			GameEvents.emit_signal("objeto_disparado")
 			particles.emitting = true
 			particles2.emitting = true
-			particles3.emitting = true
-			particles4.emitting = true
-			particles5.emitting = true
+			#particles3.emitting = true
+			#particles4.emitting = true
+			#particles5.emitting = true
+
 			
 			
-			
-			
-			vivo = false
 			yield(get_tree().create_timer(0.3), "timeout")
-			luz.queue_free()
-			area.queue_free()
-			idle.queue_free()
-			running.queue_free()
+			#luz.queue_free()
+			#area.queue_free()
+			idle.visible = false
+			running.visible = false
 
 
 func _on_Area_mouse_exited():
